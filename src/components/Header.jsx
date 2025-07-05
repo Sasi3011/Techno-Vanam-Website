@@ -24,7 +24,7 @@ const Header = () => {
 
         {/* Desktop Navigation + CTA */}
         <div className="hidden md:flex items-center gap-8">
-          <nav className="flex gap-6 text-sm font-semibold text-gray-700">
+          <nav className="flex gap-6 text-sm font-medium text-gray-700">
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
@@ -42,7 +42,7 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className="ml-4 px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition"
+            className="ml-4 px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
           >
             Get in Touch
           </Link>
