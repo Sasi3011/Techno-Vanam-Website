@@ -16,7 +16,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#F7F9FC] text-[#50577E] font-poppins text-sm pt-10 pb-6 px-4 md:px-10 lg:px-20">
+    <footer className="bg-[#F7F9FC] text-[#50577E] font-poppins text-sm pt-5 pb-3 px-4 md:px-10 lg:px-20">
       {/* Top Row: Logo - Links - Social */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Logo */}
@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
 
       {/* Divider with Plus Icon */}
-      <div className="relative mt-8 mb-6">
+      <div className="relative mt-3 mb-3">
         <div className="border-t border-gray-200 w-full"></div>
         <div className="absolute left-1/2 -translate-x-1/2 -top-3 bg-[#F7F9FC] px-2">
           <div className="   border-gray-300 flex items-center justify-center text-xs text-gray-500">
