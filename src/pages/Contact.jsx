@@ -50,23 +50,26 @@ export default function Contact() {
         <p className="font-semibold text-gray-700 mb-4">What kind of project are you looking for?</p>
         <div className="flex flex-wrap gap-4">
           {['One-time project', 'Ongoing maintenance', 'Both'].map((type, index) => (
-            <div key={index} className="px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 cursor-pointer">
-              {type}
-            </div>
+            <label key={index} className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 cursor-pointer">
+              <input type="radio" name="projectType" className="form-radio text-blue-600" />
+              <span className="text-sm text-gray-700">{type}</span>
+            </label>
           ))}
         </div>
       </div>
 
+
       <div className="mt-8">
-        <p className="font-semibold text-gray-700 mb-4">When is the project deadline?</p>
-        <div className="flex flex-wrap gap-4">
-          {['ASAP', '1 month', '2 – 3 months', '3+ months'].map((deadline, index) => (
-            <div key={index} className="px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 cursor-pointer">
-              {deadline}
-            </div>
-          ))}
-        </div>
+      <p className="font-semibold text-gray-700 mb-4">When is the project deadline?</p>
+      <div className="flex flex-wrap gap-4">
+        {['ASAP', '1 month', '2 – 3 months', '3+ months'].map((deadline, index) => (
+          <label key={index} className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 cursor-pointer">
+            <input type="radio" name="deadline" className="form-radio text-blue-600" />
+            <span className="text-sm text-gray-700">{deadline}</span>
+          </label>
+        ))}
       </div>
+    </div>
 
       <div className="mt-8">
         <label className="block text-sm font-medium text-gray-700 mb-1">Tell us a little more about you project</label>
