@@ -35,13 +35,21 @@ export default function Contact() {
         <p className="font-semibold text-gray-700 mb-4">What services are you looking for?</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {['Web Design', 'UI/UX Design', 'Development', 'Branding'].map((service, index) => (
-            <div
+            <label
               key={index}
               className="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-md transition cursor-pointer"
             >
               <img src={`https://via.placeholder.com/64`} alt={service} className="mb-2" />
-              <span className="text-sm font-medium text-gray-700 text-center">{service}</span>
-            </div>
+              <div className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value={service}
+                  className="mb-1 form-checkbox text-blue-600"
+                />
+                <span className="text-sm font-medium text-gray-700 ">{service}</span>
+              </div>
+            </label>
           ))}
         </div>
       </div>
