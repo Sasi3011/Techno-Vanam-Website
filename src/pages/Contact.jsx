@@ -1,6 +1,20 @@
 import React from "react";
 
+import { useState } from "react";
+
 export default function Contact() {
+  const [message, setMessage] = useState("");
+
+  const countWords = (text) =>
+    text.trim().split(/\s+/).filter(Boolean).length;
+
+  const handleTextareaChange = (e) => {
+    const text = e.target.value;
+    if (countWords(text) <= 1000) {
+      setMessage(text);
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto p-6">
       <p className="text-sm text-blue-600 font-semibold uppercase">Contact us</p>
@@ -83,9 +97,16 @@ export default function Contact() {
         <label className="block text-sm font-medium text-gray-700 mb-1">Tell us a little more about you project</label>
         <textarea
           rows="4"
+          required
+          value={message}
+          onChange={handleTextareaChange}
           placeholder="Please feel free to write as much (or as little) as you need."
           className="w-full border-b border-gray-300 focus:outline-none py-2"
-        ></textarea>
+        />
+        <div className="text-sm text-gray-500 mt-1">
+          {countWords(message)} / 1000 words
+        </div>
+
       </div>
 
       <div className="mt-10">
