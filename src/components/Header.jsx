@@ -14,11 +14,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50 font-poppinsd">
-      <div className="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+    <header className="w-full bg-white sticky top-0 z-50 font-poppins ">
+      {/* Container spans full width now */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo + Brand Name */}
         <Link to="/" className="flex items-center gap-3 text-xl font-bold text-gray-800">
-          <img src="src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
+          <img src="src/assets/logo.png" alt="Logo" className="h-8 w-auto object-contain" />
           <span className="text-lg md:text-xl font-bold">Techno Vanam</span>
         </Link>
 
@@ -31,7 +32,7 @@ const Header = () => {
                 to={item.to}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-blue-600 font-bold"
+                    ? "text-blue-600 font-semibold"
                     : "hover:text-blue-500 transition"
                 }
               >
@@ -42,7 +43,7 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className="ml-4 px-6 py-3 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
+            className="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
           >
             Get in Touch
           </Link>
@@ -59,7 +60,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="md:hidden bg-white shadow-md w-full">
           <div className="flex flex-col items-center py-4 gap-4 text-gray-700 font-medium">
             {navItems.map((item) => (
               <NavLink
