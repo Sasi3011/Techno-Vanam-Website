@@ -16,12 +16,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#F7F9FC] text-[#50577E] font-poppins text-sm pt-5 pb-3 px-4 md:px-10 lg:px-20">
+    <footer className="bg-[#F7F9FC] text-[#50577E] font-poppins text-sm pt-5 pb-3 px-4 sm:px-6 md:px-10 lg:px-20 w-full max-w-full">
       {/* Top Row: Logo - Links - Social */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 flex-wrap">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img src="src/assets/logo.png" alt="Logo" className="h-10 w-10" />
+          <img src="src/assets/logo.png" alt="Logo" className="h-10 w-10 object-contain" />
           <span className="text-lg font-bold text-gray-900">Techno Vanam</span>
         </div>
 
@@ -31,7 +31,7 @@ const Footer = () => {
             <NavLink
               key={item.name}
               to={item.to}
-              className="hover:text-blue-600 transition"
+              className="hover:text-blue-600 transition text-sm"
             >
               {item.name}
             </NavLink>
@@ -39,7 +39,7 @@ const Footer = () => {
         </nav>
 
         {/* Social Icons */}
-        <div className="flex gap-4 text-xl">
+        <div className="flex gap-4 text-2xl">
           <a href="#" className="text-green-500 hover:scale-110 transition">
             <FaWhatsapp />
           </a>
@@ -52,18 +52,17 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Divider with Plus Icon */}
-      <div className="relative mt-3 mb-3">
+      {/* Divider */}
+      <div className="relative mt-4 mb-4 w-full">
         <div className="border-t border-gray-200 w-full"></div>
-        <div className="absolute left-1/2 -translate-x-1/2 -top-3 bg-[#F7F9FC] px-2">
-          <div className="   border-gray-300 flex items-center justify-center text-xs text-gray-500">
-          </div>
-        </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-center text-sm text-[#50577E]">
-        Copyright © 2025 <span className="font-semibold">Techno Vanam ™</span> | All Rights Reserved
+      {/* Bottom Row: Copyright */}
+      <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-[#50577E] gap-2 text-center sm:text-left">
+        <div>
+          Copyright © 2025 <span className="font-semibold">Techno Vanam ™</span>
+        </div>
+        <div>All Rights Reserved</div>
       </div>
     </footer>
   );
