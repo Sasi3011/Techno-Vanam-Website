@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { useState } from "react";
+const servicesList = [
+  { name: "Web Design", color: "border-blue-500" },
+  { name: "UI/UX Design", color: "border-pink-500" },
+  { name: "Development", color: "border-green-500" },
+  { name: "Branding", color: "border-yellow-500" },
+];
+
 
 export default function Contact() {
+  const [selectedServices, setSelectedServices] = useState([]);
   const [message, setMessage] = useState("");
+
+  const toggleService = (service) => {
+    setSelectedServices((prev) =>
+      prev.includes(service)
+        ? prev.filter((s) => s !== service)
+        : [...prev, service]
+    );
+  };
 
   const countWords = (text) =>
     text.trim().split(/\s+/).filter(Boolean).length;
@@ -14,7 +29,6 @@ export default function Contact() {
       setMessage(text);
     }
   };
-
   return (
     <div className="max-w-3xl mx-auto p-6">
       <p className="text-sm text-blue-600 font-semibold uppercase">Contact us</p>
@@ -45,28 +59,35 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="mt-8">
-        <p className="font-semibold text-gray-700 mb-4">What services are you looking for?</p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {['Web Design', 'UI/UX Design', 'Development', 'Branding'].map((service, index) => (
-            <label
-              key={index}
-              className="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-md transition cursor-pointer"
-            >
-              <img src={`https://via.placeholder.com/64`} alt={service} className="mb-2" />
-              <div className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value={service}
-                  className="mb-1 form-checkbox text-blue-600"
-                />
-                <span className="text-sm font-medium text-gray-700 ">{service}</span>
-              </div>
-            </label>
-          ))}
-        </div>
-      </div>
+       <div className="mt-8">
+    <p className="font-semibold text-gray-700 mb-4">
+      What services are you looking for?
+    </p>
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      {servicesList.map((service, index) => {
+        const isSelected = selectedServices.includes(service.name);
+        return (
+          <button
+            key={index}
+            type="button"
+            onClick={() => toggleService(service.name)}
+            className={`flex flex-col items-center p-4 bg-white rounded-xl shadow transition cursor-pointer border-2 ${
+              isSelected ? service.color : "border-transparent"
+            }`}
+          >
+            <img
+              src={`https://via.placeholder.com/64`}
+              alt={service.name}
+              className="mb-2"
+            />
+            <span className="text-sm font-medium text-gray-700 text-center">
+              {service.name}
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  </div>
 
       <div className="mt-8">
         <p className="font-semibold text-gray-700 mb-4">What kind of project are you looking for?</p>
