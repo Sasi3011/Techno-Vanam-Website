@@ -65,27 +65,27 @@ export default function Contact() {
     </p>
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
       {servicesList.map((service, index) => {
-        const isSelected = selectedServices.includes(service.name);
-        return (
-          <button
-            key={index}
-            type="button"
-            onClick={() => toggleService(service.name)}
-            className={`flex flex-col items-center p-4 bg-white rounded-xl shadow transition cursor-pointer border-2 ${
-              isSelected ? service.color : "border-transparent"
-            }`}
-          >
-            <img
-              src={`https://via.placeholder.com/64`}
-              alt={service.name}
-              className="mb-2"
-            />
-            <span className="text-sm font-medium text-gray-700 text-center">
-              {service.name}
-            </span>
-          </button>
-        );
-      })}
+  const isSelected = selectedServices.includes(service.name);
+  return (
+    <button
+      key={index}
+      type="button"
+      onClick={() => toggleService(service.name)}
+      className={`flex flex-col items-center p-4 bg-white rounded-xl shadow cursor-pointer border-2 transition-all duration-300 ease-in-out 
+        ${isSelected ? service.color : "border-transparent hover:border-gray-300"}`}
+    >
+      <img
+        src={`https://via.placeholder.com/64`}
+        alt={service.name}
+        className="mb-2"
+      />
+      <span className="text-sm font-medium text-gray-700 text-center">
+        {service.name}
+      </span>
+    </button>
+  );
+})}
+
     </div>
   </div>
 
