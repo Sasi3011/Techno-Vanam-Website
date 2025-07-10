@@ -30,7 +30,7 @@ export default function Contact() {
     }
   };
   return (
-    <div className="max-w-3xl mx-auto p-6">
+    <div className="max-w-full sm:max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto p-6">
       <p className="text-sm text-blue-600 font-semibold uppercase">Contact us</p>
       <h1 className="text-4xl font-bold text-gray-900 mt-2">
         Send us a message <span className="inline-block">👋</span>
