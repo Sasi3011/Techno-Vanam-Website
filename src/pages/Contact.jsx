@@ -40,22 +40,24 @@ export default function Contact() {
         within 24 business hours to schedule a project discovery call.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">What's your name?</label>
-          <input type="text" placeholder="Enter your full name" className="w-full border-b border-gray-300 focus:outline-none py-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">What's your email?</label>
-          <input type="email" placeholder="Enter your email address" className="w-full border-b border-gray-300 focus:outline-none py-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">What's your company?</label>
-          <input type="text" placeholder="Enter your company name" className="w-full border-b border-gray-300 focus:outline-none py-2" />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">What's your current website?</label>
-          <input type="text" placeholder="Enter your website URL" className="w-full border-b border-gray-300 focus:outline-none py-2" />
+      <div className="mt-8 p-6 bg-white rounded-2xl shadow-md border border-gray-200">
+        <p className="text-lg font-semibold text-gray-800 mb-4">Tell us about yourself</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            { label: "What's your name?", type: "text", placeholder: "Enter your full name" },
+            { label: "What's your email?", type: "email", placeholder: "Enter your email address" },
+            { label: "What's your company?", type: "text", placeholder: "Enter your company name" },
+            { label: "What's your current website?", type: "text", placeholder: "Enter your website URL" },
+          ].map((field, index) => (
+            <div key={index}>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{field.label}</label>
+              <input
+                type={field.type}
+                placeholder={field.placeholder}
+                className="w-full border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 rounded-lg px-4 py-2 transition-all outline-none"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
