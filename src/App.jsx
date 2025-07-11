@@ -4,8 +4,8 @@ import About from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Product1 from "./pages/products/Product1";
-import Product2 from "./pages/products/Product2";
+import Product1 from "./pages/Products/Product1";
+import Product2 from "./pages/Products/Product2";
 import MainLayout from "./layout/MainLayout";
 
 function App() {
