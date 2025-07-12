@@ -133,7 +133,7 @@ const Home = () => {
       <section className="px-4 sm:px-6 lg:px-8 py-10 sm:py-16 bg-white min-h-[50vh]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-10">
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-blue-500 text-xs sm:text-sm font-semibold uppercase">DESIGN & DEVELOPMENT STUDIO</h2>
+            <h2 className="text-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold uppercase">DESIGN & DEVELOPMENT STUDIO</h2>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-3 sm:mt-4">
               We craft stunning digital experiences for startups, brands & growing businesses
             </h1>

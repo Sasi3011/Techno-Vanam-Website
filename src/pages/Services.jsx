@@ -40,13 +40,13 @@ const Services = () => {
           <div className="w-full flex flex-col items-start gap-6">
             <div className="w-full flex flex-col md:flex-row md:items-end md:justify-between">
               <div className="w-full md:w-1/2">
-                <p className="text-blue-500 text-sm font-bold uppercase tracking-wider">
+                <p className="text-blue-600 text-xs sm:text-sm md:text-lg font-semibold uppercase tracking-wider">
                   Services
                 </p>
-                <h2 className="text-gray-900 text-4xl font-bold leading-tight mt-4">
+                <h2 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mt-4">
                   What we do
                 </h2>
-                <p className="text-gray-500 text-base mt-4">
+                <p className="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg mt-4">
                   At Technovanam, our end-to-end design and development services are crafted to empower your business, enhance your digital presence, and drive growth. We blend smart strategy, modern
                   technology, and user-focused design to elevate your brand and help you thrive in today’s competitive landscape.
                 </p>
@@ -56,7 +56,7 @@ const Services = () => {
             {servicesList.map((service, index) => (
               <div
                 key={index}
-                className="w-full flex flex-col md:flex-row items-center gap-6 bg-pink-200 rounded-2xl min-h-[400px] mt-6"
+                className="w-7xl flex flex-col md:flex-row items-center gap-6 bg-pink-200 rounded-2xl min-h-[380px] mt-6 px-4 md:px-8 shadow-lg"
               >
                 <div className="w-full md:w-1/2 flex flex-col items-start p-8 gap-4">
                   <h3 className={`${service.color} text-xl font-bold`}>
