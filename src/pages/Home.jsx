@@ -128,10 +128,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="font-poppins min-h-screen w-full max-w-[100vw] overflow-x-hidden">
+    <div className="font-poppins w-full max-w-[100vw] overflow-x-hidden">
       {/* Hero Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-10 sm:py-16 bg-white min-h-[50vh]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-10">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-10 w-full">
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-blue-500 text-xs sm:text-sm font-semibold uppercase">DESIGN & DEVELOPMENT STUDIO</h2>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-3 sm:mt-4">
@@ -147,16 +147,18 @@ const Home = () => {
               Get in Touch
             </Link>
           </div>
-          <img
-            src="/illustration-hero.png"
-            alt="Hero"
-            className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mt-6PMG md:mt-0"
-          />
+          <div className="flex-1 flex justify-center md:justify-end">
+            <img
+              src="/illustration-hero.png"
+              alt="Hero"
+              className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] object-contain"
+            />
+          </div>
         </div>
       </section>
 
       {/* Our Services */}
-      <section className="bg-blue-500 py-10 sm:py-16 px-4 sm:px-6 lg:px-10 text-white">
+      <section className="min-h-screen flex items-center justify-center bg-blue-500 py-10 sm:py-16 px-4 sm:px-6 lg:px-10 text-white">
         <style>
           {`
             .animate-slideIn {
@@ -177,7 +179,7 @@ const Home = () => {
             .horizontal-card:nth-child(3) { animation-delay: 0.3s; }
           `}
         </style>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
             <div>
               <p className="uppercase text-xs sm:text-sm font-semibold">Our Services</p>
@@ -195,7 +197,7 @@ const Home = () => {
 
           {/* Scrollable Cards */}
           <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-            <div className="flex gap-4 sm gap-6 w-max">
+            <div className="flex gap-4 sm:gap-6 w-max">
               <div
                 ref={(el) => (cardRefs.current[0] = el)}
                 className="horizontal-card flex flex-col sm:flex-row justify-between items-center bg-white rounded-3xl w-[90vw] sm:w-[800px] md:w-[900px] h-[300px] sm:h-[350px] md:h-[400px] min-w-[90vw] sm:min-w-[800px] overflow-hidden shadow-md opacity-0"
@@ -220,11 +222,11 @@ const Home = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="flex items-start justify-center p-2 sm:p-4 w-full sm:w-[50%] min-w-[50%] h-full bg-[#B1B0FE] rounded-3xl">
+                <div className="flex items-center justify-center p-2 sm:p-4 w-full sm:w-[50%] min-w-[50%] h-full bg-[#B1B0FE] rounded-3xl">
                   <img
                     src={cardImage1}
                     alt="UI/UX Graphic"
-                    className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
@@ -240,7 +242,7 @@ const Home = () => {
                   <p className="text-sm sm:text-base text-[#667097] mb-4 sm:mb-6 font-['Product Sans']">
                     We help your brand stand out and communicate clearly through bold, creative visuals — from posters to promotional graphics, all designed to captivate and convert.
                   </p>
-                  <div className="flex flex-row items-center gap-1 text-[#238 Police2388FF] uppercase font-bold tracking-[0.06em] text-xs sm:text-sm font-['Product Sans']">
+                  <div className="flex flex-row items-center gap-1 text-[#2388FF] uppercase font-bold tracking-[0.06em] text-xs sm:text-sm font-['Product Sans']">
                     View More
                     <svg className="w-4 h-4 transform rotate-180" fill="#2388FF" viewBox="0 0 24 24">
                       <path d="M10 17l5-5-5-5v10z" />
@@ -288,7 +290,7 @@ const Home = () => {
       </section>
 
       {/* Why Work With Us */}
-      <section className="py-16 sm:py-24 md:py-40 flex flex-col items-center bg-white">
+      <section className="min-h-screen flex items-center justify-center py-16 sm:py-24 md:py-40 bg-white">
         <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 flex flex-col gap-8 sm:gap-10">
           <div className="flex flex-col gap-4 text-center md:text-left">
             <h2 className="uppercase text-[#2388FF] text-xs sm:text-sm font-bold tracking-widest">
@@ -301,7 +303,7 @@ const Home = () => {
               With dozens of successful design and development projects, we've built a straightforward and effective process that ensures your brand looks great, functions flawlessly, and connects with your audience.
             </p>
           </div>
-          <div className="flex flex-col gap-12 sm:gap-16 md:pas-24 mt-10 sm:mt-20">
+          <div className="flex flex-col gap-12 sm:gap-16 md:gap-24 mt-10 sm:mt-20">
             {steps.map((step) => (
               <div
                 key={step.id}
@@ -323,12 +325,12 @@ const Home = () => {
                   </p>
                 </div>
                 <div
-                  className={`relative w-full md:w-[90%] lg:w-[480px] h-[250px] sm:h-[300px] md:h-[340px] ${step.bgColor} rounded-4xl overflow-hidden flex items-center justify-center`}
+                  className={`relative w-full md:w-[350px] lg:w-[350px] h-[180px] sm:h-[200px] md:h-[220px] ${step.bgColor} rounded-3xl overflow-hidden flex items-start justify-start`}
                 >
                   <img
                     src={step.img}
                     alt={step.title}
-                    className="w-100 h-100 object-contain opacity-100"
+                    className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain ml-4 mt-4"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/10"></div>
                 </div>
@@ -339,8 +341,8 @@ const Home = () => {
       </section>
 
       {/* Past Projects */}
-      <section className="bg-white py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="min-h-screen flex items-center justify-center bg-white py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center w-full">
           <h3 className="text-xs sm:text-sm uppercase font-bold tracking-wider text-blue-600 mb-2">
             Past Projects
           </h3>
@@ -389,8 +391,8 @@ const Home = () => {
       </section>
 
       {/* Our Products */}
-      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="min-h-screen flex items-center justify-center bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto text-center w-full">
           <p className="text-xs sm:text-sm text-blue-600 font-semibold mb-2 uppercase">
             Our Products
           </p>
@@ -398,52 +400,51 @@ const Home = () => {
             Products by <span className="text-blue-600">Techno Vanam</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">
-            At Techno Vanam, we don’t just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
+            At Techno Vanam, we don't just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
           </p>
-        </div>
-        <div className="mt-8 sm:mt-12 bg-blue-50 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-10">
-          <div className="max-w-xl">
-            <h3 className="text-blue-700 text-lg sm:text-xl font-bold mb-4">ATHLIXIR</h3>
-            <p className="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6">
-              Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-left text-blue-900 font-semibold mb-4 sm:mb-6">
-              <div>
-                <p className="text-xl sm:text-2xl">50+</p>
-                <p className="text-xs sm:text-sm font-medium text-gray-600">
-                  Target athlete communities
-                </p>
+          <div className="mt-8 sm:mt-12 bg-blue-50 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-10">
+            <div className="max-w-xl">
+              <h3 className="text-blue-700 text-lg sm:text-xl font-bold mb-4">ATHLIXIR</h3>
+              <p className="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6">
+                Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-left text-blue-900 font-semibold mb-4 sm:mb-6">
+                <div>
+                  <p className="text-xl sm:text-2xl">50+</p>
+                  <p className="text-xs sm:text-sm font-medium text-gray-600">
+                    Target athlete communities
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xl sm:text-2xl">300,000+</p>
+                  <p className="text-xs sm:text-sm font-medium text-gray-600">
+                    Projected performance insights powered by AI
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-xl sm:text-2xl">300,000+</p>
-                <p className="text-xs sm:text-sm font-medium text-gray-600">
-                  Projected performance insights powered by AI
-                </p>
+              <p className="text-blue-600 font-medium text-xs sm:text-sm">
+                COMING SOON — BE PART OF THE JOURNEY →
+              </p>
+            </div>
+            <div className="w-full max-w-[300px] sm:max-w-[400px]">
+              <div className="aspect-[4/3] rounded-xl shadow-md overflow-hidden">
+                <img
+                  src={athlixirImage}
+                  alt="Athlixir Product"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
-            <p className="text-blue-600 font-medium text-xs sm:text-sm">
-              COMING SOON — BE PART OF THE JOURNEY →
-            </p>
           </div>
-          <div className="w-full max-w-[300px] sm:max-w-[400px]">
-            <div className="aspect-[4/3] rounded-xl shadow-md overflow-hidden">
-              <img
-                src={athlixirImage}  // 🔁 Replace with your actual image path
-                alt="Descriptive alt text"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="relative isolate overflow-hidden pt-16 sm:pt-24 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-10 bg-gradient-to-br from-[#0047FF] via-[#0B74F8] to-[#0047FF] rounded-t-[80px] sm:rounded-t-[160px]">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10">
+      <section className="min-h-screen flex items-center justify-center relative isolate overflow-hidden pt-16 sm:pt-24 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-10 bg-gradient-to-br from-[#0047FF] via-[#0B74F8] to-[#0047FF] rounded-t-[80px] sm:rounded-t-[160px]">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 w-full">
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
             <img
-                src= {socialmediaImage}
+                src={socialmediaImage}
                 alt="Social Media"
                 className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[320px] object-contain"
             />
@@ -453,7 +454,7 @@ const Home = () => {
               Ready to launch something amazing with Techno Vanam?
             </h2>
             <p className="text-sm sm:text-base md:text-lg leading-7 text-white/90">
-              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let's build something great together.
             </p>
             <button className="mt-4 inline-flex items-center gap-2 bg-white text-[#2388FF] font-bold px-4 sm:px-6 py-2 sm:py-4 rounded-full shadow-md hover:bg-gray-100 transition text-sm sm:text-base">
               Contact Us →
