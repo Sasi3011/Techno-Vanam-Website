@@ -4,6 +4,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import cardImage1 from "../assets/ui ux.png";
 import cardImage2 from "../assets/poster.png";
 import cardImage3 from "../assets/n.png";
+import designImage from '../assets/Home Page/Project Design Phase.png';
+import devImage from '../assets/Home Page/Project Development Phase.png';
+import ideaImage from '../assets/Home Page/Project Idea Phase.png';
+import launchImage from '../assets/Home Page/Project Launch Phase.png';
+import researchImage from '../assets/Home Page/Project Research Phase.png';
+import supportImage from '../assets/Home Page/Support Phase.png';
+import ideaicon from '../assets/Home Page/Idea Phase Icon.png';
+import researchicon from '../assets/Home Page/Research Phase Icon.png';
+import designicon from '../assets/Home Page/Design Phase Icon.png';
+import devicon from '../assets/Home Page/Development Phase Icon.png';
+import launchicon from '../assets/Home Page/Launch Phase Icon.png';
+import supporticon from '../assets/Home Page/Support Phase Icon.png';
+import athlixirImage from '../assets/Home Page/Athlixir.png';
+import socialmediaImage from '../assets/Home Page/Social Media Image.png';
+import pastprojectsImage from '../assets/Home Page/Past Projects.png';
 
 const steps = [
   {
@@ -12,7 +27,8 @@ const steps = [
     description:
       "We start by understanding your goals, vision, and challenges. Then, we create a clear action plan tailored to your project's needs.",
     bgColor: "bg-[#FFEFA8]",
-    icon: "/icons/idea.png",
+    img: ideaImage,
+    icon: ideaicon,
   },
   {
     id: 2,
@@ -20,7 +36,8 @@ const steps = [
     description:
       "Through a detailed questionnaire and business analysis, we learn what makes your brand unique — so we can design solutions that truly fit.",
     bgColor: "bg-[#D9E8FF]",
-    icon: "/icons/research.png",
+    img: researchImage,
+    icon: researchicon,
   },
   {
     id: 3,
@@ -28,15 +45,35 @@ const steps = [
     description:
       "Whether it's a website, app, or creative poster, our designers craft intuitive interfaces and eye-catching visuals that reflect your brand identity.",
     bgColor: "bg-[#FFDADE]",
-    icon: "/icons/design.png",
+    img: designImage,
+    icon: designicon,
   },
   {
     id: 4,
     title: "4. Development",
     description:
       "Our developers bring your project to life with fast, responsive, and SEO-optimized websites built using the latest technologies and best practices.",
-    bgColor: "bg-[#E2FFE3]",
-    icon: "/icons/development.png",
+    bgColor: "bg-[#D9E8FF]",
+    img: devImage,
+    icon: devicon,
+  },
+  {
+    id: 5,
+    title: "5. Launch",
+    description:
+      "Our developers bring your project to life with fast, responsive, and SEO-optimized websites built using the latest technologies and best practices.",
+    bgColor: "bg-[#A79BF4]",
+    img: launchImage,
+    icon: launchicon,
+  },
+  {
+    id: 6,
+    title: "6. Support",
+    description:
+      "Our developers bring your project to life with fast, responsive, and SEO-optimized websites built using the latest technologies and best practices.",
+    bgColor: "bg-[#E9FDE4]",
+    img: supportImage,
+    icon: supporticon,
   },
 ];
 
@@ -54,7 +91,7 @@ const projects = [
 ];
 
 const Home = () => {
-const servicesRef = useRef(null);
+  const serviceScrollRef = useRef(null);
   const cardRefs = useRef([]);
 
   const scrollHorizontally = (ref, direction, step = 300) => {
@@ -65,64 +102,6 @@ const servicesRef = useRef(null);
       });
     }
   };
-useEffect(() => {
-  const container = servicesRef.current;
-  if (!container) return;
-
-  const scrollAmount = 40;
-
-  const isFullyInView = () => {
-    const containerTop = container.offsetTop;
-    const containerBottom = containerTop + container.offsetHeight;
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-
-    return (
-      containerTop >= scrollTop &&
-      containerBottom <= scrollTop + windowHeight
-    );
-  };
-
-  const onWheel = (e) => {
-    if (!isFullyInView()) return;
-
-    const delta = e.deltaY;
-    const atEnd = container.scrollLeft >= container.scrollWidth - container.clientWidth;
-    const atStart = container.scrollLeft <= 0;
-
-    if ((delta > 0 && !atEnd) || (delta < 0 && !atStart)) {
-      e.preventDefault();
-      container.scrollLeft += delta > 0 ? scrollAmount : -scrollAmount;
-    }
-  };
-
-  const onKeyDown = (e) => {
-    if (!isFullyInView()) return;
-
-    const keys = ["ArrowDown", "ArrowUp", "PageDown", "PageUp", " "];
-    if (!keys.includes(e.key)) return;
-
-    const atEnd = container.scrollLeft >= container.scrollWidth - container.clientWidth;
-    const atStart = container.scrollLeft <= 0;
-
-    if ((e.key === "ArrowDown" || e.key === "PageDown" || e.key === " ") && !atEnd) {
-      e.preventDefault();
-      container.scrollLeft += scrollAmount;
-    } else if ((e.key === "ArrowUp" || e.key === "PageUp") && !atStart) {
-      e.preventDefault();
-      container.scrollLeft -= scrollAmount;
-    }
-  };
-
-  window.addEventListener("wheel", onWheel, { passive: false });
-  window.addEventListener("keydown", onKeyDown);
-
-  return () => {
-    window.removeEventListener("wheel", onWheel);
-    window.removeEventListener("keydown", onKeyDown);
-  };
-}, []);
-
 
   // IntersectionObserver to trigger animations
   useEffect(() => {
@@ -175,7 +154,7 @@ useEffect(() => {
           />
         </div>
       </section>
-      
+
       {/* Our Services */}
       <section className="bg-blue-500 py-10 sm:py-16 px-4 sm:px-6 lg:px-10 text-white">
         <style>
@@ -215,13 +194,13 @@ useEffect(() => {
           </div>
 
           {/* Scrollable Cards */}
-          <div ref={servicesRef} className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+          <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
             <div className="flex gap-4 sm gap-6 w-max">
               <div
                 ref={(el) => (cardRefs.current[0] = el)}
                 className="horizontal-card flex flex-col sm:flex-row justify-between items-center bg-white rounded-3xl w-[90vw] sm:w-[800px] md:w-[900px] h-[300px] sm:h-[350px] md:h-[400px] min-w-[90vw] sm:min-w-[800px] overflow-hidden shadow-md opacity-0"
               >
-                <div className="flex flex-col justify-center items-start p-6 sm:p-8 md:p-12 w-full sm:w-[50%] min-w-[0%] h-full space-y-4 sm:space-y-6">
+                <div className="flex flex-col justify-center items-start p-6 sm:p-8 md:p-12 w-full sm:w-[50%] min-w-[50%] h-full space-y-4 sm:space-y-6">
                   <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold leading-tight text-[#19213D] font-['Product Sans']">
                     UI/UX Design
                   </h3>
@@ -344,12 +323,12 @@ useEffect(() => {
                   </p>
                 </div>
                 <div
-                  className={`relative w-full md:w-[80%] lg:w-[480px] h-[250px] sm:h-[300px] md:h-[340px] ${step.bgColor} rounded-3xl overflow-hidden flex items-center justify-center`}
+                  className={`relative w-full md:w-[90%] lg:w-[480px] h-[250px] sm:h-[300px] md:h-[340px] ${step.bgColor} rounded-4xl overflow-hidden flex items-center justify-center`}
                 >
                   <img
-                    src={step.icon}
+                    src={step.img}
                     alt={step.title}
-                    className="w-3/4 h-3/4 object-contain opacity-90"
+                    className="w-100 h-100 object-contain opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/10"></div>
                 </div>
@@ -379,7 +358,7 @@ useEffect(() => {
                   className="min-w-[250px] sm:min-w-[300px] md:min-w-[350px] h-[200px] sm:h-[250px] md:h-[298px] rounded-3xl border border-[#EBEFF6] shadow-md overflow-hidden bg-white"
                 >
                   <img
-                    src={project.image}
+                    src={pastprojectsImage}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
@@ -447,10 +426,15 @@ useEffect(() => {
             </p>
           </div>
           <div className="w-full max-w-[300px] sm:max-w-[400px]">
-            <div className="aspect-[4/3] bg-gray-300 rounded-xl shadow-md flex items-center justify-center text-gray-500 text-xs sm:text-sm">
-              Image Placeholder
+            <div className="aspect-[4/3] rounded-xl shadow-md overflow-hidden">
+              <img
+                src={athlixirImage}  // 🔁 Replace with your actual image path
+                alt="Descriptive alt text"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+
         </div>
       </section>
 
@@ -458,9 +442,11 @@ useEffect(() => {
       <section className="relative isolate overflow-hidden pt-16 sm:pt-24 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-10 bg-gradient-to-br from-[#0047FF] via-[#0B74F8] to-[#0047FF] rounded-t-[80px] sm:rounded-t-[160px]">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10">
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
-            <div className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[320px] bg-white/10 rounded-xl flex items-center justify-center text-white text-xs sm:text-sm">
-              Social Media Image Placeholder
-            </div>
+            <img
+                src= {socialmediaImage}
+                alt="Social Media"
+                className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[320px] object-contain"
+            />
           </div>
           <div className="w-full lg:w-1/2 text-white space-y-4 sm:space-y-6 max-w-xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
