@@ -189,49 +189,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
-      <section className="w-full flex flex-col items-center py-8 sm:py-12 md:py-20 px-4 sm:px-6 bg-[#0B85FF]">
-        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-4xl lg:max-w-5xl xl:max-w-[1320px] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-          {/* Text Content */}
-          <div className="w-full md:w-[499px] flex flex-col items-start gap-4 md:gap-[18px]">
-            {/* Heading */}
-            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold leading-tight md:leading-[58px]">
-              Ready to launch <br />
-              something amazing <br />
-              with Techno Vanam?
-            </h2>
-            {/* Paragraph */}
-            <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed md:leading-[30px]">
-              Our creative experts are here to design, develop, and deliver high-performing
-              digital experiences tailored to your brand. Let’s build something great together.
-            </p>
-            {/* Button */}
-            <div className="pt-4 sm:pt-6 md:pt-[30px] pb-2 md:pb-[11px]">
-              <button className="flex flex-row items-center gap-1 px-6 sm:px-8 md:px-[39px] py-3 sm:py-4 md:py-[27px] bg-white text-[#2388FF] font-bold text-sm sm:text-base md:text-[18px] leading-tight md:leading-[20px] rounded-full border border-white shadow-md">
-                Contact Us
-                <svg
-                  className="w-3 sm:w-4 md:w-[14.82px] h-3 sm:h-4 md:h-[14.01px] transform -scale-y-100"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7-7l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          {/* Image Section */}
-          <div className="w-full md:w-[500px] h-[200px] sm:h-[300px] md:h-[500px]">
-            <img
-              src="https://via.placeholder.com/500x500.png?text=Social+Media+Image"
-              alt="Social Media"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-      </section>
     </>
   );
 };
