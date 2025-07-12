@@ -65,42 +65,64 @@ const servicesRef = useRef(null);
       });
     }
   };
-    // Vertical scroll to horizontal scroll logic for servicesRef
-  useEffect(() => {
-    const container = servicesRef.current;
-    if (!container) return;
+useEffect(() => {
+  const container = servicesRef.current;
+  if (!container) return;
 
-    const onWheel = (e) => {
-      const delta = e.deltaY;
+  const scrollAmount = 40;
 
-      const containerTop = container.offsetTop;
-      const containerBottom = containerTop + container.offsetHeight;
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
+  const isFullyInView = () => {
+    const containerTop = container.offsetTop;
+    const containerBottom = containerTop + container.offsetHeight;
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
 
-      const isFullyInView =
+    return (
       containerTop >= scrollTop &&
-      containerBottom <= scrollTop + windowHeight;
+      containerBottom <= scrollTop + windowHeight
+    );
+  };
 
-      if (!isFullyInView) return;
+  const onWheel = (e) => {
+    if (!isFullyInView()) return;
 
-      const scrollAmount = 40;
+    const delta = e.deltaY;
+    const atEnd = container.scrollLeft >= container.scrollWidth - container.clientWidth;
+    const atStart = container.scrollLeft <= 0;
 
-      if (
-        (delta > 0 && container.scrollLeft < container.scrollWidth - container.clientWidth) ||
-        (delta < 0 && container.scrollLeft > 0)
-      ) {
-        e.preventDefault(); // prevent vertical scrolling
-        container.scrollLeft += delta > 0 ? scrollAmount : -scrollAmount;
-      }
-    };
+    if ((delta > 0 && !atEnd) || (delta < 0 && !atStart)) {
+      e.preventDefault();
+      container.scrollLeft += delta > 0 ? scrollAmount : -scrollAmount;
+    }
+  };
 
-    window.addEventListener("wheel", onWheel, { passive: false });
+  const onKeyDown = (e) => {
+    if (!isFullyInView()) return;
 
-    return () => {
-      window.removeEventListener("wheel", onWheel);
-    };
-  }, []);
+    const keys = ["ArrowDown", "ArrowUp", "PageDown", "PageUp", " "];
+    if (!keys.includes(e.key)) return;
+
+    const atEnd = container.scrollLeft >= container.scrollWidth - container.clientWidth;
+    const atStart = container.scrollLeft <= 0;
+
+    if ((e.key === "ArrowDown" || e.key === "PageDown" || e.key === " ") && !atEnd) {
+      e.preventDefault();
+      container.scrollLeft += scrollAmount;
+    } else if ((e.key === "ArrowUp" || e.key === "PageUp") && !atStart) {
+      e.preventDefault();
+      container.scrollLeft -= scrollAmount;
+    }
+  };
+
+  window.addEventListener("wheel", onWheel, { passive: false });
+  window.addEventListener("keydown", onKeyDown);
+
+  return () => {
+    window.removeEventListener("wheel", onWheel);
+    window.removeEventListener("keydown", onKeyDown);
+  };
+}, []);
+
 
   // IntersectionObserver to trigger animations
   useEffect(() => {
