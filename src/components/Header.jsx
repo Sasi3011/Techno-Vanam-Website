@@ -19,13 +19,13 @@ const Header = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo + Brand Name */}
         <Link to="/" className="flex items-center gap-3 text-xl font-bold text-gray-800">
-          <img src="src/assets/logo.png" alt="Logo" className="h-8 w-auto object-contain" />
-          <span className="text-lg md:text-xl font-bold">Techno Vanam</span>
+          <img src="src/assets/logo.png" alt="Logo" className="h-10  w-auto object-contain" />
+          <span className="text-lg md:text-2xl font-bold">Techno Vanam</span>
         </Link>
 
         {/* Desktop Navigation + CTA */}
         <div className="hidden md:flex items-center gap-8">
-          <nav className="flex gap-6 text-sm font-medium text-gray-700">
+          <nav className="flex gap-6 text-md font-medium text-gray-700">
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
@@ -33,7 +33,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-blue-600 font-semibold"
-                    : "hover:text-blue-500 transition"
+                    : "hover:text-blue-600 transition"
                 }
               >
                 {item.name}
@@ -43,7 +43,7 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className="ml-4 px-5 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
+            className="ml-4 px-5 py-3 bg-blue-600 text-white rounded-full text-md font-medium hover:bg-blue-700 transition"
           >
             Get in Touch
           </Link>
