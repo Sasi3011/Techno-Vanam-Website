@@ -4,21 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import cardImage1 from "../assets/ui ux.png";
 import cardImage2 from "../assets/poster.png";
 import cardImage3 from "../assets/n.png";
-import designImage from '../assets/Home Page/Project Design Phase.png';
-import devImage from '../assets/Home Page/Project Development Phase.png';
-import ideaImage from '../assets/Home Page/Project Idea Phase.png';
-import launchImage from '../assets/Home Page/Project Launch Phase.png';
-import researchImage from '../assets/Home Page/Project Research Phase.png';
-import supportImage from '../assets/Home Page/Support Phase.png';
-import ideaicon from '../assets/Home Page/Idea Phase Icon.png';
-import researchicon from '../assets/Home Page/Research Phase Icon.png';
-import designicon from '../assets/Home Page/Design Phase Icon.png';
-import devicon from '../assets/Home Page/Development Phase Icon.png';
-import launchicon from '../assets/Home Page/Launch Phase Icon.png';
-import supporticon from '../assets/Home Page/Support Phase Icon.png';
-import athlixirImage from '../assets/Home Page/Athlixir.png';
-import socialmediaImage from '../assets/Home Page/Social Media Image.png';
-import pastprojectsImage from '../assets/Home Page/Past Projects.png';
 
 const steps = [
   {
@@ -27,8 +12,7 @@ const steps = [
     description:
       "We start by understanding your goals, vision, and challenges. Then, we create a clear action plan tailored to your project's needs.",
     bgColor: "bg-[#FFEFA8]",
-    img: ideaImage,
-    icon: ideaicon,
+    icon: "/icons/idea.png",
   },
   {
     id: 2,
@@ -36,8 +20,7 @@ const steps = [
     description:
       "Through a detailed questionnaire and business analysis, we learn what makes your brand unique — so we can design solutions that truly fit.",
     bgColor: "bg-[#D9E8FF]",
-    img: researchImage,
-    icon: researchicon,
+    icon: "/icons/research.png",
   },
   {
     id: 3,
@@ -45,35 +28,15 @@ const steps = [
     description:
       "Whether it's a website, app, or creative poster, our designers craft intuitive interfaces and eye-catching visuals that reflect your brand identity.",
     bgColor: "bg-[#FFDADE]",
-    img: designImage,
-    icon: designicon,
+    icon: "/icons/design.png",
   },
   {
     id: 4,
     title: "4. Development",
     description:
       "Our developers bring your project to life with fast, responsive, and SEO-optimized websites built using the latest technologies and best practices.",
-    bgColor: "bg-[#D9E8FF]",
-    img: devImage,
-    icon: devicon,
-  },
-  {
-    id: 5,
-    title: "5. Launch",
-    description:
-      "Our developers bring your project to life with fast, responsive, and SEO-optimized websites built using the latest technologies and best practices.",
-    bgColor: "bg-[#A79BF4]",
-    img: launchImage,
-    icon: launchicon,
-  },
-  {
-    id: 6,
-    title: "6. Support",
-    description:
-      "Our developers bring your project to life with fast, responsive, and SEO-optimized websites built using the latest technologies and best practices.",
-    bgColor: "bg-[#E9FDE4]",
-    img: supportImage,
-    icon: supporticon,
+    bgColor: "bg-[#E2FFE3]",
+    icon: "/icons/development.png",
   },
 ];
 
@@ -91,7 +54,7 @@ const projects = [
 ];
 
 const Home = () => {
-  const serviceScrollRef = useRef(null);
+const servicesRef = useRef(null);
   const cardRefs = useRef([]);
 
   const scrollHorizontally = (ref, direction, step = 300) => {
@@ -102,6 +65,42 @@ const Home = () => {
       });
     }
   };
+    // Vertical scroll to horizontal scroll logic for servicesRef
+  useEffect(() => {
+    const container = servicesRef.current;
+    if (!container) return;
+
+    const onWheel = (e) => {
+      const delta = e.deltaY;
+
+      const containerTop = container.offsetTop;
+      const containerBottom = containerTop + container.offsetHeight;
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      const isFullyInView =
+      containerTop >= scrollTop &&
+      containerBottom <= scrollTop + windowHeight;
+
+      if (!isFullyInView) return;
+
+      const scrollAmount = 40;
+
+      if (
+        (delta > 0 && container.scrollLeft < container.scrollWidth - container.clientWidth) ||
+        (delta < 0 && container.scrollLeft > 0)
+      ) {
+        e.preventDefault(); // prevent vertical scrolling
+        container.scrollLeft += delta > 0 ? scrollAmount : -scrollAmount;
+      }
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", onWheel);
+    };
+  }, []);
 
   // IntersectionObserver to trigger animations
   useEffect(() => {
@@ -128,10 +127,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="font-poppins w-full max-w-[100vw] overflow-x-hidden">
+    <div className="font-poppins min-h-screen w-full max-w-[100vw] overflow-x-hidden">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-16 bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-10 w-full">
+      <section className="px-4 sm:px-6 lg:px-8 py-10 sm:py-16 bg-white min-h-[50vh]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-10">
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-blue-500 text-xs sm:text-sm font-semibold uppercase">DESIGN & DEVELOPMENT STUDIO</h2>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-3 sm:mt-4">
@@ -147,18 +146,16 @@ const Home = () => {
               Get in Touch
             </Link>
           </div>
-          <div className="flex-1 flex justify-center md:justify-end">
-            <img
-              src="/illustration-hero.png"
-              alt="Hero"
-              className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] object-contain"
-            />
-          </div>
+          <img
+            src="/illustration-hero.png"
+            alt="Hero"
+            className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mt-6PMG md:mt-0"
+          />
         </div>
       </section>
-
+      
       {/* Our Services */}
-      <section className="min-h-screen flex items-center justify-center bg-blue-500 py-10 sm:py-16 px-4 sm:px-6 lg:px-10 text-white">
+      <section className="bg-blue-500 py-10 sm:py-16 px-4 sm:px-6 lg:px-10 text-white">
         <style>
           {`
             .animate-slideIn {
@@ -179,7 +176,7 @@ const Home = () => {
             .horizontal-card:nth-child(3) { animation-delay: 0.3s; }
           `}
         </style>
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
             <div>
               <p className="uppercase text-xs sm:text-sm font-semibold">Our Services</p>
@@ -196,13 +193,13 @@ const Home = () => {
           </div>
 
           {/* Scrollable Cards */}
-          <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-            <div className="flex gap-4 sm:gap-6 w-max">
+          <div ref={servicesRef} className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+            <div className="flex gap-4 sm gap-6 w-max">
               <div
                 ref={(el) => (cardRefs.current[0] = el)}
                 className="horizontal-card flex flex-col sm:flex-row justify-between items-center bg-white rounded-3xl w-[90vw] sm:w-[800px] md:w-[900px] h-[300px] sm:h-[350px] md:h-[400px] min-w-[90vw] sm:min-w-[800px] overflow-hidden shadow-md opacity-0"
               >
-                <div className="flex flex-col justify-center items-start p-6 sm:p-8 md:p-12 w-full sm:w-[50%] min-w-[50%] h-full space-y-4 sm:space-y-6">
+                <div className="flex flex-col justify-center items-start p-6 sm:p-8 md:p-12 w-full sm:w-[50%] min-w-[0%] h-full space-y-4 sm:space-y-6">
                   <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold leading-tight text-[#19213D] font-['Product Sans']">
                     UI/UX Design
                   </h3>
@@ -222,11 +219,11 @@ const Home = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="flex items-center justify-center p-2 sm:p-4 w-full sm:w-[50%] min-w-[50%] h-full bg-[#B1B0FE] rounded-3xl">
+                <div className="flex items-start justify-center p-2 sm:p-4 w-full sm:w-[50%] min-w-[50%] h-full bg-[#B1B0FE] rounded-3xl">
                   <img
                     src={cardImage1}
                     alt="UI/UX Graphic"
-                    className="w-full h-full object-contain"
+                    className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-contain"
                   />
                 </div>
               </div>
@@ -242,7 +239,7 @@ const Home = () => {
                   <p className="text-sm sm:text-base text-[#667097] mb-4 sm:mb-6 font-['Product Sans']">
                     We help your brand stand out and communicate clearly through bold, creative visuals — from posters to promotional graphics, all designed to captivate and convert.
                   </p>
-                  <div className="flex flex-row items-center gap-1 text-[#2388FF] uppercase font-bold tracking-[0.06em] text-xs sm:text-sm font-['Product Sans']">
+                  <div className="flex flex-row items-center gap-1 text-[#238 Police2388FF] uppercase font-bold tracking-[0.06em] text-xs sm:text-sm font-['Product Sans']">
                     View More
                     <svg className="w-4 h-4 transform rotate-180" fill="#2388FF" viewBox="0 0 24 24">
                       <path d="M10 17l5-5-5-5v10z" />
@@ -290,7 +287,7 @@ const Home = () => {
       </section>
 
       {/* Why Work With Us */}
-      <section className="min-h-screen flex items-center justify-center py-16 sm:py-24 md:py-40 bg-white">
+      <section className="py-16 sm:py-24 md:py-40 flex flex-col items-center bg-white">
         <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 flex flex-col gap-8 sm:gap-10">
           <div className="flex flex-col gap-4 text-center md:text-left">
             <h2 className="uppercase text-[#2388FF] text-xs sm:text-sm font-bold tracking-widest">
@@ -303,7 +300,7 @@ const Home = () => {
               With dozens of successful design and development projects, we've built a straightforward and effective process that ensures your brand looks great, functions flawlessly, and connects with your audience.
             </p>
           </div>
-          <div className="flex flex-col gap-12 sm:gap-16 md:gap-24 mt-10 sm:mt-20">
+          <div className="flex flex-col gap-12 sm:gap-16 md:pas-24 mt-10 sm:mt-20">
             {steps.map((step) => (
               <div
                 key={step.id}
@@ -325,12 +322,12 @@ const Home = () => {
                   </p>
                 </div>
                 <div
-                  className={`relative w-full md:w-[350px] lg:w-[350px] h-[180px] sm:h-[200px] md:h-[220px] ${step.bgColor} rounded-3xl overflow-hidden flex items-start justify-start`}
+                  className={`relative w-full md:w-[80%] lg:w-[480px] h-[250px] sm:h-[300px] md:h-[340px] ${step.bgColor} rounded-3xl overflow-hidden flex items-center justify-center`}
                 >
                   <img
-                    src={step.img}
+                    src={step.icon}
                     alt={step.title}
-                    className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain ml-4 mt-4"
+                    className="w-3/4 h-3/4 object-contain opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/10"></div>
                 </div>
@@ -341,8 +338,8 @@ const Home = () => {
       </section>
 
       {/* Past Projects */}
-      <section className="min-h-screen flex items-center justify-center bg-white py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center w-full">
+      <section className="bg-white py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-xs sm:text-sm uppercase font-bold tracking-wider text-blue-600 mb-2">
             Past Projects
           </h3>
@@ -360,7 +357,7 @@ const Home = () => {
                   className="min-w-[250px] sm:min-w-[300px] md:min-w-[350px] h-[200px] sm:h-[250px] md:h-[298px] rounded-3xl border border-[#EBEFF6] shadow-md overflow-hidden bg-white"
                 >
                   <img
-                    src={pastprojectsImage}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
@@ -391,8 +388,8 @@ const Home = () => {
       </section>
 
       {/* Our Products */}
-      <section className="min-h-screen flex items-center justify-center bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto text-center w-full">
+      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto text-center">
           <p className="text-xs sm:text-sm text-blue-600 font-semibold mb-2 uppercase">
             Our Products
           </p>
@@ -400,61 +397,55 @@ const Home = () => {
             Products by <span className="text-blue-600">Techno Vanam</span>
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">
-            At Techno Vanam, we don't just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
+            At Techno Vanam, we don’t just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
           </p>
-          <div className="mt-8 sm:mt-12 bg-blue-50 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-10">
-            <div className="max-w-xl">
-              <h3 className="text-blue-700 text-lg sm:text-xl font-bold mb-4">ATHLIXIR</h3>
-              <p className="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6">
-                Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-left text-blue-900 font-semibold mb-4 sm:mb-6">
-                <div>
-                  <p className="text-xl sm:text-2xl">50+</p>
-                  <p className="text-xs sm:text-sm font-medium text-gray-600">
-                    Target athlete communities
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xl sm:text-2xl">300,000+</p>
-                  <p className="text-xs sm:text-sm font-medium text-gray-600">
-                    Projected performance insights powered by AI
-                  </p>
-                </div>
+        </div>
+        <div className="mt-8 sm:mt-12 bg-blue-50 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-10">
+          <div className="max-w-xl">
+            <h3 className="text-blue-700 text-lg sm:text-xl font-bold mb-4">ATHLIXIR</h3>
+            <p className="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6">
+              Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-left text-blue-900 font-semibold mb-4 sm:mb-6">
+              <div>
+                <p className="text-xl sm:text-2xl">50+</p>
+                <p className="text-xs sm:text-sm font-medium text-gray-600">
+                  Target athlete communities
+                </p>
               </div>
-              <p className="text-blue-600 font-medium text-xs sm:text-sm">
-                COMING SOON — BE PART OF THE JOURNEY →
-              </p>
+              <div>
+                <p className="text-xl sm:text-2xl">300,000+</p>
+                <p className="text-xs sm:text-sm font-medium text-gray-600">
+                  Projected performance insights powered by AI
+                </p>
+              </div>
             </div>
-            <div className="w-full max-w-[300px] sm:max-w-[400px]">
-              <div className="aspect-[4/3] rounded-xl shadow-md overflow-hidden">
-                <img
-                  src={athlixirImage}
-                  alt="Athlixir Product"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <p className="text-blue-600 font-medium text-xs sm:text-sm">
+              COMING SOON — BE PART OF THE JOURNEY →
+            </p>
+          </div>
+          <div className="w-full max-w-[300px] sm:max-w-[400px]">
+            <div className="aspect-[4/3] bg-gray-300 rounded-xl shadow-md flex items-center justify-center text-gray-500 text-xs sm:text-sm">
+              Image Placeholder
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="min-h-screen flex items-center justify-center relative isolate overflow-hidden pt-16 sm:pt-24 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-10 bg-gradient-to-br from-[#0047FF] via-[#0B74F8] to-[#0047FF] rounded-t-[80px] sm:rounded-t-[160px]">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 w-full">
+      <section className="relative isolate overflow-hidden pt-16 sm:pt-24 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-10 bg-gradient-to-br from-[#0047FF] via-[#0B74F8] to-[#0047FF] rounded-t-[80px] sm:rounded-t-[160px]">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10">
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
-            <img
-                src={socialmediaImage}
-                alt="Social Media"
-                className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[320px] object-contain"
-            />
+            <div className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[320px] bg-white/10 rounded-xl flex items-center justify-center text-white text-xs sm:text-sm">
+              Social Media Image Placeholder
+            </div>
           </div>
           <div className="w-full lg:w-1/2 text-white space-y-4 sm:space-y-6 max-w-xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Ready to launch something amazing with Techno Vanam?
             </h2>
             <p className="text-sm sm:text-base md:text-lg leading-7 text-white/90">
-              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let's build something great together.
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
             </p>
             <button className="mt-4 inline-flex items-center gap-2 bg-white text-[#2388FF] font-bold px-4 sm:px-6 py-2 sm:py-4 rounded-full shadow-md hover:bg-gray-100 transition text-sm sm:text-base">
               Contact Us →
