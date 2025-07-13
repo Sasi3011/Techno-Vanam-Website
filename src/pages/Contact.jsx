@@ -102,7 +102,7 @@ export default function Contact() {
       </h1>
       <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base lg:text-lg">
         Fill the form below and one of our team members will get back to you
-        within 24 business hours to schedule a project discovery call.
+        within 24 business hours <br/>to schedule a project discovery call.
       </p>
 
       {submissionStatus === "success" && (
@@ -130,7 +130,7 @@ export default function Contact() {
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={`w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-2 transition-all outline-none placeholder-gray-500 
+              className={`w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-3 transition-all outline-none placeholder-gray-500 
                 ${formSubmitted && !name.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
             />
           </div>
@@ -149,7 +149,7 @@ export default function Contact() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-2 transition-all outline-none placeholder-gray-500 
+              className={`w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-3 transition-all outline-none placeholder-gray-500 
                 ${formSubmitted && !email.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
             />
           </div>
@@ -165,7 +165,7 @@ export default function Contact() {
               placeholder="Enter your company name"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              className="w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-2 transition-all outline-none placeholder-gray-500 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-3 transition-all outline-none placeholder-gray-500 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
             />
           </div>
 
@@ -180,7 +180,7 @@ export default function Contact() {
               placeholder="Enter your website URL"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
-              className="w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-2 transition-all outline-none placeholder-gray-500 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-3 transition-all outline-none placeholder-gray-500 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
             />
           </div>
         </div>
@@ -193,7 +193,7 @@ export default function Contact() {
           {formSubmitted && selectedServices.length === 0 && (
             <p className="text-red-500 text-xs sm:text-sm mb-1 sm:mb-2">Please select at least one service.</p>
           )}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 ">
             {servicesList.map((service, index) => {
               const isSelected = selectedServices.includes(service.name);
               return (
@@ -201,13 +201,13 @@ export default function Contact() {
                   key={index}
                   type="button"
                   onClick={() => toggleService(service.name)}
-                  className={`min-h-[90px] sm:min-h-[110px] md:min-h-[160px] flex flex-col items-center p-2 sm:p-3 md:p-4 pt-3 sm:pt-4 md:pt-6 bg-white rounded-xl sm:rounded-2xl shadow cursor-pointer border-2 transition-all duration-300 ease-in-out 
+                  className={`min-h-[100px] sm:min-h-[120px] md:min-h-[170px] flex flex-col items-center p-2 sm:p-3 md:p-4 pt-3 sm:pt-4 md:pt-6 pb-2  bg-white rounded-2xl sm:rounded-3xl shadow cursor-pointer border-3 transition-all duration-300 ease-in-out 
                   ${isSelected ? service.color : "border-gray-200 hover:border-gray-400"}`}
                 >
                   <img
                     src={service.image}
                     alt={service.name}
-                    className="mb-2 sm:mb-3 md:mb-4 w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 object-cover rounded-md sm:rounded-lg shadow-sm"
+                    className="mb-4 sm:mb-6 md:mb-8 w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 object-cover rounded-md sm:rounded-lg shadow-sm"
                   />
                   <span className="text-xs sm:text-sm md:text-base font-semibold text-gray-700 text-center">
                     {service.name}
@@ -227,7 +227,7 @@ export default function Contact() {
             {['One-time project', 'Ongoing maintenance', 'Both'].map((type, index) => (
               <label
                 key={index}
-                className="flex-1 min-w-[80px] sm:min-w-[100px] flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl border-2 border-gray-300 hover:border-blue-500 cursor-pointer transition-all"
+                className="flex-1 min-w-[80px] sm:min-w-[100px] flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-4 rounded-3xl sm:rounded-4xl  border-3 border-gray-300 hover:border-blue-500 cursor-pointer transition-all"
               >
                 <input
                   type="radio"
@@ -252,7 +252,7 @@ export default function Contact() {
             {['ASAP', '1 month', '2 – 3 months', '3+ months'].map((deadlineOption, index) => (
               <label
                 key={index}
-                className="flex-1 min-w-[80px] sm:min-w-[100px] flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl border-2 border-gray-300 hover:border-blue-500 cursor-pointer transition-all text-xs sm:text-sm md:text-base font-semibold text-gray-700"
+                className="flex-1 min-w-[80px] sm:min-w-[100px] flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-4 rounded-3xl sm:rounded-4xl border-3 border-gray-300 hover:border-blue-500 cursor-pointer transition-all text-xs sm:text-sm md:text-base font-semibold text-gray-700"
               >
                 <input
                   type="radio"
@@ -282,7 +282,7 @@ export default function Contact() {
             value={message}
             onChange={handleTextareaChange}
             placeholder="Write here..."
-            className={`w-full resize-none px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-2 transition-all outline-none placeholder-gray-500 ${
+            className={`w-full resize-none px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3 rounded-md border-3 transition-all outline-none placeholder-gray-500 ${
               formSubmitted && message.trim() === ""
                 ? "border-red-500 focus:border-red-500 focus:ring-red-100"
                 : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"

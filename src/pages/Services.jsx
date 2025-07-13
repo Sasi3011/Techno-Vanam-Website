@@ -85,8 +85,8 @@ const Services = () => {
       <section className="w-full flex flex-col items-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-7xl flex flex-col items-center">
           <div className="w-full flex flex-col items-start gap-4 sm:gap-6">
-            <div className="w-full text-center sm:text-left">
-              <p className="text-blue-600 text-xs sm:text-sm font-semibold uppercase tracking-wider">
+            <div className="w-full  sm:text-left">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-blue-600 font-semibold uppercase">
                 Services
               </p>
               <h2 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-2 sm:mt-3">
