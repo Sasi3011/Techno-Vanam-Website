@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const teamMembers = [
@@ -55,160 +54,136 @@ const values = [
 export default function About() {
   return (
     <>
-      {/* ===== Outer section – keeps the whole hero 534 px tall and centered ===== */}
-      <section className="relative flex flex-col items-center pt-10 sm:pt-16 md:pt-[94px] pb-0">
-        {/* inner container – matches 1320 px canvas */}
-        <div className="flex flex-col items-start px-2 sm:px-4 md:px-6 w-full max-w-[95%] sm:max-w-[90%] md:max-w-[1320px] min-h-[400px] sm:min-h-[450px] md:min-h-[534.84px]">
-          {/* flex row: text column + art column */}
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 md:gap-[55px] w-full">
-            {/* ---------- LEFT: copy block ---------- */}
-            <div className="w-full sm:w-[515px] h-[250px] sm:h-[320px] relative">
-              {/* “We are …” headline */}
-              <div className="absolute w-[90%] sm:w-[460px] h-[60px] sm:h-[80px] top-0 left-0">
-                {/* “We are” */}
-                <h1 className="font-bold text-3xl sm:text-4xl md:text-[58px] leading-tight md:leading-[68px] text-[#19213D]">
+      {/* ===== Hero Section ===== */}
+      <section className="relative flex flex-col items-center pt-6 sm:pt-8 md:pt-16 lg:pt-[94px] pb-8 sm:pb-12 md:pb-16">
+        <div className="flex flex-col items-start px-4 sm:px-6 md:px-8 w-full max-w-[95%] sm:max-w-[90%] md:max-w-7xl">
+          <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-10 w-full">
+            {/* Left: Copy Block */}
+            <div className="w-full md:w-1/2">
+              <div className="w-full">
+                <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-[58px] leading-tight text-[#19213D]">
                   We are
                 </h1>
-
-                {/* logo + “Techno Vanam” */}
-                <div className="absolute left-[150px] sm:left-[190px] top-[-0.42px] w-[250px] sm:w-[314px] h-[60px] sm:h-[80px]">
+                <div className="flex items-center mt-2 sm:mt-3">
                   <img
                     src="/placeholder-logo.svg"
                     alt="logo"
-                    className="absolute w-[60px] sm:w-[80px] md:w-[80px] h-[60px] sm:h-[80px]"
+                    className="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20"
                   />
-                  <span className="absolute left-[60px] sm:left-[75px] top-[10px] sm:top-[18.58px] font-black text-xl sm:text-2xl md:text-[35px] leading-[30px] sm:leading-[42px] text-[#2F2F2F]">
-                    Techno Vanam
+                  <span className="ml-2 sm:ml-3 font-black text-lg sm:text-xl md:text-2xl lg:text-[35px] leading-tight text-[#2F2F2F]">
+                    Techno Vanam
                   </span>
                 </div>
               </div>
-
-              {/* paragraph */}
-              <p className="absolute top-[60px] sm:top-[80px] left-0 w-[90%] sm:w-[460px] text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[30px] text-[#667097]">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg leading-relaxed text-[#667097]">
                 We’re not just an agency — we’re a creative tech studio passionate
                 about crafting impactful digital products. From empowering
                 startups to building our own innovations, we design, develop, and
                 launch experiences that move people and businesses forward.
               </p>
-
-              {/* “Scroll down” cue */}
-              <div className="absolute top-[200px] sm:top-[258px] left-0 flex flex-col pt-4 sm:pt-[33px] pb-1 sm:pb-[5px]">
-                <div className="flex items-center gap-1 sm:gap-2">
-                  {/* mouse icon */}
-                  <span className="flex justify-center items-end w-[14px] sm:w-[18px] h-[18px] sm:h-[24px] min-w-[14px] sm:min-w-[18px] border-2 border-[#2388FF] rounded-full">
-                    <span className="w-[3px] sm:w-[4px] h-[3px] sm:h-[4px] bg-[#2388FF] rounded-full mb-[4px] sm:mb-[6px]" />
-                  </span>
-                  {/* label */}
-                  <span className="font-bold uppercase tracking-[0.06em] text-xs sm:text-[16px] leading-[14px] sm:leading-[18px] text-[#2388FF]">
-                    Scroll down
-                  </span>
-                </div>
+              <div className="mt-6 sm:mt-8 flex items-center gap-2">
+                <span className="flex justify-center items-end w-4 sm:w-5 h-4 sm:h-5 border-2 border-[#2388FF] rounded-full">
+                  <span className="w-1 h-1 bg-[#2388FF] rounded-full mb-1" />
+                </span>
+                <span className="font-bold uppercase text-xs sm:text-sm text-[#2388FF]">
+                  Scroll down
+                </span>
               </div>
             </div>
-
-            {/* ---------- RIGHT: hero artwork ---------- */}
-            <div className="w-full sm:w-[839px] min-h-[300px] sm:min-h-[400px] md:min-h-[534.84px] relative isolate">
-              {/* white cylinders BG */}
+            {/* Right: Hero Artwork */}
+            <div className="w-full md:w-1/2 mt-6 md:mt-0 relative">
               <img
                 src="/placeholder-cylinders.jpg"
-                alt="3‑D cylinders"
-                className="absolute inset-0 w-full sm:w-[964.63px] h-full object-cover z-0"
+                alt="3-D cylinders"
+                className="w-full h-auto max-h-[534px] object-cover"
               />
-              {/* floating circular logo */}
               <img
                 src="/placeholder-circle-logo.svg"
                 alt="logo circle"
-                className="absolute left-[150px] sm:left-[238px] top-1 sm:top-[12px] w-[300px] sm:w-[435px] h-[200px] sm:h-[297px] object-contain z-10"
+                className="absolute inset-x-0 mx-auto top-4 sm:top-6 w-3/4 sm:w-2/3 md:w-1/2 h-auto object-contain"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative flex flex-col items-center bg-[#2388FF] pt-10 sm:pt-16 md:pt-[64px] pb-20 sm:pb-32 md:pb-[128px] rounded-b-lg sm:rounded-b-xl md:rounded-b-[64px]">
-        {/* whisper words in 40 % opacity */}
-        <h2 className="font-bold text-3xl sm:text-4xl md:text-[94px] leading-tight sm:leading-[96px] text-white/40">
+      {/* ===== Transform Section ===== */}
+      <section className="relative flex flex-col items-center bg-[#2388FF] pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-20 md:pb-32 rounded-b-2xl">
+        <h2 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-[94px] leading-tight text-white/40 text-center">
           design
         </h2>
-        {/* main headline */}
-        <h1 className="font-bold text-3xl sm:text-4xl md:text-[94px] leading-tight sm:leading-[96px] text-white text-center">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-[94px] leading-tight text-white text-center">
           We transform digital presence
         </h1>
-        <h2 className="font-bold text-3xl sm:text-4xl md:text-[94px] leading-tight sm:leading-[96px] text-white/40">
+        <h2 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-[94px] leading-tight text-white/40 text-center">
           develop
         </h2>
       </section>
 
-      {/* ===== Light‑grey background for the content grid ===== */}
-      <section className="flex flex-col items-center bg-[#F6F8FC] px-0 pt-10 sm:pt-16 md:pt-[55px] pb-10 sm:pb-16 md:pb-[94px]">
-        <div className="relative w-full max-w-[95%] sm:max-w-[90%] md:max-w-[1320px]">
-          {/* ---- Centered “What drives us” header ---- */}
-          <div className="flex flex-col items-center gap-1 sm:gap-2 mx-auto mb-10 sm:mb-20 md:mb-[162px] max-w-[90%] sm:max-w-[723px]">
-            <h2 className="text-2xl sm:text-3xl md:text-[42px] leading-tight sm:leading-[52px] font-bold text-[#19213D] text-center">
+      {/* ===== Content Grid Section ===== */}
+      <section className="flex flex-col items-center bg-[#F6F8FC] px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-20 md:pb-24">
+        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-7xl">
+          {/* What Drives Us */}
+          <div className="flex flex-col items-center gap-4 sm:gap-6 mb-8 sm:mb-12 md:mb-20 text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[42px] font-bold text-[#19213D]">
               What Drives Us
             </h2>
-            <p className="text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-[30px] text-[#667097] text-center">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-[#667097] max-w-3xl">
               In 2025, we began building our own digital products—driven by the
               same vision and purpose that fuel everything we do: turning ideas
               into impactful, user‑centered experiences.
             </p>
           </div>
 
-          {/* ================= FIRST ROW (Mission + Illustration) ================= */}
-          <div className="flex gap-2 sm:gap-4 md:gap-[28px] px-2 sm:px-4 md:px-6 lg:px-0 justify-center mb-10 sm:mb-12 md:mb-[75px] flex-wrap">
-            {/* --- Mission card --- */}
-            <div className="flex flex-col gap-4 sm:gap-6 md:gap-10 p-4 sm:p-6 md:p-[37px] w-full sm:w-[765px] bg-white border border-[#EBEFF6] shadow-[0_6px_20px_rgba(20,20,43,0.06)] rounded-lg sm:rounded-xl md:rounded-[32px]">
-              <h3 className="text-xl sm:text-2xl md:text-[32px] leading-tight sm:leading-[42px] font-bold text-[#19213D]">
+          {/* First Row: Mission + Illustration */}
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-12 md:mb-20">
+            {/* Mission Card */}
+            <div className="w-full md:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 md:p-8">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#19213D] mb-4">
                 Our Mission: <br />
                 Turning Vision into Reality
               </h3>
-
-              <p className="text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-[30px] text-[#667097] max-w-[90%] sm:max-w-[686px]">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-[#667097] mb-6">
                 We believe great design is the foundation of every successful
-                brand. At Techno Vanam, we craft intuitive user experiences,
-                build high‑performance websites, and design graphics that leave
+                brand. At Techno Vanam, we craft intuitive user experiences,
+                build high-performance websites, and design graphics that leave
                 a lasting impression. Innovation and functionality guide
                 everything we create.
               </p>
-
-              {/* bullets */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6 pt-2 sm:pt-4 md:pt-6">
-                {/* bullet 1 */}
-                <div className="flex gap-2 sm:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="flex gap-4">
                   <div className="relative">
-                    <div className="w-[50px] sm:w-[68px] h-[50px] sm:h-[68px] rounded-[15px] sm:rounded-[20px] bg-[#F6F6F6]" />
+                    <div className="w-12 sm:w-16 h-12 sm:h-16 rounded-lg bg-[#F6F6F6]" />
                     <img
-                      src="/placeholder‑idea.svg"
+                      src="/placeholder-idea.svg"
                       alt=""
-                      className="absolute top-1/2 left-1/2 w-[20px] sm:w-[32px] h-[20px] sm:h-[32px] -translate-x-1/2 -translate-y-1/2"
+                      className="absolute top-1/2 left-1/2 w-6 sm:w-8 h-6 sm:h-8 -translate-x-1/2 -translate-y-1/2"
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-lg sm:text-xl md:text-[20px] leading-tight sm:leading-[22px] text-[#2F2F2F]">
-                      Design‑led Development
+                    <p className="font-bold text-base sm:text-lg text-[#2F2F2F]">
+                      Design-led Development
                     </p>
-                    <p className="text-sm sm:text-base md:text-[14px] leading-relaxed sm:leading-[21px] text-[#667097]">
+                    <p className="text-xs sm:text-sm text-[#667097]">
                       We blend aesthetics and technology to create products
                       users love.
                     </p>
                   </div>
                 </div>
-
-                {/* bullet 2 */}
-                <div className="flex gap-2 sm:gap-6">
+                <div className="flex gap-4">
                   <div className="relative">
-                    <div className="w-[50px] sm:w-[68px] h-[50px] sm:h-[68px] rounded-[15px] sm:rounded-[20px] bg-[#F6F6F6]" />
+                    <div className="w-12 sm:w-16 h-12 sm:h-16 rounded-lg bg-[#F6F6F6]" />
                     <img
-                      src="/placeholder‑star.svg"
+                      src="/placeholder-star.svg"
                       alt=""
-                      className="absolute top-1/2 left-1/2 w-[20px] sm:w-[30px] h-[20px] sm:h-[30px] -translate-x-1/2 -translate-y-1/2"
+                      className="absolute top-1/2 left-1/2 w-6 sm:w-8 h-6 sm:h-8 -translate-x-1/2 -translate-y-1/2"
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-lg sm:text-xl md:text-[20px] leading-tight sm:leading-[22px] text-[#2F2F2F]">
-                      Scalable & Creative
+                    <p className="font-bold text-base sm:text-lg text-[#2F2F2F]">
+                      Scalable & Creative
                     </p>
-                    <p className="text-sm sm:text-base md:text-[14px] leading-relaxed sm:leading-[21px] text-[#667097]">
+                    <p className="text-xs sm:text-sm text-[#667097]">
                       From startups to enterprises, we deliver flexible and
                       impactful digital solutions.
                     </p>
@@ -216,78 +191,68 @@ export default function About() {
                 </div>
               </div>
             </div>
-
-            {/* --- Illustration card --- */}
-            <div className="flex items-center justify-center w-full sm:w-[478px] min-h-[300px] sm:min-h-[400px] md:min-h-[430px] bg-white border border-[#EBEFF6] shadow-[0_6px_20px_rgba(20,20,43,0.06)] rounded-lg sm:rounded-xl md:rounded-[32px]">
+            {/* Illustration Card */}
+            <div className="w-full md:w-1/3 flex items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl">
               <img
-                src="/placeholder‑wireframe.png"
+                src="/placeholder-wireframe.png"
                 alt="Wireframe illustration"
-                className="max-w-[90%] sm:max-w-[352px]"
+                className="w-full max-w-[90%] h-auto"
               />
             </div>
           </div>
 
-          {/* ================= SECOND ROW (Trophy + Vision) ================= */}
-          <div className="flex gap-2 sm:gap-4 md:gap-[28px] px-2 sm:px-4 md:px-6 lg:px-0 justify-center mb-10 sm:mb-12 md:mb-[75px] flex-wrap">
-            {/* trophies illustration */}
-            <div className="relative w-full sm:w-[373px] min-h-[300px] sm:min-h-[400px] md:min-h-[430px] bg-white border border-[#EBEFF6] shadow-[0_6px_20px_rgba(20,20,43,0.06)] rounded-lg sm:rounded-xl md:rounded-[32px] flex items-center justify-center">
+          {/* Second Row: Trophy + Vision */}
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-12 md:mb-20">
+            {/* Trophy Card */}
+            <div className="w-full md:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center">
               <img
-                src="/placeholder‑trophy.png"
+                src="/placeholder-trophy.png"
                 alt="Trophy illustration"
-                className="max-w-[90%] sm:max-w-[369px]"
+                className="w-full max-w-[90%] h-auto"
               />
-              {/* Figma badge */}
               <img
-                src="/placeholder‑figma.png"
+                src="/placeholder-figma.png"
                 alt="Figma logo"
-                className="absolute left-2 sm:left-[17px] top-10 sm:top-[50px] w-[50px] sm:w-[76px]"
+                className="absolute left-4 top-6 sm:top-8 w-12 sm:w-16"
               />
-              {/* Explore tag */}
-              <div className="absolute bottom-4 sm:bottom-[34px] inset-x-0 flex flex-col items-center">
-                <button className="flex items-center gap-1 text-[#2388FF] text-xs sm:text-[16px] leading-[14px] sm:leading-[18px] font-bold uppercase tracking-[0.06em]">
-                  OUR SERVICES
+              <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
+                <button className="flex items-center gap-2 text-[#2388FF] text-xs sm:text-sm font-bold uppercase">
+                  OUR SERVICES
                   <svg
                     width="12"
-                    sm:width="16"
-                    md:width="16"
                     height="10"
-                    sm:height="14"
-                    md:height="14"
                     viewBox="0 0 16 14"
-                    className="-scale-y-100 fill-[#2388FF]"
+                    className="fill-[#2388FF]"
                   >
                     <path d="M1 7h14M9 1l6 6-6 6" stroke="#2388FF" />
                   </svg>
                 </button>
               </div>
-              {/* title */}
-              <p className="absolute top-[200px] sm:top-[257px] left-1/2 -translate-x-1/2 w-[90%] sm:w-[255px] text-center font-bold text-xl sm:text-2xl md:text-[32px] leading-tight sm:leading-[42px] text-[#19213D]">
-                Explore What <br /> We Do
+              <p className="absolute top-2/3 inset-x-0 text-center font-bold text-lg sm:text-xl md:text-2xl text-[#19213D]">
+                Explore What <br /> We Do
               </p>
             </div>
-
-            {/* Vision long card */}
-            <div className="relative flex flex-col gap-2 sm:gap-3 md:gap-5 p-4 sm:p-6 md:p-[62px_33px] w-full sm:w-[765px] min-h-[300px] sm:min-h-[400px] md:min-h-[430px] bg-white border border-[#EBEFF6] shadow-[0_6px_20px_rgba(20,20,43,0.06)] rounded-lg sm:rounded-xl md:rounded-[32px]">
-              <h3 className="text-xl sm:text-2xl md:text-[32px] leading-tight sm:leading-[42px] font-bold text-[#19213D]">
-                Our Vision:
+            {/* Vision Card */}
+            <div className="w-full md:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 md:p-8">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#19213D] mb-4">
+                Our Vision:
               </h3>
-              <p className="text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-[27px] text-[#667097]">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-[#667097] mb-4">
                 To build a digital ecosystem where design, technology, and
-                human‑centric thinking shape better experiences for all. We
+                human-centric thinking shape better experiences for all. We
                 envision a future where businesses—big or small—can access
-                high‑quality digital tools that drive growth, creativity, and
+                high-quality digital tools that drive growth, creativity, and
                 connection.
               </p>
-              <ul className="space-y-2 sm:space-y-3 mt-2 sm:mt-4">
+              <ul className="space-y-3">
                 {[
                   "Empowering creators through smart, intuitive platforms",
                   "Driving meaningful change with every project",
                   "Making digital innovation accessible to everyone",
                 ].map((txt, i) => (
-                  <li key={i} className="relative pl-6 sm:pl-9 text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-[27px] text-[#667097]">
-                    {/* green tick */}
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[16px] sm:w-[22px] h-[16px] sm:h-[22px] rounded-full border-2 border-[#31C65B] flex items-center justify-center">
-                      <span className="w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] rotate-45 border-b-2 border-r-2 border-[#31C65B]" />
+                  <li key={i} className="relative pl-8 text-sm sm:text-base md:text-lg leading-relaxed text-[#667097]">
+                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-4 sm:w-5 h-4 sm:h-5 rounded-full border-2 border-[#31C65B] flex items-center justify-center">
+                      <span className="w-2 h-2 rotate-45 border-b-2 border-r-2 border-[#31C65B]" />
                     </span>
                     {txt}
                   </li>
@@ -296,61 +261,51 @@ export default function About() {
             </div>
           </div>
 
-          {/* ================= THIRD ROW (Hubspot Card + CTA) ================= */}
-          <div className="flex gap-2 sm:gap-4 md:gap-[28px] px-2 sm:px-4 md:px-6 lg:px-0 justify-center flex-wrap">
-            {/* passion card */}
-            <div className="relative w-full sm:w-[374px] min-h-[300px] sm:min-h-[400px] md:min-h-[430px] bg-white border border-[#EBEFF6] shadow-[0_6px_20px_rgba(20,20,43,0.06)] rounded-lg sm:rounded-xl md:rounded-[32px] flex items-center justify-center">
+          {/* Third Row: HubSpot + CTA */}
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10">
+            {/* HubSpot Card */}
+            <div className="w-full md:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center">
               <img
-                src="/placeholder‑hubspot.png"
+                src="/placeholder-hubspot.png"
                 alt="HubSpot award"
-                className="max-w-[90%] sm:max-w-[378px]"
+                className="w-full max-w-[90%] h-auto"
               />
-              {/* see all tag */}
-              <div className="absolute bottom-4 sm:bottom-[34px] inset-x-0 flex flex-col items-center">
-                <button className="flex items-center gap-1 text-[#FF6C4C] text-xs sm:text-[16px] leading-[14px] sm:leading-[18px] font-bold uppercase tracking-[0.06em]">
-                  SEE ALL
+              <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
+                <button className="flex items-center gap-2 text-[#FF6C4C] text-xs sm:text-sm font-bold uppercase">
+                  SEE ALL
                   <svg
                     width="12"
-                    sm:width="16"
-                    md:width="16"
                     height="10"
-                    sm:height="14"
-                    md:height="14"
                     viewBox="0 0 16 14"
-                    className="-scale-y-100 stroke-[#FF6C4C]"
+                    className="stroke-[#FF6C4C]"
                   >
                     <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
                   </svg>
                 </button>
               </div>
-              {/* title */}
-              <p className="absolute top-[200px] sm:top-[255px] w-full text-center font-bold text-xl sm:text-2xl md:text-[32px] leading-tight sm:leading-[42px] text-[#19213D]">
+              <p className="absolute top-2/3 inset-x-0 text-center font-bold text-lg sm:text-xl md:text-2xl text-[#19213D]">
                 Crafted with Passion <br /> Built to Inspire
               </p>
             </div>
-
-            {/* blue CTA card */}
-            <div className="flex flex-col bg-[#2388FF] shadow-[0_6px_20px_rgba(35,136,255,0.3)] rounded-lg sm:rounded-xl md:rounded-[32px] p-4 sm:p-6 md:p-9 gap-2 sm:gap-4 md:gap-6 w-full sm:w-[468px] min-h-[300px] sm:min-h-[400px] md:min-h-[443px]">
-              <h3 className="text-white font-bold text-xl sm:text-2xl md:text-[32px] leading-tight sm:leading-[42px]">
+            {/* CTA Card */}
+            <div className="w-full md:w-1/3 mt-6 sm:mt-8 md:mt-0 bg-[#2388FF] shadow-md rounded-xl p-4 sm:p-6 md:p-8 text-white">
+              <h3 className="font-bold text-lg sm:text-xl md:text-2xl mb-4">
                 Join with our Network
               </h3>
-              <p className="text-white text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-[30px]">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4">
                 Collaborate with us on bold new ventures, from brand identity to
-                full‑stack innovation. Let’s grow together.
+                full-stack innovation. Let’s grow together.
               </p>
-
-              {/* email form */}
-              <form className="flex flex-col gap-2 sm:gap-3">
+              <form className="flex flex-col gap-3">
                 <div className="relative">
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full h-[50px] sm:h-[72px] pl-4 sm:pl-[51px] pr-4 sm:pr-6 text-sm sm:text-[18px] leading-tight sm:leading-[22px] text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
+                    className="w-full h-12 sm:h-14 pl-10 pr-4 text-sm sm:text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
                   />
-                  {/* envelope icon */}
                   <svg
                     viewBox="0 0 18 14"
-                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-[14px] sm:w-[18px] h-[10px] sm:h-[14px] fill-white/90 -scale-y-100"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-4 sm:w-5 h-4 sm:h-5 fill-white/90"
                   >
                     <path d="M1 1h16v12H1z" fill="none" stroke="currentColor" />
                     <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
@@ -358,9 +313,9 @@ export default function About() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full h-[50px] sm:h-[72px] flex items-center justify-center font-bold text-sm sm:text-[18px] leading-tight sm:leading-[20px] text-[#2388FF] bg-white hover:bg-slate-50 border border-white rounded-full shadow-[0_2px_6px_rgba(20,20,43,0.04)]"
+                  className="w-full h-12 sm:h-14 flex items-center justify-center font-bold text-sm sm:text-base text-[#2388FF] bg-white hover:bg-slate-50 rounded-full"
                 >
-                  Let’s Connect
+                  Let’s Connect
                 </button>
               </form>
             </div>
@@ -368,58 +323,49 @@ export default function About() {
         </div>
       </section>
 
-      <section className="w-full bg-white py-6 sm:py-8 md:py-12 px-2 sm:px-4 md:px-6">
-        <div className="text-center">
-          <p className="text-[#0368FF] text-lg sm:text-xl md:text-[24px] font-bold mb-1 sm:mb-2">~ Team Member ~</p>
-          <h2 className="text-2xl sm:text-3xl md:text-[36px] lg:text-[48px] font-bold leading-tight text-black max-w-[90%] sm:max-w-3xl mx-auto">
+      {/* ===== Team Section ===== */}
+      <section className="w-full bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <p className="text-[#0368FF] text-base sm:text-lg md:text-xl font-bold">
+            ~ Team Member ~
+          </p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black max-w-3xl mx-auto">
             Our team member is ready to help our clients!
           </h2>
-          <p className="text-[#667097] text-sm sm:text-base md:text-[18px] lg:text-[24px] mt-2 sm:mt-4 max-w-[90%] sm:max-w-xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-[#667097] mt-2 max-w-xl mx-auto">
             We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
           </p>
         </div>
-
-        <div className="mt-4 sm:mt-6 md:mt-16 flex flex-wrap justify-center gap-4 sm:gap-6">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10">
           {teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col items-center">
-              {/* Member Image */}
-              <div className="w-[250px] sm:w-[320px] h-[350px] sm:h-[460px] bg-gray-200 rounded-[6px] sm:rounded-[8px] overflow-hidden">
+              <div className="w-60 sm:w-72 md:w-80 h-80 sm:h-96 md:h-[460px] bg-gray-200 rounded-lg overflow-hidden">
                 <img
                   src={member.img}
                   alt={member.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-
-              {/* Card Info */}
-              <div className="w-[250px] sm:w-[320px] -mt-6 sm:-mt-8 bg-white rounded-[12px] sm:rounded-[16px_16px_8px_8px] shadow-md flex flex-col items-center pt-2 sm:pt-3 pb-2 sm:pb-4">
-                {/* Top blue line */}
-                <div className="h-[8px] sm:h-[12px] w-full bg-[#0368FF] rounded-t-[12px] sm:rounded-t-[16px]"></div>
-
-                {/* Name and role */}
-                <div className="text-center mt-2 sm:mt-4">
-                  <h3 className="text-lg sm:text-xl md:text-[20px] font-bold text-black">{member.name}</h3>
-                  <p className="text-sm sm:text-base md:text-[16px] text-gray-600">{member.role}</p>
+              <div className="w-60 sm:w-72 md:w-80 -mt-6 sm:-mt-8 bg-white rounded-lg shadow-md flex flex-col items-center pt-3 sm:pt-4 pb-3 sm:pb-4">
+                <div className="h-2 w-full bg-[#0368FF] rounded-t-lg"></div>
+                <div className="text-center mt-3">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-black">{member.name}</h3>
+                  <p className="text-sm sm:text-base text-gray-600">{member.role}</p>
                 </div>
-
-                {/* Icons */}
-                <div className="flex items-center gap-4 sm:gap-6 mt-2 sm:mt-4">
-                  {/* Instagram */}
+                <div className="flex items-center gap-4 sm:gap-6 mt-3">
                   <a href={member.instagram} target="_blank" rel="noopener noreferrer">
                     <img
                       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg"
                       alt="Instagram"
-                      className="w-[24px] sm:w-[34px] h-[24px] sm:h-[34px]"
+                      className="w-6 sm:w-8 h-6 sm:h-8"
                     />
                   </a>
-
-                  {/* LinkedIn */}
                   <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <div className="w-[24px] sm:w-[34px] h-[24px] sm:h-[34px] bg-white shadow-md rounded-full flex items-center justify-center">
+                    <div className="w-6 sm:w-8 h-6 sm:h-8 bg-white shadow-md rounded-full flex items-center justify-center">
                       <img
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                         alt="LinkedIn"
-                        className="w-[16px] sm:w-[20px] h-[16px] sm:h-[20px]"
+                        className="w-4 sm:w-5 h-4 sm:h-5"
                       />
                     </div>
                   </a>
@@ -430,68 +376,69 @@ export default function About() {
         </div>
       </section>
 
-      <section className="w-full py-10 sm:py-[56px] px-2 sm:px-4 bg-white flex flex-col items-center">
-        <div className="max-w-[90%] sm:max-w-[600px] text-center mb-4 sm:mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-[42px] leading-tight sm:leading-[52px] font-bold text-[#19213D]">
+      {/* ===== Values Section ===== */}
+      <section className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-white flex flex-col items-center">
+        <div className="max-w-3xl text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[42px] font-bold text-[#19213D]">
             The values that drive everything we do
           </h2>
-          <p className="text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-[30px] text-[#667097] mt-2 sm:mt-4">
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-[#667097] mt-2">
             If you are so great at something, while only doing it for others?
             That is why in 2020 we started building our own products.
           </p>
         </div>
-
-        <div className="flex gap-2 sm:gap-4 md:gap-7 overflow-x-auto px-1 w-full max-w-[95%] sm:max-w-[90%] md:max-w-[1320px]">
+        <div className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory px-2 w-full max-w-[95%] sm:max-w-[90%] md:max-w-7xl scrollbar-hidden">
           {values.map((value, idx) => (
             <div
               key={idx}
-              className="min-w-[90%] sm:min-w-[400px] md:min-w-[534px] max-w-[90%] sm:max-w-[400px] md:max-w-[534px] h-[350px] sm:h-[400px] md:h-[457px] flex-shrink-0 bg-white border border-[#EBEFF6] rounded-lg sm:rounded-xl md:rounded-[32px] shadow-[0_6px_20px_rgba(20,20,43,0.06)] p-4 sm:p-6 md:p-[55px] flex flex-col"
+              className="min-w-[80%] sm:min-w-[360px] md:min-w-[400px] max-w-[80%] sm:max-w-[360px] md:max-w-[400px] h-auto sm:h-[400px] flex-shrink-0 bg-white border border-[#EBEFF6] rounded-xl shadow-md p-4 sm:p-6 md:p-8 snap-center"
             >
-              {/* Icon */}
-              <div className="relative w-[80px] sm:w-[100px] h-[80px] sm:h-[100px] mb-2 sm:mb-4 md:mb-6">
-                {/* Gradient Layer */}
+              <div className="relative w-16 sm:w-20 h-16 sm:h-20 mb-4">
                 <div
-                  className={`absolute w-[70px] sm:w-[86.49px] h-[70px] sm:h-[86.49px] rounded-[12px] sm:rounded-[15px] transform -scale-y-100 bg-gradient-to-b ${value.gradient}`}
+                  className={`absolute w-14 sm:w-16 h-14 sm:h-16 rounded-lg bg-gradient-to-b ${value.gradient}`}
                 />
-                {/* Glass Layer */}
-                <div className="absolute w-[70px] sm:w-[86.49px] h-[70px] sm:h-[86.49px] left-[10px] sm:left-[15.83px] top-[10px] sm:top-[13.51px] rounded-[12px] sm:rounded-[15px] border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)] transform -scale-y-100" />
-                {/* Placeholder icon */}
+                <div className="absolute w-14 sm:w-16 h-14 sm:h-16 left-2 top-2 rounded-lg border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)]" />
                 <img
                   src={value.icon}
                   alt={value.title}
-                  className="absolute left-[20px] sm:left-[31px] top-[20px] sm:top-[30px] w-[20px] sm:w-[30px] h-[20px] sm:h-[30px]"
+                  className="absolute left-4 sm:left-5 top-4 sm:top-5 w-6 sm:w-8 h-6 sm:h-8"
                 />
               </div>
-
-              {/* Title */}
-              <h3 className="text-lg sm:text-xl md:text-[24px] leading-tight sm:leading-[36px] font-bold text-[#19213D] mb-2 sm:mb-4">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#19213D] mb-2">
                 {value.title}
               </h3>
-
-              {/* Description */}
-              <p className="text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-[30px] text-[#667097]">
+              <p className="text-sm sm:text-base leading-relaxed text-[#667097]">
                 {value.description}
               </p>
             </div>
           ))}
         </div>
+        <style jsx>{`
+          .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+          }
+          .scrollbar-hidden {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `}</style>
       </section>
 
-      {/* CTA Section */}
-      <section className="w-full flex flex-col items-center py-4 sm:py-6 md:py-10 px-2 sm:px-4 md:px-6 bg-blue-600">
-        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-8">
+      {/* ===== CTA Section ===== */}
+      <section className="w-full flex flex-col items-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-blue-600">
+        <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
           <div className="w-full md:w-1/2 text-white text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
               Ready to launch <br />
               something amazing <br />
               with Techno Vanam?
             </h2>
-            <p className="text-sm sm:text-base md:text-base mt-2 sm:mt-3 md:mt-4">
+            <p className="text-sm sm:text-base md:text-lg mt-2 sm:mt-3 md:mt-4">
               Our creative experts are here to design, develop, and deliver high-performing
               digital experiences tailored to your brand. Let’s build something great together.
             </p>
-            <div className="pt-2 sm:pt-4 md:pt-6">
-              <button className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-blue-600 font-bold text-sm sm:text-base md:text-base rounded-full border shadow-md">
+            <div className="pt-4 sm:pt-6">
+              <button className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-blue-600 font-bold text-sm sm:text-base rounded-full border shadow-md">
                 Contact Us
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -499,14 +446,14 @@ export default function About() {
                   viewBox="0 0 24 24"
                   strokeWidth={2}
                   stroke="#2388FF"
-                  className="w-3 sm:w-4 md:w-4 h-3 sm:h-4 md:h-4 transform -scale-y-100"
+                  className="w-4 h-4"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                 </svg>
               </button>
             </div>
           </div>
-          <div className="w-full md:w-1/2 h-[150px] sm:h-[200px] md:h-80">
+          <div className="w-full md:w-1/2 mt-6 sm:mt-8 md:mt-0 h-40 sm:h-48 md:h-64">
             <img
               src="https://via.placeholder.com/500x500.png?text=Social+Media+Image"
               alt="Social Media"

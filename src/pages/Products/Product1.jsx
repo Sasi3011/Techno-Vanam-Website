@@ -5,46 +5,44 @@ const Product1 = () => {
   const navigate = useNavigate();
 
   const handleLatestReleasesClick = () => {
-    navigate('/product1');  // Navigate to the Product1 page
+    navigate('/product1'); // Navigate to the Product1 page
   };
 
   const handleWhatWeWorkingOnClick = () => {
-    navigate('/product2');  // Navigate to Product2 page
+    navigate('/product2'); // Navigate to Product2 page
   };
 
   return (
-    <div className="flex flex-col items-center pt-16 sm:pt-20 md:pt-[64px] pb-4 sm:pb-6 md:pb-[30px] gap-4 sm:gap-6 md:gap-[68px]">
-      
+    <div className="flex flex-col items-center pt-8 sm:pt-12 md:pt-[64px] pb-6 sm:pb-8 md:pb-[30px] gap-8 sm:gap-10 md:gap-[68px] px-4 sm:px-6 lg:px-8">
       {/* Section 1: Header */}
-      <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[1320px] flex flex-col items-center px-2 sm:px-4 md:px-6 gap-2 sm:gap-4 md:gap-[40px]">
-        
+      <div className="w-full max-w-[1320px] flex flex-col items-center gap-6 sm:gap-8 md:gap-[40px]">
         {/* Label */}
-        <div className="text-[#2388FF] uppercase text-xs sm:text-sm md:text-[16px] font-bold tracking-[0.06em]">
+        <div className="text-[#2388FF] uppercase text-sm sm:text-base md:text-[16px] font-bold tracking-[0.06em]">
           Products
         </div>
 
         {/* Heading + Logo */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2 md:gap-x-[14px]">
-          <div className="text-3xl sm:text-4xl md:text-[58px] leading-tight md:leading-[68px] font-bold text-[#19213D]">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-x-3 sm:gap-x-[14px] gap-y-4 sm:gap-y-0 text-center sm:text-left">
+          <div className="text-3xl sm:text-4xl md:text-[58px] leading-8 sm:leading-10 md:leading-[68px] font-bold text-[#19213D]">
             Products by
           </div>
 
           {/* Logo + Text */}
-          <div className="relative w-[200px] sm:w-[250px] md:w-[350.46px] h-[50px] sm:h-[60px] md:h-[77.92px]">
+          <div className="relative w-[200px] sm:w-[280px] md:w-[350.46px] h-[50px] sm:h-[60px] md:h-[77.92px]">
             <img
               src="https://via.placeholder.com/78"
               alt="Logo"
               className="absolute w-[50px] sm:w-[60px] md:w-[77.92px] h-[50px] sm:h-[60px] md:h-[77.92px] left-0 top-0"
             />
-            <div className="absolute left-[55px] sm:left-[65px] md:left-[78px] top-0 sm:top-[5px] md:top-[14px] text-2xl sm:text-3xl md:text-[40px] font-black text-[#2F2F2F]">
+            <div className="absolute left-[52px] sm:left-[64px] md:left-[78px] top-2 sm:top-3 md:top-[14px] text-xl sm:text-2xl md:text-[40px] font-black text-[#2F2F2F]">
               Techno Vanam
             </div>
           </div>
         </div>
 
         {/* Description */}
-        <div className="px-2 sm:px-4 md:px-6 w-full max-w-[95%] sm:max-w-[910px]">
-          <p className="text-center text-[#667097] text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[30px]">
+        <div className="px-4 sm:px-6 w-full max-w-[910px]">
+          <p className="text-center text-[#667097] text-base sm:text-lg md:text-[18px] leading-6 sm:leading-7 md:leading-[30px]">
             At Techno Vanam, we don’t just create for clients—we build for ourselves too.
             Our digital products are crafted to enhance workflows, spark creativity, and solve real-world
             problems for designers, developers, and businesses alike.
@@ -53,55 +51,59 @@ const Product1 = () => {
       </div>
 
       {/* Tabs */}
-      <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[1000px] h-auto flex justify-end px-1 sm:px-2 md:px-[21px] py-1 sm:py-2 md:py-[21px] gap-1 sm:gap-2 md:gap-[16px] bg-white border border-[#EBEFF6] shadow-md rounded-full">
-        <p className="text-black text-4xl sm:text-base md:text-2xl  font-semibold mt-5 px-6">What We’re Working On</p>
+      <div className="w-full max-w-[1000px] h-auto flex flex-col sm:flex-row justify-center sm:justify-end gap-3 sm:gap-4 md:gap-[16px] bg-white sm:border sm:border-[#EBEFF6] sm:shadow-md sm:rounded-full px-4 sm:px-5 md:px-[21px] py-4 sm:py-5 md:py-[21px]">
+        <p className="hidden sm:block text-black text-lg sm:text-xl md:text-2xl font-semibold mt-2 sm:mt-3 md:mt-5 px-4 sm:px-6 text-center sm:text-left">
+          What We’re Working On
+        </p>
         {/* Latest Releases */}
         <button
           onClick={handleLatestReleasesClick}
-          className="flex justify-center items-center px-3 sm:px-4 md:px-[40px] py-2 sm:py-3 md:py-[26px] border-2 border-[#2388FF] rounded-full shadow-md hover:bg-[#2388FF] hover:text-white transition duration-300"
+          className="flex justify-center items-center px-4 sm:px-6 md:px-[40px] py-3 sm:py-4 md:py-[26px] border-2 border-[#2388FF] rounded-full shadow-md hover:bg-[#2388FF] hover:text-white transition duration-300 w-full sm:w-auto"
         >
-          <span className="text-[#2388FF] text-sm sm:text-base md:text-[18px] font-medium">🌐 Latest Releases</span>
+          <span className="text-[#2388FF] text-base sm:text-lg md:text-[18px] font-medium hover:text-white">
+            🌐 Latest Releases
+          </span>
         </button>
 
         {/* What We’re Working On */}
         <button
           onClick={handleWhatWeWorkingOnClick}
-          className="flex justify-center items-center px-3 sm:px-4 md:px-[40px] py-2 sm:py-3 md:py-[26px] border-2 border-[#EBEFF6] rounded-full shadow-md hover:bg-[#EBEFF6] hover:text-[#19213D] transition duration-300"
+          className="flex justify-center items-center px-4 sm:px-6 md:px-[40px] py-3 sm:py-4 md:py-[26px] border-2 border-[#EBEFF6] rounded-full shadow-md hover:bg-[#EBEFF6] hover:text-[#19213D] transition duration-300 w-full sm:w-auto"
         >
-          <span className="text-[#868DA6] text-sm sm:text-base md:text-[18px] font-medium">🔒 What We’re Working On</span>
+          <span className="text-[#868DA6] text-base sm:text-lg md:text-[18px] font-medium hover:text-[#2F2F2F]">
+            🔒 What We’re Working On
+          </span>
         </button>
       </div>
 
       {/* In Progress Section */}
-      <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[1272px] flex flex-col md:flex-row items-center justify-between bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-lg sm:rounded-xl md:rounded-[32px] p-2 sm:p-4 md:p-[60px] relative min-h-[250px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[416px]">
-        
+      <div className="w-full max-w-[1272px] flex flex-col md:flex-row items-center justify-between bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 md:p-[60px] min-h-[300px] sm:min-h-[350px] md:min-h-[416px]">
         {/* Left Text Block */}
-        <div className="flex flex-col gap-2 sm:gap-4 md:gap-[33px] w-full md:w-1/2">
-          
+        <div className="flex flex-col gap-4 sm:gap-6 md:gap-[33px] w-full md:w-1/2 mb-6 md:mb-0">
           {/* Title */}
-          <h2 className="text-[#2388FF] text-xl sm:text-2xl md:text-3xl lg:text-[50px] font-bold leading-tight md:leading-[18px]">
+          <h2 className="text-[#2388FF] text-2xl sm:text-3xl md:text-[50px] font-bold leading-7 sm:leading-8 md:leading-[48px]">
             In Progress
           </h2>
 
           {/* Description */}
-          <p className="text-[#3B4A68] text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[30px]">
+          <p className="text-[#3B4A68] text-base sm:text-lg md:text-[18px] leading-6 sm:leading-7 md:leading-[30px]">
             We’re currently building powerful solutions behind the scenes.
             While we haven’t launched any products yet, exciting things are on the way —
             starting with Athlixir, our AI-powered platform for athlete performance and development.
           </p>
 
           {/* CTA */}
-          <div className="text-[#2388FF] text-sm sm:text-base md:text-lg lg:text-[24px] font-bold uppercase tracking-widest">
+          <div className="text-[#2388FF] text-lg sm:text-xl md:text-[24px] font-bold uppercase tracking-widest">
             Stay tuned — the journey has just begun.
           </div>
         </div>
 
         {/* Right Image Block */}
-        <div className="w-full md:w-1/2 mt-2 sm:mt-4 md:mt-0">
+        <div className="w-full md:w-1/2">
           <img
             src="https://via.placeholder.com/666x416"
             alt="Startup Illustration"
-            className="w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[416px] object-cover rounded-lg sm:rounded-xl md:rounded-[32px]"
+            className="w-full h-[200px] sm:h-[300px] md:h-[416px] object-cover rounded-[24px] sm:rounded-[32px]"
           />
         </div>
       </div>
