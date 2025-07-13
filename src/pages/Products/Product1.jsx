@@ -57,7 +57,7 @@ const Product1 = () => {
       {/* Tabs */}
 <div className="w-full max-w-[1250px] h-auto flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 md:gap-[16px] bg-white sm:border sm:border-[#EBEFF6] sm:shadow-md sm:rounded-full px-4 sm:px-5 md:px-[21px] py-2 sm:py-3 md:py-3">
   <p className="hidden sm:block text-black text-base sm:text-lg md:text-xl font-semibold px-4 sm:px-6 text-left w-full sm:w-auto">
-    What We’re Working On
+    Latest Releases
   </p>
 
   <div className="flex gap-3 sm:gap-4 md:gap-[16px] w-full sm:w-auto justify-end">
