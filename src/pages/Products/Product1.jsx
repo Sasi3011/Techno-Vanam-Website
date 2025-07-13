@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Logo from "../../assets/logo.png";
+import StartupIllustration from "../../assets/logo.png";// Import the startup illustration image
 
 const Product1 = () => {
   const navigate = useNavigate();
@@ -30,7 +32,7 @@ const Product1 = () => {
           {/* Logo + Text */}
           <div className="relative w-[200px] sm:w-[280px] md:w-[350.46px] h-[50px] sm:h-[60px] md:h-[77.92px]">
             <img
-              src="https://via.placeholder.com/78"
+              src={Logo}
               alt="Logo"
               className="absolute w-[50px] sm:w-[60px] md:w-[77.92px] h-[50px] sm:h-[60px] md:h-[77.92px] left-0 top-0"
             />
@@ -101,7 +103,7 @@ const Product1 = () => {
         {/* Right Image Block */}
         <div className="w-full md:w-1/2">
           <img
-            src="https://via.placeholder.com/666x416"
+            src={StartupIllustration}
             alt="Startup Illustration"
             className="w-full h-[200px] sm:h-[300px] md:h-[416px] object-cover rounded-[24px] sm:rounded-[32px]"
           />

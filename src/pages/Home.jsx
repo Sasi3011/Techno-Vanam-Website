@@ -19,6 +19,17 @@ import supporticon from "../assets/Home Page/Support Phase Icon.png";
 import athlixirImage from "../assets/Home Page/Athlixir.png";
 import socialmediaImage from "../assets/Home Page/Social Media Image.png";
 import pastprojectsImage from "../assets/Home Page/Past Projects.png";
+import HeroIllustration from "../assets/logo.png"; // Import hero illustration
+import ParadoxImage from "../assets/logo.png"; // Import project images
+import GetUpsideImage from "../assets/logo.png";
+import DeFiImage from "../assets/logo.png";
+import PixelitImage from "../assets/logo.png";
+import StartuperImage from "../assets/logo.png";
+import TechstarImage from "../assets/logo.png";
+import DarkbitImage from "../assets/logo.png";
+import StarUpImage from "../assets/logo.png";
+import PizzaplanetImage from "../assets/logo.png";
+import UpLeadImage from "../assets/logo.png";
 
 const steps = [
   {
@@ -78,16 +89,16 @@ const steps = [
 ];
 
 const projects = [
-  { title: "Paradox Project", image: "/images/paradox.jpg" },
-  { title: "GetUpside Project", image: "/images/getupside.jpg" },
-  { title: "DeFi Project", image: "/images/defi.jpg" },
-  { title: "Pixelit Project", image: "/images/pixelit.jpg" },
-  { title: "Startuper Project", image: "/images/startuper.jpg" },
-  { title: "Techstar Project", image: "/images/techstar.jpg" },
-  { title: "Darkbit Project", image: "/images/darkbit.jpg" },
-  { title: "StarUp Project", image: "/images/starup.jpg" },
-  { title: "Pizzaplanet Project", image: "/images/pizzaplanet.jpg" },
-  { title: "UpLead Project", image: "/images/uplead.jpg" },
+  { title: "Paradox Project", image: ParadoxImage },
+  { title: "GetUpside Project", image: GetUpsideImage },
+  { title: "DeFi Project", image: DeFiImage },
+  { title: "Pixelit Project", image: PixelitImage },
+  { title: "Startuper Project", image: StartuperImage },
+  { title: "Techstar Project", image: TechstarImage },
+  { title: "Darkbit Project", image: DarkbitImage },
+  { title: "StarUp Project", image: StarUpImage },
+  { title: "Pizzaplanet Project", image: PizzaplanetImage },
+  { title: "UpLead Project", image: UpLeadImage },
 ];
 
 const Home = () => {
@@ -148,7 +159,7 @@ const Home = () => {
             </Link>
           </div>
           <img
-            src="/illustration-hero.png"
+            src={HeroIllustration}
             alt="Hero illustration"
             className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mt-4 md:mt-0"
           />
@@ -369,7 +380,7 @@ const Home = () => {
                     className="min-w-[280px] sm:min-w-[320px] md:min-w-[350px] h-[240px] sm:h-[280px] md:h-[298px] rounded-2xl sm:rounded-3xl border border-[#EBEFF6] shadow-md overflow-hidden bg-white"
                   >
                     <img
-                      src={pastprojectsImage}
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover"
                     />

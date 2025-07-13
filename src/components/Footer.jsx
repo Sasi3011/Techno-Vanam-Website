@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import Logo from "../assets/logo.png"; // Import the logo image
 
 const Footer = () => {
   const navLinks = [
@@ -19,7 +20,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="src/assets/logo.png" 
+              src={Logo} 
               alt="Techno Vanam Logo" 
               className="h-8 sm:h-10 w-auto object-contain" 
             />

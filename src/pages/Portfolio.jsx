@@ -1,32 +1,38 @@
+import ParadoxLogo from "../assets/logo.png"; // Import Paradox logo
+import ParadoxImage from "../assets/logo.png"; // Import Paradox screenshot
+import TeachableLogo from "../assets/logo.png"; // Import Teachable logo
+import TeachableImage from "../assets/logo.png"; // Import Teachable screenshot
+import UpsideLogo from "../assets/logo.png"; // Import Upside logo
+import UpsideImage from "../assets/logo.png"; // Import Upside screenshot
+import CardLogo1 from "../assets/logo.png"; // Import placeholder logo 1
+import CardLogo2 from "../assets/logo.png"; // Import placeholder logo 2
+
 const projects = [
   {
-    logo: "https://cdn.prod.website-files.com/63f8ca18cae25871c18fd72d/640faec78b52078a69f42d1e_paradox-brix-agency-client.svg",
+    logo: ParadoxLogo,
     title: "Paradox.ai",
     description:
       "Paradox.ai is an AI-driven assistant that simplifies recruitment with applicant reviewing, interview booking, and automatic HR query responses.",
     link: "/portfolio/paradox",
-    image:
-      "https://cdn.prod.website-files.com/63f8ca18cae25871c18fd72d/671bf8e829a6d0ce58de5551_paradox-portfolio-featured-image.png",
+    image: ParadoxImage,
     linkColor: "text-[#23A094]",
   },
   {
-    logo: "https://cdn.prod.website-files.com/63f8ca18cae25871c18fd72d/6712b26c9a8c00e3f394be61_teachable-logo.svg",
+    logo: TeachableLogo,
     title: "Teachable",
     description:
       "Teachable is the leading online platform for creating and selling online courses.",
     link: "/portfolio/teachable",
-    image:
-      "https://cdn.prod.website-files.com/63f8ca18cae25871c18fd72d/671bf7111ed052ea780d8796_teachable-portfolio-featured-image.png",
+    image: TeachableImage,
     linkColor: "text-[#3AB1C8]",
   },
   {
-    logo: "https://cdn.prod.website-files.com/63f8ca18cae25871c18fd72d/6712b26cd6a28d0aafc553f9_upside-logo.svg",
+    logo: UpsideLogo,
     title: "Upside",
     description:
       "Upside is the perfect way to earn cash back on over 50,000 locations.",
     link: "/portfolio/upside",
-    image:
-      "https://cdn.prod.website-files.com/63f8ca18cae25871c18fd72d/6712b19b0959927114991084_upside-portfolio-featured-image.png",
+    image: UpsideImage,
     linkColor: "text-[#2869FF]",
   },
 ];
@@ -117,7 +123,7 @@ const Portfolio = () => {
               <div className="mb-4 sm:mb-6">
                 <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] flex justify-center items-center mb-4 sm:mb-6">
                   <img
-                    src="https://via.placeholder.com/80"
+                    src={CardLogo1}
                     alt="Logo 1"
                     className="w-full h-full object-cover"
                   />
@@ -132,68 +138,68 @@ const Portfolio = () => {
               </div>
 
               {/* Description */}
-  <div className="mb-6 sm:mb-8 w-full max-w-[540px]">
-    <p className="text-base sm:text-lg leading-6 sm:leading-[30px] text-[#667097]">
-      We help startups and businesses bring big visions to life through thoughtful design and smart development. Whether you're starting fresh or scaling fast — we’re built for it.
-    </p>
-  </div>
+              <div className="mb-6 sm:mb-8 w-full max-w-[540px]">
+                <p className="text-base sm:text-lg leading-6 sm:leading-[30px] text-[#667097]">
+                  We help startups and businesses bring big visions to life through thoughtful design and smart development. Whether you're starting fresh or scaling fast — we’re built for it.
+                </p>
+              </div>
 
-  {/* Button */}
-  <button className="flex items-center justify-center gap-1 px-6 py-3 sm:px-8 sm:py-4 md:px-[39px] md:py-[27px] bg-[#4A3AFF] text-white font-bold text-base sm:text-lg md:text-[18px] rounded-full shadow-[0px_2px_6px_rgba(74,58,255,0.2)] border border-[#4A3AFF] w-full sm:w-[259.81px] h-[56px] sm:h-[64px] md:h-[72px]">
-    Let’s Build Together
-    <svg
-      className="w-4 h-4 sm:w-5 sm:h-5 transform -scale-y-100"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7-7l7 7-7 7" />
-    </svg>
-  </button>
-</div>
+              {/* Button */}
+              <button className="flex items-center justify-center gap-1 px-6 py-3 sm:px-8 sm:py-4 md:px-[39px] md:py-[27px] bg-[#4A3AFF] text-white font-bold text-base sm:text-lg md:text-[18px] rounded-full shadow-[0px_2px_6px_rgba(74,58,255,0.2)] border border-[#4A3AFF] w-full sm:w-[259.81px] h-[56px] sm:h-[64px] md:h-[72px]">
+                Let’s Build Together
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 transform -scale-y-100"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7-7l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
 
-{/* Card 2 */}
-<div className="w-full sm:w-[calc(50%-12px)] max-w-[622px] bg-white border border-[#EBEFF6] rounded-[24px] sm:rounded-[32px] shadow-[0px_6px_20px_rgba(20,20,43,0.06)] p-6 sm:p-8 md:p-[55px_41px] flex flex-col min-h-[400px] sm:min-h-[462px]">
-  {/* Logo */}
-  <div className="mb-4 sm:mb-6">
-    <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] flex justify-center items-center mb-4 sm:mb-6">
-      <img
-        src="https://via.placeholder.com/80"
-        alt="Logo 2"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
+            {/* Card 2 */}
+            <div className="w-full sm:w-[calc(50%-12px)] max-w-[622px] bg-white border border-[#EBEFF6] rounded-[24px] sm:rounded-[32px] shadow-[0px_6px_20px_rgba(20,20,43,0.06)] p-6 sm:p-8 md:p-[55px_41px] flex flex-col min-h-[400px] sm:min-h-[462px]">
+              {/* Logo */}
+              <div className="mb-4 sm:mb-6">
+                <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] flex justify-center items-center mb-4 sm:mb-6">
+                  <img
+                    src={CardLogo2}
+                    alt="Logo 2"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
-  {/* Title */}
-  <div className="mb-2 sm:mb-3 w-full max-w-[540px]">
-    <h3 className="text-xl sm:text-2xl md:text-[32px] leading-7 sm:leading-8 md:leading-[42px] font-bold text-[#19213D]">
-      You won’t find templates here
-    </h3>
-  </div>
+              {/* Title */}
+              <div className="mb-2 sm:mb-3 w-full max-w-[540px]">
+                <h3 className="text-xl sm:text-2xl md:text-[32px] leading-7 sm:leading-8 md:leading-[42px] font-bold text-[#19213D]">
+                  You won’t find templates here
+                </h3>
+              </div>
 
-  {/* Description */}
-  <div className="mb-6 sm:mb-8 w-full max-w-[540px]">
-    <p className="text-base sm:text-lg leading-6 sm:leading-[30px] text-[#667097]">
-      We don’t showcase random past work — we focus on your future. Everything we create is tailored, strategic, and built from the ground up to serve a real purpose.
-    </p>
-  </div>
+              {/* Description */}
+              <div className="mb-6 sm:mb-8 w-full max-w-[540px]">
+                <p className="text-base sm:text-lg leading-6 sm:leading-[30px] text-[#667097]">
+                  We don’t showcase random past work — we focus on your future. Everything we create is tailored, strategic, and built from the ground up to serve a real purpose.
+                </p>
+              </div>
 
-  {/* Button */}
-  <button className="flex items-center justify-center gap-1 px-6 py-3 sm:px-8 sm:py-4 md:px-[39px] md:py-[27px] bg-[#2388FF] text-white font-bold text-base sm:text-lg md:text-[18px] rounded-full shadow-[0px_2px_6px_rgba(255,45,70,0.15)] border border-[#2388FF] w-full sm:w-[240px] h-[56px] sm:h-[64px] md:h-[72px]">
-    Start Your Journey
-    <svg
-      className="w-4 h-4 sm:w-5 sm:h-5 transform -scale-y-100"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7-7l7 7-7 7" />
-    </svg>
-  </button>
-</div>
+              {/* Button */}
+              <button className="flex items-center justify-center gap-1 px-6 py-3 sm:px-8 sm:py-4 md:px-[39px] md:py-[27px] bg-[#2388FF] text-white font-bold text-base sm:text-lg md:text-[18px] rounded-full shadow-[0px_2px_6px_rgba(255,45,70,0.15)] border border-[#2388FF] w-full sm:w-[240px] h-[56px] sm:h-[64px] md:h-[72px]">
+                Start Your Journey
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 transform -scale-y-100"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7-7l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>

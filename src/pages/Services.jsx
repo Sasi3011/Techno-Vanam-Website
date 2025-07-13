@@ -1,4 +1,13 @@
 import React from "react";
+import WebDesignImage from "../assets/logo.png"; // Import Web Design image
+import AppDesignImage from "../assets/logo.png"; // Import App Design image
+import WebDevelopmentImage from "../assets/logo.png"; // Import Web Development image
+import PosterDesignImage from "../assets/logo.png"; // Import Poster Design image
+import LogoDesignImage from "../assets/logo.png"; // Import Logo Design image
+import SaaSIcon from "../assets/logo.png"; // Import SaaS Companies icon
+import StartupIcon from "../assets/logo.png"; // Import Startups icon
+import IndustriesIcon from "../assets/logo.png"; // Import Industries icon
+import SocialMediaImage from "../assets/logo.png"; // Import Social Media image
 
 const servicesList = [
   {
@@ -8,6 +17,7 @@ const servicesList = [
     subheading: "We build impactful digital experiences",
     description:
       "We design stunning, responsive websites that elevate your online presence and create seamless experiences across all devices.",
+    image: WebDesignImage,
   },
   {
     name: "App Design",
@@ -16,6 +26,7 @@ const servicesList = [
     subheading: "We design mobile apps users love",
     description:
       "From wireframes to final UI, we design intuitive, attractive apps that enhance usability and connect deeply with your users.",
+    image: AppDesignImage,
   },
   {
     name: "Web Development",
@@ -24,6 +35,7 @@ const servicesList = [
     subheading: "We develop fast & scalable digital platforms",
     description:
       "We build robust, SEO-friendly websites using modern frameworks — optimized for performance, flexibility, and long-term growth.",
+    image: WebDevelopmentImage,
   },
   {
     name: "Poster Design",
@@ -32,6 +44,7 @@ const servicesList = [
     subheading: "We create bold, high-impact poster designs",
     description:
       "Whether for digital or print, our posters grab attention, convey your message clearly, and strengthen brand communication.",
+    image: PosterDesignImage,
   },
   {
     name: "Logo Design",
@@ -40,6 +53,28 @@ const servicesList = [
     subheading: "We design unique logos that define your brand",
     description:
       "We craft timeless, versatile logos that reflect your identity, resonate with your audience, and stand out in any context.",
+    image: LogoDesignImage,
+  },
+];
+
+const industriesList = [
+  {
+    labelColor: "text-blue-500",
+    label: "Web design for",
+    title: "SaaS Companies",
+    image: SaaSIcon,
+  },
+  {
+    labelColor: "text-blue-500",
+    label: "Web design for",
+    title: "Startups",
+    image: StartupIcon,
+  },
+  {
+    labelColor: "text-indigo-500",
+    label: "Web design for",
+    title: "Industries",
+    image: IndustriesIcon,
   },
 ];
 
@@ -94,7 +129,7 @@ const Services = () => {
 
                 <div className="w-full sm:w-1/2 h-[200px] sm:h-[250px] md:h-[300px] bg-gray-200 rounded-xl sm:rounded-2xl overflow-hidden">
                   <img
-                    src="https://via.placeholder.com/534x596.png?text=Service+Image"
+                    src={service.image}
                     alt={`${service.name} Illustration`}
                     className="object-cover w-full h-full"
                   />
@@ -121,26 +156,7 @@ const Services = () => {
           </div>
 
           <div className="w-full flex flex-col sm:flex-row flex-wrap justify-center items-start gap-3 sm:gap-4">
-            {[
-              {
-                labelColor: "text-blue-500",
-                label: "Web design for",
-                title: "SaaS Companies",
-                image: "https://via.placeholder.com/66",
-              },
-              {
-                labelColor: "text-blue-500",
-                label: "Web design for",
-                title: "Startups",
-                image: "https://via.placeholder.com/66",
-              },
-              {
-                labelColor: "text-indigo-500",
-                label: "Web design for",
-                title: "Industries",
-                image: "https://via.placeholder.com/66",
-              },
-            ].map((item, index) => (
+            {industriesList.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-row justify-between items-center p-4 sm:p-5 gap-2 sm:gap-3 bg-white border border-gray-200 rounded-lg sm:rounded-xl shadow-md w-full sm:w-[300px] md:w-[358px] min-h-[80px] sm:min-h-[100px]"
@@ -202,7 +218,7 @@ const Services = () => {
           </div>
           <div className="w-full md:w-1/2 h-[200px] sm:h-[250px] md:h-[300px] mt-4 md:mt-0">
             <img
-              src="https://via.placeholder.com/500x500.png?text=Social+Media+Image"
+              src={SocialMediaImage}
               alt="Social Media illustration"
               className="w-full h-full object-contain"
             />

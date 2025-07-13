@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import Logo from "../assets/logo.png"; // Import the logo image
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Header = () => {
           aria-label="Techno Vanam Home"
         >
           <img 
-            src="src/assets/logo.png" 
+            src={Logo} 
             alt="Techno Vanam Logo" 
             className="h-8 sm:h-10 w-auto object-contain" 
           />
@@ -89,7 +90,7 @@ const Header = () => {
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
-            className="px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bger-blue-700 transition-colors duration-200"
+            className="px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
             aria-label="Contact Us"
           >
             Get in Touch

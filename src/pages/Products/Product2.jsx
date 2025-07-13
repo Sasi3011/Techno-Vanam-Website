@@ -1,5 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../assets/logo.png"; // Import the logo image
+import ComingSoonIcon from "../../assets/logo.png"; // Import the coming soon icon
+import AppPreview from "../../assets/logo.png"; // Import the app preview image
 
 export default function Products2() {
   const navigate = useNavigate();
@@ -27,7 +30,7 @@ export default function Products2() {
           </h1>
           <div className="relative w-[200px] sm:w-[280px] md:w-[350.46px] h-[50px] sm:h-[60px] md:h-[77.92px]">
             <img
-              src="/placeholder.svg"
+              src={Logo}
               alt="logo"
               className="absolute left-0 w-[50px] sm:w-[60px] md:w-[77.92px] h-[50px] sm:h-[60px] md:h-[77.92px]"
             />
@@ -125,7 +128,7 @@ export default function Products2() {
               COMING SOON
             </p>
             <img
-              src="/placeholder.svg"
+              src={ComingSoonIcon}
               alt="coming soon icon"
               className="w-[18px] sm:w-[20px] md:w-[22px] h-[18px] sm:h-[20px] md:h-[22px]"
             />
@@ -134,7 +137,7 @@ export default function Products2() {
 
         {/* Image placeholder */}
         <img
-          src="/placeholder.svg"
+          src={AppPreview}
           alt="App preview"
           className="w-full md:w-[400px] lg:w-[551px] h-[300px] sm:h-[400px] md:h-[551px] object-cover"
         />

@@ -1,5 +1,5 @@
 import React from "react";
-
+ 
 const teamMembers = [
   {
     name: "Sasikiran TT",

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Send } from 'lucide-react';
+import WebDesignImage from "../assets/logo.png"; // Import image for Web Design
+import UIUXDesignImage from "../assets/logo.png"; // Import image for UI/UX Design
+import DevelopmentImage from "../assets/logo.png"; // Import image for Development
+import BrandingImage from "../assets/logo.png"; // Import image for Branding
 
 const servicesList = [
-  { name: "Web Design", color: "border-blue-500" },
-  { name: "UI/UX Design", color: "border-pink-500" },
-  { name: "Development", color: "border-green-500" },
-  { name: "Branding", color: "border-yellow-500" },
+  { name: "Web Design", color: "border-blue-500", image: WebDesignImage },
+  { name: "UI/UX Design", color: "border-pink-500", image: UIUXDesignImage },
+  { name: "Development", color: "border-green-500", image: DevelopmentImage },
+  { name: "Branding", color: "border-yellow-500", image: BrandingImage },
 ];
 
 export default function Contact() {
@@ -201,7 +205,7 @@ export default function Contact() {
                   ${isSelected ? service.color : "border-gray-200 hover:border-gray-400"}`}
                 >
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={service.image}
                     alt={service.name}
                     className="mb-2 sm:mb-3 md:mb-4 w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 object-cover rounded-md sm:rounded-lg shadow-sm"
                   />
