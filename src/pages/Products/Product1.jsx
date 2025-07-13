@@ -19,37 +19,39 @@ const Product1 = () => {
       {/* Section 1: Header */}
       <div className="w-full max-w-[1320px] flex flex-col items-center gap-6 sm:gap-8 md:gap-[40px]">
         {/* Label */}
-        <div className="text-[#2388FF] uppercase text-sm sm:text-base md:text-[16px] font-bold tracking-[0.06em]">
-          Products
+        <div className="text-xs sm:text-sm md:text-base lg:text-lg text-blue-600 font-semibold uppercase">
+          ~ Products ~
         </div>
 
         {/* Heading + Logo */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-x-3 sm:gap-x-[14px] gap-y-4 sm:gap-y-0 text-center sm:text-left">
-          <div className="text-3xl sm:text-4xl md:text-[58px] leading-8 sm:leading-10 md:leading-[68px] font-bold text-[#19213D]">
-            Products by
-          </div>
+<div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-2 sm:gap-3 text-gray-900 font-bold">
+  {/* Products by: top in mobile, inline in sm+ */}
+  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+    Products by
+  </span>
 
-          {/* Logo + Text */}
-          <div className="relative w-[200px] sm:w-[280px] md:w-[350.46px] h-[50px] sm:h-[60px] md:h-[77.92px]">
-            <img
-              src={Logo}
-              alt="Logo"
-              className="absolute w-[50px] sm:w-[60px] md:w-[77.92px] h-[50px] sm:h-[60px] md:h-[77.92px] left-0 top-0"
-            />
-            <div className="absolute left-[52px] sm:left-[64px] md:left-[78px] top-2 sm:top-3 md:top-[14px] text-xl sm:text-2xl md:text-[40px] font-black text-[#2F2F2F]">
-              Techno Vanam
-            </div>
-          </div>
-        </div>
+  {/* Logo + Techno Vanam */}
+  <div className="flex items-center gap-2">
+    <img
+      src={Logo}
+      alt="Logo"
+      className="w-[35px] sm:w-[45px] md:w-[63px] h-[35px] sm:h-[45px] md:h-[63px] object-contain"
+    />
+    <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl whitespace-nowrap">
+      Techno Vanam
+    </span>
+  </div>
+</div>
+
+
+
+
 
         {/* Description */}
-        <div className="px-4 sm:px-6 w-full max-w-[910px]">
-          <p className="text-center text-[#667097] text-base sm:text-lg md:text-[18px] leading-6 sm:leading-7 md:leading-[30px]">
-            At Techno Vanam, we don’t just create for clients—we build for ourselves too.
-            Our digital products are crafted to enhance workflows, spark creativity, and solve real-world
-            problems for designers, developers, and businesses alike.
-          </p>
-        </div>
+        <p className="text-center text-[#667097] text-base sm:text-lg md:text-[18px] leading-[1.6] line-clamp-2">
+  At Techno Vanam, we don’t just create for clients—we build for ourselves too. Our digital products are crafted to enhance workflows, spark creativity, and solve real-world problems for designers, developers, and businesses alike.
+</p>
+
       </div>
 
       {/* Tabs */}

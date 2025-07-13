@@ -84,10 +84,10 @@ const Portfolio = () => {
     <>
       <section className="w-full flex flex-col items-center py-10 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-7xl text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#19213D]">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
             Portfolio
           </h2>
-          <p className="text-[#667097] text-base sm:text-lg mt-3 sm:mt-4 max-w-[640px] mx-auto">
+          <p className="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg max-w-[640px] mx-auto">
             Our amazing team of designers and developers have produced some remarkable pieces of work.
           </p>
         </div>
