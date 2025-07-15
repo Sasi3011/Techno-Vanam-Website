@@ -1,11 +1,11 @@
-import ParadoxLogo from "../assets/logo.png"; // Import Paradox logo
-import ParadoxImage from "../assets/logo.png"; // Import Paradox screenshot
-import TeachableLogo from "../assets/logo.png"; // Import Teachable logo
-import TeachableImage from "../assets/logo.png"; // Import Teachable screenshot
-import UpsideLogo from "../assets/logo.png"; // Import Upside logo
-import UpsideImage from "../assets/logo.png"; // Import Upside screenshot
-import CardLogo1 from "../assets/logo.png"; // Import placeholder logo 1
-import CardLogo2 from "../assets/logo.png"; // Import placeholder logo 2
+import ParadoxLogo from "../assets/logo.png";
+import ParadoxImage from "../assets/logo.png";
+import TeachableLogo from "../assets/logo.png";
+import TeachableImage from "../assets/logo.png";
+import UpsideLogo from "../assets/logo.png";
+import UpsideImage from "../assets/logo.png";
+import CardLogo1 from "../assets/logo.png";
+import CardLogo2 from "../assets/logo.png";
 
 const projects = [
   {
@@ -40,16 +40,16 @@ const projects = [
 const ProjectCard = ({ project, reverse }) => (
   <a
     href={project.link}
-    className={`flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} rounded-3xl overflow-hidden shadow-sm bg-white hover:shadow-lg transition duration-300 w-full max-w-[1200px] mx-auto`}
+    className={`flex flex-row ${reverse ? "flex-row-reverse" : ""} rounded-3xl overflow-hidden shadow-sm bg-white hover:shadow-lg transition duration-300 w-full max-w-[1200px] mx-auto`}
   >
     {/* Text Section */}
-    <div className="p-4 sm:p-6 md:p-8 w-full md:w-1/2 flex flex-col justify-center">
+    <div className="p-8 w-1/2 flex flex-col justify-center">
       <img
         src={project.logo}
         alt={`${project.title} logo`}
-        className="w-[100px] sm:w-[120px] md:w-[140px] mb-4 sm:mb-6"
+        className="w-[140px] mb-6"
       />
-      <p className="text-[#667097] text-base sm:text-lg leading-6 sm:leading-7 mb-4 sm:mb-6">
+      <p className="text-[#667097] text-lg leading-7 mb-6">
         {project.description}
       </p>
       <span
@@ -57,7 +57,7 @@ const ProjectCard = ({ project, reverse }) => (
       >
         See project
         <svg
-          className="w-4 h-4 sm:w-5 sm:h-5 transform rotate-90"
+          className="w-5 h-5 transform rotate-90"
           viewBox="0 0 16 16"
           fill="none"
           stroke="currentColor"
@@ -69,7 +69,7 @@ const ProjectCard = ({ project, reverse }) => (
     </div>
 
     {/* Image Section */}
-    <div className="w-full md:w-1/2 h-[200px] sm:h-[300px] md:h-[400px]">
+    <div className="w-1/2 h-[400px]">
       <img
         src={project.image}
         alt={`${project.title} screenshot`}
@@ -79,49 +79,49 @@ const ProjectCard = ({ project, reverse }) => (
   </a>
 );
 
-const Portfolio = () => {
+export default function Portfolio() {
   return (
     <>
-      <section className="w-full flex flex-col items-center py-10 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-7xl text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
+      <section className="w-full flex flex-col items-center py-20 px-8">
+        <div className="w-full max-w-7xl text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Portfolio
           </h2>
-          <p className="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg max-w-[640px] mx-auto">
+          <p className="text-gray-500 text-lg max-w-[640px] mx-auto">
             Our amazing team of designers and developers have produced some remarkable pieces of work.
           </p>
         </div>
 
-        <div className="w-full max-w-7xl space-y-8 sm:space-y-10 md:space-y-12">
+        <div className="w-full max-w-7xl space-y-12">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} reverse={index % 2 !== 0} />
           ))}
         </div>
       </section>
 
-      <section className="w-full flex flex-col items-center py-10 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-[1320px] flex flex-col items-center gap-6 sm:gap-8 md:gap-10">
+      <section className="w-full flex flex-col items-center py-20 px-8">
+        <div className="w-full max-w-[1320px] flex flex-col items-center gap-10">
           {/* Header */}
           <div className="w-full max-w-[580px] text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-[42px] leading-8 sm:leading-10 md:leading-[52px] font-bold text-[#19213D]">
+            <h2 className="text-[42px] leading-[52px] font-bold text-[#19213D]">
               Let’s bring your vision to life
             </h2>
           </div>
 
           {/* Subheading */}
           <div className="w-full max-w-[520px] text-center">
-            <p className="text-base sm:text-lg leading-6 sm:leading-[30px] text-[#667097]">
+            <p className="text-lg leading-[30px] text-[#667097]">
               Explore how Technovanam builds custom solutions — or reach out and let’s create something exceptional.
             </p>
           </div>
 
           {/* Cards Container */}
-          <div className="w-full flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 md:gap-7">
+          <div className="w-full flex flex-row justify-center gap-7">
             {/* Card 1 */}
-            <div className="w-full sm:w-[calc(50%-12px)] max-w-[622px] bg-white border border-[#EBEFF6] rounded-[24px] sm:rounded-[32px] shadow-[0px_6px_20px_rgba(20,20,43,0.06)] p-6 sm:p-8 md:p-[55px_41px] flex flex-col min-h-[400px] sm:min-h-[462px]">
+            <div className="w-[calc(50%-14px)] max-w-[622px] bg-white border border-[#EBEFF6] rounded-[32px] shadow-[0px_6px_20px_rgba(20,20,43,0.06)] p-[55px_41px] flex flex-col min-h-[462px]">
               {/* Logo */}
-              <div className="mb-4 sm:mb-6">
-                <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] flex justify-center items-center mb-4 sm:mb-6">
+              <div className="mb-6">
+                <div className="w-[80px] h-[80px] flex justify-center items-center mb-6">
                   <img
                     src={CardLogo1}
                     alt="Logo 1"
@@ -131,24 +131,24 @@ const Portfolio = () => {
               </div>
 
               {/* Title */}
-              <div className="mb-2 sm:mb-3 w-full max-w-[540px]">
-                <h3 className="text-xl sm:text-2xl md:text-[32px] leading-7 sm:leading-8 md:leading-[42px] font-bold text-[#19213D]">
+              <div className="mb-3 w-full max-w-[540px]">
+                <h3 className="text-[32px] leading-[42px] font-bold text-[#19213D]">
                   Ideas deserve more than just code
                 </h3>
               </div>
 
               {/* Description */}
-              <div className="mb-6 sm:mb-8 w-full max-w-[540px]">
-                <p className="text-base sm:text-lg leading-6 sm:leading-[30px] text-[#667097]">
+              <div className="mb-8 w-full max-w-[540px]">
+                <p className="text-lg leading-[30px] text-[#667097]">
                   We help startups and businesses bring big visions to life through thoughtful design and smart development. Whether you're starting fresh or scaling fast — we’re built for it.
                 </p>
               </div>
 
               {/* Button */}
-              <button className="flex items-center justify-center gap-1 px-6 py-3 sm:px-8 sm:py-4 md:px-[39px] md:py-[27px] bg-[#4A3AFF] text-white font-bold text-base sm:text-lg md:text-[18px] rounded-full shadow-[0px_2px_6px_rgba(74,58,255,0.2)] border border-[#4A3AFF] w-full sm:w-[259.81px] h-[56px] sm:h-[64px] md:h-[72px]">
+              <button className="flex items-center justify-center gap-1 px-[39px] py-[27px] bg-[#4A3AFF] text-white font-bold text-[18px] rounded-full shadow-[0px_2px_6px_rgba(74,58,255,0.2)] border border-[#4A3AFF] w-[259.81px] h-[72px]">
                 Let’s Build Together
                 <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 transform -scale-y-100"
+                  className="w-5 h-5 transform -scale-y-100"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -160,10 +160,10 @@ const Portfolio = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="w-full sm:w-[calc(50%-12px)] max-w-[622px] bg-white border border-[#EBEFF6] rounded-[24px] sm:rounded-[32px] shadow-[0px_6px_20px_rgba(20,20,43,0.06)] p-6 sm:p-8 md:p-[55px_41px] flex flex-col min-h-[400px] sm:min-h-[462px]">
+            <div className="w-[calc(50%-14px)] max-w-[622px] bg-white border border-[#EBEFF6] rounded-[32px] shadow-[0px_6px_20px_rgba(20,20,43,0.06)] p-[55px_41px] flex flex-col min-h-[462px]">
               {/* Logo */}
-              <div className="mb-4 sm:mb-6">
-                <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] flex justify-center items-center mb-4 sm:mb-6">
+              <div className="mb-6">
+                <div className="w-[80px] h-[80px] flex justify-center items-center mb-6">
                   <img
                     src={CardLogo2}
                     alt="Logo 2"
@@ -173,24 +173,24 @@ const Portfolio = () => {
               </div>
 
               {/* Title */}
-              <div className="mb-2 sm:mb-3 w-full max-w-[540px]">
-                <h3 className="text-xl sm:text-2xl md:text-[32px] leading-7 sm:leading-8 md:leading-[42px] font-bold text-[#19213D]">
+              <div className="mb-3 w-full max-w-[540px]">
+                <h3 className="text-[32px] leading-[42px] font-bold text-[#19213D]">
                   You won’t find templates here
                 </h3>
               </div>
 
               {/* Description */}
-              <div className="mb-6 sm:mb-8 w-full max-w-[540px]">
-                <p className="text-base sm:text-lg leading-6 sm:leading-[30px] text-[#667097]">
+              <div className="mb-8 w-full max-w-[540px]">
+                <p className="text-lg leading-[30px] text-[#667097]">
                   We don’t showcase random past work — we focus on your future. Everything we create is tailored, strategic, and built from the ground up to serve a real purpose.
                 </p>
               </div>
 
               {/* Button */}
-              <button className="flex items-center justify-center gap-1 px-6 py-3 sm:px-8 sm:py-4 md:px-[39px] md:py-[27px] bg-[#2388FF] text-white font-bold text-base sm:text-lg md:text-[18px] rounded-full shadow-[0px_2px_6px_rgba(255,45,70,0.15)] border border-[#2388FF] w-full sm:w-[240px] h-[56px] sm:h-[64px] md:h-[72px]">
+              <button className="flex items-center justify-center gap-1 px-[39px] py-[27px] bg-[#2388FF] text-white font-bold text-[18px] rounded-full shadow-[0px_2px_6px_rgba(255,45,70,0.15)] border border-[#2388FF] w-[240px] h-[72px]">
                 Start Your Journey
                 <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 transform -scale-y-100"
+                  className="w-5 h-5 transform -scale-y-100"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -206,5 +206,3 @@ const Portfolio = () => {
     </>
   );
 };
-
-export default Portfolio;
