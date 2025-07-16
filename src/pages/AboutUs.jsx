@@ -330,13 +330,21 @@ export default function About() {
               Explore What <br /> We Do
             </p>
             <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
-              <button className="flex items-center gap-2 text-[#2388FF] text-sm font-bold uppercase">
-                <a href="/Services">OUR SERVICES</a>
-                <svg width="12" height="10" viewBox="0 0 16 14" className="fill-[#2388FF]">
-                  <path d="M1 7h14M9 1l6 6-6 6" stroke="#2388FF" />
-                </svg>
-              </button>
-            </div>
+  <button className="group flex items-center gap-2 text-sm font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
+    <a href="/Services" className="group-hover:text-blue-400 transition-colors duration-200">
+      OUR SERVICES
+    </a>
+    <svg
+      width="12"
+      height="10"
+      viewBox="0 0 16 14"
+      className="fill-current stroke-current text-[#2388FF] group-hover:text-blue-400 transition-colors duration-200"
+    >
+      <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
+    </svg>
+  </button>
+</div>
+
           </div>
 
           {/* Crafted with Passion Card */}
@@ -383,8 +391,8 @@ export default function About() {
                   <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
                 </svg>
               </div>
-              <button className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-50 rounded-full">
-                Let’s Connect
+              <button className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-100 rounded-full">
+                <a href="\contact">Let’s Connect</a>
               </button>
             </div>
           </div>
@@ -407,43 +415,48 @@ export default function About() {
           </p>
         </div>
         <div className="flex flex-row justify-center gap-10">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="flex flex-col items-center w-80">
-              <div className="w-full h-[460px] bg-gray-200 rounded-lg overflow-hidden">
+  {teamMembers.map((member, index) => (
+    <div key={index} className="flex flex-col items-center w-80 relative">
+      
+      {/* Image Section */}
+      <div className="w-full h-[460px] bg-gray-200 rounded-lg overflow-hidden relative">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="w-full h-full object-cover"
+        />
+
+        {/* Card Positioned at Bottom */}
+        <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[280px] bg-white rounded-lg shadow-md flex flex-col items-center pb-4 z-10">
+          <div className="h-2 w-full bg-[#0368FF] rounded-t-lg"></div>
+          <div className="text-center mt-3">
+            <h3 className="text-xl font-bold text-black">{member.name}</h3>
+            <p className="text-base text-gray-600">{member.role}</p>
+          </div>
+          <div className="flex items-center gap-6 mt-3">
+            <a href={member.instagram} target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg"
+                alt="Instagram"
+                className="w-8 h-8"
+              />
+            </a>
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+              <div className="w-8 h-8 bg-white shadow-md rounded-full flex items-center justify-center">
                 <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                  alt="LinkedIn"
+                  className="w-5 h-5"
                 />
               </div>
-              <div className="w-full -mt-8 bg-white rounded-lg shadow-md flex flex-col items-center pt-4 pb-4">
-                <div className="h-2 w-full bg-[#0368FF] rounded-t-lg"></div>
-                <div className="text-center mt-3">
-                  <h3 className="text-xl font-bold text-black">{member.name}</h3>
-                  <p className="text-base text-gray-600">{member.role}</p>
-                </div>
-                <div className="flex items-center gap-6 mt-3">
-                  <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg"
-                      alt="Instagram"
-                      className="w-8 h-8"
-                    />
-                  </a>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <div className="w-8 h-8 bg-white shadow-md rounded-full flex items-center justify-center">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                        alt="LinkedIn"
-                        className="w-5 h-5"
-                      />
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
+
       </section>
 
       {/* ===== Values Section ===== */}
