@@ -100,7 +100,7 @@ const Services = () => {
             {servicesList.map((service, index) => (
               <div
                 key={index}
-                className={`w-[1200px] flex flex-row items-center justify-between ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 ml-10 transition-all duration-300`}
+                className={`w-5xl flex flex-row items-center justify-between ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 ml-28 transition-all duration-300`}
               >
                 {/* Left Text Block */}
                 <div className="w-1/2 p-12 flex flex-col gap-4">
