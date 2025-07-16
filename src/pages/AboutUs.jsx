@@ -1,5 +1,5 @@
 import React from "react";
-
+import Logo from "../assets/logo.png"; // Import the logo image
 const teamMembers = [
   {
     name: "Sasikiran TT",
@@ -58,27 +58,27 @@ export default function About() {
       <section className="flex flex-col items-center pt-[94px] pb-16 px-8">
         <div className="flex flex-row items-center gap-10 w-full max-w-7xl">
           {/* Left: Copy Block */}
-          <div className="w-1/2">
-            <div>
-              <h1 className="font-bold text-[58px] leading-tight text-[#19213D]">
-                We are
-              </h1>
-              <div className="flex items-center mt-3">
-                <img
-                  src="/placeholder-logo.svg"
-                  alt="logo"
-                  className="w-20 h-20"
-                />
-                <span className="ml-3 font-black text-[35px] leading-tight text-[#2F2F2F]">
-                  Techno Vanam
-                </span>
-              </div>
-            </div>
+          <div>
+            <div className="flex items-center  text-gray-900 font-bold">
+          <span className="text-4xl">
+            We are
+          </span>
+          <div className="flex items-center gap-3">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-[63px] h-[63px] object-contain"
+            />
+            <span className="text-4xl whitespace-nowrap">
+              Techno Vanam
+            </span>
+          </div>
+        </div>
             <p className="mt-6 text-lg leading-relaxed text-[#667097]">
-              We’re not just an agency — we’re a creative tech studio passionate
-              about crafting impactful digital products. From empowering
-              startups to building our own innovations, we design, develop, and
-              launch experiences that move people and businesses forward.
+              We’re not just an agency — we’re a creative tech studio <br/>passionate
+              about crafting impactful digital products.<br/> From empowering
+              startups to building our own <br/>innovations, we design, develop, and
+              launch experiences<br/> that move people and businesses forward.
             </p>
             <div className="mt-8 flex items-center gap-2">
               <span className="flex justify-center items-end w-5 h-5 border-2 border-[#2388FF] rounded-full">
@@ -119,14 +119,14 @@ export default function About() {
       </section>
 
       {/* ===== Content Grid Section ===== */}
-      <section className="flex flex-col items-center bg-[#F6F8FC] px-8 pt-16 pb-24">
+      <section className="flex flex-col items-center bg-[#F6F8FC] px-8 pt-16 pb-6">
         <div className="w-full max-w-7xl">
           {/* What Drives Us */}
           <div className="flex flex-col items-center gap-4 mb-20 text-center">
             <h2 className="text-[42px] font-bold text-[#19213D]">
               What Drives Us
             </h2>
-            <p className="text-lg leading-relaxed text-[#667097] max-w-3xl">
+            <p className="text-lg leading-relaxed text-[#667097] max-w-4xl">
               In 2025, we began building our own digital products—driven by the
               same vision and purpose that fuel everything we do: turning ideas
               into impactful, user‑centered experiences.
@@ -134,14 +134,15 @@ export default function About() {
           </div>
 
           {/* First Row: Mission + Illustration */}
-          <div className="flex flex-row gap-10 mb-20">
+          <div className="flex flex-row gap-10 mb-10">
+
             {/* Mission Card */}
-            <div className="w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-[#19213D] mb-4">
+            <div className="w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-3xl p-8 pb-15">
+              <h3 className="text-3xl font-bold text-[#19213D] mb-6">
                 Our Mission: <br />
                 Turning Vision into Reality
               </h3>
-              <p className="text-lg leading-relaxed text-[#667097] mb-6">
+              <p className="text-lg leading-relaxed text-[#667097] mb-12">
                 We believe great design is the foundation of every successful
                 brand. At Techno Vanam, we craft intuitive user experiences,
                 build high-performance websites, and design graphics that leave
@@ -200,42 +201,23 @@ export default function About() {
           </div>
 
           {/* Second Row: Trophy + Vision */}
-          <div className="flex flex-row gap-10 mb-20">
+          <div className="flex flex-row gap-10 mb-6">
+
             {/* Trophy Card */}
-            <div className="w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-8">
+            <div className="w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-10">
               <img
-                src="/placeholder-trophy.png"
-                alt="Trophy illustration"
-                className="w-full max-w-[90%] h-auto"
+                src="/your-centered-image.png"
+                alt="Centered illustration"
+                className="w-full h-auto object-contain"
               />
-              <img
-                src="/placeholder-figma.png"
-                alt="Figma logo"
-                className="absolute left-4 top-8 w-16"
-              />
-              <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
-                <button className="flex items-center gap-2 text-[#2388FF] text-sm font-bold uppercase">
-                  OUR SERVICES
-                  <svg
-                    width="12"
-                    height="10"
-                    viewBox="0 0 16 14"
-                    className="fill-[#2388FF]"
-                  >
-                    <path d="M1 7h14M9 1l6 6-6 6" stroke="#2388FF" />
-                  </svg>
-                </button>
-              </div>
-              <p className="absolute top-2/3 inset-x-0 text-center font-bold text-2xl text-[#19213D]">
-                Explore What <br /> We Do
-              </p>
             </div>
+
             {/* Vision Card */}
             <div className="w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-[#19213D] mb-4">
+              <h3 className="text-3xl font-bold text-[#19213D] mb-6">
                 Our Vision:
               </h3>
-              <p className="text-lg leading-relaxed text-[#667097] mb-4">
+              <p className="text-lg leading-relaxed text-[#667097] mb-12">
                 To build a digital ecosystem where design, technology, and
                 human-centric thinking shape better experiences for all. We
                 envision a future where businesses—big or small—can access
@@ -258,67 +240,92 @@ export default function About() {
               </ul>
             </div>
           </div>
-
-          {/* Third Row: HubSpot + CTA */}
-          <div className="flex flex-row gap-10">
-            {/* HubSpot Card */}
-            <div className="w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-8">
-              <img
-                src="/placeholder-hubspot.png"
-                alt="HubSpot award"
-                className="w-full max-w-[90%] h-auto"
-              />
-              <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
-                <button className="flex items-center gap-2 text-[#FF6C4C] text-sm font-bold uppercase">
-                  SEE ALL
-                  <svg
-                    width="12"
-                    height="10"
-                    viewBox="0 0 16 14"
-                    className="stroke-[#FF6C4C]"
-                  >
-                    <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
-                  </svg>
-                </button>
-              </div>
-              <p className="absolute top-2/3 inset-x-0 text-center font-bold text-2xl text-[#19213D]">
-                Crafted with Passion <br /> Built to Inspire
-              </p>
-            </div>
-            {/* CTA Card */}
-            <div className="w-1/3 bg-[#2388FF] shadow-md rounded-xl p-8 text-white">
-              <h3 className="font-bold text-2xl mb-4">
-                Join with our Network
-              </h3>
-              <p className="text-lg leading-relaxed mb-4">
-                Collaborate with us on bold new ventures, from brand identity to
-                full-stack innovation. Let’s grow together.
-              </p>
-              <div className="flex flex-col gap-3">
-                <div className="relative">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full h-14 pl-10 pr-4 text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
-                  />
-                  <svg
-                    viewBox="0 0 18 14"
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 fill-white/90"
-                  >
-                    <path d="M1 1h16v12H1z" fill="none" stroke="currentColor" />
-                    <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
-                  </svg>
-                </div>
-                <button
-                  className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-50 rounded-full"
-                >
-                  Let’s Connect
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
+
+{/* === CTA Section in Card Style === */}
+      <section className="flex flex-col items-center bg-[#F6F8FC] px-8 pb-20 pt-0">
+
+        <div className="w-full max-w-7xl grid grid-cols-3 gap-8">
+          
+          {/* Explore What We Do Card */}
+          <div className="relative bg-white  border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-8">
+            <img
+              src="/placeholder-figma.png"
+              alt="Figma logo"
+              className="absolute left-4 top-8 w-16"
+            />
+            <img
+              src="/placeholder-trophy.png"
+              alt="Trophy illustration"
+              className="w-full max-w-[90%] h-auto"
+            />
+            <p className="absolute top-2/3 inset-x-0 text-center font-bold text-2xl text-[#19213D]">
+              Explore What <br /> We Do
+            </p>
+            <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
+              <button className="flex items-center gap-2 text-[#2388FF] text-sm font-bold uppercase">
+                <a href="/Services">OUR SERVICES</a>
+                <svg width="12" height="10" viewBox="0 0 16 14" className="fill-[#2388FF]">
+                  <path d="M1 7h14M9 1l6 6-6 6" stroke="#2388FF" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Crafted with Passion Card */}
+          <div className="relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-8">
+            <img
+              src="/placeholder-hubspot.png"
+              alt="HubSpot badge"
+              className="w-full max-w-[90%] h-auto"
+            />
+            <p className="absolute top-2/3 inset-x-0 text-center font-bold text-2xl text-[#19213D]">
+              Crafted with Passion <br /> Built to Inspire
+            </p>
+            <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
+              <button className="flex items-center gap-2 text-[#FF6C4C] text-sm font-bold uppercase">
+                SEE ALL
+                <svg width="12" height="10" viewBox="0 0 16 14" className="stroke-[#FF6C4C]">
+                  <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* CTA Newsletter Signup Card */}
+          <div className="bg-[#2388FF] shadow-md rounded-xl p-8 text-white flex flex-col justify-between">
+            <div>
+              <h3 className="font-bold text-2xl mb-4">Join with our Network</h3>
+              <p className="text-lg leading-relaxed mb-6">
+                Collaborate with us on bold new ventures, from brand identity to full-stack innovation.
+                Let’s grow together.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <div className="relative">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full h-14 pl-10 pr-4 text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
+                />
+                <svg
+                  viewBox="0 0 18 14"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 fill-white/90"
+                >
+                  <path d="M1 1h16v12H1z" fill="none" stroke="currentColor" />
+                  <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
+                </svg>
+              </div>
+              <button className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-50 rounded-full">
+                Let’s Connect
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
 
       {/* ===== Team Section ===== */}
       <section className="w-full bg-white py-16 px-8">
@@ -450,6 +457,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </>
-  );
-}
+      </>
+    );
+  }
