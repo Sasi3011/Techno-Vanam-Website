@@ -100,44 +100,40 @@ const Services = () => {
             {servicesList.map((service, index) => (
               <div
                 key={index}
-                className={`w-6xl flex flex-row items-center justify-center gap-6 ${service.bgColor} rounded-2xl min-h-[450px] ml-13 mt-6 shadow-lg`}
+                className={`w-[1200px] flex flex-row items-center justify-between ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 ml-10 transition-all duration-300`}
               >
-                <div className="w-1/2 flex flex-col items-start p-8 gap-4">
-                  <h3 className={`${service.color} text-xl font-bold`}>
+                {/* Left Text Block */}
+                <div className="w-1/2 p-12 flex flex-col gap-4">
+                  <h3 className={`${service.color} text-lg uppercase font-semibold tracking-wide`}>
                     {service.name}
                   </h3>
-                  <h4 className="text-gray-900 text-4xl font-bold">
+                  <h4 className="text-gray-900 text-4xl font-bold leading-tight">
                     {service.subheading}
                   </h4>
-                  <p className="text-gray-500 text-lg">
+                  <p className="text-gray-600 text-lg leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="flex items-center gap-1">
-                    <span className="text-gray-900 text-sm font-bold uppercase tracking-wider">
-                      Get in touch
-                    </span>
-                    <svg
-                      className="w-4 h-4 transform -scale-y-100"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M5 3l5 5-5 5" stroke="#19213D" strokeWidth="2" />
-                    </svg>
-                  </div>
+                  <a
+                    href="/contact"
+                    className="flex items-center gap-2 text-sm text-neutral-800 font-semibold uppercase tracking-wide hover:text-blue-600 transition-colors duration-200"
+                  >
+                    Get in touch
+                    <span className="text-lg">➔</span>
+                  </a>
                 </div>
 
-                <div className="w-1/2 h-[450px] bg-gray-200  overflow-hidden">
+                {/* Right Image Block */}
+                <div className="w-1/2 h-[450px] bg-[#D6ECFF] flex items-center justify-center rounded-2xl">
                   <img
                     src={service.image}
                     alt={`${service.name} Illustration`}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full"
                   />
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+            </div>
+        </div>  
       </section>
 
       {/* Industries Section */}
