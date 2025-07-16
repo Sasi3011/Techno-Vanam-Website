@@ -155,7 +155,7 @@ const Services = () => {
             {industriesList.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-row justify-between items-center p-5 gap-3 bg-white border border-gray-200 rounded-4xl shadow-md w-[310px] min-h-[100px]"
+                className="flex flex-row justify-between items-center p-5 gap-3 bg-white border border-gray-200 rounded-2xl shadow-md w-[330px] min-h-[100px]"
               >
                 <div className="flex flex-row items-center gap-3">
                   <img
