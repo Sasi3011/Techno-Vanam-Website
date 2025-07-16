@@ -86,30 +86,30 @@ const Services = () => {
         <div className="w-full max-w-7xl flex flex-col items-center">
           <div className="w-full flex flex-col items-start gap-6">
             <div className="w-full text-left">
-              <p className="text-base text-blue-600 font-semibold uppercase">
+              <p className="text-lg text-blue-600 font-semibold uppercase">
                 Services
               </p>
-              <h2 className="text-gray-900 text-4xl font-bold leading-tight mt-3">
+              <h2 className="text-gray-900 text-5xl font-bold leading-tight mt-3">
                 What we do
               </h2>
               <p className="text-gray-500 mt-4 text-lg">
-                At Technovanam, our end-to-end design and development services are crafted to empower your business, enhance your digital presence, and drive growth. We blend smart strategy, modern technology, and user-focused design to elevate your brand and help you thrive in today’s competitive landscape.
+                At Technovanam, our end-to-end design and development services are crafted to empower your business,<br/> enhance your digital presence, and drive growth. We blend smart strategy, modern technology, and <br/>user-focused design to elevate your brand and help you thrive in today’s competitive landscape.
               </p>
             </div>
 
             {servicesList.map((service, index) => (
               <div
                 key={index}
-                className={`w-full flex flex-row items-center justify-center gap-6 ${service.bgColor} rounded-2xl min-h-[450px] mt-6 shadow-lg`}
+                className={`w-6xl flex flex-row items-center justify-center gap-6 ${service.bgColor} rounded-2xl min-h-[450px] ml-13 mt-6 shadow-lg`}
               >
                 <div className="w-1/2 flex flex-col items-start p-8 gap-4">
                   <h3 className={`${service.color} text-xl font-bold`}>
                     {service.name}
                   </h3>
-                  <h4 className="text-gray-900 text-3xl font-bold">
+                  <h4 className="text-gray-900 text-4xl font-bold">
                     {service.subheading}
                   </h4>
-                  <p className="text-gray-500 text-base">
+                  <p className="text-gray-500 text-lg">
                     {service.description}
                   </p>
                   <div className="flex items-center gap-1">
@@ -127,7 +127,7 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div className="w-1/2 h-[300px] bg-gray-200 rounded-2xl overflow-hidden">
+                <div className="w-1/2 h-[450px] bg-gray-200  overflow-hidden">
                   <img
                     src={service.image}
                     alt={`${service.name} Illustration`}
@@ -144,10 +144,10 @@ const Services = () => {
       <section className="w-full flex flex-col items-center py-16 px-8">
         <div className="w-full max-w-7xl flex flex-col items-center gap-6">
           <div className="text-center max-w-2xl">
-            <h2 className="text-blue-500 text-sm font-bold uppercase tracking-wider">
+            <h2 className="text-blue-500 text-lg font-bold uppercase tracking-wider">
               ~ Industries ~
             </h2>
-            <h1 className="text-gray-900 text-4xl font-bold mt-4">
+            <h1 className="text-gray-900 text-5xl font-bold mt-4">
               We’re focused on
             </h1>
             <p className="text-gray-500 text-lg mt-4">
@@ -155,7 +155,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="w-full flex flex-row justify-center items-start gap-4">
+         <div className="w-full flex flex-row justify-center items-start gap-4">
             {industriesList.map((item, index) => (
               <div
                 key={index}
@@ -171,29 +171,21 @@ const Services = () => {
                     <span className={`text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
                       {item.label}
                     </span>
-                    <span className="text-gray-900 text-xl font-bold">
+                    <span className="text-gray-900 text-xl font-semibold">
                       {item.title}
                     </span>
                   </div>
                 </div>
-                <svg
-                  className="w-4 h-4 transform -scale-y-100"
-                  viewBox="0 0 16 16"
-                  fill="#19213D"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M5 3l5 5-5 5" stroke="#19213D" strokeWidth="2" fill="none" />
-                </svg>
               </div>
             ))}
+            </div>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-full flex flex-col items-center py-16 px-8 bg-blue-600">
+      <section className="w-full flex flex-col items-center h-[620px] bg-blue-600">
         <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
-          <div className="w-1/2 text-white text-left">
+          <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
             <h2 className="text-4xl font-bold leading-tight">
               Ready to launch something amazing with Techno Vanam?
             </h2>
@@ -201,7 +193,7 @@ const Services = () => {
               Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
             </p>
             <div className="pt-6 flex justify-start">
-              <button className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-bold text-base rounded-full border shadow-md hover:bg-gray-100 transition">
+              <button className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-bold text-base rounded-full border shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
                 Contact Us
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -209,14 +201,14 @@ const Services = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={2}
                   stroke="#2388FF"
-                  className="w-4 h-4 transform -scale-y-100"
+                  className="w-4 h-4 hover:text-white transform -scale-y-100"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                 </svg>
               </button>
             </div>
           </div>
-          <div className="w-1/2 h-[300px]">
+          <div className="w-1/2 h-[600px]">
             <img
               src={SocialMediaImage}
               alt="Social Media illustration"

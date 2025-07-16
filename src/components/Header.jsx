@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50 font-poppins">
+    <header className="w-full bg-white sticky top-0 z-50 font-poppins shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo + Brand Name */}
         <Link 
