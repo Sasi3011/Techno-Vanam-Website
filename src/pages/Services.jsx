@@ -7,7 +7,7 @@ import LogoDesignImage from "../assets/logo.png";
 import SaaSIcon from "../assets/logo.png";
 import StartupIcon from "../assets/logo.png";
 import IndustriesIcon from "../assets/logo.png";
-import SocialMediaImage from "../assets/logo.png";
+import SocialMediaImage from "../assets/Contact Us.mp4";
 
 const servicesList = [
   {
@@ -184,12 +184,18 @@ const Services = () => {
     
     {/* Image First */}
     <div className="w-1/2 h-[600px]">
-      <img
-        src={SocialMediaImage}
-        alt="Social Media illustration"
-        className="w-full h-full object-contain "
-      />
-    </div>
+  <video
+    src={SocialMediaImage}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-contain"
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
     {/* Content Second (on the right now) */}
     <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">

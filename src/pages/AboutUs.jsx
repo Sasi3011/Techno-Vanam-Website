@@ -136,7 +136,8 @@ export default function About() {
       </section>
 
       {/* ===== Transform Section ===== */}
-       <section className="flex flex-col items-center bg-[#2388FF] pt-16 pb-32 rounded-b-2xl px-8 space-y-6 overflow-hidden">
+       
+       <section className="flex flex-col items-center bg-[#2388FF] pt-16 pb-32 rounded-t-[125px] px-8 space-y-6 overflow-hidden">
   {/* "design" */}
   <motion.h2
     ref={ref1}

@@ -19,8 +19,8 @@ import devicon from "../assets/Home Page/Development Phase Icon.png";
 import launchicon from "../assets/Home Page/Launch Phase Icon.png";
 import supporticon from "../assets/Home Page/Support Phase Icon.png";
 import athlixirImage from "../assets/Home Page/Athlixir.png";
-import socialmediaImage from "../assets/Home Page/Social Media Image.png";
-import heroIllustration from "../assets/logo.png";
+import socialmediaImage from "../assets/Contact Us.mp4";
+import heroIllustration from "../assets/original-0c7449463779438e161d845f94825e57.mp4";
 
 // Placeholder images for services (replace with actual paths)
 import webDesignImage from "../assets/logo.png";
@@ -226,7 +226,7 @@ const Home = () => {
       </style>
 
       {/* Hero Section */}
-      <section className="px-8 py-15 bg-white min-h-[50vh]">
+      <section className="px-8 py-28 bg-white min-h-[90vh]">
         <div className="max-w-7xl mx-auto flex flex-row items-center gap-10">
           <div className="flex-1 text-left">
             <h2 className="text-blue-600 text-lg font-semibold uppercase">DESIGN & DEVELOPMENT STUDIO</h2>
@@ -243,11 +243,17 @@ const Home = () => {
               Get in Touch
             </Link>
           </div>
-          <img
-            src={heroIllustration}
-            alt="Illustration of digital design and development"
-            className="w-full max-w-[500px]"
-          />
+          <video
+  src={heroIllustration}
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full max-w-[500px] rounded-4xl shadow-lg object-cover"
+>
+  Your browser does not support the video tag.
+</video>
+
         </div>
       </section>
 
@@ -490,12 +496,18 @@ const Home = () => {
       <section className="relative isolate overflow-hidden pt-24 pb-28 px-10 bg-gradient-to-br from-[#0047FF] via-[#0B74F8] to-[#0047FF] rounded-t-[160px]">
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-10">
           <div className="w-1/2 flex justify-center">
-            <img
-              src={socialmediaImage}
-              alt="Illustration of social media engagement"
-              className="w-full max-w-[320px] h-[320px] object-contain"
-              loading="lazy"
-            />
+            <video
+  src={socialmediaImage}
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full max-w-[320px] h-[320px] object-contain rounded-xl"
+  loading="lazy"
+>
+  Your browser does not support the video tag.
+</video>
+
           </div>
           <div className="w-1/2 text-white space-y-6 max-w-xl">
             <h2 className="text-4xl font-bold leading-tight">
