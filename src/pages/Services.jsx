@@ -155,7 +155,7 @@ const Services = () => {
             {industriesList.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-row justify-between items-center p-5 gap-3 bg-white border border-gray-200 rounded-xl shadow-md w-[358px] min-h-[100px]"
+                className="flex flex-row justify-between items-center p-5 gap-3 bg-white border border-gray-200 rounded-4xl shadow-md w-[310px] min-h-[100px]"
               >
                 <div className="flex flex-row items-center gap-3">
                   <img
@@ -182,26 +182,28 @@ const Services = () => {
       <section className="w-full flex flex-col items-center h-[620px] bg-blue-600">
         <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
           <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
-            <h2 className="text-4xl font-bold leading-tight">
+            <h2 className="text-5xl font-bold leading-tight">
               Ready to launch something amazing with Techno Vanam?
             </h2>
             <p className="text-lg mt-4">
               Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
             </p>
             <div className="pt-6 flex justify-start">
-              <button className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-bold text-base rounded-full border shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
-                Contact Us
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="#2388FF"
-                  className="w-4 h-4 hover:text-white transform -scale-y-100"
+              <a href="/contact">
+                <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
+                  Contact Us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4  transform -scale-y-100"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                 </svg>
               </button>
+              </a>
             </div>
           </div>
           <div className="w-1/2 h-[600px]">
