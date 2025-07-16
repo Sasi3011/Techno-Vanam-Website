@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.png"; // Import the logo image
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 const teamMembers = [
   {
     name: "Sasikiran TT",
@@ -49,13 +51,41 @@ const values = [
     border: "border-[#E749EE]",
     icon: "/placeholder-icon3.svg",
   },
+  {
+    title: "Team Work",
+    description:
+      "Collaboration is at the heart of our process. We thrive on sharing ideas, offering support, and celebrating collective wins—because we know great results come from unity, trust, and a shared sense of purpose.",
+    gradient: "from-[#E541ED] to-[#FEEBFF]",
+    border: "border-[#E749EE]",
+    icon: "/placeholder-icon3.svg",
+  },
+  {
+    title: "Commitment",
+    description:
+      "We commit deeply to our clients' visions and to our craft. Through consistency, passion, and attention to detail, we turn complex challenges into meaningful outcomes—delivering with care, every single time.",
+    gradient: "from-[#E541ED] to-[#FEEBFF]",
+    border: "border-[#E749EE]",
+    icon: "/placeholder-icon3.svg",
+  },
+  {
+    title: "Positivity",
+    description:
+      "A positive attitude shapes everything we do—from communication to creativity. We face every challenge with optimism, resilience, and a problem-solving mindset that fuels momentum and builds stronger, happier partnerships.",
+    gradient: "from-[#E541ED] to-[#FEEBFF]",
+    border: "border-[#E749EE]",
+    icon: "/placeholder-icon3.svg",
+  },
 ];
 
 export default function About() {
+  const [ref1, inView1] = useInView({ threshold: 0.5 });
+  const [ref2, inView2] = useInView({ threshold: 0.5 });
+  const [ref3, inView3] = useInView({ threshold: 0.5 });
+
   return (
     <>
       {/* ===== Hero Section ===== */}
-      <section className="flex flex-col items-center pt-[94px] pb-16 px-8">
+      <section className="flex flex-col items-center pt-[94px] pb-60 px-8">
         <div className="flex flex-row items-center gap-10 w-full max-w-7xl">
           {/* Left: Copy Block */}
           <div>
@@ -106,17 +136,53 @@ export default function About() {
       </section>
 
       {/* ===== Transform Section ===== */}
-      <section className="flex flex-col items-center bg-[#2388FF] pt-16 pb-32 rounded-b-2xl px-8">
-        <h2 className="font-bold text-[94px] leading-tight text-white/40 text-center">
-          design
-        </h2>
-        <h1 className="font-bold text-[94px] leading-tight text-white text-center">
-          We transform digital presence
-        </h1>
-        <h2 className="font-bold text-[94px] leading-tight text-white/40 text-center">
-          develop
-        </h2>
-      </section>
+       <section className="flex flex-col items-center bg-[#2388FF] pt-16 pb-32 rounded-b-2xl px-8 space-y-6 overflow-hidden">
+  {/* "design" */}
+  <motion.h2
+    ref={ref1}
+    initial={{ opacity: 0, y: 60, scale: 0.9 }}
+    animate={{
+      opacity: inView1 && !inView2 ? 1 : 0.3,
+      y: inView1 ? 0 : 30,
+      scale: inView1 ? 1 : 0.95,
+    }}
+    transition={{ duration: 1, type: "spring", stiffness: 80 }}
+    className="font-bold text-[94px] leading-tight text-white text-center"
+  >
+    design
+  </motion.h2>
+
+  {/* Center: Transform Message */}
+  <motion.h1
+    ref={ref2}
+    initial={{ opacity: 0, y: 80, scale: 0.8 }}
+    animate={{
+      opacity: inView2 ? 1 : 0.3,
+      y: inView2 ? 0 : 40,
+      scale: inView2 ? 1 : 0.95,
+    }}
+    transition={{ duration: 1.1, delay: 0.2, type: "spring", stiffness: 60 }}
+    className="font-bold text-[94px] leading-tight text-white text-center"
+  >
+    We transform digital presence
+  </motion.h1>
+
+  {/* "develop" */}
+  <motion.h2
+    ref={ref3}
+    initial={{ opacity: 0, y: 60, scale: 0.9 }}
+    animate={{
+      opacity: inView3 && !inView2 ? 1 : 0.3,
+      y: inView3 ? 0 : 30,
+      scale: inView3 ? 1 : 0.95,
+    }}
+    transition={{ duration: 1, type: "spring", stiffness: 80 }}
+    className="font-bold text-[94px] leading-tight text-white text-center"
+  >
+    develop
+  </motion.h2>
+</section>
+
 
       {/* ===== Content Grid Section ===== */}
       <section className="flex flex-col items-center bg-[#F6F8FC] px-8 pt-16 pb-6">
@@ -391,11 +457,11 @@ export default function About() {
             That is why in 2020 we started building our own products.
           </p>
         </div>
-        <div className="flex flex-row gap-8 w-full max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
           {values.map((value, idx) => (
             <div
               key={idx}
-              className="w-[calc(33.33%-1.33rem)] min-w-[280px] max-w-[400px] h-auto bg-white border border-[#EBEFF6] rounded-xl shadow-md p-8"
+              className="w-full min-w-[280px] max-w-[400px] h-auto bg-white border border-[#EBEFF6] rounded-xl shadow-md p-8"
             >
               <div className="relative w-20 h-20 mb-4">
                 <div
