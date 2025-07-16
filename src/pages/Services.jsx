@@ -100,7 +100,7 @@ const Services = () => {
             {servicesList.map((service, index) => (
               <div
                 key={index}
-                className={`w-5xl flex flex-row items-center justify-between ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 ml-28 transition-all duration-300`}
+                className={`w-5xl flex flex-row items-center h-130 justify-between ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 ml-28 transition-all duration-300`}
               >
                 {/* Left Text Block */}
                 <div className="w-1/2 p-12 flex flex-col gap-4">
@@ -123,7 +123,7 @@ const Services = () => {
                 </div>
 
                 {/* Right Image Block */}
-                <div className="w-1/2 h-[450px] bg-[#D6ECFF] flex items-center justify-center rounded-2xl">
+                <div className="w-1/2 h-[520px] bg-[#D6ECFF] flex items-center justify-center rounded-2xl">
                   <img
                     src={service.image}
                     alt={`${service.name} Illustration`}
