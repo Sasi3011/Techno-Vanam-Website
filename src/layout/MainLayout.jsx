@@ -4,9 +4,14 @@ import Footer from "../components/Footer";
 const MainLayout = ({ children }) => {
   return (
     <>
+      {/* Sticky header (non-scrollable) */}
       <Header />
-      <main>{children}</main>
-      <Footer />
+
+      {/* Scrollable area below header (main + footer) */}
+      <div className="custom-scrollbar overflow-y-auto h-[calc(100vh-80px)]">
+        <main>{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };

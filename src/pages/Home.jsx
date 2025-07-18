@@ -69,24 +69,6 @@ const servicesList = [
       "We build robust, SEO-friendly websites using modern frameworks — optimized for performance, flexibility, and long-term growth.",
     image: webDevelopmentImage,
   },
-  {
-    name: "Poster Design",
-    color: "text-yellow-500",
-    bgColor: "bg-yellow-100",
-    subheading: "We create bold, high-impact poster designs",
-    description:
-      "Whether for digital or print, our posters grab attention, convey your message clearly, and strengthen brand communication.",
-    image: posterDesignImage,
-  },
-  {
-    name: "Logo Design",
-    color: "text-purple-500",
-    bgColor: "bg-purple-100",
-    subheading: "We design unique logos that define your brand",
-    description:
-      "We craft timeless, versatile logos that reflect your identity, resonate with your audience, and stand out in any context.",
-    image: logoDesignImage,
-  },
 ];
 
 const steps = [
@@ -262,14 +244,14 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-row justify-between items-center mb-8">
             <div className="text-left">
-              <p className="uppercase text-sm font-semibold">Our Services</p>
+              <p className="text-lg font-semibold uppercase">Our Services</p>
               <h2 className="text-4xl font-bold mt-2 leading-snug">
                 High-impact design & development services
               </h2>
             </div>
             <Link
               to="/services"
-              className="bg-white text-blue-600 font-medium px-6 py-2 rounded-full shadow hover:bg-gray-100 transition text-base"
+              className="mt-6 inline-block px-6 py-3 bg-white text-blue-600 rounded-full hover:bg-gray-100 text-base font-medium"
             >
               View More →
             </Link>
@@ -320,13 +302,13 @@ const Home = () => {
       <section className="py-40 flex flex-col items-center bg-white">
         <div className="max-w-7xl w-full px-8 flex flex-col gap-8">
           <div className="flex flex-col gap-4 text-left">
-            <h2 className="uppercase text-[#2388FF] text-sm font-bold tracking-widest">
+            <h2 className="text-blue-600 text-lg font-semibold uppercase">
               Why work with us
             </h2>
-            <h3 className="text-4xl font-bold text-[#19213D] leading-tight max-w-2xl">
+            <h3 className="text-4xl font-bold text-balck leading-tight max-w-2xl">
               We guide you through every step — from concept to creation
             </h3>
-            <p className="text-[#667097] text-lg leading-relaxed max-w-3xl">
+            <p className="mt-4 text-gray-600 text-lg leading-relaxed max-w-3xl">
               With dozens of successful design and development projects, we've built a straightforward and effective process that ensures your brand looks great, functions flawlessly, and connects with your audience.
             </p>
           </div>
@@ -372,13 +354,13 @@ const Home = () => {
       {/* Past Projects */}
       <section className="bg-white py-20 px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-sm uppercase font-bold tracking-wider text-blue-600 mb-2">
+          <h3 className="text-blue-600 text-lg font-semibold uppercase">
             Past Projects
           </h3>
-          <h2 className="text-4xl font-bold text-[#19213D] mb-4">
+          <h2 className="text-4xl font-bold text-balck leading-tight mb-4">
             Let our work speak for itself
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
+          <p className="mt-4 text-gray-600 text-lg max-w-4xl mx-auto mb-10">
             Want to discover what we can do? Take a look at some of the amazing websites that have been created by our team of talented designers and developers.
           </p>
           <div className="relative">
@@ -416,8 +398,8 @@ const Home = () => {
           </div>
           <div className="mt-12 flex justify-center">
             <Link
-              to="/projects"
-              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold text-lg rounded-full shadow-md hover:bg-blue-700 transition"
+              to="/Product1"
+              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium text-lg rounded-full shadow-md hover:bg-blue-700 transition text-base"
             >
               View More
               <svg
@@ -442,20 +424,20 @@ const Home = () => {
       {/* Our Products */}
       <section className="bg-white py-16 px-12">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm text-blue-600 font-semibold mb-2 uppercase">
+          <p className="text-blue-600 text-lg font-semibold uppercase">
             Our Products
           </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-balck leading-tight mb-4">
             Products by <span className="text-blue-600">Techno Vanam</span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="mt-4 text-gray-600 text-lg max-w-4xl mx-auto">
             At Techno Vanam, we don’t just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
           </p>
         </div>
         <div className="mt-12 bg-blue-50 rounded-3xl p-8 flex flex-row items-center justify-between gap-10">
           <div className="w-[50%] max-w-xl">
-            <h3 className="text-blue-700 text-2xl font-bold mb-4">ATHLIXIR</h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <h3 className="text-blue-700 text-3xl font-bold mb-4">ATHLIXIR</h3>
+            <p className="text-gray-700 text-md mb-8">
               Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
             </p>
             <div className="flex flex-row gap-6 text-left text-blue-900 font-semibold mb-6">
@@ -473,7 +455,7 @@ const Home = () => {
               </div>
             </div>
             <Link
-              to="/athlixir"
+              to="/product1"
               className="text-blue-600 font-medium text-sm"
             >
               COMING SOON — BE PART OF THE JOURNEY →
