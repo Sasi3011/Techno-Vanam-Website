@@ -4,6 +4,8 @@ import WebDesignImage from "../assets/logo.png"; // Import image for Web Design
 import UIUXDesignImage from "../assets/logo.png"; // Import image for UI/UX Design
 import DevelopmentImage from "../assets/logo.png"; // Import image for Development
 import BrandingImage from "../assets/logo.png"; // Import image for Branding
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const servicesList = [
   { name: "Web Design", color: "border-blue-500", image: WebDesignImage },
@@ -23,6 +25,8 @@ export default function Contact() {
   const [projectType, setProjectType] = useState("");
   const [deadline, setDeadline] = useState("");
   const [submissionStatus, setSubmissionStatus] = useState(null);
+  const location = useLocation();
+
 
   const toggleService = (service) => {
     setSelectedServices((prev) =>
@@ -31,7 +35,13 @@ export default function Contact() {
         : [...prev, service]
     );
   };
-
+  useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const emailFromURL = params.get("email");
+  if (emailFromURL) {
+    setEmail(emailFromURL);
+  }
+}, [location]);
   const countWords = (text) =>
     text.trim().split(/\s+/).filter(Boolean).length;
 
