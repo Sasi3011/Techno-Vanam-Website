@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/logo.png"; // Import the logo image
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 const teamMembers = [
   {
     name: "Sasikiran TT",
@@ -85,21 +86,21 @@ export default function About() {
   return (
     <>
       {/* ===== Hero Section ===== */}
-      <section className="flex flex-col items-center pt-[94px] pb-60 px-8">
-        <div className="flex flex-row items-center gap-10 w-full max-w-7xl">
+      <section className="flex flex-col items-center pt-[94px] pb-38 mt-23  pr-8  pl-8">
+        <div className="flex flex-row items-center gap-1 w-full max-w-7xl">
           {/* Left: Copy Block */}
           <div>
             <div className="flex items-center  text-gray-900 font-bold">
-          <span className="text-4xl">
+          <span className="text-5xl">
             We are
           </span>
           <div className="flex items-center gap-3">
             <img
               src={Logo}
               alt="Logo"
-              className="w-[63px] h-[63px] object-contain"
+              className="w-[60px] h-[60px] object-contain"
             />
-            <span className="text-4xl whitespace-nowrap">
+            <span className="text-5xl whitespace-nowrap">
               Techno Vanam
             </span>
           </div>
@@ -393,7 +394,7 @@ export default function About() {
                 </svg>
               </div>
               <button className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-100 rounded-full">
-                <a href="\contact">Let’s Connect</a>
+                <a href="\Contact" target="_self" >Let’s Connect</a>
               </button>
             </div>
           </div>
@@ -415,12 +416,14 @@ export default function About() {
             We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
           </p>
         </div>
-        <div className="flex flex-row justify-center gap-10">
+        <div className="flex flex-row justify-center gap-10 pb-28">
+
   {teamMembers.map((member, index) => (
     <div key={index} className="flex flex-col items-center w-80 relative">
       
       {/* Image Section */}
-      <div className="w-full h-[460px] bg-gray-200 rounded-lg overflow-hidden relative">
+      <div className="w-full h-[460px] bg-gray-200 rounded-lg relative">
+
         <img
           src={member.img}
           alt={member.name}
@@ -428,31 +431,22 @@ export default function About() {
         />
 
         {/* Card Positioned at Bottom */}
-        <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[280px] bg-white rounded-lg shadow-md flex flex-col items-center pb-4 z-10">
-          <div className="h-2 w-full bg-[#0368FF] rounded-t-lg"></div>
-          <div className="text-center mt-3">
-            <h3 className="text-xl font-bold text-black">{member.name}</h3>
-            <p className="text-base text-gray-600">{member.role}</p>
-          </div>
-          <div className="flex items-center gap-6 mt-3">
-            <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg"
-                alt="Instagram"
-                className="w-8 h-8"
-              />
-            </a>
-            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-              <div className="w-8 h-8 bg-white shadow-md rounded-full flex items-center justify-center">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                  alt="LinkedIn"
-                  className="w-5 h-5"
-                />
+            <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[280px] bg-white rounded-lg shadow-md flex flex-col items-center pb-4 z-50">
+              <div className="h-2 w-full bg-[#0368FF] rounded-t-lg"></div>
+              <div className="text-center mt-3">
+                <h3 className="text-xl font-bold text-black">{member.name}</h3>
+                <p className="text-base text-gray-600">{member.role}</p>
               </div>
-            </a>
-          </div>
-        </div>
+              <div className="flex items-center gap-6 mt-3">
+                <a href={member.instagram} target="_blank" rel="noopener noreferrer">
+                  <FaInstagram className="text-[#E4405F] w-8 h-8" />
+                </a>
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="text-[#0077B5] w-8 h-8" />
+                </a>
+              </div>
+            </div>
+
       </div>
     </div>
   ))}
