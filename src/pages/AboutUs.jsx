@@ -312,95 +312,103 @@ export default function About() {
       </section>
 
 {/* === CTA Section in Card Style === */}
-      <section className="flex flex-col items-center bg-[#F6F8FC] px-8 pb-20 pt-0">
+      {/* === CTA Section in Card Style === */}
+<section className="flex flex-col items-center bg-[#F6F8FC] px-8 pb-20 pt-0">
+  <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <div className="w-full max-w-7xl grid grid-cols-3 gap-8">
-          
-          {/* Explore What We Do Card */}
-          <div className="relative bg-white  border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-8">
-            <img
-              src="/placeholder-figma.png"
-              alt="Figma logo"
-              className="absolute left-4 top-8 w-16"
-            />
-            <img
-              src="/placeholder-trophy.png"
-              alt="Trophy illustration"
-              className="w-full max-w-[90%] h-auto"
-            />
-            <p className="absolute top-2/3 inset-x-0 text-center font-bold text-2xl text-[#19213D]">
-              Explore What <br /> We Do
-            </p>
-            <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
-  <button className="group flex items-center gap-2 text-sm font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
-    <a href="/Services" className="group-hover:text-blue-400 transition-colors duration-200">
-      OUR SERVICES
-    </a>
-    <svg
-      width="12"
-      height="10"
-      viewBox="0 0 16 14"
-      className="fill-current stroke-current text-[#2388FF] group-hover:text-blue-400 transition-colors duration-200"
-    >
-      <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
-    </svg>
-  </button>
-</div>
+    {/* === Card 1: Explore What We Do === */}
+    <div className="relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[330px]">
+      {/* Optional Logo */}
+      <img
+        src="/placeholder-figma.png"
+        alt="Figma logo"
+        className="absolute left-4 top-4 w-16"
+      />
+      
+      <img
+        src="/placeholder-trophy.png"
+        alt="Trophy illustration"
+        className="w-full max-w-[90%] h-auto mt-12"
+      />
 
-          </div>
+      <p className="text-center font-bold text-2xl text-[#19213D] mt-4">
+        Explore What <br /> We Do
+      </p>
 
-          {/* Crafted with Passion Card */}
-          <div className="relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-8">
-            <img
-              src="/placeholder-hubspot.png"
-              alt="HubSpot badge"
-              className="w-full max-w-[90%] h-auto"
-            />
-            <p className="absolute top-2/3 inset-x-0 text-center font-bold text-2xl text-[#19213D]">
-              Crafted with Passion <br /> Built to Inspire
-            </p>
-            <div className="absolute bottom-6 inset-x-0 flex flex-col items-center">
-              <button className="flex items-center gap-2 text-[#FF6C4C] text-sm font-bold uppercase">
-                SEE ALL
-                <svg width="12" height="10" viewBox="0 0 16 14" className="stroke-[#FF6C4C]">
-                  <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
-                </svg>
-              </button>
-            </div>
-          </div>
+      <div className="flex flex-col items-center mt-4">
+        <a href="/Services" className="group flex items-center gap-2 text-sm font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
+          OUR SERVICES
+          <svg
+            width="12"
+            height="10"
+            viewBox="0 0 16 14"
+            className="fill-current stroke-current text-[#2388FF] group-hover:text-blue-400"
+          >
+            <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
+          </svg>
+        </a>
+      </div>
+    </div>
 
-          {/* CTA Newsletter Signup Card */}
-          <div className="bg-[#2388FF] shadow-md rounded-xl p-8 text-white flex flex-col justify-between">
-            <div>
-              <h3 className="font-bold text-2xl mb-4">Join with our Network</h3>
-              <p className="text-lg leading-relaxed mb-6">
-                Collaborate with us on bold new ventures, from brand identity to full-stack innovation.
-                Let’s grow together.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full h-14 pl-10 pr-4 text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
-                />
-                <svg
-                  viewBox="0 0 18 14"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 fill-white/90"
-                >
-                  <path d="M1 1h16v12H1z" fill="none" stroke="currentColor" />
-                  <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
-                </svg>
-              </div>
-              <button className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-100 rounded-full">
-                <a href="\Contact" target="_self" >Let’s Connect</a>
-              </button>
-            </div>
-          </div>
+    {/* === Card 2: Crafted with Passion === */}
+    <div className="bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[330px]">
+      <img
+        src="/placeholder-hubspot.png"
+        alt="HubSpot badge"
+        className="w-full max-w-[90%] h-auto mt-4"
+      />
 
+      <p className="text-center font-bold text-2xl text-[#19213D] mt-4">
+        Crafted with Passion <br /> Built to Inspire
+      </p>
+
+      <div className="flex flex-col items-center mt-4">
+        <button className="flex items-center gap-2 text-[#FF6C4C] text-sm font-bold uppercase">
+          SEE ALL
+          <svg
+            width="12"
+            height="10"
+            viewBox="0 0 16 14"
+            className="stroke-[#FF6C4C]"
+          >
+            <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    {/* === Card 3: Newsletter Signup === */}
+    <div className="bg-[#2388FF] shadow-md rounded-xl p-8 text-white flex flex-col justify-between h-[330px]">
+      <div>
+        <h3 className="font-bold text-2xl mb-4">Join with our Network</h3>
+        <p className="text-lg leading-relaxed mb-6">
+          Collaborate with us on bold new ventures, from brand identity to full-stack innovation.
+          Let’s grow together.
+        </p>
+      </div>
+      <div className="flex flex-col gap-3">
+        <div className="relative">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="w-full h-14 pl-10 pr-4 text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
+          />
+          <svg
+            viewBox="0 0 18 14"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 fill-white/90"
+          >
+            <path d="M1 1h16v12H1z" fill="none" stroke="currentColor" />
+            <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
+          </svg>
         </div>
-      </section>
+        <button className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-100 rounded-full">
+          <a href="/Contact">Let’s Connect</a>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
       {/* ===== Team Section ===== */}
