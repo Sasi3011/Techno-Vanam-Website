@@ -3,6 +3,8 @@ import Logo from "../assets/logo.png"; // Import the logo image
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const teamMembers = [
   {
     name: "Sasikiran TT",
@@ -82,15 +84,27 @@ export default function About() {
   const [ref1, inView1] = useInView({ threshold: 0.5 });
   const [ref2, inView2] = useInView({ threshold: 0.5 });
   const [ref3, inView3] = useInView({ threshold: 0.5 });
+   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+ const handleConnect = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+    navigate(`/Contact?email=${encodeURIComponent(email)}`);
+  };
 
   return (
+    
     <>
       {/* ===== Hero Section ===== */}
-      <section className="flex flex-col items-center pt-[94px] pb-38 mt-23  pr-8  pl-8">
+      <section className="flex flex-col items-center pt-[65px] pb-32 mt-23  pr-16  pl-16">
         <div className="flex flex-row items-center gap-1 w-full max-w-7xl">
           {/* Left: Copy Block */}
           <div>
-            <div className="flex items-center  text-gray-900 font-bold">
+            <div className="flex items-center  gap-3 text-black font-bold">
           <span className="text-5xl">
             We are
           </span>
@@ -106,27 +120,37 @@ export default function About() {
           </div>
         </div>
             <p className="mt-6 text-lg leading-relaxed text-[#667097]">
-              We’re not just an agency — we’re a creative tech studio <br/>passionate
-              about crafting impactful digital products.<br/> From empowering
-              startups to building our own <br/>innovations, we design, develop, and
-              launch experiences<br/> that move people and businesses forward.
+              We’re not just an agency — we’re a creative tech studio passionate<br/>
+              about crafting impactful digital products. From empowering
+              startups<br/> to building our own innovations, we design, develop, and
+              launch <br/>experiences that move people and businesses forward.
             </p>
-            <div className="mt-8 flex items-center gap-2">
-              <span className="flex justify-center items-end w-5 h-5 border-2 border-[#2388FF] rounded-full">
-                <span className="w-1 h-1 bg-[#2388FF] rounded-full mb-1" />
-              </span>
-              <span className="font-bold uppercase text-sm text-[#2388FF]">
-                Scroll down
-              </span>
-            </div>
+<div className="mt-8 flex items-center gap-2">
+  {/* Icon */}
+  <div
+    onClick={() =>
+      document.getElementById("what-drives-us")?.scrollIntoView({ behavior: "smooth" })
+    }
+    className="flex items-center gap-2 cursor-pointer group transition-transform duration-200 hover:scale-105"
+  >
+    {/* Scroll icon with bounce and hover effect */}
+    <span className="flex justify-center items-end w-4 h-6 border-2 border-[#2388FF] rounded-full relative overflow-hidden group-hover:border-blue-400 transition-colors duration-200">
+      <span className="w-1.5 h-1.5 bg-[#2388FF] rounded-full mb-1 animate-bounce-dot group-hover:bg-blue-400 transition-colors duration-200" />
+    </span>
+
+    {/* Scroll text with hover effect */}
+    <span className="font-bold uppercase text-sm text-[#2388FF] group-hover:text-blue-400 transition-colors duration-200">
+      Scroll down
+    </span>
+  </div>
+</div>
+
+
+
           </div>
           {/* Right: Hero Artwork */}
           <div className="w-1/2 relative">
-            <img
-              src="/placeholder-cylinders.jpg"
-              alt="3-D cylinders"
-              className="w-full h-auto max-h-[534px] object-cover"
-            />
+            
             <img
               src="/placeholder-circle-logo.svg"
               alt="logo circle"
@@ -138,7 +162,7 @@ export default function About() {
 
       {/* ===== Transform Section ===== */}
        
-       <section className="flex flex-col items-center bg-[#2388FF] pt-16 pb-32 rounded-t-[125px] px-8 space-y-6 overflow-hidden">
+       <section className="flex flex-col items-center bg-[#2388FF] pt-8 pb-8 rounded-b-[120px] px-8 space-y-6 overflow-hidden">
   {/* "design" */}
   <motion.h2
     ref={ref1}
@@ -149,7 +173,7 @@ export default function About() {
       scale: inView1 ? 1 : 0.95,
     }}
     transition={{ duration: 1, type: "spring", stiffness: 80 }}
-    className="font-bold text-[94px] leading-tight text-white text-center"
+    className="font-bold text-[80px] leading-tight text-white text-center"
   >
     design
   </motion.h2>
@@ -164,7 +188,7 @@ export default function About() {
       scale: inView2 ? 1 : 0.95,
     }}
     transition={{ duration: 1.1, delay: 0.2, type: "spring", stiffness: 60 }}
-    className="font-bold text-[94px] leading-tight text-white text-center"
+    className="font-bold text-[80px] leading-tight text-white text-center"
   >
     We transform digital presence
   </motion.h1>
@@ -179,7 +203,7 @@ export default function About() {
       scale: inView3 ? 1 : 0.95,
     }}
     transition={{ duration: 1, type: "spring", stiffness: 80 }}
-    className="font-bold text-[94px] leading-tight text-white text-center"
+    className="font-bold text-[80px] leading-tight text-white text-center"
   >
     develop
   </motion.h2>
@@ -187,7 +211,7 @@ export default function About() {
 
 
       {/* ===== Content Grid Section ===== */}
-      <section className="flex flex-col items-center bg-[#F6F8FC] px-8 pt-16 pb-6">
+      <section id="what-drives-us" className="flex flex-col items-center bg-[#F6F8FC] px-8 pt-20 pb-6"    >
         <div className="w-full max-w-7xl">
           {/* What Drives Us */}
           <div className="flex flex-col items-center gap-4 mb-20 text-center">
@@ -317,7 +341,7 @@ export default function About() {
   <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8">
 
     {/* === Card 1: Explore What We Do === */}
-    <div className="relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[330px]">
+    <div className="relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[400px]">
       {/* Optional Logo */}
       <img
         src="/placeholder-figma.png"
@@ -331,7 +355,7 @@ export default function About() {
         className="w-full max-w-[90%] h-auto mt-12"
       />
 
-      <p className="text-center font-bold text-2xl text-[#19213D] mt-4">
+      <p className="text-center font-bold text-2xl text-[#19213D] mt-38">
         Explore What <br /> We Do
       </p>
 
@@ -351,14 +375,14 @@ export default function About() {
     </div>
 
     {/* === Card 2: Crafted with Passion === */}
-    <div className="bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[330px]">
+    <div className="bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[400px]">
       <img
         src="/placeholder-hubspot.png"
         alt="HubSpot badge"
         className="w-full max-w-[90%] h-auto mt-4"
       />
 
-      <p className="text-center font-bold text-2xl text-[#19213D] mt-4">
+      <p className="text-center font-bold text-2xl text-[#19213D] mt-42">
         Crafted with Passion <br /> Built to Inspire
       </p>
 
@@ -378,7 +402,7 @@ export default function About() {
     </div>
 
     {/* === Card 3: Newsletter Signup === */}
-    <div className="bg-[#2388FF] shadow-md rounded-xl p-8 text-white flex flex-col justify-between h-[330px]">
+     <div className="bg-[#2388FF] shadow-md rounded-xl p-8 text-white flex flex-col justify-between h-[400px]">
       <div>
         <h3 className="font-bold text-2xl mb-4">Join with our Network</h3>
         <p className="text-lg leading-relaxed mb-6">
@@ -391,18 +415,27 @@ export default function About() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full h-14 pl-10 pr-4 text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setError("");
+            }}
+            className="w-full h-14 pl-14 pr-4 text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
           />
           <svg
             viewBox="0 0 18 14"
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 fill-white/90"
+            className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 fill-white/90"
           >
             <path d="M1 1h16v12H1z" fill="none" stroke="currentColor" />
             <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
           </svg>
+          {error && <p className="text-red-300 text-sm mt-1">{error}</p>}
         </div>
-        <button className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-100 rounded-full">
-          <a href="/Contact">Let’s Connect</a>
+        <button
+          onClick={handleConnect}
+          className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-100 rounded-full"
+        >
+          Let’s Connect
         </button>
       </div>
     </div>
@@ -424,13 +457,13 @@ export default function About() {
             We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
           </p>
         </div>
-        <div className="flex flex-row justify-center gap-10 pb-28">
+        <div className="flex flex-row justify-center gap-10 pb-8">
 
   {teamMembers.map((member, index) => (
     <div key={index} className="flex flex-col items-center w-80 relative">
       
       {/* Image Section */}
-      <div className="w-full h-[460px] bg-gray-200 rounded-lg relative">
+      <div className="w-full h-[400px] bg-gray-200 rounded-lg relative">
 
         <img
           src={member.img}

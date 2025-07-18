@@ -22,6 +22,7 @@
 
   /* ======= CUSTOM SCROLLBAR STYLES ======= */
 
+<<<<<<< HEAD
   /* Exclude scrollbar styling from header */
   header::-webkit-scrollbar {
     display: none; /* Hide scrollbar in header for WebKit browsers */
@@ -71,3 +72,22 @@
     scrollbar-width: medium; /* Thinner scrollbar */
     scrollbar-color: #3b82f6 transparent; /* Blue thumb with transparent track */
   }
+=======
+/* For Firefox */
+body,
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+@keyframes bounce-dot {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.animate-bounce-dot {
+  animation: bounce-dot 2s infinite;
+}
+>>>>>>> b1c5eb24a78259c8f6341f190a32ceaca6b40809
