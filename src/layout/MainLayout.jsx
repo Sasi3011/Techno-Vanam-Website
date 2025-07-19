@@ -8,7 +8,7 @@ const MainLayout = ({ children }) => {
       <Header />
 
       {/* Scrollable area below header (main + footer) */}
-      <div className="custom-scrollbar overflow-y-auto h-[calc(100vh-80px)]">
+      <div className="custom-scrollbar overflow-y-auto h-[calc(100vh-76px)]">
         <main>{children}</main>
         <Footer />
       </div>
