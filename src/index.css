@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
-<<<<<<< HEAD
   /* Base Font Family */
   body {
     font-family: "Poppins", sans-serif;
@@ -77,11 +76,6 @@ body,
 * {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
-=======
-/* Base Font Family */
-body {
-  font-family: "Poppins", sans-serif;
->>>>>>> d0e31cfb83ecc7c555a128d0736b633dbb70909b
 }
 
 /* Smooth Scroll for anchor links and navigation */
