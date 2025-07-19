@@ -226,16 +226,15 @@ const Home = () => {
             </Link>
           </div>
           <video
-  src={heroIllustration}
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="w-full max-w-[500px] rounded-4xl shadow-lg object-cover"
->
-  Your browser does not support the video tag.
-</video>
-
+            src={heroIllustration}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full max-w-[500px] rounded-4xl shadow-lg object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
@@ -257,44 +256,59 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* Vertical Cards */}
-          {servicesList.map((service, index) => (
-            <div
-              key={index}
-              ref={(el) => (cardRefs.current[index] = el)}
-              className={`max-w-5xl flex flex-row items-center justify-between ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 mx-auto transition-all duration-300`}
-            >
-              {/* Left Text Block */}
-              <div className="w-1/2 p-12 flex flex-col gap-4">
-                <h3 className={`${service.color} text-lg uppercase font-semibold tracking-wide`}>
-                  {service.name}
-                </h3>
-                <h4 className="text-gray-900 text-4xl font-bold leading-tight">
-                  {service.subheading}
-                </h4>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {service.description}
-                </p>
-                <Link
-                  to="/contact"
-                  className="flex items-center gap-2 text-sm text-neutral-800 font-semibold uppercase tracking-wide hover:text-blue-600 transition-colors duration-200"
-                >
-                  Get in touch
-                  <span className="text-lg">➔</span>
-                </Link>
-              </div>
+          {/* Grid Cards */}
+          <div className="grid grid-cols-3 grid-rows-2 gap-4">
+            {servicesList.map((service, index) => {
+              let gridClass;
+              if (index === 0) {
+                gridClass = 'col-span-2 row-span-2';
+              } else if (index === 1) {
+                gridClass = 'col-span-1 row-span-1 col-start-3';
+              } else if (index === 2) {
+                gridClass = 'col-span-1 row-span-1 col-start-3 row-start-2';
+              } else {
+                gridClass = 'col-span-1 row-span-1';
+              }
 
-              {/* Right Image Block */}
-              <div className="w-1/2 h-[520px] bg-[#D6ECFF] flex items-center justify-center rounded-2xl">
-                <img
-                  src={service.image}
-                  alt={`${service.name} illustration`}
-                  className="object-contain w-full h-full"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          ))}
+              return (
+                <div
+                  key={index}
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  className={`max-w-lg ${gridClass} ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 mx-auto transition-all duration-300 flex flex-row items-center justify-between`}
+                >
+                  {/* Left Text Block */}
+                  <div className="w-1/2 p-12 flex flex-col gap-4">
+                    <h3 className={`${service.color} text-lg uppercase font-semibold tracking-wide`}>
+                      {service.name}
+                    </h3>
+                    <h4 className="text-gray-900 text-4xl font-bold leading-tight">
+                      {service.subheading}
+                    </h4>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      {service.description}
+                    </p>
+                    <Link
+                      to="/contact"
+                      className="flex items-center gap-2 text-sm text-neutral-800 font-semibold uppercase tracking-wide hover:text-blue-600 transition-colors duration-200"
+                    >
+                      Get in touch
+                      <span className="text-lg">➔</span>
+                    </Link>
+                  </div>
+
+                  {/* Right Image Block */}
+                  <div className="w-[700px] h-[200px] bg-[#D6ECFF] flex items-center justify-center rounded-2xl">
+                    <img
+                      src={service.image}
+                      alt={`${service.name} illustration`}
+                      className="object-contain w-full h-full"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -436,7 +450,7 @@ const Home = () => {
         </div>
         <div className="mt-12 bg-blue-50 rounded-3xl p-8 flex flex-row items-center justify-between gap-10">
           <div className="w-[50%] max-w-xl">
-            <h3 className="text-blue-700 text-3xl font-bold mb-4">ATHLIXIR</h3>
+            <h3 className="text-blue-600 text-3xl font-bold mb-4">ATHLIXIR</h3>
             <p className="text-gray-700 text-md mb-8">
               Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
             </p>
@@ -479,17 +493,16 @@ const Home = () => {
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-10">
           <div className="w-1/2 flex justify-center">
             <video
-  src={socialmediaImage}
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full max-w-[320px] h-[320px] object-contain rounded-xl"
-  loading="lazy"
->
-  Your browser does not support the video tag.
-</video>
-
+              src={socialmediaImage}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full max-w-[320px] h-[320px] object-contain rounded-xl"
+              loading="lazy"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="w-1/2 text-white space-y-6 max-w-xl">
             <h2 className="text-4xl font-bold leading-tight">

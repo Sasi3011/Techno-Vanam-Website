@@ -1,19 +1,19 @@
 import React from "react";
-import WebDesignImage from "../assets/logo.png";
-import AppDesignImage from "../assets/logo.png";
-import WebDevelopmentImage from "../assets/logo.png";
-import PosterDesignImage from "../assets/logo.png";
-import LogoDesignImage from "../assets/logo.png";
+import WebDesignImage from "../assets/Service/Web Design.png";
+import AppDesignImage from "../assets/Service/App Design.png";
+import WebDevelopmentImage from "../assets/Service/Web Development.png";
+import PosterDesignImage from "../assets/Service/Poster Design.png";
+import LogoDesignImage from "../assets/Service/Logo Design.png";
 import SaaSIcon from "../assets/logo.png";
-import StartupIcon from "../assets/logo.png";
+import StartupIcon from "../assets/Service/Startup Icon.png";
 import IndustriesIcon from "../assets/logo.png";
 import SocialMediaImage from "../assets/Contact Us.mp4";
 
 const servicesList = [
   {
     name: "Web Design",
-    color: "text-red-500",
-    bgColor: "bg-[#FFD6DC]",
+    color: "text-purple-600",
+    bgColor: "bg-purple-100",
     subheading: "We build impactful digital experiences",
     description:
       "We design stunning, responsive websites that elevate your online presence and create seamless experiences across all devices.",
@@ -21,8 +21,8 @@ const servicesList = [
   },
   {
     name: "App Design",
-    color: "text-blue-500",
-    bgColor: "bg-[#FFF3C9]",
+    color: "text-orange-500",
+    bgColor: "bg-[#fff4e5]",
     subheading: "We design mobile apps users love",
     description:
       "From wireframes to final UI, we design intuitive, attractive apps that enhance usability and connect deeply with your users.",
@@ -30,8 +30,8 @@ const servicesList = [
   },
   {
     name: "Web Development",
-    color: "text-green-500",
-    bgColor: "bg-[#E7ECF9]",
+    color: "text-blue-600",
+    bgColor: "bg-[#e0f2ff]",
     subheading: "We develop fast & scalable digital platforms",
     description:
       "We build robust, SEO-friendly websites using modern frameworks — optimized for performance, flexibility, and long-term growth.",
@@ -39,8 +39,8 @@ const servicesList = [
   },
   {
     name: "Poster Design",
-    color: "text-yellow-500",
-    bgColor: "bg-[#DCFFE1]",
+    color: "text-red-500",
+    bgColor: "bg-red-100",
     subheading: "We create bold, high-impact poster designs",
     description:
       "Whether for digital or print, our posters grab attention, convey your message clearly, and strengthen brand communication.",
@@ -48,8 +48,8 @@ const servicesList = [
   },
   {
     name: "Logo Design",
-    color: "text-purple-500",
-    bgColor: "bg-[#FFFCF8]",
+    color: "text-yellow-500",
+    bgColor: "bg-[#fff9e5]",
     subheading: "We design unique logos that define your brand",
     description:
       "We craft timeless, versatile logos that reflect your identity, resonate with your audience, and stand out in any context.",
@@ -104,7 +104,7 @@ const Services = () => {
               >
                 {/* Left Text Block */}
                 <div className="w-1/2 p-12 flex flex-col gap-4">
-                  <h3 className={`${service.color} text-lg uppercase font-semibold tracking-wide`}>
+                  <h3 className={`${service.color} text-lg uppercase font-bold tracking-wide`}>
                     {service.name}
                   </h3>
                   <h4 className="text-gray-900 text-4xl font-bold leading-tight">
@@ -153,27 +153,28 @@ const Services = () => {
 
          <div className="w-full flex flex-row justify-center items-start gap-4">
             {industriesList.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-row justify-between items-center p-5 gap-3 bg-white border border-gray-200 rounded-2xl shadow-sm w-[300px] min-h-[80px]"
-              >
-                <div className="flex flex-row items-center gap-3">
-                  <img
-                    src={item.image}
-                    alt={`${item.title} Icon`}
-                    className="w-12 h-12 object-cover"
-                  />
-                  <div className="flex flex-col items-start">
-                    <span className={`text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
-                      {item.label}
-                    </span>
-                    <span className="text-gray-900 text-xl font-semibold">
-                      {item.title}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
+  <div
+    key={index}
+    className="flex flex-row justify-between items-center p-3 gap-3 bg-white border-2 border-gray-200 rounded-2xl shadow-sm w-[300px] min-h-[80px] transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-md hover:border-blue-500"
+  >
+    <div className="flex flex-row items-center gap-3">
+      <img
+        src={item.image} 
+        alt={`${item.title} Icon`}
+        className="w-14 h-14 object-cover"
+      />
+      <div className="flex flex-col items-start">
+        <span className={`text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
+          {item.label}
+        </span>
+        <span className="text-gray-900 text-xl font-semibold">
+          {item.title}
+        </span>
+      </div>
+    </div>
+  </div>
+))}
+
             </div>
           </div>
       </section>
