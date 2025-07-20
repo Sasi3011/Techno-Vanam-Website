@@ -24,9 +24,9 @@ import heroIllustration from "../assets/original-0c7449463779438e161d845f94825e5
 
 // Placeholder images for services (replace with actual paths)
 import webDesignImage from "../assets/logo.png";
-import appDesignImage from "../assets/logo.png";
-import webDevelopmentImage from "../assets/logo.png";
-import posterDesignImage from "../assets/logo.png";
+import BrandingImage from "../assets/Home Page/Branding.png";
+import webDevelopmentImage from "../assets/Home Page/Web Development.png";
+import UIUXDesignImage from "../assets/Home Page/UIUX.png";
 import logoDesignImage from "../assets/logo.png";
 
 // Unique project images (replace with actual paths)
@@ -234,7 +234,7 @@ const Home = () => {
   <div className="w-[500px] bg-white rounded-2xl shadow-lg flex flex-col justify-between ">
     {/* Paradox Text */}
     <div className="pl-6 pr-6 pt-6 ">
-      <h3 className="text-blue-500 text-lg uppercase font-semibold tracking-wide">UI/UX Design</h3>
+      <h3 className="text-blue-500  text-lg uppercase font-semibold tracking-wide">UI/UX Design</h3>
       <p className="text-gray-600 text-base leading-relaxed mt-4">
         We craft seamless, intuitive, and visually engaging digital experiences that elevate your brand and delight your users — powered by thoughtful design and user-centered strategy. 
       </p>
@@ -249,7 +249,7 @@ const Home = () => {
     {/* Paradox Image */}
     <div className="mt-6 h-[350px] bg-gray-100 rounded-xl overflow-hidden">
       <img
-        src={paradoxImage}
+        src={UIUXDesignImage}
         alt="Para dox Preview"
         className="object-cover w-full h-full"
         loading="lazy"
@@ -277,7 +277,7 @@ const Home = () => {
       {/* Image */}
       <div className="w-1/2 h-full flex items-center justify-center">
         <img
-          src={appDesignImage}
+          src={BrandingImage}
           alt="Teachable"
           className="object-cover w-full h-full rounded-xl"
           loading="lazy"
