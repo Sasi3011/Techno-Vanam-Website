@@ -41,35 +41,7 @@ import starUpImage from "../assets/logo.png";
 import pizzaplanetImage from "../assets/logo.png";
 import upLeadImage from "../assets/logo.png";
 
-const servicesList = [
-  {
-    name: "Web Design",
-    color: "text-red-500",
-    bgColor: "bg-red-100",
-    subheading: "We build impactful digital experiences",
-    description:
-      "We design stunning, responsive websites that elevate your online presence and create seamless experiences across all devices.",
-    image: webDesignImage,
-  },
-  {
-    name: "App Design",
-    color: "text-blue-500",
-    bgColor: "bg-blue-100",
-    subheading: "We design mobile apps users love",
-    description:
-      "From wireframes to final UI, we design intuitive, attractive apps that enhance usability and connect deeply with your users.",
-    image: appDesignImage,
-  },
-  {
-    name: "Web Development",
-    color: "text-green-500",
-    bgColor: "bg-green-100",
-    subheading: "We develop fast & scalable digital platforms",
-    description:
-      "We build robust, SEO-friendly websites using modern frameworks — optimized for performance, flexibility, and long-term growth.",
-    image: webDevelopmentImage,
-  },
-];
+
 
 const steps = [
   {
@@ -257,58 +229,89 @@ const Home = () => {
           </div>
 
           {/* Grid Cards */}
-          <div className="grid grid-cols-3 grid-rows-2 gap-4">
-            {servicesList.map((service, index) => {
-              let gridClass;
-              if (index === 0) {
-                gridClass = 'col-span-2 row-span-2';
-              } else if (index === 1) {
-                gridClass = 'col-span-1 row-span-1 col-start-3';
-              } else if (index === 2) {
-                gridClass = 'col-span-1 row-span-1 col-start-3 row-start-2';
-              } else {
-                gridClass = 'col-span-1 row-span-1';
-              }
+          <div className="flex flex-row gap-6 h-[575px] w-7xl overflow-hidden justify-center">
+  {/* LEFT: Paradox Card */}
+  <div className="w-[500px] bg-white rounded-2xl shadow-lg flex flex-col justify-between ">
+    {/* Paradox Text */}
+    <div className="pl-6 pr-6 pt-6 ">
+      <h3 className="text-blue-500 text-lg uppercase font-semibold tracking-wide">UI/UX Design</h3>
+      <p className="text-gray-600 text-base leading-relaxed mt-4">
+        We craft seamless, intuitive, and visually engaging digital experiences that elevate your brand and delight your users — powered by thoughtful design and user-centered strategy. 
+      </p>
+      <Link
+        to="/services"
+        className="mt-6 inline-flex items-center gap-2 text-sm text-blue-600 font-semibold uppercase tracking-wide hover:text-blue-800 transition-colors duration-200"
+      >
+        See services <span className="text-lg">➔</span>
+      </Link>
+    </div>
 
-              return (
-                <div
-                  key={index}
-                  ref={(el) => (cardRefs.current[index] = el)}
-                  className={`max-w-lg ${gridClass} ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 mx-auto transition-all duration-300 flex flex-row items-center justify-between`}
-                >
-                  {/* Left Text Block */}
-                  <div className="w-1/2 p-12 flex flex-col gap-4">
-                    <h3 className={`${service.color} text-lg uppercase font-semibold tracking-wide`}>
-                      {service.name}
-                    </h3>
-                    <h4 className="text-gray-900 text-4xl font-bold leading-tight">
-                      {service.subheading}
-                    </h4>
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      {service.description}
-                    </p>
-                    <Link
-                      to="/contact"
-                      className="flex items-center gap-2 text-sm text-neutral-800 font-semibold uppercase tracking-wide hover:text-blue-600 transition-colors duration-200"
-                    >
-                      Get in touch
-                      <span className="text-lg">➔</span>
-                    </Link>
-                  </div>
+    {/* Paradox Image */}
+    <div className="mt-6 h-[350px] bg-gray-100 rounded-xl overflow-hidden">
+      <img
+        src={paradoxImage}
+        alt="Para dox Preview"
+        className="object-cover w-full h-full"
+        loading="lazy"
+      />
+    </div>
+  </div>
 
-                  {/* Right Image Block */}
-                  <div className="w-[700px] h-[200px] bg-[#D6ECFF] flex items-center justify-center rounded-2xl">
-                    <img
-                      src={service.image}
-                      alt={`${service.name} illustration`}
-                      className="object-contain w-full h-full"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+  {/* RIGHT SIDE: Teachable and Upside stacked with gap */}
+  <div className="w-1/2 flex flex-col gap-6">
+    {/* Teachable Card */}
+    <div className="h-[275px] bg-white rounded-2xl shadow-lg flex flex-row pl-6">
+      {/* Text */}
+      <div className="w-1/2 pr-4 flex flex-col justify-center">
+        <h3 className="text-purple-500 text-lg uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
+        <p className="text-gray-600 text-base leading-relaxed mt-2">
+          We help your brand stand out and communicate clearly through bold, creative visuals
+        </p>
+        <Link
+          to="/services"
+          className="mt-4 inline-flex items-center gap-2 text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
+        >
+          See services <span className="text-lg">➔</span>
+        </Link>
+      </div>
+      {/* Image */}
+      <div className="w-1/2 h-full flex items-center justify-center">
+        <img
+          src={appDesignImage}
+          alt="Teachable"
+          className="object-cover w-full h-full rounded-xl"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    {/* Upside Card */}
+    <div className="h-[275px] bg-white rounded-2xl shadow-lg flex flex-row pl-6">
+      {/* Text */}
+      <div className="w-1/2 pr-4 flex flex-col justify-center">
+        <h3 className="text-green-500 text-lg uppercase font-semibold tracking-wide">Web Development</h3>
+        <p className="text-gray-600 text-base leading-relaxed mt-2">
+          We help your business establish a powerful online presence with fast, responsive, and scalable websites
+        </p>
+        <Link
+          to="/services"
+          className="mt-4 inline-flex items-center gap-2 text-sm text-green-600 font-semibold uppercase tracking-wide hover:text-green-800 transition-colors duration-200"
+        >
+          See services <span className="text-lg">➔</span>
+        </Link>
+      </div>
+      {/* Image */}
+      <div className="w-1/2 h-full flex items-center justify-center">
+        <img
+          src={webDevelopmentImage}
+          alt="Upside"
+          className="object-cover w-full h-full rounded-xl"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
