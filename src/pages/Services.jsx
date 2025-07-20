@@ -30,8 +30,8 @@ const servicesList = [
   },
   {
     name: "Web Development",
-    color: "text-blue-600",
-    bgColor: "bg-[#e0f2ff]",
+    color: "text-red-600",
+    bgColor: "bg-red-100",
     subheading: "We develop fast & scalable digital platforms",
     description:
       "We build robust, SEO-friendly websites using modern frameworks — optimized for performance, flexibility, and long-term growth.",
@@ -39,8 +39,8 @@ const servicesList = [
   },
   {
     name: "Poster Design",
-    color: "text-red-500",
-    bgColor: "bg-red-100",
+    color: "text-yellow-600",
+    bgColor: "bg-yellow-100",
     subheading: "We create bold, high-impact poster designs",
     description:
       "Whether for digital or print, our posters grab attention, convey your message clearly, and strengthen brand communication.",
@@ -48,8 +48,8 @@ const servicesList = [
   },
   {
     name: "Logo Design",
-    color: "text-yellow-500",
-    bgColor: "bg-[#fff9e5]",
+    color: "text-green-600",
+    bgColor: "bg-green-100",
     subheading: "We design unique logos that define your brand",
     description:
       "We craft timeless, versatile logos that reflect your identity, resonate with your audience, and stand out in any context.",
@@ -115,7 +115,7 @@ const Services = () => {
                   </p>
                   <a
                     href="/contact"
-                    className="flex items-center gap-2 text-sm text-neutral-800 font-semibold uppercase tracking-wide hover:text-blue-600 transition-colors duration-200"
+                    className="flex items-center gap-2 text-md text-neutral-800 font-bold uppercase tracking-wide hover:text-blue-600 transition-colors duration-200"
                   >
                     Get in touch
                     <span className="text-lg">➔</span>
