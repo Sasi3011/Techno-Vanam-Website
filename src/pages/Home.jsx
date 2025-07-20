@@ -19,7 +19,7 @@ import devicon from "../assets/Home Page/Development Phase Icon.png";
 import launchicon from "../assets/Home Page/Launch Phase Icon.png";
 import supporticon from "../assets/Home Page/Support Phase Icon.png";
 import athlixirImage from "../assets/Home Page/Athlixir.png";
-import socialmediaImage from "../assets/Contact Us.mp4";
+import SocialMediaImage from "../assets/Contact Us.mp4";
 import heroIllustration from "../assets/original-0c7449463779438e161d845f94825e57.mp4";
 
 // Placeholder images for services (replace with actual paths)
@@ -192,7 +192,7 @@ const Home = () => {
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 text-base"
+              className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-400 text-base"
             >
               Get in Touch
             </Link>
@@ -224,7 +224,7 @@ const Home = () => {
               to="/services"
               className="mt-6 inline-block px-6 py-3 bg-white text-blue-600 rounded-full hover:bg-gray-100 text-base font-medium"
             >
-              View More →
+              View More 
             </Link>
           </div>
 
@@ -316,7 +316,7 @@ const Home = () => {
       </section>
 
       {/* Why Work With Us */}
-      <section className="py-40 flex flex-col items-center bg-white">
+      <section className="py-15 flex flex-col items-center bg-white">
         <div className="max-w-7xl w-full px-8 flex flex-col gap-8">
           <div className="flex flex-col gap-4 text-left">
             <h2 className="text-blue-600 text-lg font-semibold uppercase">
@@ -372,7 +372,7 @@ const Home = () => {
       <section className="bg-white py-20 px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-blue-600 text-lg font-semibold uppercase">
-            Past Projects
+            ~ Past Projects ~
           </h3>
           <h2 className="text-4xl font-bold text-balck leading-tight mb-4">
             Let our work speak for itself
@@ -413,10 +413,10 @@ const Home = () => {
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
-          <div className="mt-12 flex justify-center">
+          {/* <div className="mt-12 flex justify-center">
             <Link
               to="/Product1"
-              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium text-lg rounded-full shadow-md hover:bg-blue-700 transition text-base"
+              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium text-lg rounded-full shadow-md hover:bg-blue-400 transition text-base"
             >
               View More
               <svg
@@ -434,15 +434,15 @@ const Home = () => {
                 />
               </svg>
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Our Products */}
-      <section className="bg-white py-16 px-12">
+      <section className="bg-white py-16 px-12 ">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-blue-600 text-lg font-semibold uppercase">
-            Our Products
+            ~Our Products~
           </p>
           <h2 className="text-4xl font-bold text-balck leading-tight mb-4">
             Products by <span className="text-blue-600">Techno Vanam</span>
@@ -451,7 +451,7 @@ const Home = () => {
             At Techno Vanam, we don’t just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
           </p>
         </div>
-        <div className="mt-12 bg-blue-50 rounded-3xl p-8 flex flex-row items-center justify-between gap-10">
+        <div className="mt-12 bg-blue-50 rounded-3xl p-8 flex flex-row items-center justify-between gap-10 max-w-5xl mx-auto">
           <div className="w-[50%] max-w-xl">
             <h3 className="text-blue-600 text-3xl font-bold mb-4">ATHLIXIR</h3>
             <p className="text-gray-700 text-md mb-8">
@@ -478,8 +478,8 @@ const Home = () => {
               COMING SOON — BE PART OF THE JOURNEY →
             </Link>
           </div>
-          <div className="w-[50%] max-w-[400px]">
-            <div className="aspect-[4/3] rounded-2xl shadow-md overflow-hidden">
+          {/* <div className="w-[50%] max-w-[400px]"> */}
+            <div className="aspect-[4/3] rounded-2xl  shadow-md overflow-hidden">
               <img
                 src={athlixirImage}
                 alt="Preview of Athlixir platform"
@@ -488,42 +488,58 @@ const Home = () => {
               />
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </section>
 
-      {/* Call to Action */}
-      <section className="relative isolate overflow-hidden pt-24 pb-28 px-10 bg-gradient-to-br from-[#0047FF] via-[#0B74F8] to-[#0047FF] rounded-t-[160px]">
-        <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-10">
-          <div className="w-1/2 flex justify-center">
-            <video
-              src={socialmediaImage}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full max-w-[320px] h-[320px] object-contain rounded-xl"
-              loading="lazy"
+
+      {/* CTA Section */}
+<section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
+  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
+    
+    {/* Image First */}
+    <div className="w-1/2 h-[600px]">
+  <video
+    src={SocialMediaImage}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-contain"
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+    {/* Content Second (on the right now) */}
+    <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
+      <h2 className="text-5xl font-bold leading-tight">
+        Ready to launch something amazing with Techno Vanam?
+      </h2>
+      <p className="text-lg mt-4">
+        Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+      </p>
+      <div className="pt-6 flex justify-start">
+        <a href="/contact">
+          <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
+            Contact Us
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-4 h-4 transform -scale-y-100"
             >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div className="w-1/2 text-white space-y-6 max-w-xl">
-            <h2 className="text-4xl font-bold leading-tight">
-              Ready to launch something amazing with Techno Vanam?
-            </h2>
-            <p className="text-lg leading-7 text-white/90">
-              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-[#2388FF] font-bold px-6 py-4 rounded-full shadow-md hover:bg-gray-100 transition text-base"
-            >
-              Contact Us →
-            </Link>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-[#1278FF] z-0 rounded-t-[160px]" />
-      </section>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
     </div>
   );
 };

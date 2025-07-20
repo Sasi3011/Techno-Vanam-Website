@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SocialMediaImage from "../assets/Contact Us.mp4";
 const teamMembers = [
   {
     name: "Sasikiran TT",
@@ -28,55 +29,60 @@ const teamMembers = [
     linkedin: "#",
   },
 ];
-
 const values = [
   {
     title: "Innovation",
     description:
-      "We constantly challenge norms by turning creative ideas into practical, high-impact digital solutions. Our innovative mindset helps clients stay ahead in a fast-evolving tech landscape through thoughtful design, experimentation, and problem-solving.",
+        "We constantly challenge norms by turning creative ideas into practical, high-impact digital solutions. Our innovative mindset helps clients stay ahead in a fast-evolving tech landscape through thoughtful design, experimentation, and problem-solving.",
     gradient: "from-[#807DFF] to-[rgba(186,185,255,0.34)]",
-    border: "border-[#5956E9]",
-    icon: "/placeholder-icon1.svg",
+    bgColor: "bg-[#F3F3FF]",
+    hoverShadow: "hover:shadow-[#807DFF]/40",
+    icon: "/icons/innovation.svg",
   },
   {
     title: "Growth",
     description:
-      "We believe growth is continuous—for our team, our clients, and the communities we support. Through curiosity, reflection, and learning, we constantly refine our skills and strategies to create lasting value at every stage.",
+     "We believe growth is continuous—for our team, our clients, and the communities we support. Through curiosity, reflection, and learning, we constantly refine our skills and strategies to create lasting value at every stage.",
     gradient: "from-[#38D4FF] to-[#D9F7FF]",
-    border: "border-[#33B6DA]",
-    icon: "/placeholder-icon2.svg",
+    bgColor: "bg-[#E6FAFF]",
+    hoverShadow: "hover:shadow-[#38D4FF]/40",
+    icon: "/icons/growth.svg",
   },
   {
     title: "Ownership",
     description:
-      "Every project we take on is our responsibility. From the first brief to final delivery, we lead with accountability, craftsmanship, and integrity—ensuring the work we do truly reflects our promise of excellence.",
+         "Every project we take on is our responsibility. From the first brief to final delivery, we lead with accountability, craftsmanship, and integrity—ensuring the work we do truly reflects our promise of excellence.",
     gradient: "from-[#E541ED] to-[#FEEBFF]",
-    border: "border-[#E749EE]",
-    icon: "/placeholder-icon3.svg",
+    bgColor: "bg-[#FCECFA]",
+    hoverShadow: "hover:shadow-[#E541ED]/40",
+    icon: "/icons/ownership.svg",
   },
   {
     title: "Team Work",
     description:
-      "Collaboration is at the heart of our process. We thrive on sharing ideas, offering support, and celebrating collective wins—because we know great results come from unity, trust, and a shared sense of purpose.",
-    gradient: "from-[#E541ED] to-[#FEEBFF]",
-    border: "border-[#E749EE]",
-    icon: "/placeholder-icon3.svg",
+     "Collaboration is at the heart of our process. We thrive on sharing ideas, offering support, and celebrating collective wins—because we know great results come from unity, trust, and a shared sense of purpose.",
+    gradient: "from-[#FF6B81] to-[#FFE6EA]",
+    bgColor: "bg-[#FFF0F3]",
+    hoverShadow: "hover:shadow-[#FF6B81]/40",
+    icon: "/icons/teamwork.svg",
   },
   {
     title: "Commitment",
     description:
-      "We commit deeply to our clients' visions and to our craft. Through consistency, passion, and attention to detail, we turn complex challenges into meaningful outcomes—delivering with care, every single time.",
-    gradient: "from-[#E541ED] to-[#FEEBFF]",
-    border: "border-[#E749EE]",
-    icon: "/placeholder-icon3.svg",
+ "We commit deeply to our clients' visions and to our craft. Through consistency, passion, and attention to detail, we turn complex challenges into meaningful outcomes—delivering with care, every single time.",
+     gradient: "from-[#FFD600] to-[#FFF9DB]",
+    bgColor: "bg-[#FFFAE6]",
+    hoverShadow: "hover:shadow-[#FFD600]/40",
+    icon: "/icons/commitment.svg",
   },
   {
     title: "Positivity",
     description:
-      "A positive attitude shapes everything we do—from communication to creativity. We face every challenge with optimism, resilience, and a problem-solving mindset that fuels momentum and builds stronger, happier partnerships.",
-    gradient: "from-[#E541ED] to-[#FEEBFF]",
-    border: "border-[#E749EE]",
-    icon: "/placeholder-icon3.svg",
+            "A positive attitude shapes everything we do—from communication to creativity. We face every challenge with optimism, resilience, and a problem-solving mindset that fuels momentum and builds stronger, happier partnerships.",
+    gradient: "from-[#34D399] to-[#D1FAE5]",
+    bgColor: "bg-[#E6FFF6]",
+    hoverShadow: "hover:shadow-[#34D399]/40",
+    icon: "/icons/positivity.svg",
   },
 ];
 
@@ -451,9 +457,9 @@ export default function About() {
             ~ Team Member ~
           </p>
           <h2 className="text-4xl font-bold text-black max-w-3xl mx-auto">
-            Our team member is ready to help our clients!
+            Our team member is ready to <br/>help our clients!
           </h2>
-          <p className="text-lg text-[#667097] mt-2 max-w-xl mx-auto">
+          <p className="text-lg text-[#667097] mt-2 max-w-4xl mx-auto">
             We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
           </p>
         </div>
@@ -495,83 +501,96 @@ export default function About() {
 
       </section>
 
-      {/* ===== Values Section ===== */}
-      <section className="w-full py-16 px-8 bg-white flex flex-col items-center">
-        <div className="max-w-3xl text-center mb-12">
-          <h2 className="text-[42px] font-bold text-[#19213D]">
-            The values that drive everything we do
-          </h2>
-          <p className="text-lg leading-relaxed text-[#667097] mt-2">
-            If you are so great at something, while only doing it for others?
-            That is why in 2020 we started building our own products.
-          </p>
+<section className="w-full py-16 px-8 bg-white flex flex-col items-center">
+  <div className="max-w-3xl text-center mb-12">
+    <h2 className="text-[42px] font-bold text-[#19213D]">
+      The values that drive us
+    </h2>
+    <p className="text-lg leading-relaxed text-[#667097] mt-2">
+      In 2025, Technovanam was born from a simple idea—why just design for others when we can design for impact? We build with purpose, create with clarity, and craft experiences that matter.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
+    {values.map((value, idx) => (
+      <div
+        key={idx}
+        className={`w-full min-w-[280px] max-w-[400px] h-auto border border-gray-100 rounded-xl p-8 transform transition duration-300
+          shadow-md hover:scale-105 
+          ${value.bgColor} 
+          ${value.hoverShadow}
+        `}
+      >
+        <div className="relative w-20 h-20 mb-4">
+          <div className={`absolute w-16 h-16 rounded-lg bg-gradient-to-b ${value.gradient}`} />
+          <div className="absolute w-16 h-16 left-2 top-2 rounded-lg border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)]" />
+          <img
+            src={value.icon}
+            alt={value.title}
+            className="absolute left-5 top-5 w-8 h-8"
+          />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
-          {values.map((value, idx) => (
-            <div
-              key={idx}
-              className="w-full min-w-[280px] max-w-[400px] h-auto bg-white border border-[#EBEFF6] rounded-xl shadow-md p-8"
-            >
-              <div className="relative w-20 h-20 mb-4">
-                <div
-                  className={`absolute w-16 h-16 rounded-lg bg-gradient-to-b ${value.gradient}`}
-                />
-                <div className="absolute w-16 h-16 left-2 top-2 rounded-lg border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)]" />
-                <img
-                  src={value.icon}
-                  alt={value.title}
-                  className="absolute left-5 top-5 w-8 h-8"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-[#19213D] mb-2">
-                {value.title}
-              </h3>
-              <p className="text-base leading-relaxed text-[#667097]">
-                {value.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <h3 className="text-xl font-bold text-[#19213D] mb-2">
+          {value.title}
+        </h3>
+        <p className="text-base leading-relaxed text-[#667097]">
+          {value.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* ===== CTA Section ===== */}
-      <section className="w-full flex flex-col items-center py-16 px-8 bg-blue-600">
-        <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
-          <div className="w-1/2 text-white text-left">
-            <h2 className="text-4xl font-bold leading-tight">
-              Ready to launch <br />
-              something amazing <br />
-              with Techno Vanam?
-            </h2>
-            <p className="text-lg mt-4">
-              Our creative experts are here to design, develop, and deliver high-performing
-              digital experiences tailored to your brand. Let’s build something great together.
-            </p>
-            <div className="pt-6">
-              <button className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-bold text-base rounded-full border shadow-md">
-                Contact Us
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="#2388FF"
-                  className="w-4 h-4"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="w-1/2 h-64">
-            <img
-              src="https://via.placeholder.com/500x500.png?text=Social+Media+Image"
-              alt="Social Media"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-      </section>
+ {/* CTA Section */}
+<section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
+  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
+    
+    {/* Image First */}
+    <div className="w-1/2 h-[600px]">
+  <video
+    src={SocialMediaImage}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-contain"
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+    {/* Content Second (on the right now) */}
+    <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
+      <h2 className="text-5xl font-bold leading-tight">
+        Ready to launch something amazing with Techno Vanam?
+      </h2>
+      <p className="text-lg mt-4">
+        Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+      </p>
+      <div className="pt-6 flex justify-start">
+        <a href="/contact">
+          <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
+            Contact Us
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-4 h-4 transform -scale-y-100"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
       </>
     );
   }

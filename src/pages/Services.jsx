@@ -180,7 +180,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-<section className="w-full flex flex-col items-center h-[620px] bg-blue-600">
+<section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
   <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
     
     {/* Image First */}
