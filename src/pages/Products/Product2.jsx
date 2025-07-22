@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import ComingSoonIcon from "../../assets/logo.png";
 import AppPreview from "../../assets/logo.png";
+import SocialMediaImage from "../../assets/Contact Us.mp4";
 
 export default function Products2() {
   const navigate = useNavigate();
@@ -16,39 +17,39 @@ export default function Products2() {
   };
 
   return (
-    <div className="flex flex-col items-center px-8 pt-16 pb-40 gap-[68px] w-full">
-      {/* Header Section */}
-      <div className="w-full max-w-[1320px] flex flex-col items-center gap-[40px]">
-        {/* Label */}
-        <div className="text-base text-blue-600 font-semibold uppercase">
-          ~ Products ~
-        </div>
-
-        {/* Heading + Logo */}
-        <div className="flex items-center justify-center text-center text-gray-900 font-bold">
-          <span className="text-4xl">
-            Products by
-          </span>
-          <div className="flex items-center gap-3">
-            <img
-              src={Logo}
-              alt="Logo"
-              className="w-[63px] h-[63px] object-contain"
-            />
-            <span className="text-4xl whitespace-nowrap">
-              Techno Vanam
-            </span>
-          </div>
-        </div>
-
-        {/* Description */}
-        <p className="text-center text-[#667097] text-[18px] leading-[1.6] max-w-3xl">
-          At Techno Vanam, we don’t just create for clients—we build for ourselves too. Our digital products are crafted to enhance workflows, spark creativity, and solve real-world problems for designers, developers, and businesses alike.
-        </p>
-      </div>
+    <div className="flex flex-col items-center  pt-16 gap-[68px] w-full">
+      {/* Section 1: Header */}
+            <div className="w-full max-w-[1320px] flex flex-col items-center gap-[40px]">
+              {/* Label */}
+              <div className="text-base text-blue-600 font-semibold uppercase">
+                ~ Products ~
+              </div>
+      
+              {/* Heading + Logo */}
+              <div className="flex items-center justify-center text-center text-gray-900 font-bold gap-3">
+                <span className="text-4xl ">
+                  Products by
+                </span>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={Logo}
+                    alt="Logo"
+                    className="w-[63px] h-[63px] object-contain"
+                  />
+                  <span className="text-4xl whitespace-nowrap">
+                    Techno Vanam
+                  </span>
+                </div>
+              </div>
+      
+              {/* Description */}
+              <p className="text-center text-[#667097] text-[18px] leading-[1.6] max-w-5xl">
+                At Techno Vanam, we don’t just create for clients—we build for ourselves too. Our digital products are crafted to enhance workflows, spark creativity, and solve real-world problems for designers, developers, and businesses alike.
+              </p>
+            </div>
 
       {/* Tabs */}
-      <div className="w-full max-w-[1250px] flex justify-between items-center gap-[16px] bg-white border border-[#EBEFF6] shadow-md rounded-full px-[21px] py-3">
+      <div className="w-full max-w-[1200px] flex justify-between items-center gap-[16px] bg-white border border-[#EBEFF6] shadow-md rounded-full px-[21px] py-3">
         <p className="text-black text-xl font-semibold px-6 text-left w-auto">
           What We’re Working On
         </p>
@@ -144,6 +145,54 @@ export default function Products2() {
           className="w-[500px] h-[460px] object-cover rounded-[28px]"
         />
       </div>
+            {/* CTA Section */}
+      <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
+        <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
+          
+          {/* Image First */}
+          <div className="w-1/2 h-[600px]">
+        <video
+          src={SocialMediaImage}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-contain"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      
+          {/* Content Second (on the right now) */}
+          <div className="w-1/2 text-white text-left px-8pt-20 pb-20">
+            <h2 className="text-5xl font-bold leading-tight">
+              Ready to launch something amazing with Techno Vanam?
+            </h2>
+            <p className="text-lg mt-4">
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+            </p>
+            <div className="pt-6 flex justify-start">
+              <a href="/contact">
+                <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
+                  Contact Us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4 transform -scale-y-100"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+                  </svg>
+                </button>
+              </a>
+            </div>
+          </div>
+      
+        </div>
+      </section>
     </div>
   );
 }
