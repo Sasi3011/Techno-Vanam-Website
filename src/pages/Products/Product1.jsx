@@ -18,7 +18,7 @@ const Product1 = () => {
   return (
     <div className="flex flex-col items-center pt-[64px]  gap-[68px]  min-h-screen">
       {/* Section 1: Header */}
-      <div className="w-full max-w-[1320px] flex flex-col items-center gap-[40px]">
+      <div className="w-full max-w-[1320px] flex flex-col items-center gap-[20px]">
         {/* Label */}
         <div className="text-base text-blue-600 font-semibold uppercase">
           ~ Products ~
@@ -75,21 +75,21 @@ const Product1 = () => {
       {/* In Progress Section */}
       <div className="w-full max-w-[1200px] flex flex-row items-center justify-between bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-[32px] pl-10 h-[480px]">
         {/* Left Text Block */}
-        <div className="flex flex-col gap-[33px] w-1/2">
-          <h2 className="text-[#2388FF] text-4xl font-bold leading-[48px]">
+        <div className="flex flex-col gap-[33px] w-[600px]">
+          <h2 className="text-[#2388FF] text-5xl font-bold leading-[48px]">
             In Progress
           </h2>
-          <p className="text-[#3B4A68] text-[18px] leading-[30px] max-w-md">
-            We’re currently building powerful solutions behind the scenes.
-            While we haven’t launched any products yet, exciting things are on the way — 
-            starting with Athlixir, our AI-powered platform for athlete performance and development.
+          <p className="text-[#3B4A68] text-[18px] leading-[30px] max-w-lg">
+            We’re currently building powerful solutions behind<br/> the scenes. While we haven’t launched any products <br/> yet, exciting things are on the way—
+            starting with <br/>  Athlixir, our AI-powered platform for athlete performance and development.
           </p>
-          <>
+ <>
   <style>
     {`
       @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
+        0% { width: 0ch }
+        50% { width: 37ch }
+        100% { width: 0ch }
       }
 
       @keyframes blink {
@@ -97,11 +97,13 @@ const Product1 = () => {
       }
 
       .typing-text {
+        display: inline-block;
         overflow: hidden;
         white-space: nowrap;
         border-right: 2px solid #2388FF;
-        width: fit-content;
-        animation: typing 3s steps(40, end), blink 0.7s step-end infinite;
+        animation:
+          typing 6s steps(39, end) infinite,
+          blink 0.7s step-end infinite;
       }
     `}
   </style>
@@ -119,7 +121,7 @@ const Product1 = () => {
           <img
             src={StartupIllustration}
             alt="Startup Illustration"
-            className="w-full h-[480px] object-contain rounded-[32px]"
+            className="w-[600px] h-[480px] object-cover rounded-[32px]"
           />
         </div>
       </div>
