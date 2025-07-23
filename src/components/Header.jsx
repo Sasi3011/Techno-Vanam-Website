@@ -48,7 +48,7 @@ const Header = () => {
           ))}
           <Link
             to="/contact"
-            className="ml-4 px-4 sm:px-5 py-2 sm:py-3 bg-blue-600 text-white rounded-full text-sm xl:text-md font-medium hover:bg-blue-400 transition-colors duration-200"
+            className="ml-4 px-4 sm:px-5 py-2 sm:py-3 bg-blue-600 text-white rounded-full text-sm xl:text-md font-medium hover:bg-blue-700 transition-colors duration-200"
             aria-label="Contact Us"
           >
             Get in Touch

@@ -20,7 +20,7 @@ import launchicon from "../assets/Home Page/Launch Phase Icon.png";
 import supporticon from "../assets/Home Page/Support Phase Icon.png";
 import athlixirImage from "../assets/Home Page/Athlixir.png";
 import SocialMediaImage from "../assets/Contact Us.mp4";
-import heroIllustration from "../assets/original-0c7449463779438e161d845f94825e57.mp4";
+import heroIllustration from "../assets/Home Video.mp4";
 
 // Placeholder images for services (replace with actual paths)
 import webDesignImage from "../assets/logo.png";
@@ -113,6 +113,7 @@ const projects = [
   { title: "UpLead Project", image: upLeadImage },
 ];
 
+
 const Home = () => {
   const serviceScrollRef = useRef(null);
   const cardRefs = useRef([]);
@@ -180,7 +181,7 @@ const Home = () => {
       </style>
 
       {/* Hero Section */}
-      <section className="px-8 py-28 bg-white min-h-[90vh]">
+      <section className="px-8 py-14 bg-white min-h-[90vh] pt-20">
         <div className="max-w-7xl mx-auto flex flex-row items-center gap-10">
           <div className="flex-1 text-left">
             <h2 className="text-blue-600 text-lg font-semibold uppercase">DESIGN & DEVELOPMENT STUDIO</h2>
@@ -192,21 +193,23 @@ const Home = () => {
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-400 text-base"
+              className="mt-6 inline-block px-6 py-3 bg-blue-600 font-medium text-white rounded-full hover:bg-blue-700 text-base"
             >
               Get in Touch
             </Link>
           </div>
           <video
-            src={heroIllustration}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full max-w-[500px] rounded-4xl shadow-lg object-cover"
-          >
-            Your browser does not support the video tag.
-          </video>
+  src={heroIllustration}
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full max-w-[550px] rounded-4xl shadow-lg object-cover bg-transparent m"
+  style={{
+    backgroundColor: 'transparent',
+    WebkitMaskImage: '-webkit-radial-gradient(white, black)', // Smooth edges for some browsers
+  }}
+/>
         </div>
       </section>
 
@@ -231,23 +234,23 @@ const Home = () => {
           {/* Grid Cards */}
           <div className="flex flex-row gap-6 h-[575px] w-7xl overflow-hidden justify-center">
   {/* LEFT: Paradox Card */}
-  <div className="w-[500px] bg-white rounded-2xl shadow-lg flex flex-col justify-between ">
+  <div className="w-[500px] bg-purple-100 rounded-2xl shadow-lg flex flex-col justify-between ">
     {/* Paradox Text */}
     <div className="pl-6 pr-6 pt-6 ">
-      <h3 className="text-blue-500  text-lg uppercase font-semibold tracking-wide">UI/UX Design</h3>
+      <h3 className="text-purple-600  text-lg uppercase font-semibold tracking-wide">UI/UX Design</h3>
       <p className="text-gray-600 text-base leading-relaxed mt-4">
         We craft seamless, intuitive, and visually engaging digital experiences that elevate your brand and delight your users — powered by thoughtful design and user-centered strategy. 
       </p>
       <Link
         to="/services"
-        className="mt-6 inline-flex items-center gap-2 text-sm text-blue-600 font-semibold uppercase tracking-wide hover:text-blue-800 transition-colors duration-200"
+        className="mt-6 inline-flex items-center gap-2 text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
       >
         See services <span className="text-lg">➔</span>
       </Link>
     </div>
 
     {/* Paradox Image */}
-    <div className="mt-6 h-[350px] bg-gray-100 rounded-xl overflow-hidden">
+    <div className="mt-6 h-[350px] bg-gray-100 rounded-2xl overflow-hidden">
       <img
         src={UIUXDesignImage}
         alt="Para dox Preview"
@@ -260,22 +263,22 @@ const Home = () => {
   {/* RIGHT SIDE: Teachable and Upside stacked with gap */}
   <div className="w-1/2 flex flex-col gap-6">
     {/* Teachable Card */}
-    <div className="h-[275px] bg-white rounded-2xl shadow-lg flex flex-row pl-6">
+    <div className="h-[275px] bg-orange-100 rounded-2xl shadow-lg flex flex-row pl-6">
       {/* Text */}
       <div className="w-1/2 pr-4 flex flex-col justify-center">
-        <h3 className="text-purple-500 text-lg uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
+        <h3 className="text-orange-500 text-lg uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
         <p className="text-gray-600 text-base leading-relaxed mt-2">
           We help your brand stand out and communicate clearly through bold, creative visuals
         </p>
         <Link
           to="/services"
-          className="mt-4 inline-flex items-center gap-2 text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
+          className="mt-4 inline-flex items-center gap-2 text-sm text-orange-600 font-semibold uppercase tracking-wide hover:text-orange-700 transition-colors duration-200"
         >
           See services <span className="text-lg">➔</span>
         </Link>
       </div>
       {/* Image */}
-      <div className="w-1/2 h-full flex items-center justify-center">
+      <div className="w-1/2 h-full bg-gray-100 flex items-center rounded-2xl justify-center">
         <img
           src={BrandingImage}
           alt="Teachable"
@@ -286,22 +289,22 @@ const Home = () => {
     </div>
 
     {/* Upside Card */}
-    <div className="h-[275px] bg-white rounded-2xl shadow-lg flex flex-row pl-6">
+    <div className="h-[275px] bg-sky-100 rounded-2xl shadow-lg flex flex-row pl-6">
       {/* Text */}
       <div className="w-1/2 pr-4 flex flex-col justify-center">
-        <h3 className="text-green-500 text-lg uppercase font-semibold tracking-wide">Web Development</h3>
+        <h3 className="text-sky-600 text-lg uppercase font-semibold tracking-wide">Web Development</h3>
         <p className="text-gray-600 text-base leading-relaxed mt-2">
           We help your business establish a powerful online presence with fast, responsive, and scalable websites
         </p>
         <Link
           to="/services"
-          className="mt-4 inline-flex items-center gap-2 text-sm text-green-600 font-semibold uppercase tracking-wide hover:text-green-800 transition-colors duration-200"
+          className="mt-4 inline-flex items-center gap-2 text-sm text-sky-600 font-semibold uppercase tracking-wide hover:text-sky-700 transition-colors duration-200"
         >
           See services <span className="text-lg">➔</span>
         </Link>
       </div>
       {/* Image */}
-      <div className="w-1/2 h-full flex items-center justify-center">
+      <div className="w-1/2 h-full bg-gray-100 rounded-2xl flex items-center justify-center">
         <img
           src={webDevelopmentImage}
           alt="Upside"
