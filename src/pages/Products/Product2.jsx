@@ -19,7 +19,7 @@ export default function Products2() {
   return (
     <div className="flex flex-col items-center  pt-16 gap-[68px] w-full">
       {/* Section 1: Header */}
-            <div className="w-full max-w-[1320px] flex flex-col items-center gap-[40px]">
+            <div className="w-full max-w-[1320px] flex flex-col items-center gap-[20px]">
               {/* Label */}
               <div className="text-base text-blue-600 font-semibold uppercase">
                 ~ Products ~
@@ -77,10 +77,10 @@ export default function Products2() {
       <div className="bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-[28px] w-full max-w-[1200px] flex flex-row items-center justify-between px-[48px] pt-[70px] pb-[48px] min-h-[690px]">
         {/* Left Text Block */}
         <div className="flex flex-col gap-6 w-[600px]">
-          <h2 className="text-[#2388FF] text-[36px] font-bold leading-[42px]">
+          <h2 className="text-[#2388FF] text-5xl font-bold leading-[42px]">
             ATHLIXIR
           </h2>
-          <p className="text-[#3B4A68] text-[16px] leading-[26px] w-full">
+          <p className="text-[#3B4A68] text-[18px] leading-[26px] w-full">
             Athlixir is currently in development — a groundbreaking platform built to empower 50+ athlete communities across Tier-2 and Tier-3 regions in India and beyond. We're engineering a powerful ecosystem capable of analyzing 300,000+ performance data points, using advanced AI to enable smarter training decisions, real-time injury tracking, personalized growth plans, and verified recognition for emerging talent.<br/><br/>Whether you're an aspiring athlete, coach, or organization, Athlixir is your intelligent companion for measurable improvement, safety, and career visibility — all in one place.
           </p>
 
