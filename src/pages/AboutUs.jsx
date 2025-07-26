@@ -145,7 +145,7 @@ export default function About() {
     </span>
 
     {/* Scroll text with hover effect */}
-    <span className="font-bold uppercase text-sm text-[#2388FF] group-hover:text-blue-400 transition-colors duration-200">
+    <span className="font-bold uppercase text-base text-[#2388FF] group-hover:text-blue-400 transition-colors duration-200">
       Scroll down
     </span>
   </div>
@@ -221,7 +221,7 @@ export default function About() {
         <div className="w-full max-w-7xl">
           {/* What Drives Us */}
           <div className="flex flex-col items-center gap-4 mb-20 text-center">
-            <h2 className="text-[42px] font-bold text-[#19213D]">
+            <h2 className="text-5xl font-bold text-[#19213D]">
               What Drives Us
             </h2>
             <p className="text-lg leading-relaxed text-[#667097] max-w-4xl">
@@ -277,7 +277,7 @@ export default function About() {
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-lg text-[#2F2F2F]">
+                    <p className="font-bold tex xt-lg text-[#2F2F2F]">
                       Scalable & Creative
                     </p>
                     <p className="text-sm text-[#667097]">
@@ -366,7 +366,7 @@ export default function About() {
       </p>
 
       <div className="flex flex-col items-center mt-4">
-        <a href="/Services" className="group flex items-center gap-2 text-sm font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
+        <a href="/Services" className="group flex items-center gap-2 text-base font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
           OUR SERVICES
           <svg
             width="12"
@@ -393,7 +393,7 @@ export default function About() {
       </p>
 
       <div className="flex flex-col items-center mt-4">
-        <button className="flex items-center gap-2 text-[#FF6C4C] text-sm font-bold uppercase">
+        <button className="flex items-center gap-2 text-[#FF6C4C] text-base font-bold uppercase">
           SEE ALL
           <svg
             width="12"
@@ -410,9 +410,9 @@ export default function About() {
     {/* === Card 3: Newsletter Signup === */}
      <div className="bg-[#2388FF] shadow-md rounded-xl p-8 text-white flex flex-col justify-between h-[400px]">
       <div>
-        <h3 className="font-bold text-2xl mb-4">Join with our Network</h3>
+        <h3 className="font-bold text-3xl mb-4">Join with our Network</h3>
         <p className="text-lg leading-relaxed mb-6">
-          Collaborate with us on bold new ventures, from brand identity to full-stack innovation.
+          Collaborate with us on bold new ventures, from brand identity to<br/> full-stack innovation.
           Let’s grow together.
         </p>
       </div>
@@ -453,7 +453,7 @@ export default function About() {
       {/* ===== Team Section ===== */}
       <section className="w-full bg-white py-16 px-8">
         <div className="text-center mb-12">
-          <p className="text-[#0368FF] text-xl font-bold">
+          <p className="text-[#0368FF] text-lg font-bold">
             ~ Team Member ~
           </p>
           <h2 className="text-4xl font-bold text-black max-w-3xl mx-auto">
@@ -503,7 +503,7 @@ export default function About() {
 
 <section className="w-full py-16 px-8 bg-white flex flex-col items-center">
   <div className="max-w-3xl text-center mb-12">
-    <h2 className="text-[42px] font-bold text-[#19213D]">
+    <h2 className="text-4xl font-bold text-black">
       The values that drive us
     </h2>
     <p className="text-lg leading-relaxed text-[#667097] mt-2">
@@ -530,10 +530,10 @@ export default function About() {
             className="absolute left-5 top-5 w-8 h-8"
           />
         </div>
-        <h3 className="text-xl font-bold text-[#19213D] mb-2">
+        <h3 className="text-2xl font-bold text-[#19213D] mb-2">
           {value.title}
         </h3>
-        <p className="text-base leading-relaxed text-[#667097]">
+        <p className="text-md leading-relaxed text-[#667097]">
           {value.description}
         </p>
       </div>

@@ -20,13 +20,13 @@ const Product1 = () => {
       {/* Section 1: Header */}
       <div className="w-full max-w-[1320px] flex flex-col items-center gap-[20px]">
         {/* Label */}
-        <div className="text-base text-blue-600 font-semibold uppercase">
+        <div className="text-lg text-blue-600 font-semibold uppercase">
           ~ Products ~
         </div>
 
         {/* Heading + Logo */}
         <div className="flex items-center justify-center text-center text-gray-900 font-bold gap-3">
-          <span className="text-4xl ">
+          <span className="text-5xl ">
             Products by
           </span>
           <div className="flex items-center gap-3">
@@ -35,14 +35,14 @@ const Product1 = () => {
               alt="Logo"
               className="w-[63px] h-[63px] object-contain"
             />
-            <span className="text-4xl whitespace-nowrap">
+            <span className="text-5xl whitespace-nowrap">
               Techno Vanam
             </span>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-center text-[#667097] text-[18px] leading-[1.6] max-w-5xl">
+        <p className="text-center text-[#667097] text-lg leading-[1.6] max-w-5xl">
           At Techno Vanam, we don’t just create for clients—we build for ourselves too. Our digital products are crafted to enhance workflows, spark creativity, and solve real-world problems for designers, developers, and businesses alike.
         </p>
       </div>
@@ -57,7 +57,7 @@ const Product1 = () => {
             onClick={handleLatestReleasesClick}
             className="flex justify-center items-center px-5 py-3 border border-[#2388FF] rounded-full shadow-sm text-[#2388FF] hover:bg-[#1f7ae0] hover:text-white transition duration-200 min-w-[160px]"
           >
-            <span className="text-[16px] font-medium">
+            <span className="text-base font-medium">
               🌐 Latest Releases
             </span>
           </button>
@@ -65,7 +65,7 @@ const Product1 = () => {
             onClick={handleWhatWeWorkingOnClick}
             className="flex justify-center items-center px-5 py-3 border border-[#EBEFF6] rounded-full shadow-sm text-[#868DA6] hover:bg-[#f2f4f8] hover:text-[#2F2F2F] transition duration-200 min-w-[160px]"
           >
-            <span className="text-[16px] font-medium">
+            <span className="text-base font-medium">
               🔒 What We’re Working On
             </span>
           </button>
@@ -76,10 +76,10 @@ const Product1 = () => {
       <div className="w-full max-w-[1200px] flex flex-row items-center justify-between bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-[32px] pl-10 h-[480px]">
         {/* Left Text Block */}
         <div className="flex flex-col gap-[33px] w-[600px]">
-          <h2 className="text-[#2388FF] text-5xl font-bold leading-[48px]">
+          <h2 className="text-[#2388FF] text-4xl font-bold leading-[48px]">
             In Progress
           </h2>
-          <p className="text-[#3B4A68] text-[18px] leading-[30px] max-w-lg">
+          <p className="text-[#3B4A68] text-lg leading-[30px] max-w-lg">
             We’re currently building powerful solutions behind<br/> the scenes. While we haven’t launched any products <br/> yet, exciting things are on the way—
             starting with <br/>  Athlixir, our AI-powered platform for athlete performance and development.
           </p>

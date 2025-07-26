@@ -107,10 +107,10 @@ export default function Contact() {
   return (
     <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto p-4 sm:p-6 md:p-8">
       <p className="text-xs sm:text-sm md:text-base lg:text-lg text-blue-600 font-semibold uppercase">Contact us</p>
-      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mt-1 sm:mt-2">
+      <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mt-1 sm:mt-2">
         Connect With Us <span className="inline-block">👋</span>
       </h1>
-      <p className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base lg:text-lg">
+      <p className="text-gray-500 mt-1 sm:mt-2 text-lg sm:text-sm md:text-base lg:text-lg">
         Fill the form below and one of our team members will get back to you
         within 24 business hours <br/>to schedule a project discovery call.
       </p>
@@ -128,7 +128,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           {/* Name */}
           <div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
+            <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
               What's your name?<span className="text-red-500"> *</span>
             </p>
             {formSubmitted && !name.trim() && (
@@ -147,7 +147,7 @@ export default function Contact() {
 
           {/* Email */}
           <div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
+            <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
               What's your email?<span className="text-red-500"> *</span>
             </p>
             {formSubmitted && !email.trim() && (
@@ -166,7 +166,7 @@ export default function Contact() {
 
           {/* Company */}
           <div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
+            <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
               What's your company?
             </p>
             <input
@@ -181,7 +181,7 @@ export default function Contact() {
 
           {/* Website */}
           <div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
+            <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
               What's your current website?
             </p>
             <input
@@ -197,7 +197,7 @@ export default function Contact() {
 
         {/* Services */}
         <div className="mt-4 sm:mt-6 md:mt-8">
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2 md:mb-4">
+          <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2 md:mb-4">
             What services are you looking for?<span className="text-red-500"> *</span>
           </p>
           {formSubmitted && selectedServices.length === 0 && (
@@ -230,7 +230,7 @@ export default function Contact() {
 
         {/* Project Type */}
         <div className="mt-4 sm:mt-6 md:mt-8">
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2 md:mb-4">
+          <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2 md:mb-4">
             What kind of project are you looking for?
           </p>
           <div className="w-full flex flex-wrap gap-2 sm:gap-3 md:gap-4">
@@ -255,7 +255,7 @@ export default function Contact() {
 
         {/* Deadline */}
         <div className="mt-4 sm:mt-6 md:mt-8">
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2 md:mb-4">
+          <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2 md:mb-4">
             When is the project deadline?
           </p>
           <div className="w-full flex flex-wrap gap-2 sm:gap-3 md:gap-4">
@@ -280,7 +280,7 @@ export default function Contact() {
 
         {/* Message */}
         <div className="mt-4 sm:mt-6 md:mt-8">
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
+          <p className="text-lg sm:text-sm md:text-base lg:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
             Tell us a little more about your project<span className="text-red-500"> *</span>
           </p>
           {formSubmitted && message.trim() === "" && (
@@ -308,7 +308,7 @@ export default function Contact() {
           <button
             type="button"
             onClick={handleSubmit}
-            className="bg-blue-600 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-xs sm:text-sm md:text-base rounded-full shadow hover:bg-blue-700 transition-all flex items-center gap-2"
+            className="bg-blue-600 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-base sm:text-sm md:text-base rounded-full shadow hover:bg-blue-700 transition-all flex items-center gap-2"
           >
             Send message <Send className="w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5" />
           </button>

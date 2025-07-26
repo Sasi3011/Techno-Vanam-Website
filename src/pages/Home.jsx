@@ -237,15 +237,15 @@ const Home = () => {
   <div className="w-[500px] bg-purple-100 rounded-2xl shadow-lg flex flex-col justify-between ">
     {/* Paradox Text */}
     <div className="pl-6 pr-6 pt-6 ">
-      <h3 className="text-purple-600  text-lg uppercase font-semibold tracking-wide">UI/UX Design</h3>
-      <p className="text-gray-600 text-base leading-relaxed mt-4">
+      <h3 className="text-purple-600  text-xl uppercase font-semibold tracking-wide">UI/UX Design</h3>
+      <p className="text-gray-600 text-lg leading-relaxed mt-4">
         We craft seamless, intuitive, and visually engaging digital experiences that elevate your brand and delight your users — powered by thoughtful design and user-centered strategy. 
       </p>
       <Link
         to="/services"
         className="mt-6 inline-flex items-center gap-2 text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
       >
-        See services <span className="text-lg">➔</span>
+        See services <span className="text-base">➔</span>
       </Link>
     </div>
 
@@ -266,15 +266,15 @@ const Home = () => {
     <div className="h-[275px] bg-orange-100 rounded-2xl shadow-lg flex flex-row pl-6">
       {/* Text */}
       <div className="w-1/2 pr-4 flex flex-col justify-center">
-        <h3 className="text-orange-500 text-lg uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
-        <p className="text-gray-600 text-base leading-relaxed mt-2">
+        <h3 className="text-orange-500 text-xl uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
+        <p className="text-gray-600 text-lg leading-relaxed mt-2">
           We help your brand stand out and communicate clearly through bold, creative visuals
         </p>
         <Link
           to="/services"
           className="mt-4 inline-flex items-center gap-2 text-sm text-orange-600 font-semibold uppercase tracking-wide hover:text-orange-700 transition-colors duration-200"
         >
-          See services <span className="text-lg">➔</span>
+          See services <span className="text-base">➔</span>
         </Link>
       </div>
       {/* Image */}
@@ -292,15 +292,15 @@ const Home = () => {
     <div className="h-[275px] bg-sky-100 rounded-2xl shadow-lg flex flex-row pl-6">
       {/* Text */}
       <div className="w-1/2 pr-4 flex flex-col justify-center">
-        <h3 className="text-sky-600 text-lg uppercase font-semibold tracking-wide">Web Development</h3>
-        <p className="text-gray-600 text-base leading-relaxed mt-2">
+        <h3 className="text-sky-600 text-xl uppercase font-semibold tracking-wide">Web Development</h3>
+        <p className="text-gray-600 text-lg leading-relaxed mt-2">
           We help your business establish a powerful online presence with fast, responsive, and scalable websites
         </p>
         <Link
           to="/services"
           className="mt-4 inline-flex items-center gap-2 text-sm text-sky-600 font-semibold uppercase tracking-wide hover:text-sky-700 transition-colors duration-200"
         >
-          See services <span className="text-lg">➔</span>
+          See services <span className="text-base">➔</span>
         </Link>
       </div>
       {/* Image */}
@@ -347,10 +347,10 @@ const Home = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h4 className="text-2xl font-bold text-[#19213D] mb-2">
+                  <h4 className="text-4xl font-bold text-[#19213D] mb-2">
                     {step.title}
                   </h4>
-                  <p className="text-base text-[#667097] leading-relaxed">
+                  <p className="text-lg text-[#667097] leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -457,26 +457,26 @@ const Home = () => {
         <div className="mt-12 bg-blue-50 rounded-3xl p-8 flex flex-row items-center justify-between gap-10 max-w-5xl mx-auto">
           <div className="w-[50%] max-w-xl">
             <h3 className="text-blue-600 text-3xl font-bold mb-4">ATHLIXIR</h3>
-            <p className="text-gray-700 text-md mb-8">
+            <p className="text-gray-700 text-lg mb-8">
               Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
             </p>
             <div className="flex flex-row gap-6 text-left text-blue-900 font-semibold mb-6">
               <div>
                 <p className="text-2xl">50+</p>
-                <p className="text-sm font-medium text-gray-600">
+                <p className="text-base font-medium text-gray-600">
                   Target athlete communities
                 </p>
               </div>
               <div>
                 <p className="text-2xl">300,000+</p>
-                <p className="text-sm font-medium text-gray-600">
+                <p className="text-base font-medium text-gray-600">
                   Projected performance insights powered by AI
                 </p>
               </div>
             </div>
             <Link
               to="/product1"
-              className="text-blue-600 font-medium text-sm"
+              className="text-blue-600 font-medium text-base"
             >
               COMING SOON — BE PART OF THE JOURNEY →
             </Link>

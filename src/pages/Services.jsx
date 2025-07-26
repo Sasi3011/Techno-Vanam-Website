@@ -115,7 +115,7 @@ const Services = () => {
                   </p>
                   <a
                     href="/contact"
-                    className="flex items-center gap-2 text-md text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
+                    className="flex items-center gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
                   >
                     Get in touch
                     <span className="text-lg">➔</span>
@@ -143,7 +143,7 @@ const Services = () => {
             <h2 className="text-blue-500 text-lg font-bold uppercase tracking-wider">
               ~ Industries ~
             </h2>
-            <h1 className="text-gray-900 text-5xl font-bold mt-4">
+            <h1 className="text-gray-900 text-4xl font-bold mt-4">
               We’re focused on
             </h1>
             <p className="text-gray-500 text-lg mt-4">

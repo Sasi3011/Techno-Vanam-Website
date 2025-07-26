@@ -21,13 +21,13 @@ export default function Products2() {
       {/* Section 1: Header */}
             <div className="w-full max-w-[1320px] flex flex-col items-center gap-[20px]">
               {/* Label */}
-              <div className="text-base text-blue-600 font-semibold uppercase">
+              <div className="text-lg text-blue-600 font-semibold uppercase">
                 ~ Products ~
               </div>
       
               {/* Heading + Logo */}
               <div className="flex items-center justify-center text-center text-gray-900 font-bold gap-3">
-                <span className="text-4xl ">
+                <span className="text-5xl ">
                   Products by
                 </span>
                 <div className="flex items-center gap-3">
@@ -36,14 +36,14 @@ export default function Products2() {
                     alt="Logo"
                     className="w-[63px] h-[63px] object-contain"
                   />
-                  <span className="text-4xl whitespace-nowrap">
+                  <span className="text-5xl whitespace-nowrap">
                     Techno Vanam
                   </span>
                 </div>
               </div>
       
               {/* Description */}
-              <p className="text-center text-[#667097] text-[18px] leading-[1.6] max-w-5xl">
+              <p className="text-center text-[#667097] text-lg leading-[1.6] max-w-5xl">
                 At Techno Vanam, we don’t just create for clients—we build for ourselves too. Our digital products are crafted to enhance workflows, spark creativity, and solve real-world problems for designers, developers, and businesses alike.
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function Products2() {
             onClick={handleLatestReleasesClick}
             className="flex justify-center items-center px-5 py-3 border border-[#EBEFF6] rounded-full shadow-sm text-[#868DA6] hover:bg-[#f2f4f8] hover:text-[#2F2F2F] transition duration-200 w-auto"
           >
-            <span className="text-[16px] font-medium">
+            <span className="text-base font-medium">
               🌐 Latest Releases
             </span>
           </button>
@@ -66,7 +66,7 @@ export default function Products2() {
             onClick={handleWhatWeWorkingOnClick}
             className="flex justify-center items-center px-5 py-3 border border-[#2388FF] rounded-full shadow-sm text-[#2388FF] hover:bg-[#1f7ae0] hover:text-white transition duration-200 w-auto"
           >
-            <span className="text-[16px] font-medium">
+            <span className="text-base font-medium">
               🔒 What We’re Working On
             </span>
           </button>
@@ -77,10 +77,10 @@ export default function Products2() {
       <div className="bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-[28px] w-full max-w-[1200px] flex flex-row items-center justify-between px-[48px] pt-[70px] pb-[48px] min-h-[690px]">
         {/* Left Text Block */}
         <div className="flex flex-col gap-6 w-[600px]">
-          <h2 className="text-[#2388FF] text-5xl font-bold leading-[42px]">
+          <h2 className="text-[#2388FF] text-4xl font-bold leading-[42px]">
             ATHLIXIR
           </h2>
-          <p className="text-[#3B4A68] text-[18px] leading-[26px] w-full">
+          <p className="text-[#3B4A68] text-lg leading-[26px] w-full">
             Athlixir is currently in development — a groundbreaking platform built to empower 50+ athlete communities across Tier-2 and Tier-3 regions in India and beyond. We're engineering a powerful ecosystem capable of analyzing 300,000+ performance data points, using advanced AI to enable smarter training decisions, real-time injury tracking, personalized growth plans, and verified recognition for emerging talent.<br/><br/>Whether you're an aspiring athlete, coach, or organization, Athlixir is your intelligent companion for measurable improvement, safety, and career visibility — all in one place.
           </p>
 
@@ -88,18 +88,18 @@ export default function Products2() {
           <div className="flex flex-col gap-7 mt-7">
             <div className="flex flex-row gap-[60px]">
               <div className="flex flex-col gap-1 w-[200px]">
-                <p className="text-[#19213D] font-bold text-[20px] leading-[30px]">
+                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   50+
                 </p>
-                <p className="text-[#29BEFE] text-[16px] leading-[18px]">
+                <p className="text-[#29BEFE] text-base leading-[18px]">
                   Target athlete communities
                 </p>
               </div>
               <div className="flex flex-col gap-1 w-[320px]">
-                <p className="text-[#19213D] font-bold text-[20px] leading-[30px]">
+                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   300,000+
                 </p>
-                <p className="text-[#29BEFE] text-[16px] leading-[18px]">
+                <p className="text-[#29BEFE] text-base leading-[18px]">
                   Projected performance insights powered by AI
                 </p>
               </div>
@@ -107,18 +107,18 @@ export default function Products2() {
 
             <div className="flex flex-row gap-6">
               <div className="flex flex-col gap-1 w-[240px]">
-                <p className="text-[#19213D] font-bold text-[20px] leading-[30px]">
+                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   100%
                 </p>
-                <p className="text-[#29BEFE] text-[16px] leading-[18px]">
+                <p className="text-[#29BEFE] text-base leading-[18px]">
                   Focused on Unlocking Grassroots Sports Potential
                 </p>
               </div>
               <div className="flex flex-col gap-1 w-[320px]">
-                <p className="text-[#19213D] font-bold text-[20px] leading-[30px]">
+                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   1
                 </p>
-                <p className="text-[#29BEFE] text-[16px] leading-[18px]">
+                <p className="text-[#29BEFE] text-base leading-[18px]">
                   Unified Platform for Growth, Recognition & Performance
                 </p>
               </div>
@@ -127,7 +127,7 @@ export default function Products2() {
 
           {/* Coming Soon */}
           <div className="flex items-center gap-2 mt-[28px]">
-            <p className="text-[#2388FF] text-[20px] font-bold uppercase tracking-[0.06em]">
+            <p className="text-[#2388FF] text-xl font-bold uppercase tracking-[0.06em]">
               COMING SOON
             </p>
             <img
