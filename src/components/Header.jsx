@@ -38,7 +38,7 @@ const Header = () => {
               key={item.name}
               to={item.to}
               className={({ isActive }) =>
-                `text-sm xl:text-md font-medium transition-colors duration-200 ${
+                `text-base xl:text-md font-medium transition-colors duration-200 ${
                   isActive ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600"
                 }`
               }

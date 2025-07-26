@@ -21,7 +21,6 @@ import supporticon from "../assets/Home Page/Support Phase Icon.png";
 import athlixirImage from "../assets/Home Page/Athlixir.png";
 import SocialMediaImage from "../assets/Contact Us.mp4";
 import heroIllustration from "../assets/Home Video.mp4";
-
 // Placeholder images for services (replace with actual paths)
 import webDesignImage from "../assets/logo.png";
 import BrandingImage from "../assets/Home Page/Branding.png";
@@ -30,17 +29,26 @@ import UIUXDesignImage from "../assets/Home Page/UIUX.png";
 import logoDesignImage from "../assets/logo.png";
 
 // Unique project images (replace with actual paths)
-import paradoxImage from "../assets/logo.png";
-import getUpsideImage from "../assets/logo.png";
-import deFiImage from "../assets/logo.png";
-import pixelitImage from "../assets/logo.png";
-import startuperImage from "../assets/logo.png";
-import techstarImage from "../assets/logo.png";
-import darkbitImage from "../assets/logo.png";
-import starUpImage from "../assets/logo.png";
-import pizzaplanetImage from "../assets/logo.png";
-import upLeadImage from "../assets/logo.png";
-
+import Project1 from "../assets/Home Page/Project1.jpg";
+import Project3 from "../assets/Home Page/Project3.jpg";
+import Project4 from "../assets/Home Page/Project4.jpg";
+import Project5 from "../assets/Home Page/Project5.jpg";
+import Project2 from "../assets/Home Page/Project2.jpg";
+import Project6 from "../assets/Home Page/Project6.jpg";
+import Project7 from "../assets/Home Page/Project7.jpg";
+import Project8 from "../assets/Home Page/Project8.jpg";
+import Project9 from "../assets/Home Page/Project9.jpg";
+import Project10 from "../assets/Home Page/Project10.jpg";
+import Project11 from "../assets/Home Page/Project11.webp";
+import Project12 from "../assets/Home Page/Project12.webp";
+import Project13 from "../assets/Home Page/Project13.webp";
+import Project14 from "../assets/Home Page/Project14.webp";
+import Project15 from "../assets/Home Page/Project15.webp";
+import Project16 from "../assets/Home Page/Project16.webp";
+import Project17 from "../assets/Home Page/Project17.webp";
+import Project18 from "../assets/Home Page/Project18.webp";
+import Project19 from "../assets/Home Page/Project19.webp";
+import Project20 from "../assets/Home Page/Project20.webp";
 
 
 const steps = [
@@ -99,21 +107,108 @@ const steps = [
     icon: supporticon,
   },
 ];
-
 const projects = [
-  { title: "Paradox Project", image: paradoxImage },
-  { title: "GetUpside Project", image: getUpsideImage },
-  { title: "DeFi Project", image: deFiImage },
-  { title: "Pixelit Project", image: pixelitImage },
-  { title: "Startuper Project", image: startuperImage },
-  { title: "Techstar Project", image: techstarImage },
-  { title: "Darkbit Project", image: darkbitImage },
-  { title: "StarUp Project", image: starUpImage },
-  { title: "Pizzaplanet Project", image: pizzaplanetImage },
-  { title: "UpLead Project", image: upLeadImage },
+  {
+    title: "Project 1",
+    image: Project1,
+    alt: "Project 1 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 2",
+    image: Project2,
+    alt: "Project 2 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 3",
+    image: Project3,
+    alt: "Project 3 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 4",
+    image: Project4,
+    alt: "Project 4 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 5",
+    image: Project5,
+    alt: "Project 5 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 6",
+    image: Project6,
+    alt: "Project 6 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 7",
+    image: Project7,
+    alt: "Project 7 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 8",
+    image: Project8,
+    alt: "Project 8 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 9",
+    image: Project9,
+    alt: "Project 9 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 10",
+    image: Project10,
+    alt: "Project 10 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 11",
+    image: Project11,
+    alt: "Project 11 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 12",
+    image: Project12,
+    alt: "Project 12 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 13",
+    image: Project13,
+    alt: "Project 13 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 14",
+    image: Project14,
+    alt: "Project 14 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 15",
+    image: Project15,
+    alt: "Project 15 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 16",
+    image: Project16,
+    alt: "Project 16 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 17",
+    image: Project17,
+    alt: "Project 17 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 18",
+    image: Project18,
+    alt: "Project 18 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 19",
+    image: Project19,
+    alt: "Project 19 - Techno Vanam Portfolio",
+  },
+  {
+    title: "Project 20",
+    image: Project20,
+    alt: "Project 20 - Techno Vanam Portfolio",
+  },
 ];
-
-
 const Home = () => {
   const serviceScrollRef = useRef(null);
   const cardRefs = useRef([]);
@@ -150,6 +245,32 @@ const Home = () => {
         if (card) observer.unobserve(card);
       });
     };
+  }, []);
+
+  const firstRowRef = useRef(null);
+  const secondRowRef = useRef(null);
+
+  // Split projects into two groups for the two marquee rows
+  const firstRowProjects = projects.slice(0, 10); // First 10 projects
+  const secondRowProjects = projects.slice(10); // Last 10 projects
+
+  // Reset animation on window resize to prevent glitches
+  useEffect(() => {
+    const handleResize = () => {
+      if (firstRowRef.current) {
+        firstRowRef.current.style.animation = "none";
+        void firstRowRef.current.offsetWidth; // Trigger reflow
+        firstRowRef.current.style.animation = "marquee 30s linear infinite";
+      }
+      if (secondRowRef.current) {
+        secondRowRef.current.style.animation = "none";
+        void secondRowRef.current.offsetWidth; // Trigger reflow
+        secondRowRef.current.style.animation = "marqueeReverse 30s linear infinite";
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -371,75 +492,101 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Past Projects */}
-      <section className="bg-white py-20 px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-blue-600 text-lg font-semibold uppercase">
-            ~ Past Projects ~
-          </h3>
-          <h2 className="text-4xl font-bold text-balck leading-tight mb-4">
-            Let our work speak for itself
-          </h2>
-          <p className="mt-4 text-gray-600 text-lg max-w-4xl mx-auto mb-10">
-            Want to discover what we can do? Take a look at some of the amazing websites that have been created by our team of talented designers and developers.
-          </p>
-          <div className="relative">
-            <div ref={serviceScrollRef} className="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-              <div className="flex gap-6 w-max px-2">
-                {projects.map((project, index) => (
-                  <div
-                    key={index}
-                    className="min-w-[350px] h-[298px] rounded-3xl border border-[#EBEFF6] shadow-md overflow-hidden bg-white snap-start"
-                  >
-                    <img
-                      src={project.image}
-                      alt={`Screenshot of ${project.title}`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <button
-              onClick={() => scrollHorizontally(serviceScrollRef, "left")}
-              aria-label="Scroll projects left"
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-white text-blue-600 p-2 rounded-full shadow-md hover:bg-gray-100"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={() => scrollHorizontally(serviceScrollRef, "right")}
-              aria-label="Scroll projects right"
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-white text-blue-600 p-2 rounded-full shadow-md hover:bg-gray-100"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
+       <div className="font-poppins py-16 px-8 bg-white">
+  {/* Inline CSS for marquee animation */}
+  <style>
+    {`
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      @keyframes marqueeReverse {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+      .marquee-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        user-select: none;
+      }
+      .marquee {
+        display: flex;
+        flex-shrink: 0;
+        animation: marquee 30s linear infinite;
+      }
+      .marquee-reverse {
+        display: flex;
+        flex-shrink: 0;
+        animation: marqueeReverse 30s linear infinite;
+      }
+      .marquee:hover, .marquee-reverse:hover {
+        animation-play-state: paused;
+      }
+      .project-item {
+        position: relative;
+        flex: 0 0 auto;
+        width: 350px;
+        height: 298px;
+        margin-right: 16px;
+      }
+    `}
+  </style>
+
+  <div className="max-w-7xl mx-auto">
+    <div className="mb-16">
+      <h3 className="text-blue-600 text-lg font-semibold uppercase text-center">
+        ~ Past Projects ~
+      </h3>
+      <h2 className="text-4xl font-bold text-black leading-tight text-center mb-4">
+        Let our work speak for itself
+      </h2>
+      <p className="text-gray-600 text-lg max-w-4xl mx-auto text-center">
+        Want to discover what we can do? Take a look at some of the amazing websites that have been created by our team of talented designers and developers.
+      </p>
+    </div>
+
+    {/* First Marquee Row */}
+    <div className="marquee-container mb-6">
+      <div ref={firstRowRef} className="marquee">
+        {/* Render projects twice for seamless loop */}
+        {[...firstRowProjects, ...firstRowProjects].map((project, index) => (
+          <div
+            key={`${project.title}-${index}`}
+            className="project-item block"
+          >
+            <img
+              src={project.image}
+              alt={project.alt}
+              className="w-full h-full object-cover rounded-3xl border border-gray-200 shadow-md"
+              loading="lazy"
+            />
           </div>
-          {/* <div className="mt-12 flex justify-center">
-            <Link
-              to="/Product1"
-              className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium text-lg rounded-full shadow-md hover:bg-blue-400 transition text-base"
-            >
-              View More
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 transform -rotate-90"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </Link>
-          </div> */}
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+
+    {/* Second Marquee Row */}
+    <div className="marquee-container">
+      <div ref={secondRowRef} className="marquee-reverse">
+        {/* Render projects twice for seamless loop */}
+        {[...secondRowProjects, ...secondRowProjects].map((project, index) => (
+          <div
+            key={`${project.title}-${index}`}
+            className="project-item block"
+          >
+            <img
+              src={project.image}
+              alt={project.alt}
+              className="w-full h-full object-cover rounded-3xl border border-gray-200 shadow-md"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Our Products */}
       <section className="bg-white py-16 px-12 ">
