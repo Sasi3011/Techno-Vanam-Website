@@ -30,10 +30,10 @@ import logoDesignImage from "../assets/logo.png";
 
 // Unique project images (replace with actual paths)
 import Project1 from "../assets/Home Page/Project1.jpg";
+import Project2 from "../assets/Home Page/Project2.jpg";
 import Project3 from "../assets/Home Page/Project3.jpg";
 import Project4 from "../assets/Home Page/Project4.jpg";
 import Project5 from "../assets/Home Page/Project5.jpg";
-import Project2 from "../assets/Home Page/Project2.jpg";
 import Project6 from "../assets/Home Page/Project6.jpg";
 import Project7 from "../assets/Home Page/Project7.jpg";
 import Project8 from "../assets/Home Page/Project8.jpg";
@@ -49,7 +49,6 @@ import Project17 from "../assets/Home Page/Project17.webp";
 import Project18 from "../assets/Home Page/Project18.webp";
 import Project19 from "../assets/Home Page/Project19.webp";
 import Project20 from "../assets/Home Page/Project20.webp";
-
 
 const steps = [
   {
@@ -107,6 +106,7 @@ const steps = [
     icon: supporticon,
   },
 ];
+
 const projects = [
   {
     title: "Project 1",
@@ -209,6 +209,7 @@ const projects = [
     alt: "Project 20 - Techno Vanam Portfolio",
   },
 ];
+
 const Home = () => {
   const serviceScrollRef = useRef(null);
   const cardRefs = useRef([]);
@@ -320,17 +321,17 @@ const Home = () => {
             </Link>
           </div>
           <video
-  src={heroIllustration}
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="w-full max-w-[550px] rounded-4xl shadow-lg object-cover bg-transparent m"
-  style={{
-    backgroundColor: 'transparent',
-    WebkitMaskImage: '-webkit-radial-gradient(white, black)', // Smooth edges for some browsers
-  }}
-/>
+            src={heroIllustration}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full max-w-[550px] rounded-4xl shadow-lg object-cover bg-transparent m"
+            style={{
+              backgroundColor: 'transparent',
+              WebkitMaskImage: '-webkit-radial-gradient(white, black)', // Smooth edges for some browsers
+            }}
+          />
         </div>
       </section>
 
@@ -354,88 +355,79 @@ const Home = () => {
 
           {/* Grid Cards */}
           <div className="flex flex-row gap-6 h-[575px] w-7xl overflow-hidden justify-center">
-  {/* LEFT: Paradox Card */}
-  <div className="w-[500px] bg-purple-100 rounded-2xl shadow-lg flex flex-col justify-between ">
-    {/* Paradox Text */}
-    <div className="pl-6 pr-6 pt-6 ">
-      <h3 className="text-purple-600  text-xl uppercase font-semibold tracking-wide">UI/UX Design</h3>
-      <p className="text-gray-600 text-lg leading-relaxed mt-4">
-        We craft seamless, intuitive, and visually engaging digital experiences that elevate your brand and delight your users — powered by thoughtful design and user-centered strategy. 
-      </p>
-      <Link
-        to="/services"
-        className="mt-6 inline-flex items-center gap-2 text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
-      >
-        See services <span className="text-base">➔</span>
-      </Link>
-    </div>
+            {/* LEFT: Paradox Card */}
+            <div className="w-[500px] bg-purple-100 rounded-2xl shadow-lg flex flex-col justify-between ">
+              <div className="pl-6 pr-6 pt-6 ">
+                <h3 className="text-purple-600  text-xl uppercase font-semibold tracking-wide">UI/UX Design</h3>
+                <p className="text-gray-600 text-lg leading-relaxed mt-4">
+                  We craft seamless, intuitive, and visually engaging digital experiences that elevate your brand and delight your users — powered by thoughtful design and user-centered strategy. 
+                </p>
+                <Link
+                  to="/services"
+                  className="mt-6 inline-flex items-center gap-2 text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
+                >
+                  See services <span className="text-base">➔</span>
+                </Link>
+              </div>
+              <div className="mt-6 h-[350px] bg-gray-100 rounded-2xl overflow-hidden">
+                <img
+                  src={UIUXDesignImage}
+                  alt="Para dox Preview"
+                  className="object-cover w-full h-full"
+                  loading="lazy"
+                />
+              </div>
+            </div>
 
-    {/* Paradox Image */}
-    <div className="mt-6 h-[350px] bg-gray-100 rounded-2xl overflow-hidden">
-      <img
-        src={UIUXDesignImage}
-        alt="Para dox Preview"
-        className="object-cover w-full h-full"
-        loading="lazy"
-      />
-    </div>
-  </div>
+            {/* RIGHT SIDE: Teachable and Upside stacked with gap */}
+            <div className="w-1/2 flex flex-col gap-6">
+              <div className="h-[275px] bg-orange-100 rounded-2xl shadow-lg flex flex-row pl-6">
+                <div className="w-1/2 pr-4 flex flex-col justify-center">
+                  <h3 className="text-orange-500 text-xl uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
+                  <p className="text-gray-600 text-lg leading-relaxed mt-2">
+                    We help your brand stand out and communicate clearly through bold, creative visuals
+                  </p>
+                  <Link
+                    to="/services"
+                    className="mt-4 inline-flex items-center gap-2 text-sm text-orange-600 font-semibold uppercase tracking-wide hover:text-orange-700 transition-colors duration-200"
+                  >
+                    See services <span className="text-base">➔</span>
+                  </Link>
+                </div>
+                <div className="w-1/2 h-full bg-gray-100 flex items-center rounded-2xl justify-center">
+                  <img
+                    src={BrandingImage}
+                    alt="Teachable"
+                    className="object-cover w-full h-full rounded-xl"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
 
-  {/* RIGHT SIDE: Teachable and Upside stacked with gap */}
-  <div className="w-1/2 flex flex-col gap-6">
-    {/* Teachable Card */}
-    <div className="h-[275px] bg-orange-100 rounded-2xl shadow-lg flex flex-row pl-6">
-      {/* Text */}
-      <div className="w-1/2 pr-4 flex flex-col justify-center">
-        <h3 className="text-orange-500 text-xl uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
-        <p className="text-gray-600 text-lg leading-relaxed mt-2">
-          We help your brand stand out and communicate clearly through bold, creative visuals
-        </p>
-        <Link
-          to="/services"
-          className="mt-4 inline-flex items-center gap-2 text-sm text-orange-600 font-semibold uppercase tracking-wide hover:text-orange-700 transition-colors duration-200"
-        >
-          See services <span className="text-base">➔</span>
-        </Link>
-      </div>
-      {/* Image */}
-      <div className="w-1/2 h-full bg-gray-100 flex items-center rounded-2xl justify-center">
-        <img
-          src={BrandingImage}
-          alt="Teachable"
-          className="object-cover w-full h-full rounded-xl"
-          loading="lazy"
-        />
-      </div>
-    </div>
-
-    {/* Upside Card */}
-    <div className="h-[275px] bg-sky-100 rounded-2xl shadow-lg flex flex-row pl-6">
-      {/* Text */}
-      <div className="w-1/2 pr-4 flex flex-col justify-center">
-        <h3 className="text-sky-600 text-xl uppercase font-semibold tracking-wide">Web Development</h3>
-        <p className="text-gray-600 text-lg leading-relaxed mt-2">
-          We help your business establish a powerful online presence with fast, responsive, and scalable websites
-        </p>
-        <Link
-          to="/services"
-          className="mt-4 inline-flex items-center gap-2 text-sm text-sky-600 font-semibold uppercase tracking-wide hover:text-sky-700 transition-colors duration-200"
-        >
-          See services <span className="text-base">➔</span>
-        </Link>
-      </div>
-      {/* Image */}
-      <div className="w-1/2 h-full bg-gray-100 rounded-2xl flex items-center justify-center">
-        <img
-          src={webDevelopmentImage}
-          alt="Upside"
-          className="object-cover w-full h-full rounded-xl"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-</div>
+              <div className="h-[275px] bg-sky-100 rounded-2xl shadow-lg flex flex-row pl-6">
+                <div className="w-1/2 pr-4 flex flex-col justify-center">
+                  <h3 className="text-sky-600 text-xl uppercase font-semibold tracking-wide">Web Development</h3>
+                  <p className="text-gray-600 text-lg leading-relaxed mt-2">
+                    We help your business establish a powerful online presence with fast, responsive, and scalable websites
+                  </p>
+                  <Link
+                    to="/services"
+                    className="mt-4 inline-flex items-center gap-2 text-sm text-sky-600 font-semibold uppercase tracking-wide hover:text-sky-700 transition-colors duration-200"
+                  >
+                    See services <span className="text-base">➔</span>
+                  </Link>
+                </div>
+                <div className="w-1/2 h-full bg-gray-100 rounded-2xl flex items-center justify-center">
+                  <img
+                    src={webDevelopmentImage}
+                    alt="Upside"
+                    className="object-cover w-full h-full rounded-xl"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -492,101 +484,104 @@ const Home = () => {
         </div>
       </section>
 
-       <div className="font-poppins py-16 px-8 bg-white">
-  {/* Inline CSS for marquee animation */}
-  <style>
-    {`
-      @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      @keyframes marqueeReverse {
-        0% { transform: translateX(-50%); }
-        100% { transform: translateX(0); }
-      }
-      .marquee-container {
-        display: flex;
-        overflow: hidden;
-        width: 100%;
-        user-select: none;
-      }
-      .marquee {
-        display: flex;
-        flex-shrink: 0;
-        animation: marquee 30s linear infinite;
-      }
-      .marquee-reverse {
-        display: flex;
-        flex-shrink: 0;
-        animation: marqueeReverse 30s linear infinite;
-      }
-      .marquee:hover, .marquee-reverse:hover {
-        animation-play-state: paused;
-      }
-      .project-item {
-        position: relative;
-        flex: 0 0 auto;
-        width: 350px;
-        height: 298px;
-        margin-right: 16px;
-      }
-    `}
-  </style>
+      <div className="font-poppins py-16 px-8 bg-white">
+        {/* Inline CSS for marquee animation */}
+        <style>
+          {`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            @keyframes marqueeReverse {
+              0% { transform: translateX(-50%); }
+              100% { transform: translateX(0); }
+            }
+            .marquee-container {
+              display: flex;
+              overflow: hidden;
+              width: 100%;
+              user-select: none;
+            }
+            .marquee {
+              display: flex;
+              flex-shrink: 0;
+              animation: marquee 30s linear infinite;
+            }
+            .marquee-reverse {
+              display: flex;
+              flex-shrink: 0;
+              animation: marqueeReverse 30s linear infinite;
+            }
+            .marquee:hover, .marquee-reverse:hover {
+              animation-play-state: paused;
+            }
+            .project-item {
+              position: relative;
+              flex: 0 0 auto;
+              height: 298px;
+              margin-right: 16px;
+            }
+            .project-item img {
+              width: auto;
+              height: 100%;
+              object-fit: contain;
+              object-position: center;
+            }
+          `}
+        </style>
 
-  <div className="max-w-7xl mx-auto">
-    <div className="mb-16">
-      <h3 className="text-blue-600 text-lg font-semibold uppercase text-center">
-        ~ Past Projects ~
-      </h3>
-      <h2 className="text-4xl font-bold text-black leading-tight text-center mb-4">
-        Let our work speak for itself
-      </h2>
-      <p className="text-gray-600 text-lg max-w-4xl mx-auto text-center">
-        Want to discover what we can do? Take a look at some of the amazing websites that have been created by our team of talented designers and developers.
-      </p>
-    </div>
-
-    {/* First Marquee Row */}
-    <div className="marquee-container mb-6">
-      <div ref={firstRowRef} className="marquee">
-        {/* Render projects twice for seamless loop */}
-        {[...firstRowProjects, ...firstRowProjects].map((project, index) => (
-          <div
-            key={`${project.title}-${index}`}
-            className="project-item block"
-          >
-            <img
-              src={project.image}
-              alt={project.alt}
-              className="w-full h-full object-cover rounded-3xl border border-gray-200 shadow-md"
-              loading="lazy"
-            />
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16">
+            <h3 className="text-blue-600 text-lg font-semibold uppercase text-center">
+              ~ Past Projects ~
+            </h3>
+            <h2 className="text-4xl font-bold text-black leading-tight text-center mb-4">
+              Let our work speak for itself
+            </h2>
+            <p className="text-gray-600 text-lg max-w-4xl mx-auto text-center">
+              Want to discover what we can do? Take a look at some of the amazing websites that have been created by our team of talented designers and developers.
+            </p>
           </div>
-        ))}
-      </div>
-    </div>
 
-    {/* Second Marquee Row */}
-    <div className="marquee-container">
-      <div ref={secondRowRef} className="marquee-reverse">
-        {/* Render projects twice for seamless loop */}
-        {[...secondRowProjects, ...secondRowProjects].map((project, index) => (
-          <div
-            key={`${project.title}-${index}`}
-            className="project-item block"
-          >
-            <img
-              src={project.image}
-              alt={project.alt}
-              className="w-full h-full object-cover rounded-3xl border border-gray-200 shadow-md"
-              loading="lazy"
-            />
+          {/* First Marquee Row */}
+          <div className="marquee-container mb-6">
+            <div ref={firstRowRef} className="marquee">
+              {[...firstRowProjects, ...firstRowProjects].map((project, index) => (
+                <div
+                  key={`${project.title}-${index}`}
+                  className="project-item block"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className="rounded-3xl border border-gray-200 shadow-md"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+
+          {/* Second Marquee Row */}
+          <div className="marquee-container">
+            <div ref={secondRowRef} className="marquee-reverse">
+              {[...secondRowProjects, ...secondRowProjects].map((project, index) => (
+                <div
+                  key={`${project.title}-${index}`}
+                  className="project-item block"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className="rounded-3xl border border-gray-200 shadow-md"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {/* Our Products */}
       <section className="bg-white py-16 px-12 ">
@@ -628,68 +623,59 @@ const Home = () => {
               COMING SOON — BE PART OF THE JOURNEY →
             </Link>
           </div>
-          {/* <div className="w-[50%] max-w-[400px]"> */}
-            <div className="aspect-[4/3] rounded-2xl  shadow-md overflow-hidden">
-              <img
-                src={athlixirImage}
-                alt="Preview of Athlixir platform"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
+          <div className="aspect-[4/3] rounded-2xl shadow-md overflow-hidden">
+            <img
+              src={athlixirImage}
+              alt="Preview of Athlixir platform"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
-        {/* </div> */}
+        </div>
       </section>
 
-
       {/* CTA Section */}
-<section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
-  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
-    
-    {/* Image First */}
-    <div className="w-1/2 h-[600px]">
-  <video
-    src={SocialMediaImage}
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-contain"
-  >
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-
-    {/* Content Second (on the right now) */}
-    <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
-      <h2 className="text-5xl font-bold leading-tight">
-        Ready to launch something amazing with Techno Vanam?
-      </h2>
-      <p className="text-lg mt-4">
-        Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
-      </p>
-      <div className="pt-6 flex justify-start">
-        <a href="/contact">
-          <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
-            Contact Us
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-4 h-4 transform -scale-y-100"
+      <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
+        <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
+          <div className="w-1/2 h-[600px]">
+            <video
+              src={SocialMediaImage}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-contain"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-            </svg>
-          </button>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
+            <h2 className="text-5xl font-bold leading-tight">
+              Ready to launch something amazing with Techno Vanam?
+            </h2>
+            <p className="text-lg mt-4">
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+            </p>
+            <div className="pt-6 flex justify-start">
+              <a href="/contact">
+                <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
+                  Contact Us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4 transform -scale-y-100"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+                  </svg>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
