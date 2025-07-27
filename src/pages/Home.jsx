@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Placeholder images (replace with actual paths)
 import cardImage1 from "../assets/ui ux.png";
@@ -634,48 +635,64 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
-        <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
-          <div className="w-1/2 h-[600px]">
-            <video
-              src={SocialMediaImage}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-contain"
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
-            <h2 className="text-5xl font-bold leading-tight">
-              Ready to launch something amazing with Techno Vanam?
-            </h2>
-            <p className="text-lg mt-4">
-              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
-            </p>
-            <div className="pt-6 flex justify-start">
-              <a href="/contact">
-                <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
-                  Contact Us
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="w-4 h-4 transform -scale-y-100"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-                  </svg>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+
+{/* CTA Section */}
+<section className="w-full flex justify-center items-center min-h-[700px] bg-[#e9ebef] px-6">
+  <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12 py-12">
+    
+    {/* Left - Glass Video Card */}
+    <motion.div 
+      initial={{ opacity: 0, y: 60 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.8 }} 
+      className="w-full md:w-1/2 h-[500px] overflow-hidden"
+    >
+      <video
+  src={SocialMediaImage}
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full h-full object-cover rounded-3xl shadow-lg bg-transparent"
+  style={{
+    backgroundColor: 'transparent',
+    WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+  }}
+>
+  Your browser does not support the video tag.
+</video>
+
+    </motion.div>
+
+    {/* Right - Text and CTA */}
+    <motion.div 
+      initial={{ opacity: 0, x: 60 }} 
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.8 }} 
+      className="w-full md:w-1/2 text-blue-600 px-4"
+    >
+      <h2 className="text-5xl font-extrabold leading-snug mb-6 text-blue-600">
+        Ready to launch<br />
+        something amazing<br />
+        with Techno Vanam?
+      </h2>
+      <p className="text-lg text-blue-500 leading-relaxed mb-8">
+        Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+      </p>
+      <a href="/contact">
+        <button className="group relative inline-flex items-center px-8 py-4 text-blue-600 border-2 border-blue-600 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out shadow-md hover:shadow-xl transform hover:scale-105">
+          Contact Us
+          <span className="ml-2 transition-transform group-hover:translate-x-1">
+            →
+          </span>
+          <span className="absolute top-0 left-0 w-full h-full bg-blue-600 opacity-10 rounded-full blur-md animate-ping"></span>
+        </button>
+      </a>
+    </motion.div>
+
+  </div>
+</section>
+
     </div>
   );
 };
