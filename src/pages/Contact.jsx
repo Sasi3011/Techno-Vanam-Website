@@ -222,6 +222,7 @@ export default function Contact() {
                   <img
                     src={service.image}
                     alt={service.name}
+                    loading="lazy"
                     className="mb-4 sm:mb-6 md:mb-8 w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 object-cover rounded-md sm:rounded-lg shadow-sm"
                   />
                   <span className="text-xs sm:text-sm md:text-base font-semibold text-gray-700 text-center">

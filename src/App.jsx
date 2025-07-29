@@ -20,8 +20,8 @@ const App = () => {
     const handleOffline = () => setOffline(true);
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
-    // Simulate loading for 1.2s on mount/refresh
-    const timer = setTimeout(() => setLoading(false), 1200);
+    // Simulate loading for 5s on mount/refresh
+    const timer = setTimeout(() => setLoading(false), 5000);
     return () => {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);

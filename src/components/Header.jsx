@@ -27,6 +27,7 @@ const Header = () => {
             src={Logo} 
             alt="Techno Vanam Logo" 
             className="h-8 sm:h-10 w-auto object-contain" 
+            loading="lazy" 
           />
           <span className="text-lg sm:text-2xl font-bold">Techno Vanam</span>
         </Link>

@@ -35,6 +35,7 @@ export default function Products2() {
                     src={Logo}
                     alt="Logo"
                     className="w-[63px] h-[63px] object-contain"
+                    loading="lazy"
                   />
                   <span className="text-5xl whitespace-nowrap">
                     Techno Vanam
@@ -134,6 +135,7 @@ export default function Products2() {
               src={ComingSoonIcon}
               alt="coming soon icon"
               className="w-[20px] h-[20px]"
+              loading="lazy"
             />
           </div>
         </div>
@@ -143,6 +145,7 @@ export default function Products2() {
           src={AppPreview}
           alt="App preview"
           className="w-[500px] h-[460px] object-cover rounded-[28px]"
+          loading="lazy"
         />
       </div>
             {/* CTA Section */}

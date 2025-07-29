@@ -23,6 +23,7 @@ const Footer = () => {
               src={Logo} 
               alt="Techno Vanam Logo" 
               className="h-8 sm:h-10 w-auto object-contain" 
+              loading="lazy" 
             />
             <span className="text-lg sm:text-xl font-bold text-gray-900">Techno Vanam</span>
           </div>

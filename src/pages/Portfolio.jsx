@@ -48,6 +48,7 @@ const ProjectCard = ({ project, reverse }) => (
         src={project.logo}
         alt={`${project.title} logo`}
         className="w-[140px] mb-6"
+        loading="lazy"
       />
       <p className="text-[#667097] text-lg leading-7 mb-6">
         {project.description}
@@ -74,6 +75,7 @@ const ProjectCard = ({ project, reverse }) => (
         src={project.image}
         alt={`${project.title} screenshot`}
         className="w-full h-full object-cover"
+        loading="lazy"
       />
     </div>
   </a>
@@ -126,6 +128,7 @@ export default function Portfolio() {
                     src={CardLogo1}
                     alt="Logo 1"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -168,6 +171,7 @@ export default function Portfolio() {
                     src={CardLogo2}
                     alt="Logo 2"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>

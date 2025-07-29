@@ -34,6 +34,7 @@ const Product1 = () => {
               src={Logo}
               alt="Logo"
               className="w-[63px] h-[63px] object-contain"
+              loading="lazy"
             />
             <span className="text-5xl whitespace-nowrap">
               Techno Vanam
@@ -122,6 +123,7 @@ const Product1 = () => {
             src={StartupIllustration}
             alt="Startup Illustration"
             className="w-[600px] h-[480px] object-cover rounded-[32px]"
+            loading="lazy"
           />
         </div>
       </div>

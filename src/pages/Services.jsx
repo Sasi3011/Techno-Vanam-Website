@@ -128,6 +128,7 @@ const Services = () => {
                     src={service.image}
                     alt={`${service.name} Illustration`}
                     className="object-contain w-full h-full"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -162,6 +163,7 @@ const Services = () => {
         src={item.image} 
         alt={`${item.title} Icon`}
         className="w-14 h-14 object-cover"
+        loading="lazy"
       />
       <div className="flex flex-col items-start">
         <span className={`text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
