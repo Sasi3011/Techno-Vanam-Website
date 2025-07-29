@@ -711,7 +711,7 @@ const Home = () => {
             <p className="text-lg text-blue-500 leading-relaxed mb-8">
               Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
             </p>
-            <a href="/contact">
+            <Link to="/contact">
               <button className="group relative inline-flex items-center px-8 py-4 text-blue-600 border-2 border-blue-600 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out shadow-md hover:shadow-xl transform hover:scale-105">
                 Contact Us
                 <span className="ml-2 transition-transform group-hover:translate-x-1">
@@ -719,7 +719,7 @@ const Home = () => {
                 </span>
                 <span className="absolute top-0 left-0 w-full h-full bg-blue-600 opacity-10 rounded-full blur-md animate-ping"></span>
               </button>
-            </a>
+            </Link>
           </motion.div>
 
         </div>

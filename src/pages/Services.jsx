@@ -8,6 +8,7 @@ import SaaSIcon from "../assets/logo.png";
 import StartupIcon from "../assets/Service/Startup Icon.png";
 import IndustriesIcon from "../assets/logo.png";
 import SocialMediaImage from "../assets/Contact Us.mp4";
+import { Link } from "react-router-dom";
 
 const servicesList = [
   {
@@ -113,13 +114,13 @@ const Services = () => {
                   <p className="text-gray-600 text-lg leading-relaxed">
                     {service.description}
                   </p>
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact"
                     className="flex items-center gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
                   >
                     Get in touch
                     <span className="text-lg">➔</span>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Right Image Block */}
@@ -209,7 +210,7 @@ const Services = () => {
         Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
       </p>
       <div className="pt-6 flex justify-start">
-        <a href="/contact">
+        <Link to="/contact">
           <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
             Contact Us
             <svg
@@ -223,7 +224,7 @@ const Services = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
             </svg>
           </button>
-        </a>
+        </Link>
       </div>
     </div>
 

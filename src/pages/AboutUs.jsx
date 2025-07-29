@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import SocialMediaImage from "../assets/Contact Us.mp4";
 const teamMembers = [
   {
@@ -368,7 +368,7 @@ export default function About() {
       </p>
 
       <div className="flex flex-col items-center mt-4">
-        <a href="/Services" className="group flex items-center gap-2 text-base font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
+        <Link to="/Services" className="group flex items-center gap-2 text-base font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
           OUR SERVICES
           <svg
             width="12"
@@ -378,7 +378,7 @@ export default function About() {
           >
             <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
           </svg>
-        </a>
+        </Link>
       </div>
     </div>
 
@@ -573,7 +573,7 @@ export default function About() {
         Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
       </p>
       <div className="pt-6 flex justify-start">
-        <a href="/contact">
+        <Link to="/contact">
           <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
             Contact Us
             <svg
@@ -587,7 +587,7 @@ export default function About() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
             </svg>
           </button>
-        </a>
+        </Link>
       </div>
     </div>
 
