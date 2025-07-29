@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Send } from 'lucide-react';
-import WebDesignImage from "../assets/logo.png"; // Import image for Web Design
-import UIUXDesignImage from "../assets/logo.png"; // Import image for UI/UX Design
-import DevelopmentImage from "../assets/logo.png"; // Import image for Development
-import BrandingImage from "../assets/logo.png"; // Import image for Branding
+// Used in Contact Form
+import WebDesignImage from "../assets/logo.png";
+// Used in Contact Form
+import UIUXDesignImage from "../assets/logo.png";
+// Used in Contact Form
+import DevelopmentImage from "../assets/logo.png";
+// Used in Contact Form
+import BrandingImage from "../assets/logo.png";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useRef } from "react";

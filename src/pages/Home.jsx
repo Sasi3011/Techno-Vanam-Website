@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-import { useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import HighClassPopup from '../components/HighClassPopup';
 
 // Section: Process Steps Images
 import designImage from "../assets/Home Page/Project Design Phase.png"; // Image: Design Phase
@@ -207,6 +208,8 @@ const projects = [
 const Home = () => {
   const serviceScrollRef = useRef(null);
   const cardRefs = useRef([]);
+  const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
 
   const scrollHorizontally = (ref, direction) => {
     if (ref.current) {
@@ -431,7 +434,8 @@ const Home = () => {
                     We help your business establish a powerful online presence with fast, responsive, and scalable websites
                   </p>
                   <Link
-                    to="/services"
+                    to="#"
+                    onClick={e => { e.preventDefault(); setShowPopup(true); }}
                     className="mt-4 inline-flex items-center gap-2 text-sm text-sky-600 font-semibold uppercase tracking-wide hover:text-sky-700 transition-colors duration-200"
                   >
                     See services <span className="text-base">➔</span>
@@ -724,6 +728,20 @@ const Home = () => {
 
         </div>
       </section>
+
+      <HighClassPopup 
+        open={showPopup} 
+        onClose={() => setShowPopup(false)} 
+        title="Service is currently unavailable" 
+        description="This service is currently unavailable. Please check back later." 
+        icon={
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-12 h-12 text-red-500">
+            <circle cx="12" cy="12" r="10" fill="currentColor" />
+            <rect x="11" y="7" width="2" height="6" rx="1" fill="#fff" />
+            <rect x="11" y="15" width="2" height="2" rx="1" fill="#fff" />
+          </svg>
+        }
+      />
 
     </div>
   );

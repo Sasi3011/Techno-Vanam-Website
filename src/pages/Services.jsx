@@ -9,6 +9,8 @@ import StartupIcon from "../assets/Service/Startup Icon.png";
 import IndustriesIcon from "../assets/logo.png";
 import SocialMediaImage from "../assets/Contact Us.mp4";
 import { Link } from "react-router-dom";
+import HighClassPopup from '../components/HighClassPopup';
+import { useState } from 'react';
 
 const servicesList = [
   {
@@ -80,6 +82,8 @@ const industriesList = [
 ];
 
 const Services = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <>
       {/* Services Section */}
@@ -114,13 +118,24 @@ const Services = () => {
                   <p className="text-gray-600 text-lg leading-relaxed">
                     {service.description}
                   </p>
-                  <Link
-                    to="/contact"
-                    className="flex items-center gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
-                  >
-                    Get in touch
-                    <span className="text-lg">➔</span>
-                  </Link>
+                  {service.name === 'Web Development' ? (
+                    <button
+                      type="button"
+                      className="flex items-center gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
+                      onClick={() => setShowPopup(true)}
+                    >
+                      See more
+                      <span className="text-lg">➔</span>
+                    </button>
+                  ) : (
+                    <Link
+                      to="/contact"
+                      className="flex items-center gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
+                    >
+                      Get in touch
+                      <span className="text-lg">➔</span>
+                    </Link>
+                  )}
                 </div>
 
                 {/* Right Image Block */}
@@ -230,6 +245,20 @@ const Services = () => {
 
   </div>
 </section>
+
+<HighClassPopup 
+  open={showPopup} 
+  onClose={() => setShowPopup(false)} 
+  title="Service is currently unavailable" 
+  description="This service is currently unavailable. Please check back later." 
+  icon={
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-12 h-12 text-red-500">
+      <circle cx="12" cy="12" r="10" fill="currentColor" />
+      <rect x="11" y="7" width="2" height="6" rx="1" fill="#fff" />
+      <rect x="11" y="15" width="2" height="2" rx="1" fill="#fff" />
+    </svg>
+  }
+/>
 
     </>
   );
