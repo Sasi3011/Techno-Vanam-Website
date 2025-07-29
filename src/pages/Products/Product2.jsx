@@ -5,6 +5,7 @@ import ComingSoonIcon from "../../assets/logo.png";
 import AppPreview from "../../assets/logo.png";
 import SocialMediaImage from "../../assets/Contact Us.mp4";
 import { Link } from "react-router-dom";
+import { Rocket } from "lucide-react";
 
 export default function Products2() {
   const navigate = useNavigate();
@@ -128,17 +129,13 @@ export default function Products2() {
           </div>
 
           {/* Coming Soon */}
-          <div className="flex items-center gap-2 mt-[28px]">
-            <p className="text-[#2388FF] text-xl font-bold uppercase tracking-[0.06em]">
-              COMING SOON
-            </p>
-            <img
-              src={ComingSoonIcon}
-              alt="coming soon icon"
-              className="w-[20px] h-[20px]"
-              loading="lazy"
-            />
-          </div>
+<div className="flex items-center gap-2 mt-[28px]">
+  <p className="text-[#2388FF] text-xl font-bold uppercase tracking-[0.06em]">
+    COMING SOON
+  </p>
+  <Rocket className="w-5 h-5 text-[#2388FF]" />
+</div>
+
         </div>
 
         {/* Right Image */}
