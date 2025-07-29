@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Logo from "../../assets/logo.png";
 import StartupIllustration from "../../assets/poster.png";
 import SocialMediaImage from "../../assets/Contact Us.mp4";
+import { Link } from "react-router-dom";
 
 const Product1 = () => {
   const navigate = useNavigate();
@@ -155,7 +156,7 @@ const Product1 = () => {
         Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
       </p>
       <div className="pt-6 flex justify-start">
-        <a href="/contact">
+        <Link to="/contact">
           <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
             Contact Us
             <svg
@@ -169,7 +170,7 @@ const Product1 = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
             </svg>
           </button>
-        </a>
+        </Link>
       </div>
     </div>
 

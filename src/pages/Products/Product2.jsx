@@ -4,6 +4,7 @@ import Logo from "../../assets/logo.png";
 import ComingSoonIcon from "../../assets/logo.png";
 import AppPreview from "../../assets/logo.png";
 import SocialMediaImage from "../../assets/Contact Us.mp4";
+import { Link } from "react-router-dom";
 
 export default function Products2() {
   const navigate = useNavigate();
@@ -176,7 +177,7 @@ export default function Products2() {
               Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
             </p>
             <div className="pt-6 flex justify-start">
-              <a href="/contact">
+              <Link to="/contact">
                 <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
                   Contact Us
                   <svg
@@ -190,7 +191,7 @@ export default function Products2() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
                   </svg>
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
       
