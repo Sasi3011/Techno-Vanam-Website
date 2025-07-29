@@ -13,24 +13,25 @@ const teamMembers = [
     name: "Sasikiran TT",
     role: "Founder & CEO",
     img: "/placeholder1.jpg",
-    instagram: "#",
-    linkedin: "#",
+    instagram: "https://www.instagram.com/sasi_._06/",
+    linkedin: "https://www.linkedin.com/in/sasikiran-3031s/",
   },
   {
     name: "Sanjana B",
     role: "Co-founder & CTO",
     img: "/placeholder2.jpg",
-    instagram: "#",
-    linkedin: "#",
+    instagram: "http://instagram.com/sanjudarla07/",
+    linkedin: "https://www.linkedin.com/in/sanjana-0831s/",
   },
   {
     name: "Surya P",
     role: "CPO",
     img: "/placeholder3.jpg",
-    instagram: "#",
-    linkedin: "#",
+    instagram: "https://www.instagram.com/__suryap07__/",
+    linkedin: "https://www.linkedin.com/in/surya-p08/",
   },
 ];
+
 const values = [
   {
     title: "Innovation",
