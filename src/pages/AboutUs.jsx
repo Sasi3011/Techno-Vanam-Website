@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.png"; // Import the logo image
+import Hero from "../assets/Margin.png";
+import Blog from "../assets/Blog.png";
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
@@ -9,21 +11,21 @@ import SocialMediaImage from "../assets/Contact Us.mp4";
 const teamMembers = [
   {
     name: "Sasikiran TT",
-    role: "CEO & Founder",
+    role: "Founder & CEO",
     img: "/placeholder1.jpg",
     instagram: "#",
     linkedin: "#",
   },
   {
     name: "Sanjana B",
-    role: "CTO & Co-founder",
+    role: "Co-founder & CTO",
     img: "/placeholder2.jpg",
     instagram: "#",
     linkedin: "#",
   },
   {
     name: "Surya P",
-    role: "Marketing Lead",
+    role: "CPO",
     img: "/placeholder3.jpg",
     instagram: "#",
     linkedin: "#",
@@ -158,9 +160,9 @@ export default function About() {
           <div className="w-1/2 relative">
             
             <img
-              src="/placeholder-circle-logo.svg"
+              src={Hero}
               alt="logo circle"
-              className="absolute inset-x-0 mx-auto top-6 w-1/2 h-auto object-contain"
+              className="absolute inset-x-10 mx-auto  w-[800px] h-auto object-contain"
             />
           </div>
         </div>
@@ -356,9 +358,9 @@ export default function About() {
       />
       
       <img
-        src="/placeholder-trophy.png"
+        src={Blog}
         alt="Trophy illustration"
-        className="w-full max-w-[90%] h-auto mt-12"
+        className="w-full max-w-[50%] mt-12"
       />
 
       <p className="text-center font-bold text-2xl text-[#19213D] mt-38">

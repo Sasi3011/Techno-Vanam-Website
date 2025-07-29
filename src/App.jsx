@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import SplashScreen from "./components/SplashScreen";
 
 import Home from "./pages/Home";
 import About from "./pages/AboutUs";
@@ -12,6 +13,22 @@ import Product2 from "./pages/Products/Product2";
 import MainLayout from "./layout/MainLayout";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+  const [offline, setOffline] = useState(!navigator.onLine);
+  useEffect(() => {
+    const handleOnline = () => setOffline(false);
+    const handleOffline = () => setOffline(true);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+    // Simulate loading for 1.2s on mount/refresh
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+      clearTimeout(timer);
+    };
+  }, []);
+  if (loading || offline) return <SplashScreen />;
   return (
     <MainLayout>
       <Routes>

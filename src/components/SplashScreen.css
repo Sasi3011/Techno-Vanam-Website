@@ -1,0 +1,46 @@
+.splash-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e40af 0%, #60a5fa 100%);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.splash-loader {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.splash-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.8;
+  animation: splash-bounce 1.2s infinite cubic-bezier(.68,-0.55,.27,1.55);
+}
+.splash-dot:nth-child(2) { animation-delay: 0.2s; }
+.splash-dot:nth-child(3) { animation-delay: 0.4s; }
+.splash-dot:nth-child(4) { animation-delay: 0.6s; }
+@keyframes splash-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5rem); }
+}
+.splash-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 16px rgba(30,64,175,0.2);
+}
+.splash-desc {
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
+} 

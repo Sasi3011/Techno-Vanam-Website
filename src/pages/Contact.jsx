@@ -6,6 +6,7 @@ import DevelopmentImage from "../assets/logo.png"; // Import image for Developme
 import BrandingImage from "../assets/logo.png"; // Import image for Branding
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useRef } from "react";
 
 const servicesList = [
   { name: "Web Design", color: "border-blue-500", image: WebDesignImage },
@@ -26,6 +27,7 @@ export default function Contact() {
   const [deadline, setDeadline] = useState("");
   const [submissionStatus, setSubmissionStatus] = useState(null);
   const location = useLocation();
+  const scrollContainer = document.querySelector('.custom-scrollbar');
 
 
   const toggleService = (service) => {
@@ -55,8 +57,11 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormSubmitted(true);
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (scrollContainer) {
+      scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     if (!name.trim() || !email.trim() || selectedServices.length === 0 || message.trim() === "") {
       setSubmissionStatus("error");

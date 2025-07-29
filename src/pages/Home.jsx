@@ -1,55 +1,48 @@
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Placeholder images (replace with actual paths)
-import cardImage1 from "../assets/ui ux.png";
-import cardImage2 from "../assets/poster.png";
-import cardImage3 from "../assets/n.png";
-import designImage from "../assets/Home Page/Project Design Phase.png";
-import devImage from "../assets/Home Page/Project Development Phase.png";
-import ideaImage from "../assets/Home Page/Project Idea Phase.png";
-import launchImage from "../assets/Home Page/Project Launch Phase.png";
-import researchImage from "../assets/Home Page/Project Research Phase.png";
-import supportImage from "../assets/Home Page/Support Phase.png";
-import ideaicon from "../assets/Home Page/Idea Phase Icon.png";
-import researchicon from "../assets/Home Page/Research Phase Icon.png";
-import designicon from "../assets/Home Page/Design Phase Icon.png";
-import devicon from "../assets/Home Page/Development Phase Icon.png";
-import launchicon from "../assets/Home Page/Launch Phase Icon.png";
-import supporticon from "../assets/Home Page/Support Phase Icon.png";
-import athlixirImage from "../assets/Home Page/Athlixir.png";
-import SocialMediaImage from "../assets/Contact Us.mp4";
-import heroIllustration from "../assets/Home Video.mp4";
-// Placeholder images for services (replace with actual paths)
-import webDesignImage from "../assets/logo.png";
-import BrandingImage from "../assets/Home Page/Branding.png";
-import webDevelopmentImage from "../assets/Home Page/Web Development.png";
-import UIUXDesignImage from "../assets/Home Page/UIUX.png";
-import logoDesignImage from "../assets/logo.png";
-
-// Unique project images (replace with actual paths)
-import Project1 from "../assets/Home Page/Project1.jpg";
-import Project2 from "../assets/Home Page/Project2.jpg";
-import Project3 from "../assets/Home Page/Project3.jpg";
-import Project4 from "../assets/Home Page/Project4.jpg";
-import Project5 from "../assets/Home Page/Project5.jpg";
-import Project6 from "../assets/Home Page/Project6.jpg";
-import Project7 from "../assets/Home Page/Project7.jpg";
-import Project8 from "../assets/Home Page/Project8.jpg";
-import Project9 from "../assets/Home Page/Project9.jpg";
-import Project10 from "../assets/Home Page/Project10.jpg";
-import Project11 from "../assets/Home Page/Project11.webp";
-import Project12 from "../assets/Home Page/Project12.webp";
-import Project13 from "../assets/Home Page/Project13.webp";
-import Project14 from "../assets/Home Page/Project14.webp";
-import Project15 from "../assets/Home Page/Project15.webp";
-import Project16 from "../assets/Home Page/Project16.webp";
-import Project17 from "../assets/Home Page/Project17.webp";
-import Project18 from "../assets/Home Page/Project18.webp";
-import Project19 from "../assets/Home Page/Project19.webp";
-import Project20 from "../assets/Home Page/Project20.webp";
+// Section: Process Steps Images
+import designImage from "../assets/Home Page/Project Design Phase.png"; // Image: Design Phase
+import devImage from "../assets/Home Page/Project Development Phase.png"; // Image: Development Phase
+import ideaImage from "../assets/Home Page/Project Idea Phase.png"; // Image: Idea Phase
+import launchImage from "../assets/Home Page/Project Launch Phase.png"; // Image: Launch Phase
+import researchImage from "../assets/Home Page/Project Research Phase.png"; // Image: Research Phase
+import supportImage from "../assets/Home Page/Support Phase.png"; // Image: Support Phase
+import ideaicon from "../assets/Home Page/Idea Phase Icon.png"; // Icon: Idea Phase
+import researchicon from "../assets/Home Page/Research Phase Icon.png"; // Icon: Research Phase
+import designicon from "../assets/Home Page/Design Phase Icon.png"; // Icon: Design Phase
+import devicon from "../assets/Home Page/Development Phase Icon.png"; // Icon: Development Phase
+import launchicon from "../assets/Home Page/Launch Phase Icon.png"; // Icon: Launch Phase
+import supporticon from "../assets/Home Page/Support Phase Icon.png"; // Icon: Support Phase
+import athlixirImage from "../assets/Home Page/Athlixir.png"; // Image: Athlixir Product
+import SocialMediaImage from "../assets/Contact Us.mp4"; // Video: Social Media
+import heroIllustration from "../assets/Home Video.mp4"; // Video: Hero Section
+// Section: Services Images
+import BrandingImage from "../assets/Home Page/Branding.png"; // Image: Branding Service
+import webDevelopmentImage from "../assets/Home Page/Web Development.png"; // Image: Web Development Service
+import UIUXDesignImage from "../assets/Home Page/UIUX.png"; // Image: UI/UX Service
+// Section: Project Images
+import Project1 from "../assets/Home Page/Project1.jpg"; // Image: Project 1
+import Project2 from "../assets/Home Page/Project2.jpg"; // Image: Project 2
+import Project3 from "../assets/Home Page/Project3.jpg"; // Image: Project 3
+import Project4 from "../assets/Home Page/Project4.jpg"; // Image: Project 4
+import Project5 from "../assets/Home Page/Project5.jpg"; // Image: Project 5
+import Project6 from "../assets/Home Page/Project6.jpg"; // Image: Project 6
+import Project7 from "../assets/Home Page/Project7.jpg"; // Image: Project 7
+import Project8 from "../assets/Home Page/Project8.jpg"; // Image: Project 8
+import Project9 from "../assets/Home Page/Project9.jpg"; // Image: Project 9
+import Project10 from "../assets/Home Page/Project10.jpg"; // Image: Project 10
+import Project11 from "../assets/Home Page/Project11.webp"; // Image: Project 11
+import Project12 from "../assets/Home Page/Project12.jpg"; // Image: Project 12
+import Project13 from "../assets/Home Page/Project13.webp"; // Image: Project 13
+import Project14 from "../assets/Home Page/Project14.webp"; // Image: Project 14
+import Project15 from "../assets/Home Page/Project15.jpg"; // Image: Project 15
+import Project16 from "../assets/Home Page/Project16.webp"; // Image: Project 16
+import Project17 from "../assets/Home Page/Project17.webp"; // Image: Project 17
+import Project18 from "../assets/Home Page/Project18.webp"; // Image: Project 18
+import Project19 from "../assets/Home Page/Project19.jpg"; // Image: Project 19
+import Project20 from "../assets/Home Page/Project20.webp"; // Image: Project 20
 
 const steps = [
   {
@@ -262,18 +255,43 @@ const Home = () => {
       if (firstRowRef.current) {
         firstRowRef.current.style.animation = "none";
         void firstRowRef.current.offsetWidth; // Trigger reflow
-        firstRowRef.current.style.animation = "marquee 30s linear infinite";
+        firstRowRef.current.style.animation = "marquee 100s linear infinite";
       }
       if (secondRowRef.current) {
         secondRowRef.current.style.animation = "none";
         void secondRowRef.current.offsetWidth; // Trigger reflow
-        secondRowRef.current.style.animation = "marqueeReverse 30s linear infinite";
+        secondRowRef.current.style.animation = "marqueeReverse 100s linear infinite";
       }
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Animation variants for pop-up effect
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.85, y: 30 },
+    visible: (index) => ({
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        delay: index * 0.15,
+      },
+    }),
+  };
+
+  // Animation variants for Athlixir card hover effect
+  const athlixirCardVariants = {
+    rest: { scale: 1, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)" },
+    hover: {
+      scale: 1.03,
+      boxShadow: "0 15px 25px -5px rgba(0, 0, 0, 0.2)",
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
+  };
 
   return (
     <div className="font-poppins min-h-screen w-full max-w-[100vw] overflow-x-hidden">
@@ -282,6 +300,7 @@ const Home = () => {
         {`
           .animate-slideIn {
             animation: slideIn 0.5s ease-out forwards;
+            will-change: transform, opacity;
           }
           @keyframes slideIn {
             from {
@@ -447,9 +466,15 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col gap-16 mt-20">
-            {steps.map((step) => (
-              <div
+            {steps.map((step, index) => (
+              <motion.div
                 key={step.id}
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.2 }}
+                variants={cardVariants}
+                style={{ willChange: 'transform, opacity' }}
                 className="flex flex-row gap-8 items-center justify-between bg-white shadow-md border border-[#EBEFF6] rounded-3xl p-12"
               >
                 <div className="flex flex-col items-start w-1/2">
@@ -479,7 +504,7 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/10"></div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -585,7 +610,7 @@ const Home = () => {
       </div>
 
       {/* Our Products */}
-      <section className="bg-white py-16 px-12 ">
+      <section className="bg-white py-16 px-12">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-blue-600 text-lg font-semibold uppercase">
             ~Our Products~
@@ -597,101 +622,108 @@ const Home = () => {
             At Techno Vanam, we don’t just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
           </p>
         </div>
-        <div className="mt-12 bg-blue-50 rounded-3xl p-8 flex flex-row items-center justify-between gap-10 max-w-5xl mx-auto">
-          <div className="w-[50%] max-w-xl">
-            <h3 className="text-blue-600 text-3xl font-bold mb-4">ATHLIXIR</h3>
-            <p className="text-gray-700 text-lg mb-8">
-              Athlixir is currently in development — designed to empower over 50+ athlete communities across Tier-2 and Tier-3 regions. Our platform is being engineered to process 300,000+ performance data points, using AI to deliver smarter training, injury tracking, and verified recognition.
+        <motion.div
+          className="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-10 flex flex-row items-center justify-between gap-12 max-w-6xl mx-auto shadow-xl"
+          variants={athlixirCardVariants}
+          initial="rest"
+          whileHover="hover"
+        >
+          <div className="w-[55%] max-w-2xl">
+            <h3 className="text-gray-900 text-4xl font-extrabold mb-6 tracking-tight">ATHLIXIR</h3>
+            <p className="text-gray-700 text-lg mb-10 leading-relaxed">
+              Athlixir is in development, crafted to empower over 50+ athlete communities in Tier-2 and Tier-3 regions. Our cutting-edge platform harnesses AI to analyze 300,000+ performance data points, delivering personalized training, precise injury tracking, and verified recognition.
             </p>
-            <div className="flex flex-row gap-6 text-left text-blue-900 font-semibold mb-6">
+            <div className="flex flex-row gap-10 text-left mb-8">
               <div>
-                <p className="text-2xl">50+</p>
-                <p className="text-base font-medium text-gray-600">
-                  Target athlete communities
+                <p className="text-3xl font-bold text-blue-700">50+</p>
+                <p className="text-sm font-medium text-gray-600 tracking-wide">
+                  Target Athlete Communities
                 </p>
               </div>
               <div>
-                <p className="text-2xl">300,000+</p>
-                <p className="text-base font-medium text-gray-600">
-                  Projected performance insights powered by AI
+                <p className="text-3xl font-bold text-blue-700">300,000+</p>
+                <p className="text-sm font-medium text-gray-600 tracking-wide">
+                  AI-Powered Performance Insights
                 </p>
               </div>
             </div>
             <Link
               to="/product1"
-              className="text-blue-600 font-medium text-base"
+              className="inline-flex items-center text-blue-700 text-base font-semibold hover:text-blue-800 transition-colors duration-300"
             >
-              COMING SOON — BE PART OF THE JOURNEY →
+              COMING SOON — JOIN THE JOURNEY
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
-          <div className="aspect-[4/3] rounded-2xl shadow-md overflow-hidden">
+          <div className="w-[45%] aspect-[4/3] rounded-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-100/20 to-transparent z-10"></div>
             <img
               src={athlixirImage}
               alt="Preview of Athlixir platform"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
           </div>
-        </div>
+        </motion.div>
       </section>
 
+      {/* CTA Section */}
+      <section className="w-full flex justify-center items-center min-h-[700px] bg-[#e9ebef] px-6">
+        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12 py-12">
+          
+          {/* Left - Glass Video Card */}
+          <motion.div 
+            initial={{ opacity: 0, y: 60 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="w-full md:w-1/2 h-[500px] overflow-hidden"
+          >
+            <video
+              src={SocialMediaImage}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover rounded-3xl shadow-lg bg-transparent"
+              style={{
+                backgroundColor: 'transparent',
+                WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+              }}
+            >
+              Your browser does not support the video tag.
+            </video>
+          </motion.div>
 
-{/* CTA Section */}
-<section className="w-full flex justify-center items-center min-h-[700px] bg-[#e9ebef] px-6">
-  <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12 py-12">
-    
-    {/* Left - Glass Video Card */}
-    <motion.div 
-      initial={{ opacity: 0, y: 60 }} 
-      whileInView={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 0.8 }} 
-      className="w-full md:w-1/2 h-[500px] overflow-hidden"
-    >
-      <video
-  src={SocialMediaImage}
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full h-full object-cover rounded-3xl shadow-lg bg-transparent"
-  style={{
-    backgroundColor: 'transparent',
-    WebkitMaskImage: '-webkit-radial-gradient(white, black)',
-  }}
->
-  Your browser does not support the video tag.
-</video>
+          {/* Right - Text and CTA */}
+          <motion.div 
+            initial={{ opacity: 0, x: 60 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="w-full md:w-1/2 text-blue-600 px-4"
+          >
+            <h2 className="text-5xl font-extrabold leading-snug mb-6 text-blue-600">
+              Ready to launch<br />
+              something amazing<br />
+              with Techno Vanam?
+            </h2>
+            <p className="text-lg text-blue-500 leading-relaxed mb-8">
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+            </p>
+            <a href="/contact">
+              <button className="group relative inline-flex items-center px-8 py-4 text-blue-600 border-2 border-blue-600 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out shadow-md hover:shadow-xl transform hover:scale-105">
+                Contact Us
+                <span className="ml-2 transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+                <span className="absolute top-0 left-0 w-full h-full bg-blue-600 opacity-10 rounded-full blur-md animate-ping"></span>
+              </button>
+            </a>
+          </motion.div>
 
-    </motion.div>
-
-    {/* Right - Text and CTA */}
-    <motion.div 
-      initial={{ opacity: 0, x: 60 }} 
-      whileInView={{ opacity: 1, x: 0 }} 
-      transition={{ duration: 0.8 }} 
-      className="w-full md:w-1/2 text-blue-600 px-4"
-    >
-      <h2 className="text-5xl font-extrabold leading-snug mb-6 text-blue-600">
-        Ready to launch<br />
-        something amazing<br />
-        with Techno Vanam?
-      </h2>
-      <p className="text-lg text-blue-500 leading-relaxed mb-8">
-        Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
-      </p>
-      <a href="/contact">
-        <button className="group relative inline-flex items-center px-8 py-4 text-blue-600 border-2 border-blue-600 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out shadow-md hover:shadow-xl transform hover:scale-105">
-          Contact Us
-          <span className="ml-2 transition-transform group-hover:translate-x-1">
-            →
-          </span>
-          <span className="absolute top-0 left-0 w-full h-full bg-blue-600 opacity-10 rounded-full blur-md animate-ping"></span>
-        </button>
-      </a>
-    </motion.div>
-
-  </div>
-</section>
+        </div>
+      </section>
 
     </div>
   );
