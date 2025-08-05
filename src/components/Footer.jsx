@@ -49,22 +49,25 @@ const Footer = () => {
           <div className="flex gap-4 sm:gap-6 text-xl sm:text-2xl">
             <a 
               href="https://api.whatsapp.com/send/?phone=918610500527&text=Hey+Techno+Vanam%21+Looking+forward+to+chatting+with+you .&app_absent=0" 
-              className="text-green-500 hover:scale-110 transition-transform duration-200"
+              className="text-green-500 hover:scale-110 transition-transform duration-200 "
               aria-label="WhatsApp"
+              target="_blank"
             >
               <FaWhatsapp />
             </a>
             <a 
               href="https://www.instagram.com/technovanam/" 
-              className="text-pink-500 hover:scale-110 transition-transform duration-200"
+              className="text-pink-500 hover:scale-110 transition-transform duration-200 "
               aria-label="Instagram"
+              target="_blank"
             >
               <FaInstagram />
             </a>
             <a 
               href="https://www.linkedin.com/company/technovanam" 
-              className="text-blue-700 hover:scale-110 transition-transform duration-200"
+              className="text-blue-700 hover:scale-110 transition-transform duration-200 target=_blank"
               aria-label="LinkedIn"
+              target="_blank"
             >
               <FaLinkedin />
             </a>
