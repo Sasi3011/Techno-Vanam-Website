@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../assets/logo.png"; // Import the logo image
 import Hero from "../assets/Margin.png";
 import Blog from "../assets/Blog.png";
@@ -494,11 +493,11 @@ export default function About() {
               </div>
               <div className="flex items-center gap-6 mt-3">
                 <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-                  <FaInstagram className="text-[#E4405F] w-8 h-8" />
-                </a>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin className="text-[#0077B5] w-8 h-8" />
-                </a>
+        <FaInstagram className="text-[#E4405F] w-8 h-8" />
+      </a>
+      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+        <FaLinkedin className="text-[#0077B5] w-8 h-8" />
+      </a>
               </div>
             </div>
 
