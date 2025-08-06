@@ -8,6 +8,15 @@ import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import SocialMediaImage from "../assets/Contact Us.mp4";
+// import { Lightbulb, Sprout, Key, Users, Heart, Sun } from "lucide-react"; // Import Lucide icons
+import {
+  Lightbulb,       // Innovation
+  BarChart3,       // Growth
+  ShieldCheck,     // Ownership
+  Users,           // Team Work
+  Handshake,       // Commitment
+  Smile,           // Positivity
+} from "lucide-react";
 const teamMembers = [
   {
     name: "Sasikiran TT",
@@ -32,60 +41,64 @@ const teamMembers = [
   },
 ];
 
+
+
+// ... other imports remain the same
+
 const values = [
   {
     title: "Innovation",
     description:
-        "We constantly challenge norms by turning creative ideas into practical, high-impact digital solutions. Our innovative mindset helps clients stay ahead in a fast-evolving tech landscape through thoughtful design, experimentation, and problem-solving.",
+      "We constantly challenge norms by turning creative ideas into practical, high-impact digital solutions. Our innovative mindset helps clients stay ahead in a fast-evolving tech landscape through thoughtful design, experimentation, and problem-solving.",
     gradient: "from-[#807DFF] to-[rgba(186,185,255,0.34)]",
     bgColor: "bg-[#F3F3FF]",
     hoverShadow: "hover:shadow-[#807DFF]/40",
-    icon: "/icons/innovation.svg",
+    icon: Lightbulb, // Use Lucide Lightbulb icon
   },
   {
     title: "Growth",
     description:
-     "We believe growth is continuous—for our team, our clients, and the communities we support. Through curiosity, reflection, and learning, we constantly refine our skills and strategies to create lasting value at every stage.",
+      "We believe growth is continuous—for our team, our clients, and the communities we support. Through curiosity, reflection, and learning, we constantly refine our skills and strategies to create lasting value at every stage.",
     gradient: "from-[#38D4FF] to-[#D9F7FF]",
     bgColor: "bg-[#E6FAFF]",
     hoverShadow: "hover:shadow-[#38D4FF]/40",
-    icon: "/icons/growth.svg",
+    icon: BarChart3, // Use Lucide Sprout icon
   },
   {
     title: "Ownership",
     description:
-         "Every project we take on is our responsibility. From the first brief to final delivery, we lead with accountability, craftsmanship, and integrity—ensuring the work we do truly reflects our promise of excellence.",
+      "Every project we take on is our responsibility. From the first brief to final delivery, we lead with accountability, craftsmanship, and integrity—ensuring the work we do truly reflects our promise of excellence.",
     gradient: "from-[#E541ED] to-[#FEEBFF]",
     bgColor: "bg-[#FCECFA]",
     hoverShadow: "hover:shadow-[#E541ED]/40",
-    icon: "/icons/ownership.svg",
+    icon: ShieldCheck, // Use Lucide Key icon
   },
   {
     title: "Team Work",
     description:
-     "Collaboration is at the heart of our process. We thrive on sharing ideas, offering support, and celebrating collective wins—because we know great results come from unity, trust, and a shared sense of purpose.",
+      "Collaboration is at the heart of our process. We thrive on sharing ideas, offering support, and celebrating collective wins—because we know great results come from unity, trust, and a shared sense of purpose.",
     gradient: "from-[#FF6B81] to-[#FFE6EA]",
     bgColor: "bg-[#FFF0F3]",
     hoverShadow: "hover:shadow-[#FF6B81]/40",
-    icon: "/icons/teamwork.svg",
+    icon: Users, // Use Lucide Users icon
   },
   {
     title: "Commitment",
     description:
- "We commit deeply to our clients' visions and to our craft. Through consistency, passion, and attention to detail, we turn complex challenges into meaningful outcomes—delivering with care, every single time.",
-     gradient: "from-[#FFD600] to-[#FFF9DB]",
+      "We commit deeply to our clients' visions and to our craft. Through consistency, passion, and attention to detail, we turn complex challenges into meaningful outcomes—delivering with care, every single time.",
+    gradient: "from-[#FFD600] to-[#FFF9DB]",
     bgColor: "bg-[#FFFAE6]",
     hoverShadow: "hover:shadow-[#FFD600]/40",
-    icon: "/icons/commitment.svg",
+    icon:  Handshake, // Use Lucide Heart icon
   },
   {
     title: "Positivity",
     description:
-            "A positive attitude shapes everything we do—from communication to creativity. We face every challenge with optimism, resilience, and a problem-solving mindset that fuels momentum and builds stronger, happier partnerships.",
+      "A positive attitude shapes everything we do—from communication to creativity. We face every challenge with optimism, resilience, and a problem-solving mindset that fuels momentum and builds stronger, happier partnerships.",
     gradient: "from-[#34D399] to-[#D1FAE5]",
     bgColor: "bg-[#E6FFF6]",
     hoverShadow: "hover:shadow-[#34D399]/40",
-    icon: "/icons/positivity.svg",
+    icon: Smile, // Use Lucide Sun icon
   },
 ];
 
@@ -244,11 +257,7 @@ export default function About() {
                 Turning Vision into Reality
               </h3>
               <p className="text-lg leading-relaxed text-[#667097] mb-12">
-                We believe great design is the foundation of every successful
-                brand. At Techno Vanam, we craft intuitive user experiences,
-                build high-performance websites, and design graphics that leave
-                a lasting impression. Innovation and functionality guide
-                everything we create.
+                At Techno Vanam, we create impactful digital experiences by combining great design, smart development, and bold branding.From intuitive user interfaces to high-performance websites and standout visual identities, we turn ideas into powerful digital solutions for brands of all sizes.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex gap-4">
@@ -319,11 +328,7 @@ export default function About() {
                 Our Vision:
               </h3>
               <p className="text-lg leading-relaxed text-[#667097] mb-12">
-                To build a digital ecosystem where design, technology, and
-                human-centric thinking shape better experiences for all. We
-                envision a future where businesses—big or small—can access
-                high-quality digital tools that drive growth, creativity, and
-                connection.
+               To build a digital ecosystem where design, technology, and human-centric thinking come together to empower businesses and creators alike.We envision a future where every brand, regardless of size, has access to powerful, intuitive, and high-quality digital tools that spark innovation, growth, and connection.
               </p>
               <ul className="space-y-3">
                 {[
@@ -350,9 +355,9 @@ export default function About() {
   <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8">
 
     {/* === Card 1: Explore What We Do === */}
-    <div className="relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[400px]">
+    <div className=" bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[400px]">
       {/* Optional Logo */}
-      <img
+      <imgrelative
         src="/placeholder-figma.png"
         alt="Figma logo"
         className="absolute left-4 top-4 w-16"
@@ -361,7 +366,7 @@ export default function About() {
       <img
         src={Blog}
         alt="Trophy illustration"
-        className="w-full max-w-[50%] mt-12"
+        className="w-full max-w-[50%] mt-6"
       />
 
       <p className="text-center font-bold text-2xl text-[#19213D] mt-38">
@@ -503,46 +508,43 @@ export default function About() {
 </div>
 
       </section>
-
 <section className="w-full py-16 px-8 bg-white flex flex-col items-center">
-  <div className="max-w-3xl text-center mb-12">
-    <h2 className="text-4xl font-bold text-black">
-      The values that drive us
-    </h2>
-    <p className="text-lg leading-relaxed text-[#667097] mt-2">
-      In 2025, Technovanam was born from a simple idea—why just design for others when we can design for impact? We build with purpose, create with clarity, and craft experiences that matter.
-    </p>
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
-    {values.map((value, idx) => (
-      <div
-        key={idx}
-        className={`w-full min-w-[280px] max-w-[400px] h-auto border border-gray-100 rounded-xl p-8 transform transition duration-300
-          shadow-md hover:scale-105 
-          ${value.bgColor} 
-          ${value.hoverShadow}
-        `}
-      >
-        <div className="relative w-20 h-20 mb-4">
-          <div className={`absolute w-16 h-16 rounded-lg bg-gradient-to-b ${value.gradient}`} />
-          <div className="absolute w-16 h-16 left-2 top-2 rounded-lg border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)]" />
-          <img
-            src={value.icon}
-            alt={value.title}
-            className="absolute left-5 top-5 w-8 h-8"
-          />
+        <div className="max-w-3xl text-center mb-12">
+          <h2 className="text-4xl font-bold text-black">
+            The values that drive us
+          </h2>
+          <p className="text-lg leading-relaxed text-[#667097] mt-2">
+            In 2025, Technovanam was born from a simple idea—why just design for others when we can design for impact? We build with purpose, create with clarity, and craft experiences that matter.
+          </p>
         </div>
-        <h3 className="text-2xl font-bold text-[#19213D] mb-2">
-          {value.title}
-        </h3>
-        <p className="text-md leading-relaxed text-[#667097]">
-          {value.description}
-        </p>
-      </div>
-    ))}
-  </div>
-</section>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
+          {values.map((value, idx) => {
+            const Icon = value.icon; // Dynamically reference the Lucide icon component
+            return (
+              <div
+                key={idx}
+                className={`w-full min-w-[280px] max-w-[400px] h-auto border border-gray-100 rounded-xl p-8 transform transition duration-300 shadow-md hover:scale-105 ${value.bgColor} ${value.hoverShadow}`}
+              >
+                <div className="relative w-20 h-20 mb-4">
+                  <div className={`absolute w-16 h-16 rounded-lg bg-gradient-to-b ${value.gradient}`} />
+                  <div className="absolute w-16 h-16 left-2 top-2 rounded-lg border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)]" />
+                  <Icon
+                    className="absolute left-5 top-5 w-8 h-8 text-[#19213D]"
+                    strokeWidth={2}
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-[#19213D] mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-md leading-relaxed text-[#667097]">
+                  {value.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
 
       {/* ===== CTA Section ===== */}
