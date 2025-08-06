@@ -6,6 +6,8 @@ import AppPreview from "../../assets/logo.png";
 import SocialMediaImage from "../../assets/Contact Us.mp4";
 import { Link } from "react-router-dom";
 import { Rocket } from "lucide-react";
+import Athlixir from "../../assets/Home Page/Athlixir.png";
+
 
 export default function Products2() {
   const navigate = useNavigate();
@@ -94,7 +96,7 @@ export default function Products2() {
                 <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   50+
                 </p>
-                <p className="text-[#29BEFE] text-base leading-[18px]">
+                <p className="text-blue-600 text-base leading-[18px]">
                   Target athlete communities
                 </p>
               </div>
@@ -102,7 +104,7 @@ export default function Products2() {
                 <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   300,000+
                 </p>
-                <p className="text-[#29BEFE] text-base leading-[18px]">
+                <p className="text-blue-600 text-base leading-[18px]">
                   Projected performance insights powered by AI
                 </p>
               </div>
@@ -113,7 +115,7 @@ export default function Products2() {
                 <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   100%
                 </p>
-                <p className="text-[#29BEFE] text-base leading-[18px]">
+                <p className="text-blue-600 text-base leading-[18px]">
                   Focused on Unlocking Grassroots Sports Potential
                 </p>
               </div>
@@ -121,7 +123,7 @@ export default function Products2() {
                 <p className="text-[#19213D] font-bold text-lg leading-[30px]">
                   1
                 </p>
-                <p className="text-[#29BEFE] text-base leading-[18px]">
+                <p className="text-blue-600 text-base leading-[18px]">
                   Unified Platform for Growth, Recognition & Performance
                 </p>
               </div>
@@ -130,7 +132,7 @@ export default function Products2() {
 
           {/* Coming Soon */}
 <div className="flex items-center gap-2 mt-[28px]">
-  <p className="text-[#2388FF] text-xl font-bold uppercase tracking-[0.06em]">
+  <p className="text-blue-600 text-xl font-bold uppercase tracking-[0.06em]">
     COMING SOON
   </p>
   <Rocket className="w-5 h-5 text-[#2388FF]" />
@@ -140,7 +142,7 @@ export default function Products2() {
 
         {/* Right Image */}
         <img
-          src={AppPreview}
+          src={Athlixir}
           alt="App preview"
           className="w-[500px] h-[460px] object-cover rounded-[28px]"
           loading="lazy"

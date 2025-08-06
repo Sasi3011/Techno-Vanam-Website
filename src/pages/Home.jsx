@@ -633,19 +633,19 @@ const Home = () => {
           whileHover="hover"
         >
           <div className="w-[55%] max-w-2xl">
-            <h3 className="text-gray-900 text-4xl font-extrabold mb-6 tracking-tight">ATHLIXIR</h3>
-            <p className="text-gray-700 text-lg mb-10 leading-relaxed">
+            <h3 className="text-blue-600 text-3xl font-extrabold mb-6 tracking-tight">ATHLIXIR</h3>
+            <p className="text-gray-700 text-md mb-10 leading-relaxed">
               Athlixir is in development, crafted to empower over 50+ athlete communities in Tier-2 and Tier-3 regions. Our cutting-edge platform harnesses AI to analyze 300,000+ performance data points, delivering personalized training, precise injury tracking, and verified recognition.
             </p>
             <div className="flex flex-row gap-10 text-left mb-8">
               <div>
-                <p className="text-3xl font-bold text-blue-700">50+</p>
+                <p className="text-2xl font-bold text-blue-600">50+</p>
                 <p className="text-sm font-medium text-gray-600 tracking-wide">
                   Target Athlete Communities
                 </p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-blue-700">300,000+</p>
+                <p className="text-2xl font-bold text-blue-600">300,000+</p>
                 <p className="text-sm font-medium text-gray-600 tracking-wide">
                   AI-Powered Performance Insights
                 </p>
@@ -653,7 +653,7 @@ const Home = () => {
             </div>
             <Link
               to="/product1"
-              className="inline-flex items-center text-blue-700 text-base font-semibold hover:text-blue-800 transition-colors duration-300"
+              className="inline-flex items-center text-blue-600 text-base font-semibold hover:text-blue-700 transition-colors duration-300"
             >
               COMING SOON — JOIN THE JOURNEY
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

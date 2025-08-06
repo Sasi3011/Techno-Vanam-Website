@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Send } from 'lucide-react';
 // Used in Contact Form
-import WebDesignImage from "../assets/logo.png";
+import WebDesignImage from "../assets/Contact Page/Web Design Service Contact.png";
 // Used in Contact Form
-import UIUXDesignImage from "../assets/logo.png";
+import UIUXDesignImage from "../assets/Contact Page/UX Design Service Contact.png";
 // Used in Contact Form
-import DevelopmentImage from "../assets/logo.png";
+import DevelopmentImage from "../assets/Contact Page/Development Service Contact.png";
 // Used in Contact Form
-import BrandingImage from "../assets/logo.png";
+import BrandingImage from "../assets/Contact Page/Branding Service Contact.png";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useRef } from "react";
 
 const servicesList = [
-  { name: "Web Design", color: "border-blue-500", image: WebDesignImage },
-  { name: "UI/UX Design", color: "border-pink-500", image: UIUXDesignImage },
-  { name: "Development", color: "border-green-500", image: DevelopmentImage },
-  { name: "Branding", color: "border-yellow-500", image: BrandingImage },
+  { name: "Web Design", color: "border-red-500", image: WebDesignImage },
+  { name: "UI/UX Design", color: "border-green-500", image: UIUXDesignImage },
+  { name: "Development", color: "border-blue-500", image: DevelopmentImage },
+  { name: "Branding", color: "border-yellow-400", image: BrandingImage },
 ];
 
 export default function Contact() {
@@ -220,17 +220,16 @@ export default function Contact() {
                   key={index}
                   type="button"
                   onClick={() => toggleService(service.name)}
-                  className={`min-h-[100px] sm:min-h-[120px] md:min-h-[170px] flex flex-col items-center p-2 sm:p-3 md:p-4 pt-3 sm:pt-4 md:pt-6 pb-2  bg-white rounded-2xl sm:rounded-3xl shadow cursor-pointer border-3 transition-all duration-300 ease-in-out 
+                  className={`min-h-[130px] sm:min-h-[150px] md:min-h-[200px] flex flex-col items-center p-2 sm:p-3 md:p-4 pt-3 sm:pt-4 md:pt-6 pb-2  bg-white rounded-2xl sm:rounded-3xl shadow cursor-pointer border-4 transition-all duration-300 ease-in-out 
                   ${isSelected ? service.color : "border-gray-200 hover:border-gray-400"}`}
                 >
                   <img
                     src={service.image}
                     alt={service.name}
                     loading="lazy"
-                    className="mb-4 sm:mb-6 md:mb-8 w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 object-cover rounded-md sm:rounded-lg shadow-sm"
+                    className="mb-4 sm:mb-6 md:mb-8 w-8 sm:w-10 md:w-26 h-15 sm:h-10 md:h-26 object-cover rounded-md sm:rounded-lg shadow-sm"
                   />
-                  <span className="text-xs sm:text-sm md:text-base font-semibold text-gray-700 text-center">
-                    {service.name}
+<span className="text-xs sm:text-sm md:text-base font-semibold text-gray-700 text-center">                    {service.name}
                   </span>
                 </button>
               );

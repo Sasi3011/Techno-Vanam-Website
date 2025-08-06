@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from "../../assets/logo.png";
 import StartupIllustration from "../../assets/poster.png";
+import Athlixir from "../../assets/Home Page/Athlixir.png";
 import SocialMediaImage from "../../assets/Contact Us.mp4";
 import { Link } from "react-router-dom";
 
@@ -121,7 +122,7 @@ const Product1 = () => {
         {/* Right Image Block */}
         <div className=" flex items-center">
           <img
-            src={StartupIllustration}
+            src={Athlixir}
             alt="Startup Illustration"
             className="w-[600px] h-[480px] object-cover rounded-[32px]"
             loading="lazy"
