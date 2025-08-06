@@ -334,7 +334,7 @@ const Home = () => {
               We craft stunning digital experiences for startups, brands & growing businesses
             </h1>
             <p className="mt-4 text-gray-600 text-lg">
-              We specialize in UI/UX design, web development, and creative graphics & posters. Our team combines creativity and code to build sleek websites and bold visuals that make your brand stand out
+              We specialize in UI/UX design, web development, and creative branding & graphics. Our team combines creativity and code to build sleek websites and bold visuals that make your brand stand out
             </p>
             <Link
               to="/contact"
@@ -365,7 +365,7 @@ const Home = () => {
             <div className="text-left">
               <p className="text-lg font-semibold uppercase">Our Services</p>
               <h2 className="text-4xl font-bold mt-2 leading-snug">
-                High-impact design & development services
+                Creating Interfaces That Inspire, Code That Performs
               </h2>
             </div>
             <Link
@@ -383,7 +383,7 @@ const Home = () => {
               <div className="pl-6 pr-6 pt-6 ">
                 <h3 className="text-purple-600  text-xl uppercase font-semibold tracking-wide">UI/UX Design</h3>
                 <p className="text-gray-600 text-lg leading-relaxed mt-4">
-                  We craft seamless, intuitive, and visually engaging digital experiences that elevate your brand and delight your users — powered by thoughtful design and user-centered strategy. 
+                  We design seamless, intuitive, and user-friendly digital experiences that not only engage and retain users but also enhance your brand’s value and identity.
                 </p>
                 <Link
                   to="/services"
@@ -406,9 +406,9 @@ const Home = () => {
             <div className="w-1/2 flex flex-col gap-6">
               <div className="h-[275px] bg-orange-100 rounded-2xl shadow-lg flex flex-row pl-6">
                 <div className="w-1/2 pr-4 flex flex-col justify-center">
-                  <h3 className="text-orange-500 text-xl uppercase font-semibold tracking-wide">Poster & Graphic Design</h3>
+                  <h3 className="text-orange-500 text-xl uppercase font-semibold tracking-wide">Branding & Graphics Design</h3>
                   <p className="text-gray-600 text-lg leading-relaxed mt-2">
-                    We help your brand stand out and communicate clearly through bold, creative visuals
+                    We craft bold, creative visuals that help your brand stand out and communicate with impact.
                   </p>
                   <Link
                     to="/services"
@@ -431,7 +431,7 @@ const Home = () => {
                 <div className="w-1/2 pr-4 flex flex-col justify-center">
                   <h3 className="text-sky-600 text-xl uppercase font-semibold tracking-wide">Web Development</h3>
                   <p className="text-gray-600 text-lg leading-relaxed mt-2">
-                    We help your business establish a powerful online presence with fast, responsive, and scalable websites
+                    We develop fast, responsive, and scalable websites that strengthen your online presence.
                   </p>
                   <Link
                     to="#"
@@ -563,13 +563,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h3 className="text-blue-600 text-lg font-semibold uppercase text-center">
-              ~ Past Projects ~
+              ~ Crafted Solutions ~
             </h3>
             <h2 className="text-4xl font-bold text-black leading-tight text-center mb-4">
-              Let our work speak for itself
+              Just a glimpse of what we do.
             </h2>
             <p className="text-gray-600 text-lg max-w-4xl mx-auto text-center">
-              Want to discover what we can do? Take a look at some of the amazing websites that have been created by our team of talented designers and developers.
+              Take a glimpse into the digital experiences we’ve created — combining design, technology, and strategy to bring ideas to life.
             </p>
           </div>
 
@@ -623,7 +623,7 @@ const Home = () => {
             Products by <span className="text-blue-600">Techno Vanam</span>
           </h2>
           <p className="mt-4 text-gray-600 text-lg max-w-4xl mx-auto">
-            At Techno Vanam, we don’t just build for clients — we design, develop, and launch our own digital products that are used and loved by thousands across the globe.
+            At Techno Vanam, we go beyond client work — we create, launch, and scale our own digital products, trusted by thousands around the world.
           </p>
         </div>
         <motion.div
@@ -674,11 +674,11 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full flex justify-center items-center min-h-[700px] bg-[#e9ebef] px-6">
+      {/* <section className="w-full flex justify-center items-center min-h-[700px] bg-[#e9ebef] px-6">
         <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12 py-12">
-          
+           */}
           {/* Left - Glass Video Card */}
-          <motion.div 
+          {/* <motion.div 
             initial={{ opacity: 0, y: 60 }} 
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8 }} 
@@ -698,10 +698,10 @@ const Home = () => {
             >
               Your browser does not support the video tag.
             </video>
-          </motion.div>
+          </motion.div> */}
 
           {/* Right - Text and CTA */}
-          <motion.div 
+          {/* <motion.div 
             initial={{ opacity: 0, x: 60 }} 
             whileInView={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.8 }} 
@@ -724,12 +724,12 @@ const Home = () => {
                 <span className="absolute top-0 left-0 w-full h-full bg-blue-600 opacity-10 rounded-full blur-md animate-ping"></span>
               </button>
             </Link>
-          </motion.div>
-
+          </motion.div> */}
+{/* 
         </div>
-      </section>
+      </section> */}
 
-      <HighClassPopup 
+      {/* <HighClassPopup 
         open={showPopup} 
         onClose={() => setShowPopup(false)} 
         title="Service is currently unavailable" 
@@ -741,7 +741,7 @@ const Home = () => {
             <rect x="11" y="15" width="2" height="2" rx="1" fill="#fff" />
           </svg>
         }
-      />
+      /> */}
 
     </div>
   );

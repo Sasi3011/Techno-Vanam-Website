@@ -128,12 +128,13 @@ const Product1 = () => {
           />
         </div>
       </div>
+      <br/>
       {/* CTA Section */}
-<section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
-  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
+{/* <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
+  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8"> */}
     
     {/* Image First */}
-    <div className="w-1/2 h-[600px]">
+    {/* <div className="w-1/2 h-[600px]">
   <video
     src={SocialMediaImage}
     autoPlay
@@ -144,11 +145,11 @@ const Product1 = () => {
   >
     Your browser does not support the video tag.
   </video>
-</div>
+</div> */}
 
 
     {/* Content Second (on the right now) */}
-    <div className="w-1/2 text-white text-left px-8pt-20 pb-20">
+    {/* <div className="w-1/2 text-white text-left px-8pt-20 pb-20">
       <h2 className="text-5xl font-bold leading-tight">
         Ready to launch something amazing with Techno Vanam?
       </h2>
@@ -160,8 +161,8 @@ const Product1 = () => {
           <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
             Contact Us
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              xmlns="http://www.w3.org/2000/svg" */}
+              {/* fill="none"
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
@@ -175,7 +176,7 @@ const Product1 = () => {
     </div>
 
   </div>
-</section>
+</section> */}
     </div>
   );
 };

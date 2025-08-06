@@ -546,11 +546,11 @@ export default function About() {
 
       {/* ===== CTA Section ===== */}
  {/* CTA Section */}
-<section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
-  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
+{/* <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
+  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8"> */}
     
     {/* Image First */}
-    <div className="w-1/2 h-[600px]">
+    {/* <div className="w-1/2 h-[600px]">
   <video
     src={SocialMediaImage}
     autoPlay
@@ -560,12 +560,12 @@ export default function About() {
     className="w-full h-full object-contain"
   >
     Your browser does not support the video tag.
-  </video>
-</div>
+  </video> */}
+{/* </div> */}
 
 
     {/* Content Second (on the right now) */}
-    <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
+    {/* <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
       <h2 className="text-5xl font-bold leading-tight">
         Ready to launch something amazing with Techno Vanam?
       </h2>
@@ -592,7 +592,7 @@ export default function About() {
     </div>
 
   </div>
-</section>
+</section> */}
       </>
     );
   }
