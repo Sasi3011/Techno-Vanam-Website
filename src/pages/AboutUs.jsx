@@ -123,45 +123,51 @@ export default function About() {
   return (
     <>
       {/* ===== Hero Section ===== */}
-      <section className="flex flex-col items-center pt-[65px] pb-32 mt-23 pr-16 pl-16">
-        <div className="flex flex-row items-center gap-1 w-full max-w-7xl">
+      <section className="flex flex-col items-center pt-16 sm:pt-20 lg:pt-[65px] pb-16 sm:pb-24 lg:pb-32 mt-6 sm:mt-12 lg:mt-23 px-4 sm:px-8 lg:px-16">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-1 w-full max-w-7xl">
           {/* Left: Copy Block */}
-          <div>
-            <div className="flex items-center gap-3 text-black font-bold">
-              <span className="text-5xl">We are</span>
-              <div className="flex items-center gap-3">
+          <div className="w-full lg:w-1/2">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-black font-bold">
+              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">We are</span>
+              <div className="flex items-center gap-2 sm:gap-3">
                 <img
                   src={Logo}
                   alt="Logo"
-                  className="w-[60px] h-[60px] object-contain"
+                  className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[60px] lg:h-[60px] object-contain"
                 />
-                <span className="text-5xl whitespace-nowrap">Techno Vanam</span>
+                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap">Techno Vanam</span>
               </div>
             </div>
-            <p className="mt-6 text-lg leading-relaxed text-[#667097]">
-              We’re not just an agency — we’re a creative tech studio passionate<br/>
-              about crafting impactful digital products. From empowering startups<br/>
-              to building our own innovations, we design, develop, and launch<br/>
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] text-center lg:text-left">
+              We're not just an agency — we're a creative tech studio passionate
+              <span className="hidden sm:inline"><br/></span>
+              <span className="sm:hidden"> </span>
+              about crafting impactful digital products. From empowering startups
+              <span className="hidden sm:inline"><br/></span>
+              <span className="sm:hidden"> </span>
+              to building our own innovations, we design, develop, and launch
+              <span className="hidden sm:inline"><br/></span>
+              <span className="sm:hidden"> </span>
               experiences that move people and businesses forward.
             </p>
-            <div className="mt-8 flex items-center gap-2">
+            <div className="mt-6 sm:mt-8 flex items-center justify-center lg:justify-start gap-2">
               <div
                 onClick={() =>
                   document.getElementById("what-drives-us")?.scrollIntoView({ behavior: "smooth" })
                 }
                 className="flex items-center gap-2 cursor-pointer group transition-transform duration-200 hover:scale-105"
               >
-                <span className="flex justify-center items-end w-4 h-6 border-2 border-[#2388FF] rounded-full relative overflow-hidden group-hover:border-blue-400 transition-colors duration-200">
-                  <span className="w-1.5 h-1.5 bg-[#2388FF] rounded-full mb-1 animate-bounce-dot group-hover:bg-blue-400 transition-colors duration-200" />
+                <span className="flex justify-center items-end w-3 h-5 sm:w-4 sm:h-6 border-2 border-[#2388FF] rounded-full relative overflow-hidden group-hover:border-blue-400 transition-colors duration-200">
+                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#2388FF] rounded-full mb-1 animate-bounce-dot group-hover:bg-blue-400 transition-colors duration-200" />
                 </span>
-                <span className="font-bold uppercase text-base text-[#2388FF] group-hover:text-blue-400 transition-colors duration-200">
+                <span className="font-bold uppercase text-sm sm:text-base text-[#2388FF] group-hover:text-blue-400 transition-colors duration-200">
                   Scroll down
                 </span>
               </div>
             </div>
           </div>
           {/* Right: Hero Artwork */}
-          <div className="w-1/2 relative">
+          <div className="w-full lg:w-1/2 relative">
             {/* <img
               src={Hero}
               alt="logo circle"
@@ -172,11 +178,11 @@ export default function About() {
       </section>
 
       {/* ===== Transform Section ===== */}
-      <section className="flex flex-col items-center bg-[#2388FF] pt-8 pb-8 rounded-b-[120px] px-8 space-y-6 overflow-hidden">
+      <section className="flex flex-col items-center bg-[#2388FF] pt-6 sm:pt-8 pb-6 sm:pb-8 rounded-b-[60px] sm:rounded-b-[80px] lg:rounded-b-[120px] px-4 sm:px-8 space-y-4 sm:space-y-6 overflow-hidden">
         {/* "design" */}
         <h2
           ref={ref1}
-          className="font-bold text-[80px] leading-tight text-white/70 text-center"
+          className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-[80px] leading-tight text-white/70 text-center"
         >
           design
         </h2>
@@ -184,7 +190,7 @@ export default function About() {
         {/* Center: Transform Message */}
         <h1
           ref={ref2}
-          className="font-bold text-[80px] leading-tight text-white text-center"
+          className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-[80px] leading-tight text-white text-center px-2"
         >
           We transform digital presence
         </h1>
@@ -192,76 +198,76 @@ export default function About() {
         {/* "develop" */}
         <h2
           ref={ref3}
-          className="font-bold text-[80px] leading-tight text-white/70 text-center"
+          className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-[80px] leading-tight text-white/70 text-center"
         >
           develop
         </h2>
       </section>
 
       {/* ===== Content Grid Section ===== */}
-      <section id="what-drives-us" className="flex flex-col items-center bg-white px-8 pt-20 pb-6">
+      <section id="what-drives-us" className="flex flex-col items-center bg-white px-4 sm:px-8 pt-12 sm:pt-16 lg:pt-20 pb-6">
         <div className="w-full max-w-7xl">
           {/* What Drives Us */}
-          <div className="flex flex-col items-center gap-4 mb-20 text-center">
-            <h2 className="text-5xl font-bold text-[#19213D]">
+          <div className="flex flex-col items-center gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-20 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#19213D]">
               What Drives Us
             </h2>
-            <p className="text-lg leading-relaxed text-[#667097] max-w-4xl">
-              In 2025, we began building our own digital products—driven by the
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] max-w-4xl px-2">
+              In 2025, we began building our own digital products—driven by the
               same vision and purpose that fuel everything we do: turning ideas
               into impactful, user‑centered experiences.
             </p>
           </div>
 
           {/* First Row: Mission + Illustration */}
-          <div className="flex flex-row gap-10 mb-10">
+          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 mb-6 sm:mb-8 lg:mb-10">
             {/* Mission Card */}
-            <div className="w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-3xl p-8 pb-15">
-              <h3 className="text-3xl font-bold text-[#19213D] mb-6">
+            <div className="w-full lg:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 pb-8 sm:pb-12 lg:pb-15">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#19213D] mb-3 sm:mb-4 lg:mb-6">
                 Our Mission: <br />
                 Turning Vision into Reality
               </h3>
-              <p className="text-lg leading-relaxed text-[#667097] mb-12">
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
                 We believe great design is the foundation of every successful
                 brand. At Techno Vanam, we craft intuitive user experiences,
                 build high-performance websites, and design graphics that leave
                 a lasting impression. Innovation and functionality guide
                 everything we create.
               </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex gap-4">
-                  <div className="relative">
-                    <div className="w-16 h-16 rounded-lg bg-[#F6F6F6]" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="flex gap-3 sm:gap-4">
+                  <div className="relative flex-shrink-0">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
                     <img
                       src={Design}
                       alt="design"
-                      className="absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2"
+                      className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
                     />
                   </div>
-                  <div>
-                    <p className="font-bold text-lg text-[#2F2F2F]">
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
                       Design-led Development
                     </p>
-                    <p className="text-sm text-[#667097]">
+                    <p className="text-xs sm:text-sm text-[#667097]">
                       We blend aesthetics and technology to create products
                       users love.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="relative">
-                    <div className="w-16 h-16 rounded-lg bg-[#F6F6F6]" />
+                <div className="flex gap-3 sm:gap-4">
+                  <div className="relative flex-shrink-0">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
                     <img
                       src={Scale}
                       alt=""
-                      className="absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2"
+                      className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
                     />
                   </div>
-                  <div>
-                    <p className="font-bold text-lg text-[#2F2F2F]">
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
                       Scalable & Creative
                     </p>
-                    <p className="text-sm text-[#667097]">
+                    <p className="text-xs sm:text-sm text-[#667097]">
                       From startups to enterprises, we deliver flexible and
                       impactful digital solutions.
                     </p>
@@ -270,7 +276,7 @@ export default function About() {
               </div>
             </div>
             {/* Illustration Card */}
-            <div className="w-1/3 flex items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl p-8">
+            <div className="w-full lg:w-1/3 flex items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8 min-h-[200px] sm:min-h-[250px]">
               <img
                 src={Mission}
                 alt="Mission"
@@ -280,9 +286,9 @@ export default function About() {
           </div>
 
           {/* Second Row: Trophy + Vision */}
-          <div className="flex flex-row gap-10 mb-6">
+          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 mb-6">
             {/* Trophy Card */}
-            <div className="w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-10">
+            <div className="w-full lg:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-6 sm:p-8 lg:p-10 min-h-[200px] sm:min-h-[250px]">
               <img
                 src={Vission}
                 alt="Vission"
@@ -291,26 +297,26 @@ export default function About() {
             </div>
 
             {/* Vision Card */}
-            <div className="w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-8">
-              <h3 className="text-3xl font-bold text-[#19213D] mb-6">
+            <div className="w-full lg:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#19213D] mb-3 sm:mb-4 lg:mb-6">
                 Our Vision:
               </h3>
-              <p className="text-lg leading-relaxed text-[#667097] mb-12">
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
                 To build a digital ecosystem where design, technology, and
                 human-centric thinking shape better experiences for all. We
                 envision a future where businesses—big or small—can access
                 high-quality digital tools that drive growth, creativity, and
                 connection.
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {[
                   "Empowering creators through smart, intuitive platforms",
                   "Driving meaningful change with every project",
                   "Making digital innovation accessible to everyone",
                 ].map((txt, i) => (
-                  <li key={i} className="relative pl-8 text-lg leading-relaxed text-[#667097]">
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-[#31C65B] flex items-center justify-center">
-                      <span className="w-2 h-2 rotate-45 border-b-2 border-r-2 border-[#31C65B]" />
+                  <li key={i} className="relative pl-6 sm:pl-8 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097]">
+                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-[#31C65B] flex items-center justify-center">
+                      <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 border-b-2 border-r-2 border-[#31C65B]" />
                     </span>
                     {txt}
                   </li>
@@ -321,176 +327,80 @@ export default function About() {
         </div>
       </section>
 
-      {/* <section className="flex flex-col items-center bg-[#F6F8FC] px-8 pb-20 pt-0">
-        <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8"> */}
-          {/* Card 1: Explore What We Do */}
-          {/* <div className="relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[400px]">
-            <img
-              src="/placeholder-figma.png"
-              alt="Figma logo"
-              className="absolute left-4 top-4 w-16"
-            />
-            <img
-              src={Blog}
-              alt="Trophy illustration"
-              className="w-full max-w-[50%] mt-12"
-            />
-            <p className="text-center font-bold text-2xl text-[#19213D] mt-38">
-              Explore What <br /> We Do
-            </p>
-            <div className="flex flex-col items-center mt-4">
-              <Link to="/Services" className="group flex items-center gap-2 text-base font-bold uppercase text-[#2388FF] hover:text-blue-400 transition-colors duration-200">
-                OUR SERVICES
-                <svg
-                  width="12"
-                  height="10"
-                  viewBox="0 0 16 14"
-                  className="fill-current stroke-current text-[#2388FF] group-hover:text-blue-400"
-                >
-                  <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
-                </svg>
-              </Link>
-            </div>
-          </div> */}
-
-          {/* Card 2: Crafted with Passion */}
-          {/* <div className="bg-white border border-[#EBEFF6] shadow-md rounded-xl flex flex-col justify-between items-center p-8 h-[400px]">
-            <img
-              src="/placeholder-hubspot.png"
-              alt="HubSpot badge"
-              className="w-full max-w-[90%] h-auto mt-4"
-            />
-            <p className="text-center font-bold text-2xl text-[#19213D] mt-42">
-              Crafted with Passion <br /> Built to Inspire
-            </p>
-            <div className="flex flex-col items-center mt-4">
-              <button className="flex items-center gap-2 text-[#FF6C4C] text-base font-bold uppercase">
-                SEE ALL
-                <svg
-                  width="12"
-                  height="10"
-                  viewBox="0 0 16 14"
-                  className="stroke-[#FF6C4C]"
-                >
-                  <path d="M1 7h14M9 1l6 6-6 6" strokeWidth="2" />
-                </svg>
-              </button>
-            </div>
-          </div> */}
-
-          {/* Card 3: Newsletter Signup */}
-          {/* <div className="bg-[#2388FF] shadow-md rounded-xl p-8 text-white flex flex-col justify-between h-[400px]">
-            <div>
-              <h3 className="font-bold text-3xl mb-4">Join with our Network</h3>
-              <p className="text-lg leading-relaxed mb-6">
-                Collaborate with us on bold new ventures, from brand identity to<br/> full-stack innovation.
-                Let’s grow together.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    setError("");
-                  }}
-                  className="w-full h-14 pl-14 pr-4 text-base text-white/90 placeholder:text-white/90 bg-transparent border border-white/90 rounded-full focus:outline-none"
-                />
-                <svg
-                  viewBox="0 0 18 14"
-                  className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 fill-white/90"
-                >
-                  <path d="M1 1h16v12H1z" fill="none" stroke="currentColor" />
-                  <path d="M1 1l8 6 8-6" fill="none" stroke="currentColor" />
-                </svg>
-                {error && <p className="text-red-300 text-sm mt-1">{error}</p>}
-              </div>
-              <button
-                onClick={handleConnect}
-                className="w-full h-14 flex items-center justify-center font-bold text-base text-[#2388FF] bg-white hover:bg-slate-100 rounded-full"
-              >
-                Let’s Connect
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* ===== Team Section ===== */}
-      <section className="w-full bg-[#F6F8FC] py-16 px-8">
-        <div className="text-center mb-12">
-          <p className="text-[#0368FF] text-lg font-bold">
+      <section className="w-full bg-[#F6F8FC] py-12 sm:py-16 px-4 sm:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <p className="text-[#0368FF] text-base sm:text-lg font-bold">
             ~ Team Member ~
           </p>
-          <h2 className="text-4xl font-bold text-black max-w-3xl mx-auto">
-            Our team member is ready to <br/>help our clients!
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black max-w-3xl mx-auto">
+            Our team member is ready to <br className="hidden sm:block"/>help our clients!
           </h2>
-          <p className="text-lg text-[#667097] mt-2 max-w-4xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-[#667097] mt-2 max-w-4xl mx-auto px-2">
             We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
           </p>
         </div>
-        <div className="flex flex-row justify-center gap-10 pb-8">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center gap-6 sm:gap-8 lg:gap-10 pb-4 sm:pb-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="flex flex-col items-center w-80 relative">
-              <div className="w-full h-[400px] bg-gray-200 rounded-lg relative">
+            <div key={index} className="flex flex-col items-center w-full sm:w-80 lg:w-80 relative mx-auto">
+              <div className="w-full max-w-[280px] sm:max-w-full h-[300px] sm:h-[350px] lg:h-[400px] bg-gray-200 rounded-lg relative">
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-full h-full object-cover rounded-lg "
+                  className="w-full h-full object-cover rounded-lg"
                 />
-                <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[320px] bg-white rounded-lg shadow-md flex flex-col items-center pb-4 z-50">
+                <div className="absolute bottom-[-50px] sm:bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[280px] sm:w-[300px] lg:w-[320px] bg-white rounded-lg shadow-md flex flex-col items-center pb-3 sm:pb-4 z-50">
                   <div className="h-2 w-full bg-[#0368FF] rounded-t-lg"></div>
-                  <div className="text-center mt-3">
-                    <h3 className="text-xl font-bold text-black">{member.name}</h3>
-                    <p className="text-base text-gray-600">{member.role}</p>
+                  <div className="text-center mt-2 sm:mt-3 px-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-black">{member.name}</h3>
+                    <p className="text-sm sm:text-base text-gray-600">{member.role}</p>
                   </div>
-                  <div className="flex items-center gap-6 mt-3">
+                  <div className="flex items-center gap-4 sm:gap-6 mt-2 sm:mt-3">
                     <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-                      <FaInstagram className="text-[#E4405F] w-8 h-8" />
+                      <FaInstagram className="text-[#E4405F] w-6 h-6 sm:w-8 sm:h-8" />
                     </a>
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                      <FaLinkedin className="text-[#0077B5] w-8 h-8" />
+                      <FaLinkedin className="text-[#0077B5] w-6 h-6 sm:w-8 sm:h-8" />
                     </a>
                   </div>
                 </div>
               </div>
+              {/* Spacer for overlapping card */}
+              <div className="h-12 sm:h-16"></div>
             </div>
           ))}
         </div>
       </section>
 
       {/* ===== Values Section ===== */}
-      <section className="w-full py-16 px-8 bg-white flex flex-col items-center">
-        <div className="max-w-3xl text-center mb-12">
-          <h2 className="text-4xl font-bold text-black">
+      <section className="w-full py-12 sm:py-16 px-4 sm:px-8 bg-white flex flex-col items-center">
+        <div className="max-w-3xl text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
             The values that drive us
           </h2>
-          <p className="text-lg leading-relaxed text-[#667097] mt-2">
+          <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mt-2 px-2">
             In 2025, Technovanam was born from a simple idea—why just design for others when we can design for impact? We build with purpose, create with clarity, and craft experiences that matter.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl">
           {values.map((value, idx) => (
             <div
               key={idx}
-              className={`w-full min-w-[280px] max-w-[400px] h-auto border border-gray-100 rounded-xl p-8 transform transition duration-300 shadow-md hover:scale-105 ${value.bgColor} ${value.hoverShadow}`}
+              className={`w-full min-w-0 h-auto border border-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 transform transition duration-300 shadow-md hover:scale-105 ${value.bgColor} ${value.hoverShadow}`}
             >
-              <div className="relative w-20 h-20 mb-4">
-                <div className={`absolute w-16 h-16 rounded-lg bg-gradient-to-b ${value.gradient}`} />
-                <div className="absolute w-16 h-16 left-2 top-2 rounded-lg border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)]" />
+              <div className="relative w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 mb-3 sm:mb-4">
+                <div className={`absolute w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-gradient-to-b ${value.gradient}`} />
+                <div className="absolute w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 left-1 top-1 sm:left-2 sm:top-2 rounded-lg border border-white backdrop-blur-md bg-[rgba(238,238,238,0.61)]" />
                 <img
                   src={value.img}
                   alt={value.title}
-                  className="absolute left-4 top-4 w-12 h-12 object-contain"
+                  className="absolute left-2 top-2 sm:left-3 sm:top-3 lg:left-4 lg:top-4 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#19213D] mb-2">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#19213D] mb-2">
                 {value.title}
               </h3>
-              <p className="text-md leading-relaxed text-[#667097]">
+              <p className="text-xs sm:text-sm lg:text-md leading-relaxed text-[#667097]">
                 {value.description}
               </p>
             </div>
@@ -518,7 +428,7 @@ export default function About() {
               Ready to launch something amazing with Techno Vanam?
             </h2>
             <p className="text-lg mt-4">
-              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let's build something great together.
             </p>
             <div className="pt-6 flex justify-start">
               <Link to="/contact">

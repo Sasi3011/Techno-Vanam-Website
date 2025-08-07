@@ -298,7 +298,7 @@ const Home = () => {
 
   return (
     <div className="font-poppins min-h-screen w-full max-w-[100vw] overflow-x-hidden">
-      {/* Inline styles (move to a separate CSS file in production) */}
+      {/* Inline styles with responsive adjustments */}
       <style>
         {`
           .animate-slideIn {
@@ -322,154 +322,250 @@ const Home = () => {
             -ms-overflow-style: none;
             scrollbar-width: none;
           }
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes marqueeReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          .marquee-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            user-select: none;
+          }
+          .marquee {
+            display: flex;
+            flex-shrink: 0;
+            animation: marquee 30s linear infinite;
+          }
+          .marquee-reverse {
+            display: flex;
+            flex-shrink: 0;
+            animation: marqueeReverse 30s linear infinite;
+          }
+          .marquee:hover, .marquee-reverse:hover {
+            animation-play-state: paused;
+          }
+          .project-item {
+            position: relative;
+            flex: 0 0 auto;
+            margin-right: 16px;
+          }
+          .project-item img {
+            width: auto;
+            object-fit: contain;
+            object-position: center;
+          }
+          /* Mobile specific project item sizing */
+          @media (max-width: 640px) {
+            .project-item {
+              height: 180px;
+            }
+            .project-item img {
+              height: 100%;
+            }
+          }
+          /* Tablet specific project item sizing */
+          @media (min-width: 641px) and (max-width: 1024px) {
+            .project-item {
+              height: 240px;
+            }
+            .project-item img {
+              height: 100%;
+            }
+          }
+          /* Desktop specific project item sizing */
+          @media (min-width: 1025px) {
+            .project-item {
+              height: 298px;
+            }
+            .project-item img {
+              height: 100%;
+            }
+          }
         `}
       </style>
 
-      {/* Hero Section */}
-      <section className="px-8 py-14 bg-white min-h-[90vh] pt-20">
-        <div className="max-w-7xl mx-auto flex flex-row items-center gap-10">
-          <div className="flex-1 text-left">
-            <h2 className="text-blue-600 text-lg font-semibold uppercase">DESIGN & DEVELOPMENT STUDIO</h2>
-            <h1 className="text-5xl font-bold leading-tight mt-4">
+      {/* Hero Section - Fully Responsive */}
+      <section className="px-4 sm:px-6 md:px-8 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-14 bg-white min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] pt-12 sm:pt-16 md:pt-18 lg:pt-20">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-10">
+          <div className="flex-1 text-left w-full lg:w-auto">
+            <h2 className="text-blue-600 text-sm sm:text-base md:text-lg lg:text-lg font-semibold uppercase">
+              DESIGN & DEVELOPMENT STUDIO
+            </h2>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-tight mt-2 sm:mt-3 md:mt-4 lg:mt-4">
               We craft stunning digital experiences for startups, brands & growing businesses
             </h1>
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-3 sm:mt-4 md:mt-4 lg:mt-4 text-gray-600 text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed">
               We specialize in UI/UX design, web development, and creative branding & graphics. Our team combines creativity and code to build sleek websites and bold visuals that make your brand stand out
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-block px-6 py-3 bg-blue-600 font-medium text-white rounded-full hover:bg-blue-700 text-base"
+              className="mt-4 sm:mt-5 md:mt-6 lg:mt-6 inline-block px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 bg-blue-600 font-medium text-white rounded-full hover:bg-blue-700 text-sm sm:text-sm md:text-base lg:text-base transition-colors duration-200"
             >
               Get in Touch
             </Link>
           </div>
-          <video
-            src={heroIllustration}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full max-w-[550px] rounded-4xl shadow-lg object-cover bg-transparent m"
-            style={{
-              backgroundColor: 'transparent',
-              WebkitMaskImage: '-webkit-radial-gradient(white, black)', // Smooth edges for some browsers
-            }}
-          />
+          <div className="w-full lg:flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[550px] xl:max-w-[550px] mt-6 lg:mt-0">
+            <video
+              src={heroIllustration}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-2xl sm:rounded-3xl md:rounded-4xl lg:rounded-4xl shadow-lg object-cover bg-transparent"
+              style={{
+                backgroundColor: 'transparent',
+                WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+              }}
+            />
+          </div>
         </div>
       </section>
 
-      {/* Our Services */}
-      <section className="bg-blue-500 py-16 px-10 text-white">
+      {/* Our Services - Fully Responsive */}
+      <section className="bg-blue-500 py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 text-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-row justify-between items-center mb-8">
-            <div className="text-left">
-              <p className="text-lg font-semibold uppercase">Our Services</p>
-              <h2 className="text-4xl font-bold mt-2 leading-snug">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6 sm:mb-7 md:mb-8 lg:mb-8 gap-4 lg:gap-0">
+            <div className="text-left w-full lg:w-auto">
+              <p className="text-sm sm:text-base md:text-lg lg:text-lg font-semibold uppercase">Our Services</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mt-1 sm:mt-2 md:mt-2 lg:mt-2 leading-snug">
                 Creating Interfaces That Inspire, Code That Performs
               </h2>
             </div>
             <Link
               to="/services"
-              className="mt-6 inline-block px-6 py-3 bg-white text-blue-600 rounded-full hover:bg-gray-100 text-base font-medium"
+              className="mt-2 sm:mt-4 md:mt-6 lg:mt-6 inline-block px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 bg-white text-blue-600 rounded-full hover:bg-gray-100 text-sm sm:text-sm md:text-base lg:text-base font-medium transition-colors duration-200 self-start lg:self-auto"
             >
               View More 
             </Link>
           </div>
 
-          {/* Grid Cards */}
-          <div className="flex flex-row gap-6 h-[575px] w-7xl overflow-hidden justify-center">
-            {/* LEFT: Paradox Card */}
-            <div className="w-[500px] bg-purple-100 rounded-2xl shadow-lg flex flex-col justify-between ">
-              <div className="pl-6 pr-6 pt-6 ">
-                <h3 className="text-purple-600  text-xl uppercase font-semibold tracking-wide">UI/UX Design</h3>
-                <p className="text-gray-600 text-lg leading-relaxed mt-4">
-                  We design seamless, intuitive, and user-friendly digital experiences that not only engage and retain users but also enhance your brand’s value and identity.
-                </p>
-                <Link
-                  to="/services"
-                  className="mt-6 inline-flex items-center gap-2 text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
-                >
-                  See services <span className="text-base">➔</span>
-                </Link>
-              </div>
-              <div className="mt-6 h-[350px] bg-gray-100 rounded-2xl overflow-hidden">
-                <img
-                  src={UIUXDesignImage}
-                  alt="Para dox Preview"
-                  className="object-cover w-full h-full"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+          {/* Services Cards - Mobile Stack, Desktop Grid */}
+          {/* Services Cards - Mobile Stack, Desktop Grid - FIXED NO OVERLAPPING */}
+<div className="flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 lg:gap-6 w-full">
+  {/* UI/UX Design Card */}
+  <div className="w-full lg:w-[48%] xl:w-[500px] bg-purple-100 rounded-xl sm:rounded-2xl lg:rounded-2xl shadow-lg flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[575px]">
+    <div className="p-4 sm:p-5 md:p-6 lg:p-6 flex-shrink-0">
+      <h3 className="text-purple-600 text-base sm:text-lg md:text-xl lg:text-xl uppercase font-semibold tracking-wide">
+        UI/UX Design
+      </h3>
+      <p className="text-gray-600 text-sm sm:text-base md:text-base lg:text-lg leading-relaxed mt-2 sm:mt-3 md:mt-4 lg:mt-4">
+        We design seamless, intuitive, and user-friendly digital experiences that not only engage and retain users but also enhance your brand's value and identity.
+      </p>
+      <Link
+        to="/services"
+        className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 inline-flex items-center gap-2 text-xs sm:text-sm md:text-sm lg:text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
+      >
+        See services <span className="text-sm sm:text-base md:text-base lg:text-base">➔</span>
+      </Link>
+    </div>
+    <div className="flex-1 mx-4 sm:mx-5 md:mx-6 lg:mx-6 mb-4 sm:mb-5 md:mb-6 lg:mb-6 min-h-[200px] sm:min-h-[220px] md:min-h-[250px] lg:min-h-[300px] bg-gray-100 rounded-xl sm:rounded-2xl lg:rounded-2xl overflow-hidden">
+      <img
+        src={UIUXDesignImage}
+        alt="UI/UX Design Preview"
+        className="object-contain w-full h-full"
+        loading="lazy"
+      />
+    </div>
+  </div>
 
-            {/* RIGHT SIDE: Teachable and Upside stacked with gap */}
-            <div className="w-1/2 flex flex-col gap-6">
-              <div className="h-[275px] bg-orange-100 rounded-2xl shadow-lg flex flex-row pl-6">
-                <div className="w-1/2 pr-4 flex flex-col justify-center">
-                  <h3 className="text-orange-500 text-xl uppercase font-semibold tracking-wide">Branding & Graphics Design</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed mt-2">
-                    We craft bold, creative visuals that help your brand stand out and communicate with impact.
-                  </p>
-                  <Link
-                    to="/services"
-                    className="mt-4 inline-flex items-center gap-2 text-sm text-orange-600 font-semibold uppercase tracking-wide hover:text-orange-700 transition-colors duration-200"
-                  >
-                    See services <span className="text-base">➔</span>
-                  </Link>
-                </div>
-                <div className="w-1/2 h-full bg-gray-100 flex items-center rounded-2xl justify-center">
-                  <img
-                    src={BrandingImage}
-                    alt="Teachable"
-                    className="object-cover w-full h-full rounded-xl"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+  {/* Right Side Cards - Stack on Mobile, Side by Side on Desktop */}
+  <div className="w-full lg:w-[52%] lg:flex-1 flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-6">
+    {/* Branding Card */}
+    <div className="min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:h-[275px] bg-orange-100 rounded-xl sm:rounded-2xl lg:rounded-2xl shadow-lg flex flex-col md:flex-row lg:flex-row overflow-hidden">
+      <div className="w-full md:w-1/2 lg:w-1/2 p-4 sm:p-4 md:p-5 lg:p-6 flex flex-col justify-center">
+        <h3 className="text-orange-500 text-base sm:text-lg md:text-xl lg:text-xl uppercase font-semibold tracking-wide">
+          Branding & Graphics Design
+        </h3>
+        <p className="text-gray-600 text-sm sm:text-sm md:text-base lg:text-lg leading-relaxed mt-2 sm:mt-2 md:mt-3 lg:mt-2">
+          We craft bold, creative visuals that help your brand stand out and communicate with impact.
+        </p>
+        <Link
+          to="/services"
+          className="mt-3 sm:mt-3 md:mt-4 lg:mt-4 inline-flex items-center gap-2 text-xs sm:text-sm md:text-sm lg:text-sm text-orange-600 font-semibold uppercase tracking-wide hover:text-orange-700 transition-colors duration-200"
+        >
+          See services <span className="text-sm sm:text-base md:text-base lg:text-base">➔</span>
+        </Link>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/2 h-[120px] sm:h-[140px] md:h-full lg:h-full bg-gray-100 flex items-center justify-center md:rounded-r-xl lg:rounded-r-2xl overflow-hidden md:block hidden">
+        <img
+          src={BrandingImage}
+          alt="Branding Design"
+          className="object-contain w-full h-full md:rounded-r-xl lg:rounded-r-2xl"
+          loading="lazy"
+        />
+      </div>
+      {/* Phone view layout */}
+      <div className="md:hidden flex mx-4 sm:mx-5 mb-4 sm:mb-5 bg-gray-100 rounded-xl sm:rounded-2xl overflow-hidden" style={{ height: '150px' }}>
+        <img
+          src={BrandingImage}
+          alt="Branding Design Preview"
+          className="object-contain w-full h-full"
+          loading="lazy"
+        />
+      </div>
+    </div>
 
-              <div className="h-[275px] bg-sky-100 rounded-2xl shadow-lg flex flex-row pl-6">
-                <div className="w-1/2 pr-4 flex flex-col justify-center">
-                  <h3 className="text-sky-600 text-xl uppercase font-semibold tracking-wide">Web Development</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed mt-2">
-                    We develop fast, responsive, and scalable websites that strengthen your online presence.
-                  </p>
-                  <Link
-                    to="#"
-                    onClick={e => { e.preventDefault(); setShowPopup(true); }}
-                    className="mt-4 inline-flex items-center gap-2 text-sm text-sky-600 font-semibold uppercase tracking-wide hover:text-sky-700 transition-colors duration-200"
-                  >
-                    See services <span className="text-base">➔</span>
-                  </Link>
-                </div>
-                <div className="w-1/2 h-full bg-gray-100 rounded-2xl flex items-center justify-center">
-                  <img
-                    src={webDevelopmentImage}
-                    alt="Upside"
-                    className="object-cover w-full h-full rounded-xl"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* Web Development Card */}
+    <div className="min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:h-[275px] bg-sky-100 rounded-xl sm:rounded-2xl lg:rounded-2xl shadow-lg flex flex-col md:flex-row lg:flex-row overflow-hidden">
+      <div className="w-full md:w-1/2 lg:w-1/2 p-4 sm:p-4 md:p-5 lg:p-6 flex flex-col justify-center">
+        <h3 className="text-sky-600 text-base sm:text-lg md:text-xl lg:text-xl uppercase font-semibold tracking-wide">
+          Web Development
+        </h3>
+        <p className="text-gray-600 text-sm sm:text-sm md:text-base lg:text-lg leading-relaxed mt-2 sm:mt-2 md:mt-3 lg:mt-2">
+          We develop fast, responsive, and scalable websites that strengthen your online presence.
+        </p>
+        <Link
+          to="#"
+          onClick={e => { e.preventDefault(); setShowPopup(true); }}
+          className="mt-3 sm:mt-3 md:mt-4 lg:mt-4 inline-flex items-center gap-2 text-xs sm:text-sm md:text-sm lg:text-sm text-sky-600 font-semibold uppercase tracking-wide hover:text-sky-700 transition-colors duration-200"
+        >
+          See services <span className="text-sm sm:text-base md:text-base lg:text-base">➔</span>
+        </Link>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/2 h-[120px] sm:h-[140px] md:h-full lg:h-full bg-gray-100 flex items-center justify-center md:rounded-r-xl lg:rounded-r-2xl overflow-hidden md:block hidden">
+        <img
+          src={webDevelopmentImage}
+          alt="Web Development"
+          className="object-contain w-full h-full md:rounded-r-xl lg:rounded-r-2xl"
+          loading="lazy"
+        />
+      </div>
+      {/* Phone view layout */}
+      <div className="md:hidden flex mx-4 sm:mx-5 mb-4 sm:mb-5 bg-gray-100 rounded-xl sm:rounded-2xl overflow-hidden" style={{ height: '150px' }}>
+        <img
+          src={webDevelopmentImage}
+          alt="Web Development Preview"
+          className="object-contain w-full h-full"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
-      {/* Why Work With Us */}
-      <section className="py-15 flex flex-col items-center bg-white">
-        <div className="max-w-7xl w-full px-8 flex flex-col gap-8">
-          <div className="flex flex-col gap-4 text-left">
-            <h2 className="text-blue-600 text-lg font-semibold uppercase">
+      {/* Why Work With Us - Fully Responsive */}
+      <section className="py-8 sm:py-12 md:py-14 lg:py-15 flex flex-col items-center bg-white">
+        <div className="max-w-7xl w-full px-4 sm:px-6 md:px-8 lg:px-8 flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-8">
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-4 lg:gap-4 text-left">
+            <h2 className="text-blue-600 text-sm sm:text-base md:text-lg lg:text-lg font-semibold uppercase">
               Why work with us
             </h2>
-            <h3 className="text-4xl font-bold text-balck leading-tight max-w-2xl">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-black leading-tight max-w-full lg:max-w-2xl">
               We guide you through every step — from concept to creation
             </h3>
-            <p className="mt-4 text-gray-600 text-lg leading-relaxed max-w-3xl">
+            <p className="mt-2 sm:mt-3 md:mt-4 lg:mt-4 text-gray-600 text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed max-w-full lg:max-w-3xl">
               With dozens of successful design and development projects, we've built a straightforward and effective process that ensures your brand looks great, functions flawlessly, and connects with your audience.
             </p>
           </div>
-          <div className="flex flex-col gap-16 mt-20">
+
+          <div className="flex flex-col gap-8 sm:gap-12 md:gap-14 lg:gap-16 mt-8 sm:mt-12 md:mt-16 lg:mt-20">
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
@@ -479,10 +575,10 @@ const Home = () => {
                 viewport={{ amount: 0.2 }}
                 variants={cardVariants}
                 style={{ willChange: 'transform, opacity' }}
-                className="flex flex-row gap-8 items-center justify-between bg-white shadow-md border border-[#EBEFF6] rounded-3xl p-12"
+                className="flex flex-col lg:flex-row gap-6 sm:gap-7 md:gap-8 lg:gap-8 items-center justify-between bg-white shadow-md border border-[#EBEFF6] rounded-2xl sm:rounded-3xl lg:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12"
               >
-                <div className="flex flex-col items-start w-1/2">
-                  <div className="w-24 h-24 mb-6">
+                <div className="flex flex-col items-start w-full lg:w-1/2 text-center lg:text-left">
+                  <div className="w-16 h-16 sm:w-20 h-20 md:w-22 h-22 lg:w-24 h-24 mb-4 sm:mb-5 md:mb-6 lg:mb-6 mx-auto lg:mx-0">
                     <img
                       src={step.icon}
                       alt={`${step.title} icon`}
@@ -490,15 +586,15 @@ const Home = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h4 className="text-4xl font-bold text-[#19213D] mb-2">
+                  <h4 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-[#19213D] mb-2 lg:mb-2">
                     {step.title}
                   </h4>
-                  <p className="text-lg text-[#667097] leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-lg text-[#667097] leading-relaxed">
                     {step.description}
                   </p>
                 </div>
                 <div
-                  className={`relative w-[480px] h-[340px] ${step.bgColor} rounded-3xl overflow-hidden flex items-center justify-center`}
+                  className={`relative w-full sm:w-[400px] md:w-[450px] lg:w-[480px] h-[200px] sm:h-[250px] md:h-[300px] lg:h-[340px] ${step.bgColor} rounded-2xl sm:rounded-3xl lg:rounded-3xl overflow-hidden flex items-center justify-center mt-6 lg:mt-0`}
                 >
                   <img
                     src={step.img}
@@ -514,67 +610,23 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="font-poppins py-16 px-8 bg-white">
-        {/* Inline CSS for marquee animation */}
-        <style>
-          {`
-            @keyframes marquee {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-            @keyframes marqueeReverse {
-              0% { transform: translateX(-50%); }
-              100% { transform: translateX(0); }
-            }
-            .marquee-container {
-              display: flex;
-              overflow: hidden;
-              width: 100%;
-              user-select: none;
-            }
-            .marquee {
-              display: flex;
-              flex-shrink: 0;
-              animation: marquee 30s linear infinite;
-            }
-            .marquee-reverse {
-              display: flex;
-              flex-shrink: 0;
-              animation: marqueeReverse 30s linear infinite;
-            }
-            .marquee:hover, .marquee-reverse:hover {
-              animation-play-state: paused;
-            }
-            .project-item {
-              position: relative;
-              flex: 0 0 auto;
-              height: 298px;
-              margin-right: 16px;
-            }
-            .project-item img {
-              width: auto;
-              height: 100%;
-              object-fit: contain;
-              object-position: center;
-            }
-          `}
-        </style>
-
+      {/* Projects Marquee Section - Fully Responsive */}
+      <div className="font-poppins py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h3 className="text-blue-600 text-lg font-semibold uppercase text-center">
+          <div className="mb-8 sm:mb-12 md:mb-14 lg:mb-16">
+            <h3 className="text-blue-600 text-sm sm:text-base md:text-lg lg:text-lg font-semibold uppercase text-center">
               ~ Crafted Solutions ~
             </h3>
-            <h2 className="text-4xl font-bold text-black leading-tight text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-black leading-tight text-center mb-3 sm:mb-4 md:mb-4 lg:mb-4">
               Just a glimpse of what we do.
             </h2>
-            <p className="text-gray-600 text-lg max-w-4xl mx-auto text-center">
-              Take a glimpse into the digital experiences we’ve created — combining design, technology, and strategy to bring ideas to life.
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-lg max-w-4xl mx-auto text-center leading-relaxed px-4 sm:px-0">
+              Take a glimpse into the digital experiences we've created — combining design, technology, and strategy to bring ideas to life.
             </p>
           </div>
 
           {/* First Marquee Row */}
-          <div className="marquee-container mb-6">
+          <div className="marquee-container mb-4 sm:mb-5 md:mb-6 lg:mb-6">
             <div ref={firstRowRef} className="marquee">
               {[...firstRowProjects, ...firstRowProjects].map((project, index) => (
                 <div
@@ -584,7 +636,7 @@ const Home = () => {
                   <img
                     src={project.image}
                     alt={project.alt}
-                    className="rounded-3xl border border-gray-200 shadow-md"
+                    className="rounded-2xl sm:rounded-3xl lg:rounded-3xl border border-gray-200 shadow-md"
                     loading="lazy"
                   />
                 </div>
@@ -603,7 +655,7 @@ const Home = () => {
                   <img
                     src={project.image}
                     alt={project.alt}
-                    className="rounded-3xl border border-gray-200 shadow-md"
+                    className="rounded-2xl sm:rounded-3xl lg:rounded-3xl border border-gray-200 shadow-md"
                     loading="lazy"
                   />
                 </div>
@@ -613,55 +665,58 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Our Products */}
-      <section className="bg-white py-16 px-12">
+      {/* Our Products - Fully Responsive */}
+      <section className="bg-white py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-blue-600 text-lg font-semibold uppercase">
+          <p className="text-blue-600 text-sm sm:text-base md:text-lg lg:text-lg font-semibold uppercase">
             ~Our Products~
           </p>
-          <h2 className="text-4xl font-bold text-balck leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-black leading-tight mb-3 sm:mb-4 md:mb-4 lg:mb-4">
             Products by <span className="text-blue-600">Techno Vanam</span>
           </h2>
-          <p className="mt-4 text-gray-600 text-lg max-w-4xl mx-auto">
+          <p className="mt-2 sm:mt-3 md:mt-4 lg:mt-4 text-gray-600 text-sm sm:text-base md:text-lg lg:text-lg max-w-4xl mx-auto leading-relaxed">
             At Techno Vanam, we go beyond client work — we create, launch, and scale our own digital products, trusted by thousands around the world.
           </p>
         </div>
+
         <motion.div
-          className="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-10 flex flex-row items-center justify-between gap-12 max-w-6xl mx-auto shadow-xl"
+          className="mt-8 sm:mt-12 md:mt-14 lg:mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl sm:rounded-3xl lg:rounded-3xl p-6 sm:p-8 md:p-9 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 max-w-6xl mx-auto shadow-xl"
           variants={athlixirCardVariants}
           initial="rest"
           whileHover="hover"
         >
-          <div className="w-[55%] max-w-2xl">
-            <h3 className="text-blue-600 text-3xl font-extrabold mb-6 tracking-tight">ATHLIXIR</h3>
-            <p className="text-gray-700 text-md mb-10 leading-relaxed">
+          <div className="w-full lg:w-[55%] max-w-2xl text-center lg:text-left">
+            <h3 className="text-blue-600 text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-extrabold mb-4 sm:mb-5 md:mb-6 lg:mb-6 tracking-tight">
+              ATHLIXIR
+            </h3>
+            <p className="text-gray-700 text-sm sm:text-sm md:text-md lg:text-md mb-6 sm:mb-8 md:mb-9 lg:mb-10 leading-relaxed">
               Athlixir is in development, crafted to empower over 50+ athlete communities in Tier-2 and Tier-3 regions. Our cutting-edge platform harnesses AI to analyze 300,000+ performance data points, delivering personalized training, precise injury tracking, and verified recognition.
             </p>
-            <div className="flex flex-row gap-10 text-left mb-8">
+            <div className="flex flex-col sm:flex-row lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-10 text-center lg:text-left mb-6 sm:mb-7 md:mb-8 lg:mb-8 justify-center lg:justify-start">
               <div>
-                <p className="text-2xl font-bold text-blue-600">50+</p>
-                <p className="text-sm font-medium text-gray-600 tracking-wide">
+                <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold text-blue-600">50+</p>
+                <p className="text-xs sm:text-sm md:text-sm lg:text-sm font-medium text-gray-600 tracking-wide">
                   Target Athlete Communities
                 </p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-blue-600">300,000+</p>
-                <p className="text-sm font-medium text-gray-600 tracking-wide">
+                <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold text-blue-600">300,000+</p>
+                <p className="text-xs sm:text-sm md:text-sm lg:text-sm font-medium text-gray-600 tracking-wide">
                   AI-Powered Performance Insights
                 </p>
               </div>
             </div>
             <Link
               to="/product1"
-              className="inline-flex items-center text-blue-600 text-base font-semibold hover:text-blue-700 transition-colors duration-300"
+              className="inline-flex items-center text-blue-600 text-sm sm:text-base md:text-base lg:text-base font-semibold hover:text-blue-700 transition-colors duration-300 justify-center lg:justify-start"
             >
               COMING SOON — JOIN THE JOURNEY
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="ml-2 w-4 h-4 sm:w-5 h-5 md:w-5 h-5 lg:w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
           </div>
-          <div className="w-[45%] aspect-[4/3] rounded-2xl overflow-hidden relative">
+          <div className="w-full lg:w-[45%] aspect-[4/3] rounded-xl sm:rounded-2xl lg:rounded-2xl overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-t from-blue-100/20 to-transparent z-10"></div>
             <img
               src={athlixirImage}
@@ -673,12 +728,11 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Commented Out (keeping as requested) */}
       {/* <section className="w-full flex justify-center items-center min-h-[700px] bg-[#e9ebef] px-6">
         <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12 py-12">
-           */}
-          {/* Left - Glass Video Card */}
-          {/* <motion.div 
+          
+          <motion.div 
             initial={{ opacity: 0, y: 60 }} 
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8 }} 
@@ -698,10 +752,9 @@ const Home = () => {
             >
               Your browser does not support the video tag.
             </video>
-          </motion.div> */}
+          </motion.div>
 
-          {/* Right - Text and CTA */}
-          {/* <motion.div 
+          <motion.div 
             initial={{ opacity: 0, x: 60 }} 
             whileInView={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.8 }} 
@@ -713,7 +766,7 @@ const Home = () => {
               with Techno Vanam?
             </h2>
             <p className="text-lg text-blue-500 leading-relaxed mb-8">
-              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let's build something great together.
             </p>
             <Link to="/contact">
               <button className="group relative inline-flex items-center px-8 py-4 text-blue-600 border-2 border-blue-600 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out shadow-md hover:shadow-xl transform hover:scale-105">
@@ -724,11 +777,12 @@ const Home = () => {
                 <span className="absolute top-0 left-0 w-full h-full bg-blue-600 opacity-10 rounded-full blur-md animate-ping"></span>
               </button>
             </Link>
-          </motion.div> */}
-{/* 
+          </motion.div>
+
         </div>
       </section> */}
 
+      {/* Popup Component - Keeping as requested */}
       {/* <HighClassPopup 
         open={showPopup} 
         onClose={() => setShowPopup(false)} 

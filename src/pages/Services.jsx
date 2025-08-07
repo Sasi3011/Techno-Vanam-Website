@@ -87,179 +87,174 @@ const Services = () => {
   return (
     <>
       {/* Services Section */}
-      <section className="w-full flex flex-col items-center py-16 px-8">
+      <section className="w-full flex flex-col items-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
         <div className="w-full max-w-7xl flex flex-col items-center">
-          <div className="w-full flex flex-col items-start gap-6">
+          <div className="w-full flex flex-col items-start gap-4 sm:gap-6">
             <div className="w-full text-left">
-              <p className="text-lg text-blue-600 font-semibold uppercase">
+              <p className="text-sm sm:text-base md:text-lg text-blue-600 font-semibold uppercase">
                 Services
               </p>
-              <h2 className="text-gray-900 text-5xl font-bold leading-tight mt-3">
+              <h2 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-2 md:mt-3">
                 What we do
               </h2>
-              <p className="text-gray-500 mt-4 text-lg">
-                At Technovanam, our end-to-end design and development services are crafted to empower your business,<br/> enhance your digital presence, and drive growth. We blend smart strategy, modern technology, and <br/>user-focused design to elevate your brand and help you thrive in today’s competitive landscape.
+              <p className="text-gray-500 mt-3 md:mt-4 text-sm sm:text-base md:text-lg leading-relaxed">
+                At Technovanam, our end-to-end design and development services are crafted to empower your business, enhance your digital presence, and drive growth. We blend smart strategy, modern technology, and user-focused design to elevate your brand and help you thrive in today's competitive landscape.
               </p>
             </div>
 
             {servicesList.map((service, index) => (
               <div
                 key={index}
-                className={`w-5xl flex flex-row items-center h-130 justify-between ${service.bgColor} rounded-[20px] overflow-hidden shadow-lg mt-8 ml-28 transition-all duration-300`}
+                className={`w-full flex flex-col lg:flex-row items-center justify-between ${service.bgColor} rounded-xl lg:rounded-[20px] overflow-hidden shadow-lg mt-6 sm:mt-8 transition-all duration-300`}
               >
-                {/* Left Text Block */}
-                <div className="w-1/2 p-12 flex flex-col gap-4">
-                  <h3 className={`${service.color} text-lg uppercase font-bold tracking-wide`}>
+                {/* Text Block - Full width on mobile, half width on desktop */}
+                <div className="w-full lg:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col gap-3 sm:gap-4 text-center lg:text-left">
+                  <h3 className={`${service.color} text-sm sm:text-base md:text-lg uppercase font-bold tracking-wide`}>
                     {service.name}
                   </h3>
-                  <h4 className="text-gray-900 text-4xl font-bold leading-tight">
+                  <h4 className="text-gray-900 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                     {service.subheading}
                   </h4>
-                  <p className="text-gray-600 text-lg leading-relaxed">
+                  <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
                     {service.description}
                   </p>
                   {service.name === 'Web Development' ? (
                     <button
                       type="button"
-                      className="flex items-center gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
-                      onClick={() => setShowPopup(true)}
+                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
                     >
                       See more
-                      <span className="text-lg">➔</span>
+                      <span className="text-base sm:text-lg">➔</span>
                     </button>
                   ) : (
                     <Link
                       to="/contact"
-                      className="flex items-center gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200"
+                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
                     >
                       Get in touch
-                      <span className="text-lg">➔</span>
+                      <span className="text-base sm:text-lg">➔</span>
                     </Link>
                   )}
                 </div>
 
-                {/* Right Image Block */}
-                <div className="w-1/2 h-[520px] bg-[#E5E9F0] flex items-center justify-center rounded-2xl">
+                {/* Image Block - Full width on mobile, half width on desktop */}
+                <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[520px] bg-[#E5E9F0] flex items-center justify-center rounded-xl lg:rounded-2xl mx-4 lg:mx-0 mb-4 lg:mb-0">
                   <img
                     src={service.image}
                     alt={`${service.name} Illustration`}
-                    className="object-contain w-full h-full"
+                    className="object-contain w-full h-full p-4 sm:p-6 lg:p-0"
                     loading="lazy"
                   />
                 </div>
               </div>
             ))}
-            </div>
+          </div>
         </div>  
       </section>
 
       {/* Industries Section */}
-      <section className="w-full flex flex-col items-center py-16 px-8">
-        <div className="w-full max-w-7xl flex flex-col items-center gap-6">
-          <div className="text-center max-w-2xl">
-            <h2 className="text-blue-500 text-lg font-bold uppercase tracking-wider">
+      <section className="w-full flex flex-col items-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+        <div className="w-full max-w-7xl flex flex-col items-center gap-4 sm:gap-6">
+          <div className="text-center max-w-2xl px-4">
+            <h2 className="text-blue-500 text-sm sm:text-base md:text-lg font-bold uppercase tracking-wider">
               ~ Industries ~
             </h2>
-            <h1 className="text-gray-900 text-4xl font-bold mt-4">
+            <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl font-bold mt-3 sm:mt-4">
               Our Focus Areas 
             </h1>
-            <p className="text-gray-500 text-lg mt-4">
-              We’ve collaborated across various sectors — with deep expertise in delivering tailored solutions for these key industries.  
+            <p className="text-gray-500 text-sm sm:text-base md:text-lg mt-3 sm:mt-4 leading-relaxed">
+              We've collaborated across various sectors — with deep expertise in delivering tailored solutions for these key industries.  
             </p>
           </div>
 
-         <div className="w-full flex flex-row justify-center items-start gap-4">
+          {/* Industries Cards - Responsive Grid */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center mt-4 sm:mt-6">
             {industriesList.map((item, index) => (
-  <div
-    key={index}
-    className="flex flex-row justify-between items-center p-3 gap-3 bg-white border-2 border-gray-200 rounded-2xl shadow-sm w-[300px] min-h-[80px] transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-md hover:border-blue-500"
-  >
-    <div className="flex flex-row items-center gap-3">
-      <img
-        src={item.image} 
-        alt={`${item.title} Icon`}
-        className="w-14 h-14 object-cover"
-        loading="lazy"
-      />
-      <div className="flex flex-col items-start">
-        <span className={`text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
-          {item.label}
-        </span>
-        <span className="text-gray-900 text-xl font-semibold">
-          {item.title}
-        </span>
-      </div>
-    </div>
-  </div>
-))}
-
-            </div>
+              <div
+                key={index}
+                className="flex flex-row justify-between items-center p-3 sm:p-4 gap-3 bg-white border-2 border-gray-200 rounded-xl sm:rounded-2xl shadow-sm w-full max-w-[300px] min-h-[80px] sm:min-h-[90px] transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-md hover:border-blue-500"
+              >
+                <div className="flex flex-row items-center gap-3 w-full">
+                  <img
+                    src={item.image} 
+                    alt={`${item.title} Icon`}
+                    className="w-12 h-12 sm:w-14 sm:h-14 object-cover flex-shrink-0"
+                    loading="lazy"
+                  />
+                  <div className="flex flex-col items-start flex-grow min-w-0">
+                    <span className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
+                      {item.label}
+                    </span>
+                    <span className="text-gray-900 text-lg sm:text-xl font-semibold leading-tight">
+                      {item.title}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
       </section>
 
-      {/* CTA Section */}
-{/* <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
-  <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8"> */}
-    
-    {/* Image First */}
-    {/* <div className="w-1/2 h-[600px]">
-  <video
-    src={SocialMediaImage}
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-contain"
-  >
-    Your browser does not support the video tag.
-  </video>
-</div> */}
-
-
-    {/* Content Second (on the right now) */}
-    {/* <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
-      <h2 className="text-5xl font-bold leading-tight">
-        Ready to launch something amazing with Techno Vanam?
-      </h2>
-      <p className="text-lg mt-4">
-        Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
-      </p>
-      <div className="pt-6 flex justify-start">
-        <Link to="/contact">
-          <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
-            Contact Us
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-4 h-4 transform -scale-y-100"
+      {/* CTA Section - Commented out as in original */}
+      {/* <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
+        <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8">
+          
+          <div className="w-1/2 h-[600px]">
+            <video
+              src={SocialMediaImage}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-contain"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-            </svg>
-          </button>
-        </Link>
-      </div>
-    </div>
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
-  </div>
-</section>
+          <div className="w-1/2 text-white text-left px-8 pt-20 pb-20">
+            <h2 className="text-5xl font-bold leading-tight">
+              Ready to launch something amazing with Techno Vanam?
+            </h2>
+            <p className="text-lg mt-4">
+              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let's build something great together.
+            </p>
+            <div className="pt-6 flex justify-start">
+              <Link to="/contact">
+                <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
+                  Contact Us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4 transform -scale-y-100"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+                  </svg>
+                </button>
+              </Link>
+            </div>
+          </div>
 
-<HighClassPopup 
-  open={showPopup} 
-  onClose={() => setShowPopup(false)} 
-  title="Service is currently unavailable" 
-  description="This service is currently unavailable. Please check back later." 
-  icon={
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-12 h-12 text-red-500">
-      <circle cx="12" cy="12" r="10" fill="currentColor" />
-      <rect x="11" y="7" width="2" height="6" rx="1" fill="#fff" />
-      <rect x="11" y="15" width="2" height="2" rx="1" fill="#fff" />
-    </svg>
-  }
-/> */}
+        </div>
+      </section> */}
 
+      <HighClassPopup 
+        open={showPopup} 
+        onClose={() => setShowPopup(false)} 
+        title="Service is currently unavailable" 
+        description="This service is currently unavailable. Please check back later." 
+        icon={
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-12 h-12 text-red-500">
+            <circle cx="12" cy="12" r="10" fill="currentColor" />
+            <rect x="11" y="7" width="2" height="6" rx="1" fill="#fff" />
+            <rect x="11" y="15" width="2" height="2" rx="1" fill="#fff" />
+          </svg>
+        }
+      />
     </>
   );
 };
