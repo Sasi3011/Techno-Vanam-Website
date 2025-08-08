@@ -102,6 +102,7 @@ const values = [
   },
 ];
 
+
 export default function About() {
   const [ref1, inView1] = useInView({ threshold: 0.5 });
   const [ref2, inView2] = useInView({ threshold: 0.5 });
@@ -137,7 +138,7 @@ export default function About() {
                 <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap">Techno Vanam</span>
               </div>
             </div>
-            <p className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] text-center lg:text-left sm:text-justify">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] text-center lg:text-left">
               We're not just an agency — we're a creative tech studio passionate
               <span className="hidden sm:inline"><br/></span>
               <span className="sm:hidden"> </span>
@@ -204,14 +205,14 @@ export default function About() {
       </section>
 
       {/* ===== Content Grid Section ===== */}
-<section id="what-drives-us" className="flex flex-col items-center bg-white px-4 sm:px-8 pt-12 sm:pt-16 lg:pt-20 pb-6">
+      <section id="what-drives-us" className="flex flex-col items-center bg-white px-4 sm:px-8 pt-12 sm:pt-16 lg:pt-20 pb-6">
         <div className="w-full max-w-7xl">
           {/* What Drives Us */}
           <div className="flex flex-col items-center gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-20 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#19213D]">
               What Drives Us
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] max-w-4xl px-2 sm:text-justify">
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] max-w-4xl px-2">
               In 2025, we began building our own digital products—driven by the
               same vision and purpose that fuel everything we do: turning ideas
               into impactful, user‑centered experiences.
@@ -226,7 +227,7 @@ export default function About() {
                 Our Mission: <br />
                 Turning Vision into Reality
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12 sm:text-justify">
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
                 We believe great design is the foundation of every successful
                 brand. At Techno Vanam, we craft intuitive user experiences,
                 build high-performance websites, and design graphics that leave
@@ -247,7 +248,7 @@ export default function About() {
                     <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
                       Design-led Development
                     </p>
-                    <p className="text-xs sm:text-sm text-[#667097] sm:text-justify">
+                    <p className="text-xs sm:text-sm text-[#667097]">
                       We blend aesthetics and technology to create products
                       users love.
                     </p>
@@ -266,7 +267,7 @@ export default function About() {
                     <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
                       Scalable & Creative
                     </p>
-                    <p className="text-xs sm:text-sm text-[#667097] sm:text-justify">
+                    <p className="text-xs sm:text-sm text-[#667097]">
                       From startups to enterprises, we deliver flexible and
                       impactful digital solutions.
                     </p>
@@ -274,9 +275,8 @@ export default function About() {
                 </div>
               </div>
             </div>
-            
-            {/* Mission Illustration Card - Hidden on mobile, visible on larger screens */}
-            <div className="hidden lg:flex w-full lg:w-1/3 items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8 min-h-[200px] sm:min-h-[250px]">
+            {/* Illustration Card */}
+            <div className="w-full lg:w-1/3 flex items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8 min-h-[200px] sm:min-h-[250px]">
               <img
                 src={Mission}
                 alt="Mission"
@@ -285,41 +285,23 @@ export default function About() {
             </div>
           </div>
 
-          {/* Mobile Images Row - Only visible on mobile */}
-          <div className="flex gap-4 mb-6 lg:hidden">
-            <div className="w-1/2 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 min-h-[150px] flex items-center justify-center">
-              <img
-                src={Mission}
-                alt="Mission"
-                className="w-full h-auto object-contain"
-              />
-            </div>
-            <div className="w-1/2 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 min-h-[150px] flex items-center justify-center">
-              <img
-                src={Vission}
-                alt="Vision"
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Vision Card - Modified for mobile */}
+          {/* Second Row: Trophy + Vision */}
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 mb-6">
-            {/* Vision Trophy Card - Hidden on mobile, visible on larger screens */}
-            <div className="hidden lg:flex w-full lg:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl items-center justify-center p-6 sm:p-8 lg:p-10 min-h-[200px] sm:min-h-[250px]">
+            {/* Trophy Card */}
+            <div className="w-full lg:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-6 sm:p-8 lg:p-10 min-h-[200px] sm:min-h-[250px]">
               <img
                 src={Vission}
-                alt="Vision"
+                alt="Vission"
                 className="w-full h-auto object-contain"
               />
             </div>
 
-            {/* Vision Content Card */}
+            {/* Vision Card */}
             <div className="w-full lg:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#19213D] mb-3 sm:mb-4 lg:mb-6">
                 Our Vision:
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12 sm:text-justify">
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
                 To build a digital ecosystem where design, technology, and
                 human-centric thinking shape better experiences for all. We
                 envision a future where businesses—big or small—can access
@@ -332,7 +314,7 @@ export default function About() {
                   "Driving meaningful change with every project",
                   "Making digital innovation accessible to everyone",
                 ].map((txt, i) => (
-                  <li key={i} className="relative pl-6 sm:pl-8 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] sm:text-justify">
+                  <li key={i} className="relative pl-6 sm:pl-8 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097]">
                     <span className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-[#31C65B] flex items-center justify-center">
                       <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 border-b-2 border-r-2 border-[#31C65B]" />
                     </span>
@@ -346,7 +328,7 @@ export default function About() {
       </section>
 
       {/* ===== Team Section ===== */}
-<section className="w-full bg-[#F6F8FC] py-12 sm:py-16 px-4 sm:px-8">
+      <section className="w-full bg-[#F6F8FC] py-12 sm:py-16 px-4 sm:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <p className="text-[#0368FF] text-base sm:text-lg font-bold">
             ~ Team Member ~
@@ -354,20 +336,20 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black max-w-3xl mx-auto">
             Our team member is ready to <br className="hidden sm:block"/>help our clients!
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-[#667097] mt-2 max-w-4xl mx-auto px-2 sm:text-justify">
+          <p className="text-sm sm:text-base lg:text-lg text-[#667097] mt-2 max-w-4xl mx-auto px-2">
             We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center gap-6 sm:gap-8 lg:gap-10 pb-4 sm:pb-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col items-center w-full sm:w-80 lg:w-80 relative mx-auto">
-              <div className="w-full max-w-[280px] sm:max-w-full aspect-[4/5] min-h-[350px] sm:min-h-[350px] lg:min-h-[400px] bg-gray-200 rounded-lg relative overflow-hidden">
+              <div className="w-full max-w-[280px] sm:max-w-full h-[300px] sm:h-[350px] lg:h-[400px] bg-gray-200 rounded-lg relative">
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-full h-full object-cover object-center rounded-lg"
+                  className="w-full h-full object-cover rounded-lg"
                 />
-                <div className="absolute bottom-[-45px] sm:bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[260px] sm:w-[300px] lg:w-[320px] bg-white rounded-lg shadow-md flex flex-col items-center pb-3 sm:pb-4 z-50">
+                <div className="absolute bottom-[-50px] sm:bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[280px] sm:w-[300px] lg:w-[320px] bg-white rounded-lg shadow-md flex flex-col items-center pb-3 sm:pb-4 z-50">
                   <div className="h-2 w-full bg-[#0368FF] rounded-t-lg"></div>
                   <div className="text-center mt-2 sm:mt-3 px-2">
                     <h3 className="text-lg sm:text-xl font-bold text-black">{member.name}</h3>
@@ -383,7 +365,8 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="h-10 sm:h-16"></div>
+              {/* Spacer for overlapping card */}
+              <div className="h-12 sm:h-16"></div>
             </div>
           ))}
         </div>
@@ -395,7 +378,7 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
             The values that drive us
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mt-2 px-2 sm:text-justify">
+          <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mt-2 px-2">
             In 2025, Technovanam was born from a simple idea—why just design for others when we can design for impact? We build with purpose, create with clarity, and craft experiences that matter.
           </p>
         </div>
@@ -417,7 +400,7 @@ export default function About() {
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#19213D] mb-2">
                 {value.title}
               </h3>
-              <p className="text-xs sm:text-sm lg:text-md leading-relaxed text-[#667097] sm:text-justify">
+              <p className="text-xs sm:text-sm lg:text-md leading-relaxed text-[#667097]">
                 {value.description}
               </p>
             </div>
