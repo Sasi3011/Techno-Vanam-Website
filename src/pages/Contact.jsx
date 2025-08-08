@@ -150,7 +150,7 @@ export default function Contact() {
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-xs md:placeholder:text-sm placeholder-gray-500 
+              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
                 ${formSubmitted && !name.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
             />
           </div>
@@ -169,7 +169,7 @@ export default function Contact() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-xs md:placeholder:text-sm placeholder-gray-500 
+              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
                 ${formSubmitted && !email.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
             />
           </div>
@@ -185,7 +185,7 @@ export default function Contact() {
               placeholder="Enter your company name"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-xs md:placeholder:text-sm placeholder-gray-500 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
             />
           </div>
 
@@ -200,7 +200,7 @@ export default function Contact() {
               placeholder="Enter your website URL"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
-              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-xs md:placeholder:text-sm placeholder-gray-500 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
             />
           </div>
         </div>
@@ -301,7 +301,7 @@ export default function Contact() {
             value={message}
             onChange={handleTextareaChange}
             placeholder="Write here..."
-            className={`w-full resize-none px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-xs md:placeholder:text-sm placeholder-gray-500 ${
+            className={`w-full resize-none px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 ${
               formSubmitted && message.trim() === ""
                 ? "border-red-500 focus:border-red-500 focus:ring-red-100"
                 : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"

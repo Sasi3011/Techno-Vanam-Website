@@ -178,7 +178,7 @@ export default function About() {
       </section>
 
       {/* ===== Transform Section ===== */}
-      <section className="flex flex-col items-center bg-[#2388FF] pt-6 sm:pt-8 pb-6 sm:pb-8 rounded-b-[60px] sm:rounded-b-[80px] lg:rounded-b-[120px] px-4 sm:px-8 space-y-4 sm:space-y-6 overflow-hidden">
+      <section className="flex flex-col items-center bg-[#2388FF] pt-6 sm:pt-16 pb-6 sm:pb-8 rounded-b-[60px] sm:rounded-b-[80px] lg:rounded-b-[120px] px-4 sm:px-8 space-y-4 sm:space-y-6 overflow-hidden">
         {/* "design" */}
         <h2
           ref={ref1}
@@ -342,7 +342,7 @@ export default function About() {
         </div>
         <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center gap-6 sm:gap-8 lg:gap-10 pb-4 sm:pb-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="flex flex-col items-center w-full sm:w-80 lg:w-80 relative mx-auto">
+            <div key={index} className="flex flex-col items-center w-full sm:w-80 lg:w-80 relative ">
               <div className="w-full max-w-[280px] sm:max-w-full h-[300px] sm:h-[350px] lg:h-[400px] bg-gray-200 rounded-lg relative">
                 <img
                   src={member.img}

@@ -121,15 +121,15 @@ const Services = () => {
                   {service.name === 'Web Development' ? (
                     <button
                       type="button"
-                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
+                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-blue-700 transition-colors duration-200 mt-2"
                     >
-                      See more
+                      Get in touch
                       <span className="text-base sm:text-lg">➔</span>
                     </button>
                   ) : (
                     <Link
                       to="/contact"
-                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
+                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-blue-700 transition-colors duration-200 mt-2"
                     >
                       Get in touch
                       <span className="text-base sm:text-lg">➔</span>
@@ -168,7 +168,7 @@ const Services = () => {
           </div>
 
           {/* Industries Cards - Responsive Grid */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center mt-4 sm:mt-6">
+          <div className="w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-1  justify-items-center mt-4 sm:mt-6">
             {industriesList.map((item, index) => (
               <div
                 key={index}

@@ -390,15 +390,14 @@ const Home = () => {
       </style>
 
       {/* Hero Section - Fully Responsive */}
-      <section className="px-4 sm:px-6 md:px-8 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-14 bg-white min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] pt-12 sm:pt-16 md:pt-18 lg:pt-20">
+      <section className="px-4 sm:px-6 md:px-8 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-18 bg-white min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] lg:min-h-[50px] pt-12 sm:pt-16 md:pt-18 lg:pt-20">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10 lg:gap-10">
           <div className="flex-1 text-left w-full lg:w-auto">
             <h2 className="text-blue-600 text-sm sm:text-base md:text-lg lg:text-lg font-semibold uppercase">
               DESIGN & DEVELOPMENT STUDIO
             </h2>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-tight mt-2 sm:mt-3 md:mt-4 lg:mt-4">
-              We craft stunning digital experiences for startups, brands & growing businesses
-            </h1>
+            We make brands <br/> that demand attention            </h1>
             <p className="mt-3 sm:mt-4 md:mt-4 lg:mt-4 text-gray-600 text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed">
               We specialize in UI/UX design, web development, and creative branding & graphics. Our team combines creativity and code to build sleek websites and bold visuals that make your brand stand out
             </p>
@@ -409,7 +408,7 @@ const Home = () => {
               Get in Touch
             </Link>
           </div>
-          <div className="w-full lg:flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[550px] xl:max-w-[550px] mt-6 lg:mt-0">
+          <div className="w-full lg:flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[550 px] xl:max-w-[550px] mt-6 lg:mt-0">
             <video
               src={heroIllustration}
               autoPlay
@@ -458,12 +457,12 @@ const Home = () => {
       </p>
       <Link
         to="/services"
-        className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 inline-flex items-center gap-2 text-xs sm:text-sm md:text-sm lg:text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
+        className="mt-3 sm:mt-4 md:mt-5 lg:mt-1 inline-flex items-center gap-2 text-xs sm:text-sm md:text-sm lg:text-sm text-purple-600 font-semibold uppercase tracking-wide hover:text-purple-800 transition-colors duration-200"
       >
         See services <span className="text-sm sm:text-base md:text-base lg:text-base">➔</span>
       </Link>
     </div>
-    <div className="flex-1 mx-4 sm:mx-5 md:mx-6 lg:mx-6 mb-4 sm:mb-5 md:mb-6 lg:mb-6 min-h-[200px] sm:min-h-[220px] md:min-h-[250px] lg:min-h-[300px] bg-gray-100 rounded-xl sm:rounded-2xl lg:rounded-2xl overflow-hidden">
+    <div className="flex-1 mx-4 sm:mx-5 md:mx-6 lg:mx-6 mb-4 sm:mb-5 md:mb-6 lg:mb-0 lg:mr-0 lg:ml-0 min-h-[200px] sm:min-h-[220px] md:min-h-[250px] lg:min-h-[300px] bg-gray-100 rounded-bottom-xl sm:rounded-2xl lg:rounded-2xl overflow-hidden">
       <img
         src={UIUXDesignImage}
         alt="UI/UX Design Preview"
