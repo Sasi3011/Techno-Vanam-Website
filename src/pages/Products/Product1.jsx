@@ -109,18 +109,11 @@ const Product1 = () => {
                     blink 0.7s step-end infinite;
                 }
 
-                /* Mobile specific typing animation */
+                /* Mobile view: no animation */
                 @media (max-width: 640px) {
-                  @keyframes typing-mobile {
-                    0% { width: 0ch }
-                    50% { width: 10ch }
-                    100% { width: 0ch }
-                  }
-
                   .typing-text {
-                    animation:
-                      typing-mobile 6s steps(10, end) infinite,
-                      blink 0.7s step-end infinite;
+                    border-right: none;
+                    animation: none;
                   }
                 }
 
