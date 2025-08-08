@@ -113,13 +113,13 @@ const Product1 = () => {
                 @media (max-width: 640px) {
                   @keyframes typing-mobile {
                     0% { width: 0ch }
-                    50% { width: 32ch }
+                    50% { width: 10ch }
                     100% { width: 0ch }
                   }
 
                   .typing-text {
                     animation:
-                      typing-mobile 6s steps(34, end) infinite,
+                      typing-mobile 6s steps(10, end) infinite,
                       blink 0.7s step-end infinite;
                   }
                 }
@@ -142,7 +142,8 @@ const Product1 = () => {
             </style>
 
             <div className="text-[#2388FF] text-base sm:text-lg lg:text-xl font-bold uppercase leading-relaxed typing-text text-left">
-              Stay tuned — the journey has just begun.
+              <span className="block sm:hidden">Stay tuned</span>
+              <span className="hidden sm:block">Stay tuned — the journey has just begun.</span>
             </div>
           </>
         </div>
