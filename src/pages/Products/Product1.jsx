@@ -45,7 +45,7 @@ const Product1 = () => {
         </div>
 
         {/* Description */}
-        <p className="text-center text-[#667097] text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-5xl px-2">
+        <p className="text-justify sm:text-justify md:text-justify lg:text-center text-[#667097] text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-5xl px-2">
           At Techno Vanam, we don't just create for clients—we build for ourselves too. Our digital products are crafted to enhance workflows, spark creativity, and solve real-world problems for designers, developers, and businesses alike.
         </p>
       </div>
@@ -78,8 +78,8 @@ const Product1 = () => {
       {/* In Progress Section */}
       <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-2xl lg:rounded-[32px] p-6 sm:p-8 lg:pl-10 lg:pr-0 min-h-[400px] lg:h-[480px] gap-6 lg:gap-0">
         {/* Left Text Block */}
-        <div className="flex flex-col gap-6 sm:gap-8 lg:gap-8 w-full lg:w-[600px] text-center lg:text-left">
-          <h2 className="text-[#2388FF] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+        <div className="flex flex-col gap-6 sm:gap-8 lg:gap-8 w-full lg:w-[600px] text-justify sm:text-justify md:text-justify lg:text-left">
+          <h2 className="text-[#2388FF] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-left">
             In Progress
           </h2>
           <p className="text-[#3B4A68] text-sm sm:text-base lg:text-lg leading-relaxed max-w-none lg:max-w-lg mx-auto lg:mx-0">
@@ -109,17 +109,39 @@ const Product1 = () => {
                     blink 0.7s step-end infinite;
                 }
 
+                /* Mobile specific typing animation */
                 @media (max-width: 640px) {
+                  @keyframes typing-mobile {
+                    0% { width: 0ch }
+                    50% { width: 32ch }
+                    100% { width: 0ch }
+                  }
+
                   .typing-text {
-                    white-space: normal;
-                    border-right: none;
-                    animation: none;
+                    animation:
+                      typing-mobile 6s steps(34, end) infinite,
+                      blink 0.7s step-end infinite;
+                  }
+                }
+
+                /* Tablet specific typing animation */
+                @media (min-width: 641px) and (max-width: 1024px) {
+                  @keyframes typing-tablet {
+                    0% { width: 0ch }
+                    50% { width: 35ch }
+                    100% { width: 0ch }
+                  }
+
+                  .typing-text {
+                    animation:
+                      typing-tablet 6s steps(37, end) infinite,
+                      blink 0.7s step-end infinite;
                   }
                 }
               `}
             </style>
 
-            <div className="text-[#2388FF] text-base sm:text-lg lg:text-xl font-bold uppercase leading-relaxed typing-text mx-auto lg:mx-0">
+            <div className="text-[#2388FF] text-base sm:text-lg lg:text-xl font-bold uppercase leading-relaxed typing-text text-left">
               Stay tuned — the journey has just begun.
             </div>
           </>

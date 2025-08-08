@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import ComingSoonIcon from "../../assets/logo.png";
@@ -10,6 +10,49 @@ import Athlixir from "../../assets/Home Page/Athlixir.png";
 
 export default function Products2() {
   const navigate = useNavigate();
+  const [displayedAthlixir, setDisplayedAthlixir] = useState("");
+  const [displayedComingSoon, setDisplayedComingSoon] = useState("");
+  const [showCursor1, setShowCursor1] = useState(true);
+  const [showCursor2, setShowCursor2] = useState(false);
+
+  const athlixirText = "ATHLIXIR";
+  const comingSoonText = "COMING SOON";
+
+  useEffect(() => {
+    let timeoutId;
+    let currentIndex = 0;
+
+    const typeAthlixir = () => {
+      if (currentIndex < athlixirText.length) {
+        setDisplayedAthlixir(athlixirText.slice(0, currentIndex + 1));
+        currentIndex++;
+        timeoutId = setTimeout(typeAthlixir, 150);
+      } else {
+        setShowCursor1(false);
+        // Start typing "COMING SOON" after ATHLIXIR is complete
+        setTimeout(() => {
+          setShowCursor2(true);
+          let comingSoonIndex = 0;
+          const typeComingSoon = () => {
+            if (comingSoonIndex < comingSoonText.length) {
+              setDisplayedComingSoon(comingSoonText.slice(0, comingSoonIndex + 1));
+              comingSoonIndex++;
+              setTimeout(typeComingSoon, 150);
+            } else {
+              setShowCursor2(false);
+            }
+          };
+          typeComingSoon();
+        }, 500);
+      }
+    };
+
+    typeAthlixir();
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, []);
 
   const handleLatestReleasesClick = () => {
     navigate("/product1");
@@ -82,10 +125,11 @@ export default function Products2() {
         
         {/* Left Text Block */}
         <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full lg:w-[600px] order-2 lg:order-1">
-          <h2 className="text-[#2388FF] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center lg:text-left">
-            ATHLIXIR
+          <h2 className="text-[#2388FF] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-left">
+            {displayedAthlixir}
+            {showCursor1 && <span className="animate-pulse">|</span>}
           </h2>
-          <p className="text-[#3B4A68] text-sm sm:text-base md:text-lg leading-relaxed w-full text-center lg:text-left">
+          <p className="text-[#3B4A68] text-sm sm:text-base md:text-lg leading-relaxed w-full text-justify md:text-justify lg:text-left">
             Athlixir is currently in development — a groundbreaking platform built to empower 50+ athlete communities across Tier-2 and Tier-3 regions in India and beyond. We're engineering a powerful ecosystem capable of analyzing 300,000+ performance data points, using advanced AI to enable smarter training decisions, real-time injury tracking, personalized growth plans, and verified recognition for emerging talent.
             <br className="hidden sm:block" /><br className="hidden sm:block" />
             Whether you're an aspiring athlete, coach, or organization, Athlixir is your intelligent companion for measurable improvement, safety, and career visibility — all in one place.
@@ -94,7 +138,7 @@ export default function Products2() {
           {/* Highlights */}
           <div className="flex flex-col gap-4 sm:gap-5 md:gap-7 mt-4 sm:mt-5 md:mt-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-[60px]">
-              <div className="flex flex-col gap-1 text-center sm:text-left">
+              <div className="flex flex-col gap-1 text-left">
                 <p className="text-[#19213D] font-bold text-base sm:text-lg leading-tight">
                   50+
                 </p>
@@ -102,7 +146,7 @@ export default function Products2() {
                   Target athlete communities
                 </p>
               </div>
-              <div className="flex flex-col gap-1 text-center sm:text-left">
+              <div className="flex flex-col gap-1 text-left">
                 <p className="text-[#19213D] font-bold text-base sm:text-lg leading-tight">
                   300,000+
                 </p>
@@ -113,7 +157,7 @@ export default function Products2() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-              <div className="flex flex-col gap-1 text-center sm:text-left">
+              <div className="flex flex-col gap-1 text-left">
                 <p className="text-[#19213D] font-bold text-base sm:text-lg leading-tight">
                   100%
                 </p>
@@ -121,7 +165,7 @@ export default function Products2() {
                   Focused on Unlocking Grassroots Sports Potential
                 </p>
               </div>
-              <div className="flex flex-col gap-1 text-center sm:text-left">
+              <div className="flex flex-col gap-1 text-left">
                 <p className="text-[#19213D] font-bold text-base sm:text-lg leading-tight">
                   1
                 </p>
@@ -133,9 +177,10 @@ export default function Products2() {
           </div>
 
           {/* Coming Soon */}
-          <div className="flex items-center justify-center lg:justify-start gap-2 mt-6 sm:mt-7 md:mt-[28px]">
+          <div className="flex items-center justify-start gap-2 mt-6 sm:mt-7 md:mt-[28px]">
             <p className="text-blue-600 text-base sm:text-lg md:text-xl font-bold uppercase tracking-[0.06em]">
-              COMING SOON
+              {displayedComingSoon}
+              {showCursor2 && <span className="animate-pulse">|</span>}
             </p>
             <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-[#2388FF]" />
           </div>

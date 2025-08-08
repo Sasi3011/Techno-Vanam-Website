@@ -97,7 +97,7 @@ const Services = () => {
               <h2 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-2 md:mt-3">
                 What we do
               </h2>
-              <p className="text-gray-500 mt-3 md:mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-justify">
+              <p className="text-gray-500 mt-3 md:mt-4 text-sm sm:text-base md:text-lg leading-relaxed">
                 At Technovanam, our end-to-end design and development services are crafted to empower your business, enhance your digital presence, and drive growth. We blend smart strategy, modern technology, and user-focused design to elevate your brand and help you thrive in today's competitive landscape.
               </p>
             </div>
@@ -105,92 +105,46 @@ const Services = () => {
             {servicesList.map((service, index) => (
               <div
                 key={index}
-                className={`w-full ${service.bgColor} rounded-xl lg:rounded-[20px] overflow-hidden shadow-lg mt-6 sm:mt-8 transition-all duration-300`}
+                className={`w-full flex flex-col lg:flex-row items-center justify-between ${service.bgColor} rounded-xl lg:rounded-[20px] overflow-hidden shadow-lg mt-6 sm:mt-8 transition-all duration-300`}
               >
-                {/* Mobile Layout */}
-                <div className="lg:hidden">
-                  {/* Text Block - Mobile */}
-                  <div className="w-full p-6 sm:p-8 flex flex-col gap-3 sm:gap-4 text-center">
-                    <h3 className={`${service.color} text-sm sm:text-base md:text-lg uppercase font-bold tracking-wide`}>
-                      {service.name}
-                    </h3>
-                    <h4 className="text-gray-900 text-xl sm:text-2xl font-bold leading-tight">
-                      {service.subheading}
-                    </h4>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify">
-                      {service.description}
-                    </p>
-                    {service.name === 'Web Development' ? (
-                      <button
-                        type="button"
-                        className="flex items-center justify-center gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
-                      >
-                        See more
-                        <span className="text-base sm:text-lg">➔</span>
-                      </button>
-                    ) : (
-                      <Link
-                        to="/contact"
-                        className="flex items-center justify-center gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
-                      >
-                        Get in touch
-                        <span className="text-base sm:text-lg">➔</span>
-                      </Link>
-                    )}
-                  </div>
-
-                  {/* Image Block - Mobile - Positioned lower and extends to bottom */}
-                  <div className="w-full h-64 sm:h-80 md:h-96 bg-[#E5E9F0] flex items-center justify-center rounded-xl mx-4 mb-4 -mt-2">
-                    <img
-                      src={service.image}
-                      alt={`${service.name} Illustration`}
-                      className="object-contain w-full h-full p-4 sm:p-6"
-                      loading="lazy"
-                    />
-                  </div>
+                {/* Text Block - Full width on mobile, half width on desktop */}
+                <div className="w-full lg:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col gap-3 sm:gap-4 text-center lg:text-left">
+                  <h3 className={`${service.color} text-sm sm:text-base md:text-lg uppercase font-bold tracking-wide`}>
+                    {service.name}
+                  </h3>
+                  <h4 className="text-gray-900 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                    {service.subheading}
+                  </h4>
+                  <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                    {service.description}
+                  </p>
+                  {service.name === 'Web Development' ? (
+                    <button
+                      type="button"
+                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
+                    >
+                      See more
+                      <span className="text-base sm:text-lg">➔</span>
+                    </button>
+                  ) : (
+                    <Link
+                      to="/contact"
+                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
+                    >
+                      Get in touch
+                      <span className="text-base sm:text-lg">➔</span>
+                    </Link>
+                  )}
                 </div>
 
-                {/* Desktop Layout */}
-                <div className="hidden lg:flex items-center justify-between">
-                  {/* Text Block - Desktop */}
-                  <div className="w-1/2 p-12 flex flex-col gap-4 text-left">
-                    <h3 className={`${service.color} text-lg uppercase font-bold tracking-wide`}>
-                      {service.name}
-                    </h3>
-                    <h4 className="text-gray-900 text-4xl font-bold leading-tight">
-                      {service.subheading}
-                    </h4>
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      {service.description}
-                    </p>
-                    {service.name === 'Web Development' ? (
-                      <button
-                        type="button"
-                        className="flex items-center justify-start gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
-                      >
-                        See more
-                        <span className="text-lg">➔</span>
-                      </button>
-                    ) : (
-                      <Link
-                        to="/contact"
-                        className="flex items-center justify-start gap-2 text-base text-blue-600 font-bold uppercase tracking-wide hover:text-gray-800 transition-colors duration-200 mt-2"
-                      >
-                        Get in touch
-                        <span className="text-lg">➔</span>
-                      </Link>
-                    )}
-                  </div>
-
-                  {/* Image Block - Desktop */}
-                  <div className="w-1/2 h-[520px] bg-[#E5E9F0] flex items-center justify-center rounded-2xl">
-                    <img
-                      src={service.image}
-                      alt={`${service.name} Illustration`}
-                      className="object-contain w-full h-full"
-                      loading="lazy"
-                    />
-                  </div>
+                {/* Image Block - Full width on mobile, half width on desktop */}
+                <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[520px] bg-[#E5E9F0] flex items-center justify-center rounded-xl lg:rounded-2xl mx-4 lg:mx-0 mb-4 lg:mb-0">
+                  <img
+                    src={service.image}
+                    alt={`${service.name} Illustration`}
+                    className="object-contain w-full h-full p-4 sm:p-6 lg:p-0"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             ))}
@@ -208,7 +162,7 @@ const Services = () => {
             <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl font-bold mt-3 sm:mt-4">
               Our Focus Areas 
             </h1>
-            <p className="text-gray-500 text-sm sm:text-base md:text-lg mt-3 sm:mt-4 leading-relaxed text-justify md:text-center">
+            <p className="text-gray-500 text-sm sm:text-base md:text-lg mt-3 sm:mt-4 leading-relaxed">
               We've collaborated across various sectors — with deep expertise in delivering tailored solutions for these key industries.  
             </p>
           </div>
