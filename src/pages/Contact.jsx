@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+
+
+import React, { useState, useEffect } from "react";
 import { Send } from 'lucide-react';
+import { useLocation } from "react-router-dom";
+
 // Used in Contact Form
 import WebDesignImage from "../assets/Contact Page/Web Design Service Contact.png";
-// Used in Contact Form
 import UIUXDesignImage from "../assets/Contact Page/UX Design Service Contact.png";
-// Used in Contact Form
 import DevelopmentImage from "../assets/Contact Page/Development Service Contact.png";
-// Used in Contact Form
 import BrandingImage from "../assets/Contact Page/Branding Service Contact.png";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { useRef } from "react";
 
 const servicesList = [
   { name: "Web Design", color: "border-red-500", image: WebDesignImage },
@@ -150,8 +148,9 @@ export default function Contact() {
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
-                ${formSubmitted && !name.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
+              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none 
+              placeholder:text-xs xs:placeholder:text-sm sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
+              ${formSubmitted && !name.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
             />
           </div>
 
@@ -169,8 +168,9 @@ export default function Contact() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
-                ${formSubmitted && !email.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
+              className={`w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none 
+              placeholder:text-xs xs:placeholder:text-sm sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
+              ${formSubmitted && !email.trim() ? "border-red-500" : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"}`}
             />
           </div>
 
@@ -185,7 +185,9 @@ export default function Contact() {
               placeholder="Enter your company name"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none 
+              placeholder:text-xs xs:placeholder:text-sm sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
+              border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
             />
           </div>
 
@@ -200,12 +202,16 @@ export default function Contact() {
               placeholder="Enter your website URL"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
-              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none 
+              placeholder:text-xs xs:placeholder:text-sm sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
+              border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
             />
           </div>
         </div>
 
         {/* Services */}
+        {/* unchanged, keep as is */}
+                {/* Services */}
         <div className="mt-3 xs:mt-4 sm:mt-6 md:mt-8">
           <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800 mb-1 xs:mb-2 md:mb-4">
             What services are you looking for?<span className="text-red-500"> *</span>
@@ -242,7 +248,7 @@ export default function Contact() {
           <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800 mb-1 xs:mb-2 md:mb-4">
             What kind of project are you looking for?
           </p>
-          <div className="w-full flex flex-wrap gap-2 xs:gap-3 sm:gap-4 md:gap-5">
+          <div className="w-full flex flex-col sm:flex-row gap-2 xs:gap-3 sm:gap-4 md:gap-5">
             {['One-time project', 'Ongoing maintenance', 'Both'].map((type, index) => (
               <label
                 key={index}
@@ -263,6 +269,8 @@ export default function Contact() {
         </div>
 
         {/* Deadline */}
+        {/* unchanged */}
+{/* Deadline */}
         <div className="mt-3 xs:mt-4 sm:mt-6 md:mt-8">
           <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800 mb-1 xs:mb-2 md:mb-4">
             When is the project deadline?
@@ -301,10 +309,11 @@ export default function Contact() {
             value={message}
             onChange={handleTextareaChange}
             placeholder="Write here..."
-            className={`w-full resize-none px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none placeholder:text-md sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 ${
-              formSubmitted && message.trim() === ""
-                ? "border-red-500 focus:border-red-500 focus:ring-red-100"
-                : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            className={`w-full resize-none px-2 xs:px-3 sm:px-4 py-1 xs:py-1.5 sm:py-2 md:py-3 rounded-md border-2 xs:border-3 transition-all outline-none 
+            placeholder:text-xs xs:placeholder:text-sm sm:placeholder:text-base md:placeholder:text-lg placeholder-gray-400 
+            ${formSubmitted && message.trim() === ""
+              ? "border-red-500 focus:border-red-500 focus:ring-red-100"
+              : "border-gray-200 hover:border-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
             }`}
           />
           <div className="text-[10px] xs:text-xs sm:text-sm md:text-base mt-1 xs:mt-2 text-gray-500">
