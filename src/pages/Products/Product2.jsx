@@ -1,13 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
-import ComingSoonIcon from "../../assets/logo.png";
-import AppPreview from "../../assets/logo.png";
-import SocialMediaImage from "../../assets/Contact Us.mp4";
-import { Link } from "react-router-dom";
 import { Rocket } from "lucide-react";
-import Athlixir from "../../assets/Home Page/Athlixir.png";
-
 
 export default function Products2() {
   const navigate = useNavigate();
@@ -21,57 +15,59 @@ export default function Products2() {
   };
 
   return (
-    <div className="flex flex-col items-center  pt-16 gap-[68px] w-full">
+    <div className="flex flex-col items-center pt-16 gap-16 w-full px-4 sm:px-6 lg:px-0">
       {/* Section 1: Header */}
-            <div className="w-full max-w-[1320px] flex flex-col items-center gap-[20px]">
-              {/* Label */}
-              <div className="text-lg text-blue-600 font-semibold uppercase">
-                ~ Products ~
-              </div>
-      
-              {/* Heading + Logo */}
-              <div className="flex items-center justify-center text-center text-gray-900 font-bold gap-3">
-                <span className="text-5xl ">
-                  Products by
-                </span>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={Logo}
-                    alt="Logo"
-                    className="w-[63px] h-[63px] object-contain"
-                    loading="lazy"
-                  />
-                  <span className="text-5xl whitespace-nowrap">
-                    Techno Vanam
-                  </span>
-                </div>
-              </div>
-      
-              {/* Description */}
-              <p className="text-center text-[#667097] text-lg leading-[1.6] max-w-5xl">
-                At Techno Vanam, we don’t just create for clients—we build for ourselves too. Our digital products are crafted to enhance workflows, spark creativity, and solve real-world problems for designers, developers, and businesses alike.
-              </p>
-            </div>
+      <div className="w-full max-w-7xl flex flex-col items-center gap-4 md:gap-6 lg:gap-8 px-4">
+        {/* Label */}
+        <div className="text-sm md:text-base lg:text-lg text-blue-600 font-semibold uppercase tracking-wider">
+          ~ Products ~
+        </div>
+
+        {/* Heading + Logo */}
+        <div className="flex flex-col sm:flex-row items-center justify-center text-center text-gray-900 font-bold gap-2 sm:gap-3 lg:gap-4">
+          <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
+            Products by
+          </span>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain"
+              loading="lazy"
+            />
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl whitespace-nowrap">
+              Techno Vanam
+            </span>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="text-justify sm:text-justify md:text-justify lg:text-center text-[#667097] text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-5xl px-2">
+          At Techno Vanam, we don’t just create for clients—we build for ourselves too.
+          Our digital products are crafted to enhance workflows, spark creativity, and
+          solve real-world problems for designers, developers, and businesses alike.
+        </p>
+      </div>
 
       {/* Tabs */}
-      <div className="w-full max-w-[1200px] flex justify-between items-center gap-[16px] bg-white border border-[#EBEFF6] shadow-md rounded-full px-[21px] py-3">
-        <p className="text-black text-xl font-semibold px-6 text-left w-auto">
+      <div className="w-full max-w-6xl flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-4 bg-white border border-[#EBEFF6] shadow-md rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 sm:py-3">
+        <p className="text-black text-lg sm:text-xl font-semibold px-2 sm:px-6 text-center sm:text-left w-full sm:w-auto">
           What We’re Working On
         </p>
-        <div className="flex gap-[16px] justify-end">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center sm:justify-end w-full sm:w-auto">
           <button
             onClick={handleLatestReleasesClick}
-            className="flex justify-center items-center px-5 py-3 border border-[#EBEFF6] rounded-full shadow-sm text-[#868DA6] hover:bg-[#f2f4f8] hover:text-[#2F2F2F] transition duration-200 w-auto"
+            className="flex justify-center items-center px-4 sm:px-5 py-2.5 sm:py-3 border border-[#EBEFF6] rounded-full shadow-sm text-[#868DA6] hover:bg-[#f2f4f8] hover:text-[#2F2F2F] transition duration-200 min-w-[140px] sm:min-w-[160px]"
           >
-            <span className="text-base font-medium">
+            <span className="text-sm sm:text-base font-medium">
               🌐 Latest Releases
             </span>
           </button>
           <button
             onClick={handleWhatWeWorkingOnClick}
-            className="flex justify-center items-center px-5 py-3 border border-[#2388FF] rounded-full shadow-sm text-[#2388FF] hover:bg-[#1f7ae0] hover:text-white transition duration-200 w-auto"
+            className="flex justify-center items-center px-4 sm:px-5 py-2.5 sm:py-3 border border-[#2388FF] rounded-full shadow-sm text-[#2388FF] hover:bg-[#1f7ae0] hover:text-white transition duration-200 min-w-[140px] sm:min-w-[160px]"
           >
-            <span className="text-base font-medium">
+            <span className="text-sm sm:text-base font-medium">
               🔒 What We’re Working On
             </span>
           </button>
@@ -79,51 +75,52 @@ export default function Products2() {
       </div>
 
       {/* Product Card */}
-      <div className="bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-[28px] w-full max-w-[1200px] flex flex-row items-center justify-between px-[48px] pt-[70px] pb-[48px] min-h-[690px]">
-        {/* Left Text Block */}
-        <div className="flex flex-col gap-6 w-[600px]">
-          <h2 className="text-[#2388FF] text-4xl font-bold leading-[42px]">
+      <div className="bg-[#F4F2FF] border border-[#B4CDF6] shadow-lg rounded-[20px] w-full max-w-[1200px] p-6 sm:p-10 lg:p-12 gap-8">
+        {/* Text Block */}
+        <div className="flex flex-col gap-6">
+          <h2 className="text-[#2388FF] text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug">
             ATHLIXIR
           </h2>
-          <p className="text-[#3B4A68] text-lg leading-[26px] w-full">
-            Athlixir is currently in development — a groundbreaking platform built to empower 50+ athlete communities across Tier-2 and Tier-3 regions in India and beyond. We're engineering a powerful ecosystem capable of analyzing 300,000+ performance data points, using advanced AI to enable smarter training decisions, real-time injury tracking, personalized growth plans, and verified recognition for emerging talent.<br/><br/>Whether you're an aspiring athlete, coach, or organization, Athlixir is your intelligent companion for measurable improvement, safety, and career visibility — all in one place.
+          <p className="text-[#3B4A68] text-sm sm:text-base md:text-lg leading-relaxed">
+            Athlixir is currently in development — a groundbreaking platform built to
+            empower 50+ athlete communities across Tier-2 and Tier-3 regions in India
+            and beyond. We're engineering a powerful ecosystem capable of analyzing
+            300,000+ performance data points, using advanced AI to enable smarter
+            training decisions, real-time injury tracking, personalized growth plans,
+            and verified recognition for emerging talent.
+            <br /><br />
+            Whether you're an aspiring athlete, coach, or organization, Athlixir is your
+            intelligent companion for measurable improvement, safety, and career
+            visibility — all in one place.
           </p>
 
           {/* Highlights */}
-          <div className="flex flex-col gap-7 mt-7">
-            <div className="flex flex-row gap-[60px]">
-              <div className="flex flex-col gap-1 w-[200px]">
-                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
-                  50+
-                </p>
-                <p className="text-blue-600 text-base leading-[18px]">
+          <div className="flex flex-col gap-6 mt-4">
+            <div className="flex flex-col sm:flex-row gap-6">
+              <div className="flex flex-col gap-1 flex-1">
+                <p className="text-[#19213D] font-bold text-lg">50+</p>
+                <p className="text-blue-600 text-sm sm:text-base">
                   Target athlete communities
                 </p>
               </div>
-              <div className="flex flex-col gap-1 w-[320px]">
-                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
-                  300,000+
-                </p>
-                <p className="text-blue-600 text-base leading-[18px]">
+              <div className="flex flex-col gap-1 flex-1">
+                <p className="text-[#19213D] font-bold text-lg">300,000+</p>
+                <p className="text-blue-600 text-sm sm:text-base">
                   Projected performance insights powered by AI
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-row gap-6">
-              <div className="flex flex-col gap-1 w-[240px]">
-                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
-                  100%
-                </p>
-                <p className="text-blue-600 text-base leading-[18px]">
+            <div className="flex flex-col sm:flex-row gap-6">
+              <div className="flex flex-col gap-1 flex-1">
+                <p className="text-[#19213D] font-bold text-lg">100%</p>
+                <p className="text-blue-600 text-sm sm:text-base">
                   Focused on Unlocking Grassroots Sports Potential
                 </p>
               </div>
-              <div className="flex flex-col gap-1 w-[320px]">
-                <p className="text-[#19213D] font-bold text-lg leading-[30px]">
-                  1
-                </p>
-                <p className="text-blue-600 text-base leading-[18px]">
+              <div className="flex flex-col gap-1 flex-1">
+                <p className="text-[#19213D] font-bold text-lg">1</p>
+                <p className="text-blue-600 text-sm sm:text-base">
                   Unified Platform for Growth, Recognition & Performance
                 </p>
               </div>
@@ -131,59 +128,14 @@ export default function Products2() {
           </div>
 
           {/* Coming Soon */}
-<div className="flex items-center gap-2 mt-[28px]">
-  <p className="text-blue-600 text-xl font-bold uppercase tracking-[0.06em]">
-    COMING SOON
-  </p>
-  <Rocket className="w-5 h-5 text-[#2388FF]" />
-</div>
-
-        </div>
-
-        {/* Right Image */}
-        <img
-          src={Athlixir}
-          alt="App preview"
-          className="w-[500px] h-[460px] object-cover rounded-[28px]"
-          loading="lazy"
-        />
-      </div>
-            {/* CTA Section */}
-      {/* <section className="w-full flex flex-col items-center h-[600px] bg-blue-600">
-        <div className="w-full max-w-7xl flex flex-row items-center justify-between gap-8"> */}
-          
-          {/* Image First */}
-        <br />
-
-          {/* Content Second (on the right now) */}
-          {/* <div className="w-1/2 text-white text-left px-8pt-20 pb-20">
-            <h2 className="text-5xl font-bold leading-tight">
-              Ready to launch something amazing with Techno Vanam?
-            </h2>
-            <p className="text-lg mt-4">
-              Our creative experts are here to design, develop, and deliver high-performing digital experiences tailored to your brand. Let’s build something great together.
+          <div className="flex items-center gap-2 mt-6">
+            <p className="text-blue-600 text-base sm:text-lg lg:text-xl font-bold uppercase tracking-wide">
+              COMING SOON
             </p>
-            <div className="pt-6 flex justify-start">
-              <Link to="/contact">
-                <button className="flex items-center gap-2 px-7 py-4 bg-white text-blue-600 font-bold text-base rounded-full border-2 shadow-md hover:bg-gray-100 hover:bg-transparent hover:text-white transition">
-                  Contact Us
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="w-4 h-4 transform -scale-y-100"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-                  </svg>
-                </button>
-              </Link>
-            </div>
+            <Rocket className="w-5 h-5 text-[#2388FF]" />
           </div>
-      
         </div>
-      </section> */}
+      </div>
     </div>
   );
 }

@@ -103,51 +103,52 @@ const Services = () => {
             </div>
 
             {servicesList.map((service, index) => (
-              <div
-                key={index}
-                className={`w-full flex flex-col lg:flex-row items-center justify-between ${service.bgColor} rounded-xl lg:rounded-[20px] overflow-hidden shadow-lg mt-6 sm:mt-8 transition-all duration-300`}
-              >
-                {/* Text Block - Full width on mobile, half width on desktop */}
-                <div className="w-full lg:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col gap-3 sm:gap-4 text-center lg:text-left">
-                  <h3 className={`${service.color} text-sm sm:text-base md:text-lg uppercase font-bold tracking-wide`}>
-                    {service.name}
-                  </h3>
-                  <h4 className="text-gray-900 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                    {service.subheading}
-                  </h4>
-                  <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                  {service.name === 'Web Development' ? (
-                    <button
-                      type="button"
-                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-blue-700 transition-colors duration-200 mt-2"
-                    >
-                      Get in touch
-                      <span className="text-base sm:text-lg">➔</span>
-                    </button>
-                  ) : (
-                    <Link
-                      to="/contact"
-                      className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-blue-700 transition-colors duration-200 mt-2"
-                    >
-                      Get in touch
-                      <span className="text-base sm:text-lg">➔</span>
-                    </Link>
-                  )}
-                </div>
+  <div
+    key={index}
+    className={`w-full flex flex-col lg:flex-row items-center justify-between ${service.bgColor} rounded-xl lg:rounded-[20px] overflow-hidden shadow-lg mt-6 sm:mt-8 transition-all duration-300`}
+  >
+    {/* Text Block */}
+    <div className="w-full lg:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col gap-3 sm:gap-4 text-left">
+      <h3 className={`${service.color} text-sm sm:text-base md:text-lg uppercase font-bold tracking-wide`}>
+        {service.name}
+      </h3>
+      <h4 className="text-gray-900 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+        {service.subheading}
+      </h4>
+      <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+        {service.description}
+      </p>
+      {service.name === 'Web Development' ? (
+        <button
+          type="button"
+          className="flex items-center justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-blue-700 transition-colors duration-200 mt-2"
+        >
+          Get in touch
+          <span className="text-base sm:text-lg">➔</span>
+        </button>
+      ) : (
+        <Link
+          to="/contact"
+          className="flex items-center justify-start gap-2 text-sm sm:text-base text-blue-600 font-bold uppercase tracking-wide hover:text-blue-700 transition-colors duration-200 mt-2"
+        >
+          Get in touch
+          <span className="text-base sm:text-lg">➔</span>
+        </Link>
+      )}
+    </div>
 
-                {/* Image Block - Full width on mobile, half width on desktop */}
-                <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[520px] bg-[#E5E9F0] flex items-center justify-center rounded-xl lg:rounded-2xl mx-4 lg:mx-0 mb-4 lg:mb-0">
-                  <img
-                    src={service.image}
-                    alt={`${service.name} Illustration`}
-                    className="object-contain w-full h-full p-4 sm:p-6 lg:p-0"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            ))}
+    {/* Image Block */}
+    <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[520px] bg-[#E5E9F0] flex items-center justify-center rounded-xl lg:rounded-2xl mx-4 lg:mx-0 mb-0 lg:mb-0 p-0 sm:p-6 lg:p-0">
+      <img
+        src={service.image}
+        alt={`${service.name} Illustration`}
+        className="object-contain w-full h-full"
+        loading="lazy"
+      />
+    </div>
+  </div>
+))}
+
           </div>
         </div>  
       </section>
@@ -168,31 +169,32 @@ const Services = () => {
           </div>
 
           {/* Industries Cards - Responsive Grid */}
-          <div className="w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-1  justify-items-center mt-4 sm:mt-6">
-            {industriesList.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-row justify-between items-center p-3 sm:p-4 gap-3 bg-white border-2 border-gray-200 rounded-xl sm:rounded-2xl shadow-sm w-full max-w-[300px] min-h-[80px] sm:min-h-[90px] transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-md hover:border-blue-500"
-              >
-                <div className="flex flex-row items-center gap-3 w-full">
-                  <img
-                    src={item.image} 
-                    alt={`${item.title} Icon`}
-                    className="w-12 h-12 sm:w-14 sm:h-14 object-cover flex-shrink-0"
-                    loading="lazy"
-                  />
-                  <div className="flex flex-col items-start flex-grow min-w-0">
-                    <span className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
-                      {item.label}
-                    </span>
-                    <span className="text-gray-900 text-lg sm:text-xl font-semibold leading-tight">
-                      {item.title}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 justify-items-center mt-4 sm:mt-6">
+  {industriesList.map((item, index) => (
+    <div
+      key={index}
+      className="flex flex-row justify-between items-center p-3 sm:p-4 gap-3 bg-white border-2 border-gray-200 rounded-xl sm:rounded-2xl shadow-sm w-full max-w-[300px] min-h-[80px] sm:min-h-[90px] transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-md hover:border-blue-500"
+    >
+      <div className="flex flex-row items-center gap-3 w-full">
+        <img
+          src={item.image} 
+          alt={`${item.title} Icon`}
+          className="w-12 h-12 sm:w-14 sm:h-14 object-cover flex-shrink-0"
+          loading="lazy"
+        />
+        <div className="flex flex-col items-start flex-grow min-w-0">
+          <span className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${item.labelColor}`}>
+            {item.label}
+          </span>
+          <span className="text-gray-900 text-lg sm:text-xl font-semibold leading-tight">
+            {item.title}
+          </span>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 

@@ -205,127 +205,144 @@ export default function About() {
       </section>
 
       {/* ===== Content Grid Section ===== */}
-      <section id="what-drives-us" className="flex flex-col items-center bg-white px-4 sm:px-8 pt-12 sm:pt-16 lg:pt-20 pb-6">
-        <div className="w-full max-w-7xl">
-          {/* What Drives Us */}
-          <div className="flex flex-col items-center gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-20 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#19213D]">
-              What Drives Us
-            </h2>
-            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] max-w-4xl px-2">
-              In 2025, we began building our own digital products—driven by the
-              same vision and purpose that fuel everything we do: turning ideas
-              into impactful, user‑centered experiences.
-            </p>
-          </div>
+      {/* ===== Content Grid Section ===== */}
+<section id="what-drives-us" className="flex flex-col items-center bg-white px-4 sm:px-8 pt-12 sm:pt-16 lg:pt-20 pb-6">
+  <div className="w-full max-w-7xl">
+    {/* What Drives Us */}
+    <div className="flex flex-col items-center gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-20 text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#19213D]">
+        What Drives Us
+      </h2>
+      <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] max-w-4xl px-2">
+        In 2025, we began building our own digital products—driven by the
+        same vision and purpose that fuel everything we do: turning ideas
+        into impactful, user-centered experiences.
+      </p>
+    </div>
 
-          {/* First Row: Mission + Illustration */}
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 mb-6 sm:mb-8 lg:mb-10">
-            {/* Mission Card */}
-            <div className="w-full lg:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 pb-8 sm:pb-12 lg:pb-15">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#19213D] mb-3 sm:mb-4 lg:mb-6">
-                Our Mission: <br />
-                Turning Vision into Reality
-              </h3>
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
-                We believe great design is the foundation of every successful
-                brand. At Techno Vanam, we craft intuitive user experiences,
-                build high-performance websites, and design graphics that leave
-                a lasting impression. Innovation and functionality guide
-                everything we create.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="relative flex-shrink-0">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
-                    <img
-                      src={Design}
-                      alt="design"
-                      className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
-                      Design-led Development
-                    </p>
-                    <p className="text-xs sm:text-sm text-[#667097]">
-                      We blend aesthetics and technology to create products
-                      users love.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="relative flex-shrink-0">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
-                    <img
-                      src={Scale}
-                      alt=""
-                      className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
-                      Scalable & Creative
-                    </p>
-                    <p className="text-xs sm:text-sm text-[#667097]">
-                      From startups to enterprises, we deliver flexible and
-                      impactful digital solutions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Illustration Card */}
-            <div className="w-full lg:w-1/3 flex items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8 min-h-[200px] sm:min-h-[250px]">
+    
+
+    {/* First Row: Mission + Illustration */}
+    <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 mb-6 sm:mb-8 lg:mb-10">
+      {/* Mission Card */}
+      <div className="w-full lg:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 pb-8 sm:pb-12 lg:pb-15">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#19213D] mb-3 sm:mb-4 lg:mb-6">
+          Our Mission: <br />
+          Turning Vision into Reality
+        </h3>
+        <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
+          We believe great design is the foundation of every successful
+          brand. At Techno Vanam, we craft intuitive user experiences,
+          build high-performance websites, and design graphics that leave
+          a lasting impression. Innovation and functionality guide
+          everything we create.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="flex gap-3 sm:gap-4">
+            <div className="relative flex-shrink-0">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
               <img
-                src={Mission}
-                alt="Mission"
-                className="w-full max-w-[100%] h-auto"
+                src={Design}
+                alt="design"
+                className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
               />
             </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
+                Design-led Development
+              </p>
+              <p className="text-xs sm:text-sm text-[#667097]">
+                We blend aesthetics and technology to create products
+                users love.
+              </p>
+            </div>
           </div>
-
-          {/* Second Row: Trophy + Vision */}
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 mb-6">
-            {/* Trophy Card */}
-            <div className="w-full lg:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-6 sm:p-8 lg:p-10 min-h-[200px] sm:min-h-[250px]">
+          <div className="flex gap-3 sm:gap-4">
+            <div className="relative flex-shrink-0">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
               <img
-                src={Vission}
-                alt="Vission"
-                className="w-full h-auto object-contain"
+                src={Scale}
+                alt=""
+                className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
               />
             </div>
-
-            {/* Vision Card */}
-            <div className="w-full lg:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#19213D] mb-3 sm:mb-4 lg:mb-6">
-                Our Vision:
-              </h3>
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
-                To build a digital ecosystem where design, technology, and
-                human-centric thinking shape better experiences for all. We
-                envision a future where businesses—big or small—can access
-                high-quality digital tools that drive growth, creativity, and
-                connection.
+            <div className="flex-1 min-w-0">
+              <p className="font-bold text-sm sm:text-base lg:text-lg text-[#2F2F2F]">
+                Scalable & Creative
               </p>
-              <ul className="space-y-2 sm:space-y-3">
-                {[
-                  "Empowering creators through smart, intuitive platforms",
-                  "Driving meaningful change with every project",
-                  "Making digital innovation accessible to everyone",
-                ].map((txt, i) => (
-                  <li key={i} className="relative pl-6 sm:pl-8 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097]">
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-[#31C65B] flex items-center justify-center">
-                      <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 border-b-2 border-r-2 border-[#31C65B]" />
-                    </span>
-                    {txt}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-xs sm:text-sm text-[#667097]">
+                From startups to enterprises, we deliver flexible and
+                impactful digital solutions.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      {/* Illustration Card - hidden on mobile */}
+      <div className="hidden sm:flex w-full lg:w-1/3 items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8 min-h-[200px] sm:min-h-[250px]">
+        <img
+          src={Mission}
+          alt="Mission"
+          className="w-full max-w-[100%] h-auto"
+        />
+      </div>
+    </div>
+
+{/* Mobile View: Mission + Vision images in one row */}
+    <div className="flex sm:hidden gap-4 mb-6">
+      <div className="flex-1 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4">
+        <img src={Mission} alt="Mission" className="w-full h-auto object-contain" />
+      </div>
+      <div className="flex-1 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4">
+        <img src={Vission} alt="Vision" className="w-full h-auto object-contain" />
+      </div>
+    </div>
+    
+    {/* Second Row: Trophy + Vision */}
+    <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 mb-6">
+      {/* Trophy Card - hidden on mobile */}
+      <div className="hidden sm:flex w-full lg:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-6 sm:p-8 lg:p-10 min-h-[200px] sm:min-h-[250px]">
+        <img
+          src={Vission}
+          alt="Vission"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
+      {/* Vision Card */}
+      <div className="w-full lg:w-2/3 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#19213D] mb-3 sm:mb-4 lg:mb-6">
+          Our Vision:
+        </h3>
+        <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] mb-6 sm:mb-8 lg:mb-12">
+          To build a digital ecosystem where design, technology, and
+          human-centric thinking shape better experiences for all. We
+          envision a future where businesses—big or small—can access
+          high-quality digital tools that drive growth, creativity, and
+          connection.
+        </p>
+        <ul className="space-y-2 sm:space-y-3">
+          {[
+            "Empowering creators through smart, intuitive platforms",
+            "Driving meaningful change with every project",
+            "Making digital innovation accessible to everyone",
+          ].map((txt, i) => (
+            <li
+              key={i}
+              className="relative pl-6 sm:pl-8 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097]"
+            >
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-[#31C65B] flex items-center justify-center">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 border-b-2 border-r-2 border-[#31C65B]" />
+              </span>
+              {txt}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* ===== Team Section ===== */}
       <section className="w-full bg-[#F6F8FC] py-12 sm:py-16 px-4 sm:px-8">
