@@ -234,7 +234,7 @@ export default function Contact() {
                     src={service.image}
                     alt={service.name}
                     loading="lazy"
-                    className="mb-2 xs:mb-3 sm:mb-4 md:mb-6 lg:mb-8 w-10 xs:w-12 sm:w-16 md:w-20 lg:w-24 h-10 xs:h-12 sm:h-16 md:h-20 lg:h-24 object-cover rounded-md sm:rounded-lg shadow-sm"
+                    className="mb-2 xs:mb-3 sm:mb-4 md:mb-6 lg:mb-8 w-14 xs:w-16 sm:w-20 md:w-24 lg:w-28 h-14 xs:h-16 sm:h-20 md:h-24 lg:h-28 object-cover rounded-md sm:rounded-lg shadow-sm"
                   />
                   <span className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-700 text-center">{service.name}</span>
                 </button>
