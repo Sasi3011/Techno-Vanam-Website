@@ -123,22 +123,22 @@ export default function About() {
   return (
     <>
       {/* ===== Hero Section ===== */}
-      <section className="flex flex-col items-center pt-16 sm:pt-20 lg:pt-[65px] pb-16 sm:pb-24 lg:pb-32 mt-6 sm:mt-12 lg:mt-23 px-4 sm:px-8 lg:px-16">
+      <section className="flex flex-col items-center pt-16 sm:pt-20 lg:pt-8 xl:pt-12 pb-16 sm:pb-24 lg:pb-32 mt-6 sm:mt-12 lg:mt-8 xl:mt-12 px-4 sm:px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-1 w-full max-w-7xl">
-          {/* Left: Copy Block */}
-          <div className="w-full lg:w-1/2">
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-black font-bold">
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">We are</span>
+          {/* Left: Copy Block - Centered for desktop/laptop, default for mobile */}
+          <div className="w-full lg:w-full text-center lg:text-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-black font-bold">
+              <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">We are</span>
               <div className="flex items-center gap-2 sm:gap-3">
                 <img
                   src={Logo}
                   alt="Logo"
-                  className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[60px] lg:h-[60px] object-contain"
+                  className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-[70px] lg:h-[70px] xl:w-[80px] xl:h-[80px] object-contain"
                 />
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap">Techno Vanam</span>
+                <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl whitespace-nowrap">Techno Vanam</span>
               </div>
             </div>
-            <p className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg leading-relaxed text-[#667097] text-center lg:text-left">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-[#667097] text-center max-w-4xl mx-auto">
               We're not just an agency — we're a creative tech studio passionate
               <span className="hidden sm:inline"><br/></span>
               <span className="sm:hidden"> </span>
@@ -150,7 +150,7 @@ export default function About() {
               <span className="sm:hidden"> </span>
               experiences that move people and businesses forward.
             </p>
-            <div className="mt-6 sm:mt-8 flex items-center justify-center lg:justify-start gap-2">
+            <div className="mt-6 sm:mt-8 flex items-center justify-center gap-2">
               <div
                 onClick={() =>
                   document.getElementById("what-drives-us")?.scrollIntoView({ behavior: "smooth" })
@@ -165,14 +165,6 @@ export default function About() {
                 </span>
               </div>
             </div>
-          </div>
-          {/* Right: Hero Artwork */}
-          <div className="w-full lg:w-1/2 relative">
-            {/* <img
-              src={Hero}
-              alt="logo circle"
-              className="absolute inset-x-10 mx-auto w-[800px] h-auto object-contain"
-            /> */}
           </div>
         </div>
       </section>
