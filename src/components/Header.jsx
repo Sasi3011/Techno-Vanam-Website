@@ -24,7 +24,7 @@ const Header = () => {
           aria-label="Techno Vanam Home"
         >
           <img 
-            src={Logo} 
+            src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825654/logo_lkfqmn.png" 
             alt="Techno Vanam Logo" 
             className="h-8 sm:h-10 w-auto object-contain" 
             loading="lazy" 

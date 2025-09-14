@@ -1,49 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import HighClassPopup from '../components/HighClassPopup';
-
-// Section: Process Steps Images
-import designImage from "../assets/Home Page/Project Design Phase.png"; // Image: Design Phase
-import devImage from "../assets/Home Page/Project Development Phase.png"; // Image: Development Phase
-import ideaImage from "../assets/Home Page/Project Idea Phase.png"; // Image: Idea Phase
-import launchImage from "../assets/Home Page/Project Launch Phase.png"; // Image: Launch Phase
-import researchImage from "../assets/Home Page/Project Research Phase.png"; // Image: Research Phase
-import supportImage from "../assets/Home Page/Support Phase.png"; // Image: Support Phase
-import ideaicon from "../assets/Home Page/Idea Phase Icon.png"; // Icon: Idea Phase
-import researchicon from "../assets/Home Page/Research Phase Icon.png"; // Icon: Research Phase
-import designicon from "../assets/Home Page/Design Phase Icon.png"; // Icon: Design Phase
-import devicon from "../assets/Home Page/Development Phase Icon.png"; // Icon: Development Phase
-import launchicon from "../assets/Home Page/Launch Phase Icon.png"; // Icon: Launch Phase
-import supporticon from "../assets/Home Page/Support Phase Icon.png"; // Icon: Support Phase
-import athlixirImage from "../assets/Home Page/Athlixir.png"; // Image: Athlixir Product
-import SocialMediaImage from "../assets/Contact Us.mp4"; // Video: Social Media
-import heroIllustration from "../assets/Home Video.mp4"; // Video: Hero Section
-// Section: Services Images
-import BrandingImage from "../assets/Home Page/Branding.png"; // Image: Branding Service
-import webDevelopmentImage from "../assets/Home Page/Web Development.png"; // Image: Web Development Service
-import UIUXDesignImage from "../assets/Home Page/UIUX.png"; // Image: UI/UX Service
-// Section: Project Images
-import Project1 from "../assets/Home Page/Project1.jpg"; // Image: Project 1
-import Project2 from "../assets/Home Page/Project2.jpg"; // Image: Project 2
-import Project3 from "../assets/Home Page/Project3.jpg"; // Image: Project 3
-import Project4 from "../assets/Home Page/Project4.jpg"; // Image: Project 4
-import Project5 from "../assets/Home Page/Project5.jpg"; // Image: Project 5
-import Project6 from "../assets/Home Page/Project6.jpg"; // Image: Project 6
-import Project7 from "../assets/Home Page/Project7.jpg"; // Image: Project 7
-import Project8 from "../assets/Home Page/Project8.jpg"; // Image: Project 8
-import Project9 from "../assets/Home Page/Project9.jpg"; // Image: Project 9
-import Project10 from "../assets/Home Page/Project10.jpg"; // Image: Project 10
-import Project11 from "../assets/Home Page/Project11.webp"; // Image: Project 11
-import Project12 from "../assets/Home Page/Project12.jpg"; // Image: Project 12
-import Project13 from "../assets/Home Page/Project13.webp"; // Image: Project 13
-import Project14 from "../assets/Home Page/Project14.webp"; // Image: Project 14
-import Project15 from "../assets/Home Page/Project15.jpg"; // Image: Project 15
-import Project16 from "../assets/Home Page/Project16.webp"; // Image: Project 16
-import Project17 from "../assets/Home Page/Project17.webp"; // Image: Project 17
-import Project18 from "../assets/Home Page/Project18.webp"; // Image: Project 18
-import Project19 from "../assets/Home Page/Project19.jpg"; // Image: Project 19
-import Project20 from "../assets/Home Page/Project20.webp"; // Image: Project 20
 
 const steps = [
   {
@@ -52,8 +9,8 @@ const steps = [
     description:
       "We start by understanding your goals, vision, and challenges. Then, we create a clear action plan tailored to your project's needs.",
     bgColor: "bg-[#FFEFA8]",
-    img: ideaImage,
-    icon: ideaicon,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825609/Project_Idea_Phase_ftrqmm.png",
+    icon: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825608/Idea_Phase_Icon_umhslf.png",
   },
   {
     id: 2,
@@ -61,8 +18,8 @@ const steps = [
     description:
       "Through a detailed questionnaire and business analysis, we learn what makes your brand unique — so we can design solutions that truly fit.",
     bgColor: "bg-[#D9E8FF]",
-    img: researchImage,
-    icon: researchicon,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825615/Project_Research_Phase_ayglwr.png",
+    icon: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825629/Research_Phase_Icon_cb9p9g.png",
   },
   {
     id: 3,
@@ -70,8 +27,8 @@ const steps = [
     description:
       "Whether it's a website, app, or creative poster, our designers craft intuitive interfaces and eye-catching visuals that reflect your brand identity.",
     bgColor: "bg-[#FFDADE]",
-    img: designImage,
-    icon: designicon,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825610/Project_Design_Phase_oljltz.png",
+    icon: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825607/Design_Phase_Icon_nzlu5f.png",
   },
   {
     id: 4,
@@ -79,8 +36,8 @@ const steps = [
     description:
       "Our developers bring your project to life with fast, responsive, and SEO-optimized websites built using the latest technologies and best practices.",
     bgColor: "bg-[#D9E8FF]",
-    img: devImage,
-    icon: devicon,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825609/Project_Development_Phase_nt2emc.png",
+    icon: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825607/Development_Phase_Icon_vgedby.png",
   },
   {
     id: 5,
@@ -88,8 +45,8 @@ const steps = [
     description:
       "We ensure a smooth launch with thorough testing and optimization, delivering a product that's ready to make an impact from day one.",
     bgColor: "bg-[#A79BF4]",
-    img: launchImage,
-    icon: launchicon,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825611/Project_Launch_Phase_avvee6.png",
+    icon: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825608/Launch_Phase_Icon_lt0zmy.png",
   },
   {
     id: 6,
@@ -97,110 +54,110 @@ const steps = [
     description:
       "Post-launch, we provide ongoing support to keep your project running smoothly, with updates, maintenance, and enhancements as needed.",
     bgColor: "bg-[#E9FDE4]",
-    img: supportImage,
-    icon: supporticon,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825634/Support_Phase_czkwbv.png",
+    icon: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825634/Support_Phase_Icon_rjswru.png",
   },
 ];
 
 const projects = [
   {
     title: "Project 1",
-    image: Project1,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825629/Project20_pokpes.webp",
     alt: "Project 1 - Techno Vanam Portfolio",
   },
   {
     title: "Project 2",
-    image: Project2,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825629/Project19_ot5qah.jpg",
     alt: "Project 2 - Techno Vanam Portfolio",
   },
   {
     title: "Project 3",
-    image: Project3,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825629/Project18_jx05gw.webp",
     alt: "Project 3 - Techno Vanam Portfolio",
   },
   {
     title: "Project 4",
-    image: Project4,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825629/Project15_fyvdqh.jpg",
     alt: "Project 4 - Techno Vanam Portfolio",
   },
   {
     title: "Project 5",
-    image: Project5,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825628/Project16_ssge9u.webp",
     alt: "Project 5 - Techno Vanam Portfolio",
   },
   {
     title: "Project 6",
-    image: Project6,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825628/Project17_v5wnno.webp",
     alt: "Project 6 - Techno Vanam Portfolio",
   },
   {
     title: "Project 7",
-    image: Project7,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825628/Project13_aydyc3.webp",
     alt: "Project 7 - Techno Vanam Portfolio",
   },
   {
     title: "Project 8",
-    image: Project8,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825628/Project14_kyz1f9.webp",
     alt: "Project 8 - Techno Vanam Portfolio",
   },
   {
     title: "Project 9",
-    image: Project9,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825621/Project10_mmjquo.jpg",
     alt: "Project 9 - Techno Vanam Portfolio",
   },
   {
     title: "Project 10",
-    image: Project10,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825622/Project8_rntkpw.jpg",
     alt: "Project 10 - Techno Vanam Portfolio",
   },
   {
     title: "Project 11",
-    image: Project11,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825620/Project12_czdqup.jpg",
     alt: "Project 11 - Techno Vanam Portfolio",
   },
   {
     title: "Project 12",
-    image: Project12,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825616/Project2_qryk4a.jpg",
     alt: "Project 12 - Techno Vanam Portfolio",
   },
   {
     title: "Project 13",
-    image: Project13,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825620/Project11_lz8v85.webp",
     alt: "Project 13 - Techno Vanam Portfolio",
   },
   {
     title: "Project 14",
-    image: Project14,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825620/Project5_qsh9b1.jpg",
     alt: "Project 14 - Techno Vanam Portfolio",
   },
   {
     title: "Project 15",
-    image: Project15,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825620/Project7_slix3d.jpg",
     alt: "Project 15 - Techno Vanam Portfolio",
   },
   {
     title: "Project 16",
-    image: Project16,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825619/Project9_n8x6l0.jpg ",
     alt: "Project 16 - Techno Vanam Portfolio",
   },
   {
     title: "Project 17",
-    image: Project17,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825619/Project3_vk60gw.jpg",
     alt: "Project 17 - Techno Vanam Portfolio",
   },
   {
     title: "Project 18",
-    image: Project18,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825618/Project6_sxl9qr.jpg",
     alt: "Project 18 - Techno Vanam Portfolio",
   },
   {
     title: "Project 19",
-    image: Project19,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825618/Project1_iw4nit.jpg",
     alt: "Project 19 - Techno Vanam Portfolio",
   },
   {
     title: "Project 20",
-    image: Project20,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825617/Project4_aie2pd.jpg",
     alt: "Project 20 - Techno Vanam Portfolio",
   },
 ];
@@ -410,7 +367,7 @@ const Home = () => {
           </div>
           <div className="w-full lg:flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[550 px] xl:max-w-[550px] mt-6 lg:mt-0">
             <video
-              src={heroIllustration}
+              src="https://res.cloudinary.com/dnmvriw3e/video/upload/v1757826916/Home_Video_cymz4e.mp4"
               autoPlay
               loop
               muted
@@ -466,7 +423,7 @@ const Home = () => {
         </div>
         <div className="flex-1 mx-4 sm:mx-5 mb-4 sm:mb-5 min-h-[200px] sm:min-h-[220px] md:min-h-[300px] bg-gray-100 rounded-2xl overflow-hidden">
           <img
-            src={UIUXDesignImage}
+            src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825637/UIUX_avzdc8.png"
             alt="UI/UX Design Preview"
             className="object-contain w-full h-full"
             loading="lazy"
@@ -495,7 +452,7 @@ const Home = () => {
           </div>
           <div className="hidden md:flex w-full md:w-1/2 bg-gray-100 items-center justify-center overflow-hidden">
             <img
-              src={BrandingImage}
+              src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825610/Branding_gpllkb.png"
               alt="Branding Design"
               className="object-contain w-full h-full"
               loading="lazy"
@@ -504,7 +461,7 @@ const Home = () => {
           {/* Mobile image */}
           <div className="md:hidden flex mx-4 mb-4 bg-gray-100 rounded-xl overflow-hidden h-[150px]">
             <img
-              src={BrandingImage}
+              src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825610/Branding_gpllkb.png"
               alt="Branding Design Preview"
               className="object-contain w-full h-full"
               loading="lazy"
@@ -531,7 +488,7 @@ const Home = () => {
           </div>
           <div className="hidden md:flex w-full md:w-1/2 bg-gray-100 items-center justify-center overflow-hidden">
             <img
-              src={webDevelopmentImage}
+              src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825638/Web_Development_z7wnga.png"
               alt="Web Development"
               className="object-contain w-full h-full"
               loading="lazy"
@@ -540,7 +497,7 @@ const Home = () => {
           {/* Mobile image */}
           <div className="md:hidden flex mx-4 mb-4 bg-gray-100 rounded-xl overflow-hidden h-[150px]">
             <img
-              src={webDevelopmentImage}
+              src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825638/Web_Development_z7wnga.png"
               alt="Web Development Preview"
               className="object-contain w-full h-full"
               loading="lazy"
@@ -735,7 +692,7 @@ const Home = () => {
     <div className="w-full lg:w-[45%] aspect-[4/3] rounded-xl sm:rounded-2xl lg:rounded-2xl overflow-hidden relative">
       <div className="absolute inset-0 bg-gradient-to-t from-blue-100/20 to-transparent z-10"></div>
       <img
-        src={athlixirImage}
+        src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825608/Athlixir_srv8w4.png"
         alt="Preview of Athlixir platform"
         className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
         loading="lazy"
