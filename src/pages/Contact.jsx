@@ -2,17 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Send } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
-// Used in Contact Form
-import WebDesignImage from "../assets/Contact Page/Web Design Service Contact.png";
-import UIUXDesignImage from "../assets/Contact Page/UX Design Service Contact.png";
-import DevelopmentImage from "../assets/Contact Page/Development Service Contact.png";
-import BrandingImage from "../assets/Contact Page/Branding Service Contact.png";
+
 
 const servicesList = [
-  { name: "Web Design", color: "border-red-500", image: WebDesignImage },
-  { name: "UI/UX Design", color: "border-green-500", image: UIUXDesignImage },
-  { name: "Development", color: "border-blue-500", image: DevelopmentImage },
-  { name: "Branding", color: "border-yellow-400", image: BrandingImage },
+  { name: "Web Design", color: "border-red-500", image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825592/Web_Design_Service_Contact_lbyojo.png" },
+  { name: "UI/UX Design", color: "border-green-500", image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825592/UX_Design_Service_Contact_pxltn3.png" },
+  { name: "Development", color: "border-blue-500", image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825593/Development_Service_Contact_f3lrum.png" },
+  { name: "Branding", color: "border-yellow-400", image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825592/Branding_Service_Contact_y7thya.png" },
 ];
 
 export default function Contact() {

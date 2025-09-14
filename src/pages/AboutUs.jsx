@@ -1,45 +1,28 @@
-import Logo from "../assets/logo.png"; // Import the logo image
-import Hero from "../assets/logo.png";
-import Blog from "../assets/Blog.png";
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import SocialMediaImage from "../assets/Contact Us.mp4";
-import Mission from "../assets/About Page/Mission.png";
-import Commitment from "../assets/About Page/Commitment.png";
-import TeamWork from "../assets/About Page/Team Work.png";
-import Positivity from "../assets/About Page/Postivity.png";
-import Growth from "../assets/About Page/Growth.png";
-import Innovation from "../assets/About Page/Innovatioon.png";
-import Ownership from "../assets/About Page/Ownership.png";
-import Vission from "../assets/About Page/Vission.png";
-import Design from "../assets/Design.png";
-import Scale from "../assets/Icon.png";
-import Sasi from "../assets/About Page/Sasi.png";
-import Sanju from "../assets/About Page/Sanju.png";
-import Surya from "../assets/About Page/Surya.png";
 
 const teamMembers = [
   {
     name: "Sasikiran TT",
     role: "Founder & CEO",
-    img: Sasi,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826413/Sasi_vpik2a.png",
     instagram: "https://www.instagram.com/sasi_._06/",
     linkedin: "https://www.linkedin.com/in/sasikiran-3031s/",
   },
   {
     name: "Sanjana B",
     role: "Co-founder & CTO",
-    img: Sanju,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826375/Sanju_kqcvvo.png",
     instagram: "http://instagram.com/sanjudarla07/",
     linkedin: "https://www.linkedin.com/in/sanjana-0831s/",
   },
   {
     name: "Surya P",
     role: "CPO",
-    img: Surya,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826447/Surya_tbvuw7.png",
     instagram: "https://www.instagram.com/__suryap07__/",
     linkedin: "https://www.linkedin.com/in/surya-p08/",
   },
@@ -53,7 +36,7 @@ const values = [
     gradient: "from-[#8B5CF6] to-[#DDD6FE]", // Purple
     bgColor: "bg-[#F3E8FF]",
     hoverShadow: "hover:shadow-[#8B5CF6]/40",
-    img: Innovation,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825551/Innovatioon_gvux5c.png",
   },
   {
     title: "Growth",
@@ -62,7 +45,7 @@ const values = [
     gradient: "from-[#10B981] to-[#D1FAE5]", // Green
     bgColor: "bg-[#ECFDF5]",
     hoverShadow: "hover:shadow-[#10B981]/40",
-    img: Growth,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826453/Growth_idrpse.png",
   },
   {
     title: "Ownership",
@@ -71,7 +54,7 @@ const values = [
     gradient: "from-[#1E3A8A] to-[#DBEAFE]", // Dark Blue
     bgColor: "bg-[#E0F2FE]",
     hoverShadow: "hover:shadow-[#1E3A8A]/40",
-    img: Ownership,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825550/Ownership_kxhju5.png",
   },
   {
     title: "Team Work",
@@ -80,7 +63,7 @@ const values = [
     gradient: "from-[#F97316] to-[#FFEDD5]", // Orange
     bgColor: "bg-[#FFF7ED]",
     hoverShadow: "hover:shadow-[#F97316]/40",
-    img: TeamWork,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826443/Team_Work_desido.png",
   },
   {
     title: "Commitment",
@@ -89,7 +72,7 @@ const values = [
     gradient: "from-[#EF4444] to-[#FEE2E2]", // Red
     bgColor: "bg-[#FEF2F2]",
     hoverShadow: "hover:shadow-[#EF4444]/40",
-    img: Commitment,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825551/Commitment_lud39p.png",
   },
   {
     title: "Positivity",
@@ -98,7 +81,7 @@ const values = [
     gradient: "from-[#FACC15] to-[#FEF9C3]", // Yellow
     bgColor: "bg-[#FEFCE8]",
     hoverShadow: "hover:shadow-[#FACC15]/40",
-    img: Positivity,
+    img: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826431/Postivity_ny6kj6.png",
   },
 ];
 
@@ -131,7 +114,7 @@ export default function About() {
               <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">We are</span>
               <div className="flex items-center gap-2 sm:gap-3">
                 <img
-                  src={Logo}
+                  src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825654/logo_lkfqmn.png"
                   alt="Logo"
                   className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-[70px] lg:h-[70px] xl:w-[80px] xl:h-[80px] object-contain"
                 />
@@ -234,7 +217,7 @@ export default function About() {
             <div className="relative flex-shrink-0">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
               <img
-                src={Design}
+                src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825649/Design_loxshy.png"
                 alt="design"
                 className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
               />
@@ -253,7 +236,7 @@ export default function About() {
             <div className="relative flex-shrink-0">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg bg-[#F6F6F6]" />
               <img
-                src={Scale}
+                src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825653/Icon_yhroc3.png"
                 alt=""
                 className="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 -translate-x-1/2 -translate-y-1/2"
               />
@@ -273,7 +256,7 @@ export default function About() {
       {/* Illustration Card - hidden on mobile */}
       <div className="hidden sm:flex w-full lg:w-1/3 items-center justify-center bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4 sm:p-6 lg:p-8 min-h-[200px] sm:min-h-[250px]">
         <img
-          src={Mission}
+          src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826374/Mission_rexvxc.png"
           alt="Mission"
           className="w-full max-w-[100%] h-auto"
         />
@@ -283,10 +266,10 @@ export default function About() {
 {/* Mobile View: Mission + Vision images in one row */}
     <div className="flex sm:hidden gap-4 mb-6">
       <div className="flex-1 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4">
-        <img src={Mission} alt="Mission" className="w-full h-auto object-contain" />
+        <img src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826374/Mission_rexvxc.png" alt="Mission" className="w-full h-auto object-contain" />
       </div>
       <div className="flex-1 bg-white border border-[#EBEFF6] shadow-md rounded-xl p-4">
-        <img src={Vission} alt="Vision" className="w-full h-auto object-contain" />
+        <img src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826440/Vission_clkvhq.png" alt="Vision" className="w-full h-auto object-contain" />
       </div>
     </div>
     
@@ -295,7 +278,7 @@ export default function About() {
       {/* Trophy Card - hidden on mobile */}
       <div className="hidden sm:flex w-full lg:w-1/3 relative bg-white border border-[#EBEFF6] shadow-md rounded-xl flex items-center justify-center p-6 sm:p-8 lg:p-10 min-h-[200px] sm:min-h-[250px]">
         <img
-          src={Vission}
+          src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757826440/Vission_clkvhq.png"
           alt="Vission"
           className="w-full h-auto object-contain"
         />

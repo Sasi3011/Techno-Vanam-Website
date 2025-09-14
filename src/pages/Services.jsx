@@ -1,13 +1,4 @@
 import React from "react";
-import WebDesignImage from "../assets/Service/Web Design.png";
-import AppDesignImage from "../assets/Service/App Design.png";
-import WebDevelopmentImage from "../assets/Service/Web Development.png";
-import PosterDesignImage from "../assets/Service/Poster Design.png";
-import LogoDesignImage from "../assets/Service/Logo Design.png";
-import SaaSIcon from "../assets/Service/Saas.png";
-import StartupIcon from "../assets/Service/Startup Icon.png";
-import IndustriesIcon from "../assets/Service/Company.png";
-import SocialMediaImage from "../assets/Contact Us.mp4";
 import { Link } from "react-router-dom";
 import HighClassPopup from '../components/HighClassPopup';
 import { useState } from 'react';
@@ -20,7 +11,7 @@ const servicesList = [
     subheading: "We build impactful digital experiences",
     description:
       "We design stunning, responsive websites that elevate your online presence and create seamless experiences across all devices.",
-    image: WebDesignImage,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825646/Web_Design_czkou0.png",
   },
   {
     name: "App Design",
@@ -29,7 +20,7 @@ const servicesList = [
     subheading: "We design mobile apps users love",
     description:
       "From wireframes to final UI, we design intuitive, attractive apps that enhance usability and connect deeply with your users.",
-    image: AppDesignImage,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825647/App_Design_qb4r9a.png",
   },
   {
     name: "Web Development",
@@ -38,7 +29,7 @@ const servicesList = [
     subheading: "We develop fast & scalable digital platforms",
     description:
       "We build robust, SEO-friendly websites using modern frameworks — optimized for performance, flexibility, and long-term growth.",
-    image: WebDevelopmentImage,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825648/Web_Development_md30ng.png",
   },
   {
     name: "Poster Design",
@@ -47,7 +38,7 @@ const servicesList = [
     subheading: "We create bold, high-impact poster designs",
     description:
       "Whether for digital or print, our posters grab attention, convey your message clearly, and strengthen brand communication.",
-    image: PosterDesignImage,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825648/Poster_Design_r6syn2.png",
   },
   {
     name: "Logo Design",
@@ -56,7 +47,7 @@ const servicesList = [
     subheading: "We design unique logos that define your brand",
     description:
       "We craft timeless, versatile logos that reflect your identity, resonate with your audience, and stand out in any context.",
-    image: LogoDesignImage,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825647/Logo_Design_unkzvb.png",
   },
 ];
 
@@ -65,19 +56,19 @@ const industriesList = [
     labelColor: "text-blue-500",
     label: "Web design for",
     title: "SaaS Companies",
-    image: SaaSIcon,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825655/Saas_cgd0xs.png",
   },
   {
     labelColor: "text-blue-500",
     label: "Web design for",
     title: "Startups",
-    image: StartupIcon,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825647/Startup_Icon_g6hzpp.png",
   },
   {
     labelColor: "text-indigo-500",
     label: "Web design for",
     title: "Industries",
-    image: IndustriesIcon,
+    image: "https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825645/Company_z20aqn.png",
   },
 ];
 

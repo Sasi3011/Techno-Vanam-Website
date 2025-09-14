@@ -1,9 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from "../../assets/logo.png";
-import StartupIllustration from "../../assets/poster.png";
-import Athlixir from "../../assets/Home Page/Athlixir.png";
-import SocialMediaImage from "../../assets/Contact Us.mp4";
 import { Link } from "react-router-dom";
 
 const Product1 = () => {
@@ -33,7 +29,7 @@ const Product1 = () => {
           </span>
           <div className="flex items-center gap-2 sm:gap-3">
             <img
-              src={Logo}
+              src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825654/logo_lkfqmn.png"
               alt="Logo"
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain"
               loading="lazy"
@@ -144,7 +140,7 @@ const Product1 = () => {
         {/* Right Image Block */}
         <div className="flex items-center justify-center w-full lg:w-auto">
           <img
-            src={Athlixir}
+            src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825608/Athlixir_srv8w4.png"
             alt="Startup Illustration"
             className="w-full max-w-md sm:max-w-lg lg:w-[600px] h-64 sm:h-80 lg:h-[480px] object-cover rounded-2xl lg:rounded-[32px]"
             loading="lazy"

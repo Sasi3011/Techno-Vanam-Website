@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.png";
 import { Rocket } from "lucide-react";
 
 export default function Products2() {
@@ -30,7 +29,7 @@ export default function Products2() {
           </span>
           <div className="flex items-center gap-2 sm:gap-3">
             <img
-              src={Logo}
+              src="https://res.cloudinary.com/dnmvriw3e/image/upload/v1757825654/logo_lkfqmn.png"
               alt="Logo"
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain"
               loading="lazy"
